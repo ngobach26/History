@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -51,5 +52,6 @@ public class sideBarController {
     }
 
     public void exitSwitch(ActionEvent event) throws IOException {
+        Platform.exit();
     }
 }
