@@ -16,7 +16,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         final String appName = "Vietnam History Wikiapp";
         scene = new Scene(loadFXML("figureView"), 950, 750);
-        scene.getStylesheets().add(getClass().getResource("stylesheet/mainScreen.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle(appName);
 //        stage.getIcons().add(new Image(getClass().getResourceAsStream("./resources/main/img/vnicon.jpg")));
@@ -28,7 +28,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view/" + fxml+ ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/view/" + fxml+ ".fxml"));
         return fxmlLoader.load();
     }
 
