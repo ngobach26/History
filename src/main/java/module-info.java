@@ -1,10 +1,10 @@
-module com.example.oopproject {
+module main {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.oopproject to javafx.fxml;
-    exports com.example.oopproject;
-    exports com.example.oopproject.controller;
-    opens com.example.oopproject.controller to javafx.fxml;
+    opens main to javafx.fxml;
+    exports main;
+    exports controller;
+    opens controller to javafx.fxml;
 }
