@@ -23,7 +23,8 @@ public class FigureCrawler implements ICrawler{
 	
 	@Override
 	public void crawl() {
-		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
+		figureIO.writeJson(crawlVanSu(), "src/main/resources/json/Figures.json");
+//		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
 	}
 	
 	public ArrayList<Figure> crawlVanSu() {
@@ -120,7 +121,7 @@ public class FigureCrawler implements ICrawler{
 		ArrayList<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		
 		//add details for each figure
-		for (int i=0;i<150;i++) {
+		for (int i=0;i<figures.size();i++) {
 			HashMap<String, Integer> mother = new HashMap<>();
 			HashMap<String, Integer> father = new HashMap<>();
 			HashMap<String, Integer> children = new HashMap<>();
@@ -182,7 +183,7 @@ public class FigureCrawler implements ICrawler{
 	
 	public static void main(String[] args) {
 		FigureCrawler figureCrawler = new FigureCrawler();
-		figureCrawler.crawl();
+//		figureCrawler.crawl();
 		System.out.println(figureCrawler.getUniqueEras());
 	}
 	
