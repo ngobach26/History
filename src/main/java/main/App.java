@@ -13,7 +13,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("homepageView"), 750, 550);
+        scene = new Scene(loadFXML("figureView"), 950, 750);
         scene.getStylesheets().add(getClass().getResource("stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
