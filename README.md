@@ -1,4 +1,4 @@
-# OOP - Capstone Project Group 07 - ICT K66 - HUST
+# OOP - Capstone Project Group 05 - ICT K66 - HUST
 ## Vietnam History WikiApp
 ---
 ### Demonstration
