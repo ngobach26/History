@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,9 +14,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        final String appName = "Vietnam History Wikiapp";
         scene = new Scene(loadFXML("figureView"), 950, 750);
         scene.getStylesheets().add(getClass().getResource("stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
+        stage.setTitle(appName);
+//        stage.getIcons().add(new Image(getClass().getResourceAsStream("./resources/main/img/vnicon.jpg")));
         stage.show();
     }
 

@@ -49,4 +49,7 @@ public class sideBarController {
     void aboutusSwitch(ActionEvent event) throws IOException {
         switchByGetFxml("resources/com/example/oopproject/view/AboutUsView.fxml", event);
     }
+
+    public void exitSwitch(ActionEvent event) throws IOException {
+    }
 }

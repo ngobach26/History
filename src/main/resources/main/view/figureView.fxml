@@ -38,9 +38,9 @@
         <fx:include fx:id="sideBar" source="sideBar.fxml" />
     </left>
     <center>
-        <VBox BorderPane.alignment="CENTER">
+        <VBox BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS" alignment="CENTER">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="636.0" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER">
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="636.0" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
                     <font>
                         <Font name="Monospaced Regular" size="40.0" />
                     </font>

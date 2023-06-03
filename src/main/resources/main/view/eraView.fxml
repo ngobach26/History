@@ -38,7 +38,7 @@
         <fx:include fx:id="sideBar" source="sideBar.fxml" />
     </left>
     <center>
-        <VBox BorderPane.alignment="CENTER">
+        <VBox BorderPane.alignment="CENTER" alignment="CENTER">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="636.0" text="VIỆT SỬ GIAI THOẠI" textAlignment="CENTER">
                     <font>
