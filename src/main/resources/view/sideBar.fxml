@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
@@ -13,39 +15,92 @@
             <image>
                 <Image url="@../img/logo_soict_hust.png" />
             </image></ImageView>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mainSwitch" style="-fx-background-color: #80002b;" text="MÀN HÌNH CHÍNH" textAlignment="CENTER" textFill="#faf5f5">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#mainSwitch" style="-fx-background-color: #80002b;" text="MÀN HÌNH CHÍNH" textAlignment="CENTER" textFill="#faf5f5">
             <VBox.margin>
                 <Insets />
             </VBox.margin>
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
         </Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#figuresSwitch" style="-fx-background-color: #80002b;" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER" textFill="#f7f4f4">
-            <font>
-                <Font name="Gill Sans MT" size="15.0" />
-            </font></Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#placeSwitch" prefWidth="204.0" style="-fx-background-color: #80002b;" text="DANH LAM THẮNG CẢNH " textAlignment="CENTER" textFill="#fcfafa">
-            <font>
-                <Font name="Gill Sans MT" size="15.0" />
-            </font></Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#erasSwitch" style="-fx-background-color: #80002b;" text="VIỆT SỬ GIAI THOẠI " textAlignment="CENTER" textFill="#fcfafa">
-            <font>
-                <Font name="Gill Sans MT" size="15.0" />
-            </font></Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#eventsSwitch" style="-fx-background-color: #80002b;" text="SỰ KIỆN TIÊU BIỂU " textAlignment="CENTER" textFill="#fcfafa">
-            <font>
-                <Font name="Gill Sans MT" size="15.0" />
-            </font></Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#festivalsSwitch" style="-fx-background-color: #80002b;" text="LỄ HỘI VĂN HÓA" textAlignment="CENTER" textFill="#fcfafa">
-            <font>
-                <Font name="Gill Sans MT" size="15.0" />
-            </font></Button>
-        <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#aboutusSwitch" style="-fx-background-color: #80002b;" text="VỀ CHÚNG TÔI " textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#figuresSwitch" style="-fx-background-color: #80002b;" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER" textFill="#f7f4f4">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></Button>
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#placeSwitch" prefWidth="204.0" style="-fx-background-color: #80002b;" text="DANH LAM THẮNG CẢNH " textAlignment="CENTER" textFill="#fcfafa">
+            <font>
+                <Font name="Gill Sans MT" size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></Button>
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#erasSwitch" style="-fx-background-color: #80002b;" text="VIỆT SỬ GIAI THOẠI " textAlignment="CENTER" textFill="#fcfafa">
+            <font>
+                <Font name="Gill Sans MT" size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></Button>
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#eventsSwitch" style="-fx-background-color: #80002b;" text="SỰ KIỆN TIÊU BIỂU " textAlignment="CENTER" textFill="#fcfafa">
+            <font>
+                <Font name="Gill Sans MT" size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></Button>
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#festivalsSwitch" style="-fx-background-color: #80002b;" text="LỄ HỘI VĂN HÓA" textAlignment="CENTER" textFill="#fcfafa">
+            <font>
+                <Font name="Gill Sans MT" size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></Button>
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#aboutusSwitch" style="-fx-background-color: #80002b;" text="VỀ CHÚNG TÔI " textAlignment="CENTER" textFill="#fcfafa">
+            <font>
+                <Font name="Gill Sans MT" size="15.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
         </Button>
+      <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#exitSwitch" style="-fx-background-color: #80002b;" text="THOÁT" textAlignment="CENTER" textFill="#fcfafa">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
     </children>
     <padding>
         <Insets bottom="30.0" left="16.0" right="16.0" top="20.0" />
