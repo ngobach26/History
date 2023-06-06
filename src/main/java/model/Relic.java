@@ -1,5 +1,6 @@
 package model;
 
+
 public class Relic extends HistoricalEntity{
     private static int numRelic = 0;
     private int id;

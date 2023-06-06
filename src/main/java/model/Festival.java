@@ -1,5 +1,4 @@
 package model;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,6 +10,7 @@ public class Festival extends HistoricalEntity{
     private String firstTime;
     private String startingDay;
     private HashMap<String, Integer> relatedFigures = new HashMap<>();
+
 
     public Festival(String name, String location, String firstTime, String startingDay, ArrayList<String> relatedFigures) {
         this.id = ++numFes;

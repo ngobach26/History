@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 import com.google.gson.reflect.TypeToken;
 
 import crawler.ICrawler;
-import crawler.JsonIO;
+import helper.JsonIO;
 import model.Event;
 
 public class EventCrawler implements ICrawler{
