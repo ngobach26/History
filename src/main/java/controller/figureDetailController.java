@@ -26,9 +26,6 @@ public class figureDetailController {
     private Text overviewText;
 
     @FXML
-    private Text workTimeText;
-
-    @FXML
     private Text eraText;
 
     @FXML
