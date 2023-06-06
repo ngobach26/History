@@ -3,52 +3,50 @@ package controller;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import main.App;
+
 import java.io.IOException;
 
 public class sideBarController {
-    private Parent root;
-    private Stage stage;
-    private Scene scene;
+
 
     public static void switchByGetFxml(String path, ActionEvent event) throws IOException {
     }
 
     @FXML
     void mainSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("java/com/example/oopproject/view/homepageView.fxml", event);
+        App.setRoot("homepageView");
     }
 
     @FXML
     void figuresSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/figureView.fxml", event);
+        App.setRoot("figureView");
+
     }
 
     @FXML
     void placeSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/placeView.fxml", event);
+        App.setRoot("placeView");
     }
 
     @FXML
     void erasSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/eraView.fxml", event);
+        App.setRoot("eraView");
     }
 
     @FXML
     void eventsSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/eventView.fxml", event);
+        App.setRoot("eventView");
     }
 
     @FXML
     void festivalsSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/festivalView.fxml", event);
+        App.setRoot("festivalView");
     }
 
     @FXML
     void aboutusSwitch(ActionEvent event) throws IOException {
-        switchByGetFxml("resources/com/example/oopproject/view/AboutUsView.fxml", event);
+        App.setRoot("aboutUsView");
     }
 
     public void exitSwitch(ActionEvent event) throws IOException {

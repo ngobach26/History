@@ -215,7 +215,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Tiền nhiệm">
+                                        <Label text="Con">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -224,7 +224,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="precededText" strokeType="OUTSIDE" strokeWidth="0.0" text="precededText" wrappingWidth="368.5367126464844" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="childrenText" strokeType="OUTSIDE" strokeWidth="0.0" text="childrenText" wrappingWidth="368.5367126464844" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -233,7 +233,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Kế nhiệm">
+                                        <Label text="Vợ chồng">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -242,7 +242,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="succeededText" strokeType="OUTSIDE" strokeWidth="0.0" text="succeededText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="spouseText" strokeType="OUTSIDE" strokeWidth="0.0" text="spouseText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>

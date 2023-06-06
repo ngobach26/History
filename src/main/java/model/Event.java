@@ -2,7 +2,7 @@ package model;
 
 import java.util.HashMap;
 
-public class Event extends HistoricalEntity{
+public class Event{
 	 private String time;
 	 private String location;
 	 private String description;

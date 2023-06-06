@@ -1,6 +1,6 @@
 package model;
 
-public class Era extends HistoricalEntity{
+public class Era{
 	private static int numEras = 0;
 	private int id;
 	private String name;

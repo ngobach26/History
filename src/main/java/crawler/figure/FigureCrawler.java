@@ -15,7 +15,7 @@ import com.google.gson.reflect.TypeToken;
 
 import crawler.GoogleCrawler;
 import crawler.ICrawler;
-import crawler.JsonIO;
+import helper.JsonIO;
 import model.Figure;
 
 public class FigureCrawler implements ICrawler{
