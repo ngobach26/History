@@ -25414,7 +25414,9 @@
     "role": "Nhân sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Võ Duy": 0
+    },
     "children": {},
     "description": "Nhân sĩ đời Minh Mạng, anh ruột nhà yêu nước Bảng Nhãn Võ Duy Thanh, quê làng Kim Bồng (sau đổi là Vân Bồng), huyện Gia Khánh, tỉnh Ninh Bình."
   },
@@ -25469,7 +25471,9 @@
     "location": "Quảng Nam",
     "role": "Danh thần",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Võ Tắc Thiên": 0
+    },
     "father": {},
     "children": {},
     "description": "Danh thần, tướng lãnh cuối triều Nguyễn, quê làng Phố Thị, huyện Lễ Dương, phủ Thăng Bình, tỉnh Quảng Nam (nay là xã Bình Nguyên, huyện Thăng Bình, tỉnh Quảng Nam)."
@@ -25504,10 +25508,14 @@
     },
     "location": "Quảng Bình",
     "role": "Đại thần, sử gia",
-    "spouses": {},
+    "spouses": {
+      "vợ chính là họ Bạch, vợ thứ là họ Trần": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Võ Thị Duyên": 0
+    },
     "description": "Đại thần, sử gia triều Nguyễn, người làng Lệ Thủy, tỉnh Quảng Bình."
   },
   {
@@ -25523,7 +25531,9 @@
     },
     "location": "Hải Dương",
     "role": "Danh sĩ",
-    "spouses": {},
+    "spouses": {
+      "Nguyễn Thị Thu Hiền": 0
+    },
     "mother": {},
     "father": {},
     "children": {},
@@ -25565,8 +25575,12 @@
     "location": "Hải Dương",
     "role": "Danh sĩ",
     "spouses": {},
-    "mother": {},
-    "father": {},
+    "mother": {
+      "bà Phạm Thị Đôi": 0
+    },
+    "father": {
+      "Vũ Tông Cửu đỗ Tú tài rồi ở ẩn đi dạy học": 0
+    },
     "children": {},
     "description": "Danh sĩ, Nhà giáo dục đời Nguyễn, tự Hoán Phủ, hiệu Lỗ Am, Đường Xuyên, học trò danh sĩ Phạm Quí Thích, bạn Cao Bá Quát, Nguyễn Văn Siêu... tại trường Tự Tháp; tục gọi là Nghè Tự Tháp (vì ông ngụ ở thôn Tự Tháp, phủ Báo Thiên, huyện Thọ Xương, Hà Nội)."
   },
@@ -25584,7 +25598,9 @@
     "role": "Danh thần",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Võ Văn Sung": 0
+    },
     "children": {},
     "description": "Danh thần đời Thiệu Trị, quê xã Bát Tràng, huyện Gia Lâm, tỉnh Bắc Ninh (nay thuộc Hà Nội). Năm Đinh dậu 1837 ông đổ Cử nhân, đến Quí mão 1843 đỗ Tiến sĩ, làm Án sát tỉnh Hưng Hóa. Cùng với Phan Huy Vịnh đi sứ nhà Thanh, khi về ông được vua tặng bảy bài thơ."
   },
@@ -25625,7 +25641,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Bùi Văn Hy": 0
+    },
     "children": {},
     "description": "Danh sĩ đời Tự Đức đến Thành Thái, cũng gọi là Bùi Văn Dị, tự Ân Niên, hiệu Tốn Am, người làng Châu Cầu, huyện Kiến Bảng, tỉnh Hà Nam."
   },
@@ -25664,7 +25682,9 @@
     "role": "Chiến sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Cầm Bá Tiêu": 0
+    },
     "children": {},
     "description": "Chiến sĩ phong trào Cần vương kháng Pháp trong đời vua Hàm Nghi, người dân tộc Thái ở châu Thường Xuân, tỉnh Thanh Hóa, con quản cơ Cầm Bá Tiêu."
   },
@@ -25702,8 +25722,24 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "ông Cao Xuân Tiếu": 0
+    },
+    "children": {
+      "Cao Xuân Thọ": 0,
+      "Cao Thị Thuyên": 0,
+      "Cao Thị Đóa": 0,
+      "Cao Thị Quán": 0,
+      "Cao Xuân Đài": 0,
+      "Cao Thị Bích": 0,
+      "Cao Xuân Tuệ": 0,
+      "Cao Thị Ngân": 0,
+      "Cao Xuân Tiếu": 0,
+      "Cao Xuân Thể": 0,
+      "Cao Ngọc Anh": 0,
+      "Cao Thị Tích": 0,
+      "Cao Thị Kính": 0
+    },
     "description": "Danh sĩ đời Duy Tân, tự Tử Phát, hiệu Long Cương, quê xã Thịnh Kháng (sau đổi là Thịnh Mĩ ) huyện Đông Thành, tỉnh Nghệ An (nay thuộc tỉnh Nghệ An)."
   },
   {
@@ -25722,7 +25758,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Chu Mạnh Trinh": 0
+    },
     "children": {},
     "description": "Danh sĩ, tự Cán Thần, hiệu Trúc Vân, con cử nhân Châu Duy Trinh quê làng Phú Thỉ, xa Mễ Sở, huyện Văn Giang tỉnh Hưng Yên. Sau khi đậu Tiến sĩ người đương thời thường gọi là ông Nghè Phú Thị."
   },
@@ -25818,7 +25856,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Bá Hộ Khiêm": 0
+    },
     "description": "Tay sai giặc Pháp trong việc đánh dẹp các cuộc khởi nghĩa chống Pháp nên đưọc Pháp phong Tổng đốc hàm, tục gọi là Tổng đôc Phương."
   },
   {
@@ -25835,8 +25875,12 @@
     "location": "Hà Tĩnh",
     "role": "Nhân vật hi hữu trong trường khoa cử",
     "spouses": {},
-    "mother": {},
-    "father": {},
+    "mother": {
+      "Lê Thị Nậm": 0
+    },
+    "father": {
+      "ông Đoàn Nhuyện": 0
+    },
     "children": {},
     "description": "Nhân vật hi hữu trong trường khoa cử, người làng Phụng Công, tỉnh Hà Tĩnh."
   },
@@ -25856,7 +25900,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Tào Hồ Phi Anh": 0
+    },
     "description": "Đại thần cuối triều Nguyễn tự Trạch Hữu, hiệu Kim Khanh, biệt hiệu Song Mĩ, quê làng Phú Mĩ, huyện Duy Xuyên, tỉnh Quảng Nam (nay là thôn Phú Mĩ, xã Lộc Hoà, huyện Đại Lộc, tỉnh Quảng Nam)."
   },
   {
@@ -25891,10 +25937,14 @@
     },
     "location": "Hà Nội",
     "role": "Sử gia",
-    "spouses": {},
+    "spouses": {
+      "hai đời vợ.": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "con của Hoàng Đạo Thành": 0
+    },
     "description": "Sử gia, nguyên là họ Cung, khi thi Hương đổi là họ Hoàng, không rõ năm sinh, năm mất, hiệu Cúc Lữ, quê làng Kim La, huyện Thanh Trì, tỉnh Hà Đông (nay thuộc TP. Hà Nội)."
   },
   {
@@ -25911,10 +25961,18 @@
     },
     "location": "Quảng Bình",
     "role": "Hoàng Tá Viêm",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "Hương La Công chúa Quang Tĩnh": 0
+    },
+    "mother": {
+      "Hoàng Kim Xán": 0
+    },
+    "father": {
+      "Hoàng Kim Xán": 0
+    },
+    "children": {
+      "Hoàng Kế Viêm": 0
+    },
     "description": "Cũng gọi là Hoàng Tá Viêm, Danh thần, tác giả triều Nguyễn, tự Nhật Trường, hiệu Tùng An, quê làng Văn Đa, tổng Văn Đại, phủ Quảng Ninh, tỉnh Quảng Bình (nay vẫn thuộc tỉnh Quảng Bình)."
   },
   {
@@ -25932,8 +25990,12 @@
     "role": "Chí sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Hoàng Tướng Hiệp đỗ Đệ tam giáp đồng tiến sĩ": 0
+    },
+    "children": {
+      "Hoàng Minh Bàn": 0
+    },
     "description": "Chí sĩ, Danh sĩ cận đại, tự Nguyên Phu, hiệu Tiếu Mai, quê xã Đông Ngạc, phủ Hoài Đức, tỉnh Hà Đông (nay là Thành Phố Hà Nội)."
   },
   {
@@ -25951,7 +26013,9 @@
     "role": "Chí sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "ngự sử Hoàng Công Định": 0
+    },
     "children": {},
     "description": "Chí sĩ, tác giả, hiệu Cổ Lẫm tự Hạc Nhân quê làng Phù Lưu, huyện Từ Sơn, tỉnh Bắc Ninh (nay là Tiên Sơn thuộc tỉnh Bắc Ninh)."
   },
@@ -26031,7 +26095,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đoàn Tử Quang": 0
+    },
     "children": {},
     "description": "Danh sĩ đời Tự Đức tự là Trọng Định, hiệu Mỹ Đình quê làng Trực Mĩ (Chân Mĩ), xã Yên Thắng, huyện Đại Yên (hay Ý Yên), tỉnh Nam Định."
   },
@@ -26050,9 +26116,15 @@
     "location": "Quảng Nam",
     "role": "Danh thần",
     "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "mother": {
+      "Hưng Quốc Quảng Thánh Hoàng thái hậu": 0
+    },
+    "father": {
+      "Lê Đại Hành": 0
+    },
+    "children": {
+      "con của": 0
+    },
     "description": "Danh thần triều Nguyễn, còn gọi là Lê Đình Đỉnh, quê làng Đông Mĩ (sau đổi là La Kham) huyện Diên Phước, phủ Điện Bàn, tỉnh Quảng Nam (nay là xã Điện Quang, huyện Điện Bàn, cùng tỉnh). Ông là thân phụ y sĩ liệt sĩ Lê Đình Dương, và Bác sĩ Lê Đình Thám."
   },
   {
@@ -26070,9 +26142,13 @@
     },
     "location": "Quảng Nam",
     "role": "Danh thần",
-    "spouses": {},
+    "spouses": {
+      "Lương Hữu Khánh": 0
+    },
     "mother": {},
-    "father": {},
+    "father": {
+      "Lương Hữu Khánh": 0
+    },
     "children": {},
     "description": "Danh thần triều Thành Thái, Duy Tân, còn có tên là Lê Văn Hiển, tự Hàm Trung, sinh năm 1850 tại làng Mĩ Thị, huyện Diên Phước, phủ Điện Bàn, tỉnh Quảng Nam (nay là phường Bắc Mĩ An, quận Ngũ Hành Sơn, TP. Đà Nẵng)."
   },
@@ -26092,8 +26168,12 @@
     "role": "Nhân sĩ yêu nước",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Bình Định Lê Khanh": 0
+    },
+    "children": {
+      "Lê Trực lê thay": 0
+    },
     "description": "Nhân sĩ yêu nước hiệu Mạnh Khang, quê xã Trung Lễ (nay là xã Đức Trung), huyện Đức Thọ, tỉnh Hà Tĩnh."
   },
   {
@@ -26110,9 +26190,14 @@
     "location": "Quảng Ngãi",
     "role": "Văn thần",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Lê Mai": 0
+    },
     "father": {},
-    "children": {},
+    "children": {
+      "Phạm Gia Khanh": 0,
+      "Pham Lam Khe": 0
+    },
     "description": "Văn thần cuối đời Tự Đức quê làng An Chỉ, huyện Chương Nghĩa (Nghĩa Hành) tỉnh Quảng Ngãi."
   },
   {
@@ -26130,8 +26215,12 @@
     "role": "Chí sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Lê Vĩnh Khanh": 0
+    },
+    "children": {
+      "Hai con trai ông là Lê Triêm và Lê Duyện và em trai là Lê Quý Liên": 0
+    },
     "description": "Chí sĩ cận đại, quán làng Thạnh Bình, tổng Tiên Giang thượng, huyện Hà Đông, tỉnh Quảng Nam, nay là xã Tiên Cảnh, huyện Tiên Phước, tỉnh Quảng Nam."
   },
   {
@@ -26149,8 +26238,13 @@
     },
     "location": "Quảng Nam",
     "role": "Quan lại",
-    "spouses": {},
-    "mother": {},
+    "spouses": {
+      "Lady Xiao": 0,
+      "Lady Yang": 0
+    },
+    "mother": {
+      "Trần Lệ Xuân": 0
+    },
     "father": {},
     "children": {},
     "description": "Quan lại triều Nguyễn, còn có tên là Ngô Trân, Ngô Lý hoặc Ngô Chuân, quê làng Mông Lãnh, tổng Phú Xuân, huyện Quế Sơn tỉnh Quảng Nam, cư ngu tại làng Cẩm Sa, huyện Điện Bàn, tỉnh Quảng Nam. (Nay là xã Điện Nam huyện Điện Bàn cùng tỉnh)."
@@ -26170,10 +26264,25 @@
     },
     "location": "Bắc Ninh",
     "role": "Chí sĩ",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "Lê Hoàng Kim Nicole": 0,
+      "Đặng Tuyết Mai": 0
+    },
+    "mother": {
+      "Đặng Tuyết Mai": 0
+    },
+    "father": {
+      "Nguyễn Văn Hiếu": 0
+    },
+    "children": {
+      "Nguyễn Cao Thắng": 0,
+      "Nguyễn Cao Kỳ Trang": 0,
+      "Nguyễn Cao Kỳ Duyên": 0,
+      "Nguyễn Cao Đạt": 0,
+      "Nguyễn Cao Trí": 0,
+      "Nguyễn Cao Tuấn": 0,
+      "Nguyễn Cao Kỳ Vân": 0
+    },
     "description": "Chí sĩ yêu nước cận đại, hiệu Cách Pha, Trác Phong, quê làng Cách Bi, tục gọi là làng Gạch, huyện Quế Dương, tỉnh Bắc Ninh (nay là huyện Quế Võ). Vì từng giữ chức Tán Lý quân vụ chống Pháp, nên thường gọi là Tán Cao. Ông là con Tri huyện Nguyễn Hành. Cha mất sớm năm ông mới lên 4 tuổi. Mẹ ông bấy giờ mới ngoài 20 tuổi, có nhan sắc nên một hôm Lý trưởng làng Cổ Bi đón đường chòng ghẹo thô bỉ, chạm ngực bà. Bà căm giận nhưng cố nén lòng, dịu dàng bảo gã hãy chờ ít lâu đã. Nhẫn nhục nuôi con đến lên 10, tên Lý trưởng giục bà tái giá, bà ừ hữ cho qua. Đến ngày giỗ chồng đông đảo họ hàng, bà kể chuyện tên Lý trưởng thô bỉ bức bách bà, rồi cầm dao đâm cổ tử tiết. Mọi nguời đều cảm phục và ngỡ ngàng."
   },
   {
@@ -26192,7 +26301,9 @@
     "role": "Liệt sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Phạm Tiến Duật": 0
+    },
     "children": {},
     "description": "Liệt sĩ chống Pháp thời Cần Vương, Nghĩa hội (1885, 1886) có tên là Nguyễn Duật hay Nguyễn Uýnh, nguyên tên là Nguyễn Công Trứ, hậu cải là Nguyễn Duật, tự là Vọng Sơn là con trai thứ ba (thứ hai) của ông bà Nguyễn Đạo. Quê làng Hà Lam, huyện Lễ Dương phủ Thăng Bình, tỉnh Quảng Nam là em trai Phó bảng Nguyệt Thuật, tổng tài Quốc sử quán, Nguyễn Tạo đốc học Quảng Nam."
   },
@@ -26211,7 +26322,9 @@
     "role": "Danh sĩ,",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Trọng Hợp": 0
+    },
     "children": {},
     "description": "Danh sĩ, tác giả đời Thành Thái, tự Thạch Hữu, hiệu Lan Bính, quê làng Kim La, huyện Thanh Trì, tỉnh Hà Đông (nay thuộc ngoại thành Hà Nội), con trai phụ chánh đại thần Nguyễn Trọng Hợp. Năm 1891 đậu cử nhân năm Thành Thái thứ 3 (khoa Tân mão) tại trường Hà Nam (Hà Nội và Hà Nam thi chung), làm quan tại các tỉnh ở Bắc Kì, sau chuyển về kinh làm việc ở Quốc sử quán."
   },
@@ -26229,10 +26342,19 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Danh sĩ",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "Lê Thị Điền": 0
+    },
+    "mother": {
+      "bà Trương Thị Thiệt": 0
+    },
+    "father": {
+      "Nguyễn Đình Huy": 0
+    },
+    "children": {
+      "Nguyễn Đình Chiêm": 0,
+      "Sương Nguyệt Anh": 0
+    },
     "description": "Danh sĩ, Chí sĩ cận đại, hiệu Trạch Phủ, con cụ Nguyễn Đình Huy và bà Truơng Thị Thiệt, quê làng Tân Khánh, huyện Bình Dương, tỉnh Gia Định (nay thuộc Thành phố Hồ Chí Minh). Thân phụ ông vốn ở huyện Phong Điền, tỉnh Thừa Thiên:"
   },
   {
@@ -26252,7 +26374,9 @@
     "location": "Quảng Nam",
     "role": "Danh thần",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Meng Mu": 0
+    },
     "father": {},
     "children": {},
     "description": "Danh thần cuối triều Nguyễn, tự Dực Phu, hiệu Ấn Nam, thụy là Mạnh Khả, quê làng Lộc Đông, huyện Quế Sơn, tỉnh Quảng Nam (nay là xã Quế Lộc, huyện Quế Sơn, tỉnh Quảng Nam)."
@@ -26292,7 +26416,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Nguyễn Hiệu Tri": 0
+    },
     "description": "Nhân sĩ yêu nước, quê làng Thọ Vực, huyện Hoằng Hóa, tỉnh Thanh Hóa."
   },
   {
@@ -26329,8 +26455,12 @@
     },
     "location": "Thanh Hóa",
     "role": "Đại thần",
-    "spouses": {},
-    "mother": {},
+    "spouses": {
+      "Trương Huệ Vân": 0
+    },
+    "mother": {
+      "chính thất Trần Thị Lựu": 0
+    },
     "father": {},
     "children": {},
     "description": "Đại thần đời vua Đồng Khánh, tự Hi Bùi, hiệu Tống Khê, dòng dõi nhà thơ Nguyễn Trãi, quê xã Nguyệt Viên, huyện Hoằng Hóa, tỉnh Thanh Hóa."
@@ -26351,8 +26481,12 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Nguyễn Du": 0
+    },
+    "children": {
+      "Nguyễn Tùng Bá (tức Tư Bá)": 0
+    },
     "description": "Danh sĩ, chiến sĩ Cần vương, còn gọi là Nguyễn Phong, sinh năm Tân tị 1821 quê làng Thịnh Lạc, huyện Nam Đàn, tỉnh Nghệ An, con trai ông Nguyễn Du (không phải Nguyễn Du thi sĩ) - em ruột hoàng giáp Nguyễn Thái (1819-…), không rõ năm mất."
   },
   {
@@ -26371,9 +26505,13 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Chí sĩ",
-    "spouses": {},
+    "spouses": {
+      "Trần Thị Nhàn": 0
+    },
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Thanh Oai": 0
+    },
     "children": {},
     "description": "Chí sĩ, tự Hà Nhân, hiệu Kì Am, biệt hiệu Quì Ưu, quê làng Kế Môn, huyện Phong Điền, tỉnh Thừa Thiên."
   },
@@ -26391,8 +26529,12 @@
     "location": "Ninh Thuận",
     "role": "Nữ học sĩ",
     "spouses": {},
-    "mother": {},
-    "father": {},
+    "mother": {
+      "bà Thục nhân họ Nguyễn": 0
+    },
+    "father": {
+      "Nguyễn Nhược Sơn": 0
+    },
     "children": {},
     "description": "Nữ học sĩ triều Tự Đức, tự Lang Hoàn, con vị Bố chánh Nguyễn Nhược San, quê huyện An Phước, đạo Ninh Thuận, vùng Phan Rang (nay thuộc tỉnh Ninh Thuận)."
   },
@@ -26413,9 +26555,18 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Nữ sĩ",
-    "spouses": {},
-    "mother": {},
-    "father": {},
+    "spouses": {
+      "Chen Guojun": 0,
+      "Li Wang": 0,
+      "A Feng": 0,
+      "William Wang": 0
+    },
+    "mother": {
+      "Thục tần Nguyễn Thị Bửu": 0
+    },
+    "father": {
+      "Minh Mạng": 0
+    },
     "children": {},
     "description": "Nữ sĩ, công chúa triều Nguyễn (1802-1945) tên thật là Nguyễn Phúc Vĩnh Trinh, Thuận Lễ, hiệu Nguyệt Đinh tự Trọng Khanh, sinh ngày 25-5 năm Giáp thân (21-6-1824) trong hoàng cung Huế. Bà là con gái thứ 18 của vua Minh Mạng em ruột (đồng bào) Tùng Thiện Vương. Ngay từ tuổi thơ bà được thọ hưởng một nền giáo dục nơi cung cấm rất chu đáo, đầy đủ, trở thành một nữ sĩ tài hoa, một mệnh phụ khiêm tốn, một trí giả chân chính."
   },
@@ -26432,7 +26583,9 @@
     },
     "location": "Thanh Hóa",
     "role": "Nhân sĩ",
-    "spouses": {},
+    "spouses": {
+      "Huỳnh Uy Dũng": 0
+    },
     "mother": {},
     "father": {},
     "children": {},
@@ -26455,7 +26608,9 @@
     "role": "Nhà ngoại giao",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Tấn Duệ": 0
+    },
     "children": {},
     "description": "Nhà ngoại giao, nhà cải cách cuối triều Tự Đức tự Thiện Quang, hiệu Túy xuyên, quê làng Túy La, huyện Điện Bàn, tỉnh Quảng Nam (nay là xã Điện Phước, huyện Điện Bàn, tỉnh Quảng Nam)."
   },
@@ -26475,8 +26630,13 @@
     "role": "Một đám trần ai phủi sạch rồi,",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Tuy Lý vương": 0
+    },
+    "children": {
+      "Nguyễn Phúc Ưng Tôn": 0,
+      "Nguyễn Phước Ưng Bình": 0
+    },
     "description": "Tức Nữ sĩ Hồng Thiết, dòng dõi Đoan Hưng Quận Công Nguyễn Văn Trương."
   },
   {
@@ -26513,10 +26673,18 @@
     },
     "location": "Hưng Yên",
     "role": "Nhà yêu nước",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "bà chính thất là Nguyễn Thị Tuân, bà thứ là Trần Thị Thuần Tĩnh": 0
+    },
+    "mother": {
+      "họ Phạm, người làng Dị Sử (nay thuộc phường Dị Sử, thị xã Mỹ Hào)": 0
+    },
+    "father": {
+      "Nguyễn Tuy": 0
+    },
+    "children": {
+      "Nguyễn Văn Sâm": 0
+    },
     "description": "Nhà yêu nước danh tướng Cần vương chống Pháp, quê làng Xuân Dục, tổng Bạch Sam, huyện Mĩ Hào, tỉnh Hưng Yên. (nay là thôn Xuân Đào, xã Xuân Dục, huyện Mĩ Hào, tỉnh Hưng Yên)."
   },
   {
@@ -26536,7 +26704,9 @@
     "role": "Danh thần",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Tuy, hiệu Quảng Phường, đỗ tú tài năm 1842, làm nghề dạy học": 0
+    },
     "children": {},
     "description": "Danh thần, Danh sĩ cuối triều Nguyễn, hiệu , qHà Đình tự Hiếu Sinh, quê làng Hà Lam, huyện Lễ Dương, tỉnh Quảng Nam (nay thuộc thị trấn Hà Lam, huyện Thăng Bình, tỉnh Quảng Nam)."
   },
@@ -26555,7 +26725,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Thượng Hiền": 0
+    },
     "children": {},
     "description": "Danh sĩ đời Tự Đức, quê xã Liên Bạt, huyện Ứng Hòa, tỉnh Hà Đông (nay là TP. Hà Nội)."
   },
@@ -26578,8 +26750,12 @@
     "role": "Nữ sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Minh Mạng": 0
+    },
+    "children": {
+      "Mai Am không sinh thêm được người con nào nữa": 0
+    },
     "description": "Nữ sĩ, công chúa triều Nguyễn, con gái thứ 25 của vua Minh Mạng, tên thật là Nguyễn Thị Trinh Thận, còn gọi là Diệu Liên công chúa. Bà tự là Thúc Khanh, Nữ Chi hiệu là Mai Am, sinh năm 1826 tại hoàng cung kinh thành Huế."
   },
   {
@@ -26598,8 +26774,12 @@
     "role": "Danh thần",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Nguyễn Văn Cư": 0
+    },
+    "children": {
+      "Nguyễn Nghiêm": 0
+    },
     "description": "Danh thần đời Tự Đức, Đồng Khánh, Thành Thái chính tên là Nguyễn Tuyên, tự Trọng Hợp, về sau dùng tên tự làm tên chính. Dòng dõi đại thần đời Hậu Lê là Nguyễn Công Thái, quê làng Kim Lũ huyện Thanh Trì, tỉnh Hà Đông (nay thuộc ngoại thành Hà Nội). Năm Nhâm ngọ 1858, đỗ cử nhân, năm Ất sửu 1865 đỗ tiến sĩ. Làm quan trải các chức: Tổng đốc Định An, và Sơn Hưng Tuyên, Bắc Kì Khâm sai quyền Kinh lược sứ, Thượng thư bộ Lại và bộ Hình, hàm Hiệp biện Đại học sĩ, rồi làm Phụ chính đại thần đời vua Đồng Khánh, sung Cơ mật viện đại thần. Ông cũng từng làm Tổng tài Quốc sử quán, kiêm quân các việc ở Khâm thiên giám, được phong tước Vịnh Trung Tử."
   },
   {
@@ -26621,7 +26801,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nguyễn Tri Hoàn": 0
+    },
     "children": {},
     "description": "Danh sĩ triều Nguyễn, tự Thân Thúc, Hi Bạch; hiệu Văn Lộc, Thạch Nông. Vốn tên là Nguyễn Văn Phú, và có tên khác nữa là Nguyễn Địch Giản, sau đổi là Tư Giản, cháu nội danh sĩ Nguyễn Án, quê làng Gia Lâm, huyện Đông Ngàn, tỉnh Bắc Ninh."
   },
@@ -26641,8 +26823,12 @@
     },
     "location": "Hà Nội",
     "role": "Danh thần",
-    "spouses": {},
-    "mother": {},
+    "spouses": {
+      "Sumonthip Hsu": 0
+    },
+    "mother": {
+      "Nontalee Saejung": 0
+    },
     "father": {},
     "children": {},
     "description": "Danh thần đời Minh Mạng, tự Tuần Phủ, hiệu Đông Khê, Chí Hiên, quê xã Đông Tác, huyện Thọ Xương, Hà Nội."
@@ -26722,7 +26908,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Phạm Đình Trọng": 0
+    },
     "children": {},
     "description": "Danh sĩ, đời Thiệu Trị, tự Thiếu Du, hiệu Song Quỳnh. Con đốc học Phạm Đình Trọng, quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An."
   },
@@ -26742,7 +26930,10 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Phạm Tuấn Anh": 0,
+      "Phạm Thị Hằng": 0
+    },
     "description": "Danh thần, nhà giáo dục triều Thành Thái Duy Tân, lúc thi Hương năm 1879 lẩy tên là Phạm Trọng Tấn, sau đổi là Phạm Trọng Tuấn, tên thường gọi là Phạm Tuấn, tự là Hỉ Thần, hiệu là Văn Luân. Sinh ngày 24-11 âm lịch Nhâm tí, quê làng Xuân Đài, huyện Diên Phước, phủ Điện Bàn, tỉnh Quảng Nam (nay là xã Điện Quang, huyện Điện Bàn cùng tỉnh)."
   },
   {
@@ -26778,9 +26969,13 @@
     },
     "location": "Hà Tĩnh",
     "role": "Liệt sĩ",
-    "spouses": {},
+    "spouses": {
+      "con gái quan phủ làng Thọ Tường": 0
+    },
     "mother": {},
-    "father": {},
+    "father": {
+      "Phan Dinh Tuyen": 0
+    },
     "children": {},
     "description": "Liệt sĩ, anh hùng chống Pháp, con cụ Phó bảng Phan Đình Tuyền, hiệu Châu Phong quê làng Đông Thái, huyện La Sơn anh Hà Tĩnh."
   },
@@ -26799,7 +26994,9 @@
     "role": "Chiến sĩ cần vương",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Phan Đình": 0
+    },
     "children": {},
     "description": "Chiến sĩ cần vương, anh ruột nhà yêu nước Phan Đình Phùng. Ông cùng với em nhiệt thành cứu nước, hi sinh vì tổ quốc."
   },
@@ -26819,9 +27016,15 @@
     "location": "Bến Tre",
     "role": "Khâm sai",
     "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "mother": {
+      "Trần Thị Hoạch (tự Cúc)": 0
+    },
+    "father": {
+      "Sigmund Freud": 0
+    },
+    "children": {
+      "Phan Thanh Khải, Phan Thanh Khác, Phan Thanh Đàm": 0
+    },
     "description": "Khâm sai cuối triều Nguyễn, con trai đại thần Phan Thanh Giản, không rõ năm mất, còn có tên là Phan Tam, nhân dân địa phương thường gọi thân mật là Cậu Ba, tự Thúc Thanh, anh ruột Phan Tôn (1837 -...) tự Quí Tướng."
   },
   {
@@ -26862,7 +27065,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Nhược Lâm": 0
+    },
     "children": {},
     "description": "Còn có tên là Phan Văn Tâm, Danh sĩ triều Tự Đức, hiệu Đồng Giang, Chuyết Phu, quê làng Đồng Tỉnh, huyện Văn Giang, tỉnh Hưng Yên."
   },
@@ -26938,10 +27143,16 @@
     },
     "location": "Thái Bình",
     "role": "anh hùng kháng Pháp",
-    "spouses": {},
+    "spouses": {
+      "Zhen Zhen": 0,
+      "Deborah Lee": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Tạ Đình Phong": 0,
+      "Jennifer Tse": 0
+    },
     "description": "Tức Tạ Quang Hiện, anh hùng kháng Pháp quê làng Quan Lang, huyện Thụy Anh, phủ Thái Bình, tỉnh Nam Định (nay thuộc xã Quan Lang, huyện Thái Thụy tỉnh Thái Bình)."
   },
   {
@@ -27001,8 +27212,12 @@
     "role": "Phổ Quang quận công",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Đinh Liễn": 0
+    },
+    "children": {
+      "Tôn Thất Hối": 0
+    },
     "description": "Phụ chánh đại thần triều Duy Tân Thành Thái, tự Lạc Chi, biệt hiệu Liên Đình, tước Phổ Quang quận công, sinh năm 1854 tại làng Lại Thế, TP. Huế, tỉnh Thừa Thiên."
   },
   {
@@ -27018,10 +27233,23 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Danh tướng",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "Lê Thị Thanh": 0
+    },
+    "mother": {
+      "Văn Thị Thu": 0
+    },
+    "father": {
+      "Tôn Thất Đính": 0
+    },
+    "children": {
+      "Tôn Thất Đàm": 0,
+      "Tôn Nữ Thị Tựu": 0,
+      "Ton Nu Thi An": 0,
+      "Tôn Thất Tiệp": 0,
+      "Tôn Thất Trọng": 0,
+      "Tôn Thất Hoàng": 0
+    },
     "description": "Danh tướng, nhà yêu nước, con thứ hai của Đề đốc Tôn Thất Đính, quê ở Xuân Long, Thành phố Huế, tỉnh Thừa Thiên."
   },
   {
@@ -27076,9 +27304,15 @@
     "location": "An Giang",
     "role": "Tay sai Pháp xâm lược",
     "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "mother": {
+      "bà Nguyễn Thị Ở": 0
+    },
+    "father": {
+      "tú tài Trần Bá Phước": 0
+    },
+    "children": {
+      "Trần Bá Thọ": 0
+    },
     "description": "Tay sai Pháp xâm lược, quê ở Cù Lao Giêng, làng Tân Đức, tổng An Bình, tỉnh Long Xuyên (nay là tỉnh An Giang)."
   },
   {
@@ -27097,8 +27331,12 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "bác sĩ Trần Đình Nam": 0
+    },
+    "children": {
+      "Trần Đình Doãn (Trần Nguyên Đỉnh) đỗ cử nhân khoa Canh Tý (1900).": 0
+    },
     "description": "Danh sĩ, nhà giáo dục cuối triều Nguyễn, hiệu Mã Sơn tục gọi Đốc học Mã Sơn, quê xã An Mĩ. huyện An Thành tỉnh Nghệ An."
   },
   {
@@ -27116,7 +27354,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Trần Trung": 0
+    },
     "children": {},
     "description": "Danh sĩ, nhà ngoại giao cận đại, quê huyện Gio Linh, tỉnh Quảng Trị."
   },
@@ -27136,7 +27376,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "bảy người con: ba trai, bốn gái": 0
+    },
     "description": "Nhân sĩ, nhà thơ cận đại, quê làng Phú Thuận, huyện Tân Châu, tỉnh An Giang (sau sát nhập vào huyện Hồng Ngư, nay thuộc tỉnh Đồng Tháp)."
   },
   {
@@ -27154,9 +27396,17 @@
     "location": "Thanh Hóa",
     "role": "Linh mục",
     "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "mother": {
+      "Trần Thị Xuân": 0
+    },
+    "father": {
+      "Trần Văn Nhu": 0
+    },
+    "children": {
+      "Trần Bách": 0,
+      "Trần Hoàng": 0,
+      "Trần Mỹ Anh": 0
+    },
     "description": "Linh mục Thiên chúa giáo, thụ phong Linh mục, tục gọi Cha Sáu. Ông vốn tên là Hữu, rồi đổi là Triêm. Nhân tục danh Cha Sáu, ông lấy tên TrầnLục hoặc Trần Văn Lục. Quê làng Mĩ Quán, tỉnh Thanh Hóa."
   },
   {
@@ -27191,7 +27441,9 @@
     },
     "location": "Quảng Nam",
     "role": "Liệt sĩ",
-    "spouses": {},
+    "spouses": {
+      "Nguyễn Linh Nga": 0
+    },
     "mother": {},
     "father": {},
     "children": {},
@@ -27270,7 +27522,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Trần Xuân Kháng": 0
+    },
     "description": "Nhà yêu nước quê làng Thọ Hạc huyện Đông Sơn, tỉnh Thanh Hóa."
   },
   {
@@ -27287,9 +27541,13 @@
     "location": "Thừa Thiên-Huế",
     "role": "Phụ chánh đại thần",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Trương Như Thị Tịnh": 0
+    },
     "father": {},
-    "children": {},
+    "children": {
+      "Trương Như Thị Tịnh": 0
+    },
     "description": "Phụ chánh đại thần triều Thành Thái Duy Tân, quê làng Hiền Lương (tục gọi làng Rèn), huyện Quảng Điền, tỉnh Thừa Thiên, nhạc phụ Phụng Hóa Công (vua Khải Định)."
   },
   {
@@ -27310,7 +27568,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Trương Đăng Quế": 0
+    },
     "children": {},
     "description": "Danh sĩ đại thần triều Nguyễn, sinh năm 1833 tại Kinh thành Huế, tự Tử Minh hiệu Cúc Viên, nguyên quán làng Mĩ Khê, huyện Bình Sơn, tỉnh Quảng Ngãi."
   },
@@ -27347,10 +27607,16 @@
     },
     "location": "Quảng Nam",
     "role": "Danh thần",
-    "spouses": {},
+    "spouses": {
+      "Nguyễn Tuyết Mai": 0
+    },
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Nguyễn Phi Khanh": 0
+    },
+    "children": {
+      "Đặng Trọng Vũ": 0
+    },
     "description": "Danh thần cuối triều Nguyễn, không rõ năm mất, tự là Tố Trai, quê làng Lang Châu, huyện Duy Xuyên, tỉnh Quảng Nam, không rõ năm mất."
   },
   {
@@ -27368,10 +27634,19 @@
     },
     "location": "Hưng Yên",
     "role": "Anh hùng kháng Pháp",
-    "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "spouses": {
+      "Đặng Thị Nhu": 0
+    },
+    "mother": {
+      "Hoàng Hoa Thám": 0
+    },
+    "father": {
+      "Trương Văn Thận": 0
+    },
+    "children": {
+      "Hoàng Hoa Phồn": 0,
+      "Hoàng Thị Thế": 0
+    },
     "description": "Anh hùng kháng Pháp tức Hoàng Hoa Thám. Thuở trẻ còn có tên là Trương Văn Nghĩa, con Trương Văn Thân và Lương Thị Minh, quê làng Dị Chiến, huyện Tiên Lữ, tỉnh Hưng Yên."
   },
   {
@@ -27392,7 +27667,10 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Trương Vĩnh Tống": 0,
+      "Trương Vĩnh Thế": 0
+    },
     "description": "Học giả, tự là Sĩ Tải, trước tên là Chánh Ký, sau đổi là Vĩnh Ký. Ông vốn theo đạo Thiên Chúa, có tên thánh là Jean Baptiste, hay Pétrus Ký. Quê ở thôn Cái Mơn, xã Vĩnh Thanh, huyện Tân Minh tỉnh Vĩnh Long (nay thuộc tỉnh Bến Tre)."
   },
   {
@@ -27487,8 +27765,12 @@
     "role": "Chiến sĩ kháng Pháp",
     "spouses": {},
     "mother": {},
-    "father": {},
-    "children": {},
+    "father": {
+      "Vương Khởi": 0
+    },
+    "children": {
+      "Wang Ssu-yin": 0
+    },
     "description": "Chiến sĩ kháng Pháp, con trưởng cụ Thủ chỉ Vương Ngọc Kinh, quê ở làng Trang Nương, nay thuộc xã Phú Thành, huyện Yên Thành, tỉnh Nghệ An."
   },
   {
@@ -27527,7 +27809,9 @@
     "role": "Danh sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Dương Quang": 0
+    },
     "children": {},
     "description": "Danh sĩ đời Tự Đức, hiệu Vân Trì. Tục gọi ông Nghè Vân Đình vì ông quê ở làng Vân Đình, huyện Sơn Lang, phủ Ứng Hòa, tỉnh Hà Đông (nay là TP. Hà Nội). Cháu nội cụ Đốc học tỉnh Sơn Tây Dương Đức Ứng, húy Thụy, con cả cụ Đô ngự sử Dương Quang, anh ruột Dương Lâm."
   },
@@ -27545,7 +27829,9 @@
     "role": "Doanh nhân",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đỗ Văn Cóp": 0
+    },
     "children": {},
     "description": "Doanh nhân lừng tiếng ở Bắc kì, nhất là về mặt hàng hải, tranh thương cùng tư sản Pháp, tư sản Trung Quốc."
   },
@@ -27652,10 +27938,14 @@
     },
     "location": "Hưng Yên",
     "role": "Danh sĩ",
-    "spouses": {},
+    "spouses": {
+      "Hoa Tư": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Phục Hy, Nữ Oa, và Hoa Tư": 0
+    },
     "description": "Danh sĩ, tự là Bàn Cổ, người làng Lang Trụ, huyện Tiên Lữ, tỉnh Hưng Yên."
   },
   {
@@ -27673,7 +27963,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Henriette Bùi Quang Chiêu": 0
+    },
     "description": "Kĩ sư, nhân vật chính trị, quê làng Đa Phước Hội, huyện Mỏ Cày, tỉnh Bến Tre, con ông Bùi Quang Đại và bà Phan Thị Tuân."
   },
   {
@@ -27783,7 +28075,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "không có con": 0
+    },
     "description": "Liệt sĩ hiện đại, bí danh là Bảy Xuyến, quê làng Tân Thời Nhứt, huyện Hóc Môn (nay là quận 12 TP. HCM)."
   },
   {
@@ -27870,10 +28164,14 @@
     },
     "location": "Hà Tĩnh",
     "role": "Danh tướng",
-    "spouses": {},
+    "spouses": {
+      "Đông Nhi": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Winnie": 0
+    },
     "description": "Danh tướng của Phan Đình Phùng, đóng góp rất nhiều công lao kháng Pháp. Quê làng Lê Động, huyện Hương Sơn. tỉnh Hà Tĩnh."
   },
   {
@@ -27890,9 +28188,15 @@
     },
     "location": "Không rõ",
     "role": "L\u0027Ère Nouveau",
-    "spouses": {},
-    "mother": {},
-    "father": {},
+    "spouses": {
+      "Thừa Thiên Cao Hoàng hậu": 0
+    },
+    "mother": {
+      "Lê Thị Sâm": 0
+    },
+    "father": {
+      "Nguyễn Tường Nhu": 0
+    },
     "children": {},
     "description": "Ký giả, cũng gọi là Cao Chánh, hiệu Thạch Lan. Khoảng năm 1926-1927, ông viết báo tiếng Pháp L\u0027Ère Nouveau và báo Việt ngữ Nhật tân báo. ít lâu, ông sang Pháp du học về chính trị. Tại Pháp, ông vẫn thường viết bài gởi về đăng trên tuần báo Phụ nữ tân văn, dưới mục Bức thư Ba Lê, đồng thời viết những bài ngắn gửi đăng các báo bên Pháp với bút hiệu Thạch Lan."
   },
@@ -27963,7 +28267,9 @@
     "location": "Thừa Thiên-Huế",
     "role": "Danh sĩ",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Công nữ Thiện Niệm": 0
+    },
     "father": {},
     "children": {},
     "description": "Danh sĩ cận đại, nhà báo, thân phụ ông là Yên Sa Diệp Văn Cương, thân mẫu là người trong hoàng tộc Nguyễn Phúc. Ông sinh trưởng tại Huế, thông Hán học, Tây học. Vào Nam với ý định tìm cách xuất dương du học. Nhờ cớ Phan Văn Cử giúp và được Lê Quang Hiền đỡ đâu ông sang Pháp, đỗ cử nhân Luật. trở về nước, ông ngụ ở Cao Lanh khá lâu thành lập Hội khuyến học và tổ chức nhiều buổi diễn thuyết về văn hóa."
@@ -28000,7 +28306,9 @@
     "role": "Chí sĩ cận đại",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Dương Trọng Phổ": 0
+    },
     "children": {},
     "description": "Chí sĩ cận đại, hiệu là Tuyết Huy, quê làng Phù Thị, phủ Khoái Châu, tỉnh Hưng Yên."
   },
@@ -28108,10 +28416,14 @@
     },
     "location": "Không rõ",
     "role": "Danh sĩ",
-    "spouses": {},
+    "spouses": {
+      "Tạ Thị Quỳnh Anh": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Bảo Nhi (sinh năm 2018), Bảo Ngọc (sinh năm 2020) và cậu út Dĩ Kha (chào đời vào tháng 8/2022)": 0
+    },
     "description": "Danh sĩ cận đại, hiệu Vân Hồ, Quất Đình, tự Thu Nguyên, Mộng Thạch. Con cụ Đô ngự sử Dương Quang. Em tiến sĩ Vân Trì Dương Khuê. Có tướng lạ, mới sinh lông mày đã dài như người lớn."
   },
   {
@@ -28127,8 +28439,12 @@
     "location": "TP Hồ Chí Minh",
     "role": "Thủ lãnh giới giang hồ Bình Xuyên",
     "spouses": {},
-    "mother": {},
-    "father": {},
+    "mother": {
+      "Lưu Thị Biểu": 0
+    },
+    "father": {
+      "Ngô Văn Mà": 0
+    },
     "children": {},
     "description": "Thủ lãnh giới giang hồ Bình Xuyên tục danh là Ba Dương và sau trở thành người chỉ huy Bộ đội Bình Xuyên, quê làng Chánh Hưng, tỉnh Chợ Lớn (nay thuộc q. 8, TP. Hồ Chí Minh)."
   },
@@ -28162,9 +28478,15 @@
     },
     "location": "Hà Nội",
     "role": "Chí sĩ",
-    "spouses": {},
-    "mother": {},
-    "father": {},
+    "spouses": {
+      "họ Mộ Dung, thuộc tộc Tiên Ti": 0
+    },
+    "mother": {
+      "Dương Diên Chiêu": 0
+    },
+    "father": {
+      "Dương Diên Chiêu": 0
+    },
     "children": {},
     "description": "Chí sĩ cận đại, tự là Quốc Quang, quê ở thôn Văn Quân, xã Đông Cửu, huyện Thanh Oai, tỉnh Hà Đông (nay là TP. Hà Nội)."
   },
@@ -28273,9 +28595,15 @@
     "location": "Nghệ An",
     "role": "Chí sĩ",
     "spouses": {},
-    "mother": {},
-    "father": {},
-    "children": {},
+    "mother": {
+      "bà Đinh Thị Hoan": 0
+    },
+    "father": {
+      "Đặng Thai Giai": 0
+    },
+    "children": {
+      "Đặng Thai Mai": 0
+    },
     "description": "Chí sĩ cận đại, hiệu Thai Sơn, Tam Thai, tên cũ là Đặng Thai Nhận. Quê làng Lương Điền, tổng Bích Triều, huyện Thanh Chương, tỉnh Nghệ An, con cụ Đặng Thai Giai (hay Thai Cảnh), từng tham gia phong trào Cần vương, bị giặc Pháp bắt giam rồi an trí đến chết. Ông và em là Đặng Thúc Hứa nặng nợ nước, thù nhà, tận tụy hi sinh vì đồng bào, dân tộc. Năm Mậu tí 1888, ông đỗ cử nhân, năm Ất mùi 1895, đỗ phó bảng lúc 28 tuổi. Sau đó làm quan tại Huế, rồi làm Đốc học ở Nghệ An, Bình Thuận. Nhưng ông nặng lòng yêu nước nên tham gia cổ động phong trào Đông du, Duy tân thuộc nhóm \"Minh Xã\" tại Nghệ An."
   },
   {
@@ -28290,8 +28618,12 @@
     },
     "location": "Nghệ An",
     "role": "Chí sĩ",
-    "spouses": {},
-    "mother": {},
+    "spouses": {
+      "cụ Trần Thị Út": 0
+    },
+    "mother": {
+      "Thái Thị Liên": 0
+    },
     "father": {},
     "children": {},
     "description": "Chí sĩ cận đại, hiệu Ngư Hải, Ngư ông quê làng Hải Côn, tỉnh Nghệ An."
@@ -28311,7 +28643,9 @@
     "role": "Liệt sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Thái Thân": 0
+    },
     "children": {},
     "description": "Liệt sĩ cách mạng, hiệu Canh Tân, con trai lớn của Đặng Thái Thân, quê làng Hải Côn, huyện Nghi Lộc, tỉnh Nghệ An."
   },
@@ -28329,7 +28663,9 @@
     "role": "Cựu Thượng thư",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Thành Tâm": 0
+    },
     "children": {},
     "description": "Cựu Thượng thư triều Nguyễn, sinh năm 1885 tại làng Long Vân, huyện Tuy Phước, Bình Định, không rõ năm mất."
   },
@@ -28365,7 +28701,9 @@
     "role": "Nhạc sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Hiển Thế": 0
+    },
     "children": {},
     "description": "Nhạc sĩ tài hoa mệnh yểu, tên thật cũng là bút danh, sinh năm 1918 tại thị xã Nam Định (nay văn thuộc tỉnh Nam Định)."
   },
@@ -28381,10 +28719,14 @@
     },
     "location": "Bắc Giang",
     "role": "Vợ thứ",
-    "spouses": {},
+    "spouses": {
+      "Hoàng Hoa Thám": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Hoàng Thị Thế và Hoàng Văn Vi": 0
+    },
     "description": "Vợ thứ Trương Văn Thám tức Hoàng Hoa Thám (Đề Thám), không rõ năm sinh. Tục gọi Bà Ba Cẩn."
   },
   {
@@ -28400,7 +28742,9 @@
     "location": "Nghệ An",
     "role": "Chí sĩ",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Đinh Thị Hoa": 0
+    },
     "father": {},
     "children": {},
     "description": "Chí sĩ cận đại, hiệu Ngọ Sinh, ông đỗ tú tài Hán học, nên cũng gọi là Tú Ngọ Sinh, hay Tú Hứa, quê ở làng Lương Điền, huyện Thanh Chương, tỉnh Nghệ An."
@@ -28420,9 +28764,13 @@
     },
     "location": "TP Hồ Chí Minh",
     "role": "Nhân sĩ",
-    "spouses": {},
+    "spouses": {
+      "bà Nguyễn Thị Nhơn": 0
+    },
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Văn Duy": 0
+    },
     "children": {},
     "description": "Nhân sĩ ông có các hiệu: Trúc Am, Mộng Liêm, Lục Hà Tẩu. Quê làng Tân Phú, quận Hóc Môn, tỉnh Gia Định (nay thuộc thành phố Hồ Chí Minh), sau dời về quê vợ ở làng Tân Qui Đông, tỉnh Sa Đéc (nay là tỉnh Đồng Tháp)."
   },
@@ -28477,7 +28825,9 @@
     "role": "Chí sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Đoàn Bằng": 0
+    },
     "children": {},
     "description": "Chí sĩ cận đại, ông từng sát cánh với Phan Bội Châu hoạt động cứu nước, không rõ năm sinh, năm mất, quê xã Hành Thiện, tỉnh Nam Định."
   },
@@ -28495,7 +28845,9 @@
     "role": "Chí sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Văn Kiều": 0
+    },
     "children": {},
     "description": "Chí sĩ cận đại, người huyện Thạch Hà, tỉnh Hà Tĩnh hiệu Nghiêu Giang, con Thám hoa Đặng Văn Kiều, đỗ cử nhân năm 1900 nên thường gọi là Cử Đặng. Năm 1904 ông tham gia phong trào Duy tân tại Nghệ tĩnh, có chân trong tổ chức \"Minh xã\" và \"ám xã\" của Ngô Đức Kế và Phan Bội Châu."
   },
@@ -28515,7 +28867,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Đào Nguyên Phổ": 0
+    },
     "description": "Danh sĩ cận đại; quê làng Thượng Phán, huyện Quỳnh Côi, tỉnh Thái Bình, tên cũ là Đào Văn Mại. Ông đỗ cử nhân năm 1884, được bổ làm Huấn đạo huyện Tam Nông, Tri huyện huyện Võ Giàng một thời gian, nhưng bị bãi chức. Sau đó ông vào Huế học ở Quốc tử giám 3 năm."
   },
   {
@@ -28604,7 +28958,9 @@
     "role": "Linh mục công giáo",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Phêrô Đậu Quang Lĩnh": 0
+    },
     "children": {},
     "description": "Linh mục công giáo quê làng Yên Phú, xứ Thọ Ninh, huyện Đức Thọ, tỉnh Hà tĩnh, tục gọi là Cha Chiêu."
   },
@@ -28693,10 +29049,14 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Liệt sĩ",
-    "spouses": {},
+    "spouses": {
+      "Tào Tháo": 0
+    },
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "hai người con trai là Tào Ngang, Tào Thước và một cô con gái là Thanh Hà Trưởng công chúa": 0
+    },
     "description": "Liệt sĩ cận đại, không rõ năm sinh, năm mất, quê tỉnh Thuận Hóa (Huế). Có sách chép tên là Đinh Thị Thoán, các sách khác thì bảo là vợ một võ quan họ Đinh, nên gọi là Đinh phu nhân."
   },
   {
@@ -28821,7 +29181,9 @@
     "role": "nhân sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Giacôbê Nguyễn Ngọc Quang": 0
+    },
     "children": {},
     "description": "Không rõ năm sinh, nhân sĩ yêu nước cận đại, tục gọi là René Quang, còn có tên khác nữa là Hoàng, hay Hoàng Minh Chánh."
   },
@@ -28857,7 +29219,9 @@
     "role": "Nữ liệt sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "ông Đỗ Văn Thạch": 0
+    },
     "children": {},
     "description": "Nữ liệt sĩ cận đại, tên riêng là Chuyên, con thứ ba của chí sĩ Đỗ Văn Viêm, tức Đỗ Chân Thiết, quê làng Thịnh Hào (Đại Li) cách Hà Nội độ một cây số (nằm phía sau đường Hàng Bột)."
   },
@@ -28913,7 +29277,9 @@
     "role": "Liệt sĩ",
     "spouses": {},
     "mother": {},
-    "father": {},
+    "father": {
+      "Đặng Trần Nghiệp": 0
+    },
     "children": {},
     "description": "Liệt sĩ cận đại, tục gọi Kí Con, quê làng Khúc Thủy, huyện Thanh Oai, tỉnh Hà Đông (nay là tỉnh Hà Tây)."
   },
@@ -28967,10 +29333,19 @@
     },
     "location": "Thừa Thiên-Huế",
     "role": "Chí sĩ",
-    "spouses": {},
-    "mother": {},
+    "spouses": {
+      "Diệu Huê": 0,
+      "Kiều Tiên": 0
+    },
+    "mother": {
+      "Đồng Thị Xuân Lan": 0
+    },
     "father": {},
-    "children": {},
+    "children": {
+      "Tiểu Phụng": 0,
+      "Quỳnh Em": 0,
+      "Y Phụng": 0
+    },
     "description": "Chí sĩ cận đại, tự Mậu Lâm, hiệu Minh Phụng, sinh ngày 13-8 năm Giáp thìn (22-9-1904), quê thôn Mậu Tài, xã Phú Mậu, huyện Phú Vang, tỉnh Thừa Thiên."
   },
   {
@@ -29006,7 +29381,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Hà Thị Thúy Hồng": 0
+    },
     "description": "Liệt sĩ cách mạng, quê làng Kim Nặc, huyện Cẩm Xuyên, tỉnh Hà Tĩnh."
   },
   {
@@ -29058,9 +29435,13 @@
     },
     "location": "Không rõ",
     "role": "Chí sĩ",
-    "spouses": {},
+    "spouses": {
+      "Hồ Thị Quỳnh Nga": 0
+    },
     "mother": {},
-    "father": {},
+    "father": {
+      "thầy giáo tiểu học trường làng Hà Văn Phu, còn gọi là thầy Cửu Phu": 0
+    },
     "children": {},
     "description": "Chí sĩ cận đại, nhiệt thành yêu nước, ông gia nhập Việt Nam Quốc dân đảng."
   },
@@ -29079,7 +29460,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Hồ Mỹ Xuyên": 0
+    },
     "description": "Liệt sĩ kháng Pháp, con Án sát Hồ Bá Ôn, quê làng Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An."
   },
   {
@@ -29133,7 +29516,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Hồ Đắc Di": 0
+    },
     "description": "Đại thần đời Duy Tân, xuất thân từ giai cấp nông dân, nhờ sức học trở nên một đại thần và được phong tước. Ông làm quan trải các chức: Đông các điện Đại học sĩ, Lễ bộ Thượng thư, Cơ mật viện đại thần, Tổng tài Quốc sử quán, Tế tửu Quốc tử giám..."
   },
   {
@@ -29167,7 +29552,9 @@
     "location": "Thừa Thiên-Huế",
     "role": "Giám mục",
     "spouses": {},
-    "mother": {},
+    "mother": {
+      "Nguyễn Thị Đào": 0
+    },
     "father": {},
     "children": {},
     "description": "Giám mục Thiên Chúa giáo, tác giả, quê làng Ba Châu, tỉnh Thừa Thiên, tên thánh là Dominique Marie, là giám mục nguời Việt đầu tiên phụ trách giáo phận Bùi Chu."
@@ -29205,7 +29592,9 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {},
+    "children": {
+      "Nguyễn Tất Thành": 0
+    },
     "description": "Nhân sĩ yêu nước cận đại, nguời làng Kế Môn, huyện Phong Điền, tỉnh Thừa Thiên, sau dời vào cư ngụ ở thị xã Phan Thiết tỉnh Bình Thuận."
   },
   {

@@ -121,7 +121,7 @@ public class FigureCrawler implements ICrawler{
 		ArrayList<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		
 		//add details for each figure
-		for (int i=1200;i<1500;i++) {
+		for (int i=1392;i<1394;i++) {
 			HashMap<String, Integer> mother = new HashMap<>();
 			HashMap<String, Integer> father = new HashMap<>();
 			HashMap<String, Integer> children = new HashMap<>();

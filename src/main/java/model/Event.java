@@ -13,20 +13,16 @@ public class Event extends HistoricalEntity{
 	 private String result = "Không rõ";
 	 private HashMap<String, Integer> relatedFigures = new HashMap<>();
 	 
-	 public Event(String eventName, String time, String location, String result, ArrayList<String> relatedFigures) {
+	 public Event(String eventName, String time, String location, String result, ArrayList<String> relatedFigures, String description) {
 		 this.id = ++numEvents;
 		 this.name = eventName;
 		 this.time = time;
 		 this.location = location;
 		 this.result = result;
+		 this.description = description;
 		 for (String figure : relatedFigures) {
 			 this.relatedFigures.put(figure, 0);
 		 }
 	 }
 	 
-	 public Event(String eventName, String time) {
-		 this.id = ++numEvents;
-		 this.name = eventName;
-		 this.time = time;
-	 }
 }
