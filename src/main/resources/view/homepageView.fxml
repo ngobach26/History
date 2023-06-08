@@ -8,23 +8,23 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="950.0" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
                 <Menu mnemonicParsing="false" text="Contact">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Forum">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Term of service">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
             </menus>
@@ -35,13 +35,13 @@
     </left>
     <center>
         <Pane prefHeight="530.0" prefWidth="506.0" BorderPane.alignment="CENTER">
-            <children>
-                <ImageView fitHeight="515.0" fitWidth="199.0" layoutX="130.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../img/thuphap.png" />
-                    </image>
-                </ImageView>
-            </children>
+         <children>
+            <ImageView fitHeight="403.0" fitWidth="313.0" layoutX="286.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/DaiVietSuKyToanThukanji.png" />
+               </image>
+            </ImageView>
+         </children>
         </Pane>
     </center>
 </BorderPane>

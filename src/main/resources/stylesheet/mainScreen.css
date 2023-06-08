@@ -1,5 +1,9 @@
 .background {
-    -fx-background-image: url("../img/vn.jpg");
+    -fx-background-image: url("../img/bg1.png");
+    -fx-background-color: transparent;
+}
+.titlebar {
+    -fx-background-image: url("../img/viewbg.jpg");
     -fx-background-color: transparent;
 }
 
