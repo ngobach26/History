@@ -12,23 +12,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.festivalViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="titlebar" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.festivalViewController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
                 <Menu mnemonicParsing="false" text="Contact">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Forum">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Term of service">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
             </menus>
@@ -38,7 +38,7 @@
         <fx:include fx:id="sideBar" source="sideBar.fxml" />
     </left>
     <center>
-        <VBox BorderPane.alignment="CENTER" alignment="CENTER">
+        <VBox alignment="CENTER" styleClass="thumb" stylesheets="@../stylesheet/mainScreen.css" BorderPane.alignment="CENTER">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="636.0" text="LỄ HỘI VĂN HÓA" textAlignment="CENTER">
                     <font>
@@ -51,7 +51,7 @@
                 <fx:include fx:id="searchBar" source="searchBar.fxml" />
                 <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                     <children>
-                        <TableView fx:id="fesTable" stylesheets="@../stylesheet/mainScreen.css" HBox.hgrow="ALWAYS">
+                        <TableView fx:id="fesTable" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" HBox.hgrow="ALWAYS">
                             <columns>
                                 <TableColumn fx:id="colFesId" prefWidth="75.0" text="Mã" />
                                 <TableColumn fx:id="colFesName" prefWidth="150.0" text="Tên" />

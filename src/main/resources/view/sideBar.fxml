@@ -15,7 +15,7 @@
             <image>
                 <Image url="@../img/logo_soict_hust.png" />
             </image></ImageView>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#mainSwitch" style="-fx-background-color: #80002b;" text="MÀN HÌNH CHÍNH" textAlignment="CENTER" textFill="#faf5f5">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#mainSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="MÀN HÌNH CHÍNH" textAlignment="CENTER" textFill="#faf5f5">
             <VBox.margin>
                 <Insets />
             </VBox.margin>
@@ -29,7 +29,7 @@
             <Glow />
          </effect>
         </Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#figuresSwitch" style="-fx-background-color: #80002b;" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER" textFill="#f7f4f4">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#figuresSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="NHÂN VẬT LỊCH SỬ" textAlignment="CENTER" textFill="#f7f4f4">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -39,7 +39,7 @@
          <effect>
             <Glow />
          </effect></Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#placeSwitch" prefWidth="204.0" style="-fx-background-color: #80002b;" text="DANH LAM THẮNG CẢNH " textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#placeSwitch" prefWidth="204.0" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="DANH LAM THẮNG CẢNH " textAlignment="CENTER" textFill="#fcfafa">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -49,7 +49,7 @@
          <effect>
             <Glow />
          </effect></Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#erasSwitch" style="-fx-background-color: #80002b;" text="VIỆT SỬ GIAI THOẠI " textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#erasSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="VIỆT SỬ GIAI THOẠI " textAlignment="CENTER" textFill="#fcfafa">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -59,7 +59,7 @@
          <effect>
             <Glow />
          </effect></Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#eventsSwitch" style="-fx-background-color: #80002b;" text="SỰ KIỆN TIÊU BIỂU " textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#eventsSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="SỰ KIỆN TIÊU BIỂU " textAlignment="CENTER" textFill="#fcfafa">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -69,7 +69,7 @@
          <effect>
             <Glow />
          </effect></Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#festivalsSwitch" style="-fx-background-color: #80002b;" text="LỄ HỘI VĂN HÓA" textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#festivalsSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="LỄ HỘI VĂN HÓA" textAlignment="CENTER" textFill="#fcfafa">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -79,7 +79,7 @@
          <effect>
             <Glow />
          </effect></Button>
-        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#aboutusSwitch" style="-fx-background-color: #80002b;" text="VỀ CHÚNG TÔI " textAlignment="CENTER" textFill="#fcfafa">
+        <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#aboutusSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="VỀ CHÚNG TÔI " textAlignment="CENTER" textFill="#fcfafa">
             <font>
                 <Font name="Gill Sans MT" size="15.0" />
             </font>
@@ -90,7 +90,7 @@
             <Glow />
          </effect>
         </Button>
-      <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#exitSwitch" style="-fx-background-color: #80002b;" text="THOÁT" textAlignment="CENTER" textFill="#fcfafa">
+      <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#exitSwitch" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="THOÁT" textAlignment="CENTER" textFill="#fcfafa">
          <font>
             <Font name="Gill Sans MT" size="15.0" />
          </font>

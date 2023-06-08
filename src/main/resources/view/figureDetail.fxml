@@ -19,17 +19,17 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Contact">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Forum">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Term of service">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="no" />
                     </items>
                 </Menu>
             </menus>
