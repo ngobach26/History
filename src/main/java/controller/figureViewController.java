@@ -31,23 +31,23 @@ public class figureViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         colFigureId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colFigureName.setCellFactory(column -> {
-            TableCell<Figure, ArrayList<String>> cell = new TableCell<Figure, ArrayList<String>>() {
-                @Override
-                protected void updateItem(ArrayList<String> names, boolean empty) {
-                    super.updateItem(names, empty);
+        // colFigureName.setCellFactory(column -> {
+        //     TableCell<Figure, ArrayList<String>> cell = new TableCell<Figure, ArrayList<String>>() {
+        //         @Override
+        //         protected void updateItem(ArrayList<String> names, boolean empty) {
+        //             super.updateItem(names, empty);
 
-                    if (names == null || empty) {
-                        setText(null);
-                    } else {
-                        String namesString = String.join(", ", names);
-                        setText(namesString);
-                    }
-                }
-            };
-            return cell;
-        });
-        colFigureName.setCellValueFactory(new PropertyValueFactory<>("names"));
+        //             if (names == null || empty) {
+        //                 setText(null);
+        //             } else {
+        //                 String namesString = String.join(", ", names);
+        //                 setText(namesString);
+        //             }
+        //         }
+        //     };
+        //     return cell;
+        // });
+        colFigureName.setCellValueFactory(new PropertyValueFactory<>("name"));
         
         colFigureEra.setCellFactory(column -> {
             TableCell<Figure, HashMap<String, Integer>> cell = new TableCell<Figure, HashMap<String, Integer>>() {

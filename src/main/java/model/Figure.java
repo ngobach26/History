@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 public class Figure extends HistoricalEntity {
 	private static int numFigures = 0;
+	private ArrayList<String> otherNames;
 	private String bornYear;
 	private String diedYear;
 	private HashMap<String, Integer> eras = new HashMap<>();
@@ -16,10 +17,10 @@ public class Figure extends HistoricalEntity {
 	private HashMap<String, Integer> children = new HashMap<>();
 	private String description;
 
-	public Figure(int id, ArrayList<String> names, String bornYear, String diedYear, HashMap<String, Integer> eras,
+	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
 			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
 			HashMap<String, Integer> father, HashMap<String, Integer> children, String description) {
-		super(id, names);
+		super(id, name);
 		this.bornYear = bornYear;
 		this.diedYear = diedYear;
 		this.eras = eras;
@@ -120,10 +121,19 @@ public class Figure extends HistoricalEntity {
 		this.description = description;
 	}
 
+	public ArrayList<String> getOtherNames() {
+		return otherNames;
+	}
+
+	public void setOtherNames(ArrayList<String> otherNames) {
+		this.otherNames = otherNames;
+	}
+	
+
 	public String getEraString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
-		if(eras.isEmpty()){
+		if (eras.isEmpty()) {
 			return "không rõ";
 		}
 		for (String era : eras.keySet()) {
@@ -137,7 +147,7 @@ public class Figure extends HistoricalEntity {
 	public String getMotherString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
-		if(mother.isEmpty()){
+		if (mother.isEmpty()) {
 			return "không rõ";
 		}
 		for (String mo : mother.keySet()) {
@@ -151,7 +161,7 @@ public class Figure extends HistoricalEntity {
 	public String getfatherString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
-		if(father.isEmpty()){
+		if (father.isEmpty()) {
 			return "không rõ";
 		}
 		for (String fa : father.keySet()) {
@@ -165,7 +175,7 @@ public class Figure extends HistoricalEntity {
 	public String getChildrenString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
-		if(children.isEmpty()){
+		if (children.isEmpty()) {
 			return "không rõ";
 		}
 		for (String ch : children.keySet()) {
@@ -179,7 +189,7 @@ public class Figure extends HistoricalEntity {
 	public String getSpouseString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
-		if(spouses.isEmpty()){
+		if (spouses.isEmpty()) {
 			return "không rõ";
 		}
 		for (String sp : spouses.keySet()) {

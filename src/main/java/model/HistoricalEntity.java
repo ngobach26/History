@@ -1,14 +1,12 @@
 package model;
 
-import java.util.ArrayList;
-
 public class HistoricalEntity {
     protected int id;
-    protected ArrayList<String> names;
+    protected String name;
 
-    public HistoricalEntity(int id, ArrayList<String> names) {
+    public HistoricalEntity(int id, String name) {
         this.id = id;
-        this.names = names;
+        this.name = name;
     }
 
     public int getId() {
@@ -19,12 +17,12 @@ public class HistoricalEntity {
         this.id = id;
     }
 
-    public ArrayList<String> getNames() {
-        return names;
+    public String getName() {
+        return name;
     }
 
-    public void setNames(ArrayList<String> names) {
-        this.names = names;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -39,36 +37,26 @@ public class HistoricalEntity {
         if (id != other.id)
             return false;
 
-        if (names == null && other.names == null)
+        if (name == null && other.name == null)
             return true;
 
-        if (names == null || other.names == null || names.size() != other.names.size())
+        if (name == null || other.name == null || !name.equalsIgnoreCase(other.name))
             return false;
-
-        for (int i = 0; i < names.size(); i++) {
-            if (!names.get(i).equals(other.names.get(i)))
-                return false;
-        }
 
         return true;
     }
 
-    public boolean containName(String name) {
-        if (names == null || name == null)
+    public boolean containsName(String name) {
+        if (name == null)
             return false;
-    
-        for (int i = 0; i < names.size(); i++) {
-            if (names.get(i).toLowerCase().contains(name.toLowerCase()))
-                return true;
-        }
-    
-        return false;
+
+        if (this.name == null)
+            return false;
+
+        return this.name.toLowerCase().contains(name.toLowerCase());
     }
 
-    public boolean containID(int id) {
-        return Integer.toString(this.getId()).contains(Integer.toString(id));
+    public boolean containsID(int id) {
+        return this.id == id;
     }
-
-    
-
 }

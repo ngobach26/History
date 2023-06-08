@@ -13,8 +13,7 @@ public class Festival extends HistoricalEntity{
 
 
     public Festival(String name, String location, String firstTime, String startingDay, ArrayList<String> relatedFigures) {
-        this.id = ++numFes;
-        this.name = name;
+        super(++numFes, name);
         this.location = location;
         this.firstTime = firstTime;
         this.startingDay = startingDay;

@@ -17,11 +17,11 @@ public class EntityCollection<T extends HistoricalEntity> {
         return this.data;
     }
 
-    public FilteredList<T> searchByName(String name){
-        return new FilteredList<>(data, entity -> entity.containName(name));
+    public FilteredList<T> searchByName(String name) {
+        return new FilteredList<>(data, entity -> entity.containsName(name));
     }
 
-    public FilteredList<T> searchByID(int id){
-        return new FilteredList<>(data, entity -> entity.containID(id));
+    public FilteredList<T> searchByID(int id) {
+        return new FilteredList<>(data, entity -> entity.containsID(id));
     }
 }

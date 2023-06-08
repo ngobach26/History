@@ -11,8 +11,7 @@ public class Relic extends HistoricalEntity{
     private String overView;
 
     public Relic(String name, String location, String category, String approvedYear, String overView) {
-        this.id = ++numRelic;
-        this.name = name;
+        super(++numRelic, name);
         this.location = location;
         this.category = category;
         this.approvedYear = approvedYear;

@@ -48,10 +48,10 @@ public class figureDetailController {
     }
 
     public void setFigure(Figure figure) {
-        nameText.setText(figure.getNames().get(0));
-        realNameText.setText(figure.getNames().get(0));
-        for (int i = 1; i < figure.getNames().size();i++) {
-            Text aliasText = new Text(figure.getNames().get(i));
+        nameText.setText(figure.getName());
+        realNameText.setText(figure.getName());
+        for (String f : figure.getOtherNames()) {
+            Text aliasText = new Text(f);
             aliasFlowPane.getChildren().add(aliasText);
         }
         bornText.setText(figure.getBornYear());
