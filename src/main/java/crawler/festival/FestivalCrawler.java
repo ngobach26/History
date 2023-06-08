@@ -89,7 +89,7 @@ public class FestivalCrawler implements ICrawler{
 
         return festivals;
     }
-
+    
     public static void main(String[] args) {
         FestivalCrawler festivalCrawler = new FestivalCrawler();
         festivalCrawler.crawl();
