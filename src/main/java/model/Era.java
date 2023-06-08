@@ -12,14 +12,15 @@ public class Era extends HistoricalEntity{
 	private HashMap<String, Integer> kings = new HashMap<>();
 	private String description;
 //	private String nation;
-//	private String capital;
+	private String capital;
 	
-	public Era(String eraName, String startYear, String endYear, String description, ArrayList<String> kings) {
+	public Era(String eraName, String startYear, String endYear, String description,String capital, ArrayList<String> kings) {
 		this.id = ++numEras;
 		this.name = eraName;
 		this.startYear = startYear;
 		this.endYear = endYear;
 		this.description = description;
+		this.capital = capital;
 		for (String king : kings) {
 			this.kings.put(king, 0);
 		}
