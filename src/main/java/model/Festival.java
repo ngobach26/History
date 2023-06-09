@@ -4,8 +4,6 @@ import java.util.HashMap;
 
 public class Festival extends HistoricalEntity{
     private static int numFes = 0;
-    private int id;
-    private String name;
     private String location;
     private String firstTime;
     private String startingDay;
@@ -20,5 +18,44 @@ public class Festival extends HistoricalEntity{
         for (String figure : relatedFigures) {
         	this.relatedFigures.put(figure,0); 
         }
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+
+    public String getFirstTime() {
+        return firstTime;
+    }
+
+
+    public void setFirstTime(String firstTime) {
+        this.firstTime = firstTime;
+    }
+
+
+    public String getStartingDay() {
+        return startingDay;
+    }
+
+
+    public void setStartingDay(String startingDay) {
+        this.startingDay = startingDay;
+    }
+
+
+    public HashMap<String, Integer> getRelatedFigures() {
+        return relatedFigures;
+    }
+
+
+    public void setRelatedFigures(HashMap<String, Integer> relatedFigures) {
+        this.relatedFigures = relatedFigures;
     }
 }

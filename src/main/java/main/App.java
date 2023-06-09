@@ -1,16 +1,17 @@
 package main;
 
 import javafx.application.Application;
-import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import collection.EraCollection;
 import collection.EventCollection;
+import collection.FestivalCollection;
 import collection.FigureCollection;
+import collection.RelicCollection;
 
 public class App extends Application {
     private static Scene scene;
@@ -40,6 +41,9 @@ public class App extends Application {
     private static void loadData(){
         FigureCollection.loadJson();
         EventCollection.loadJson();
+        FestivalCollection.loadJson();
+        EraCollection.loadJson();
+        RelicCollection.loadJson();
     }
 
     public static void main(String[] args) {

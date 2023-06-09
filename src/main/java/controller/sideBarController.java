@@ -9,10 +9,6 @@ import java.io.IOException;
 
 public class sideBarController {
 
-
-    public static void switchByGetFxml(String path, ActionEvent event) throws IOException {
-    }
-
     @FXML
     void mainSwitch(ActionEvent event) throws IOException {
         App.setRoot("homepageView");

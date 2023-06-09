@@ -1,30 +1,30 @@
 package model;
 
-public class Era{
+public class Era extends HistoricalEntity{
 	private static int numEras = 0;
-	private int id;
-	private String name;
 	private String startYear;
 	private String endYear;
-//	private List<String> kings;
-//	private String nation;
-	private String capital;
 	
 	public Era(String name, String startYear, String endYear) {
-		this.id = ++numEras;
-		this.name = name;
+		super(++numEras, name);
 		this.startYear = startYear;
 		this.endYear = endYear;
-//		this.kings = kings;
-//		this.nation = nation;
-//		this.capital = capital;
+	}
+
+	public String getStartYear() {
+		return startYear;
+	}
+
+	public void setStartYear(String startYear) {
+		this.startYear = startYear;
+	}
+
+	public String getEndYear() {
+		return endYear;
+	}
+
+	public void setEndYear(String endYear) {
+		this.endYear = endYear;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setCapital(String capital) {
-		this.capital = capital;
-	}
 }
