@@ -26,14 +26,14 @@ public class EventCrawler implements ICrawler{
 	
 	@Override
 	public void crawl() {
-		ArrayList<Event> events = new ArrayList<>();
+		List<Event> events = new ArrayList<>();
 		events = crawlNguoiKeSu();
 		events.addAll(crawlWiki());
 		eventIO.writeJson(events, "src/main/resources/json/Events.json");
 	}
 	
-	public ArrayList<Event> crawlNguoiKeSu(){
-		ArrayList<Event> events = new ArrayList<>();
+	public List<Event> crawlNguoiKeSu(){
+		List<Event> events = new ArrayList<>();
 		String url ="https://nguoikesu.com/tu-lieu/quan-su?start=";
 		Document doc;
 		
@@ -51,7 +51,7 @@ public class EventCrawler implements ICrawler{
 					String location = "Không rõ";
 					String result = "Không rõ";
 					String description = "Không rõ";
-					ArrayList<String> relatedFigures = new ArrayList<>();
+					List<String> relatedFigures = new ArrayList<>();
 					
 					//crawl eventName
 					Element header = eventDoc.selectFirst(".page-header h1");
@@ -124,8 +124,8 @@ public class EventCrawler implements ICrawler{
 		return events;
 	}
 	
-	public ArrayList<Event> crawlWiki(){
-		ArrayList<Event> events = new ArrayList<>();
+	public List<Event> crawlWiki(){
+		List<Event> events = new ArrayList<>();
 		Document doc;
 		
 		try {
@@ -180,7 +180,7 @@ public class EventCrawler implements ICrawler{
 		String location = "Không rõ";
 		String result = "Không rõ";
 		String description = "Không rõ";
-		ArrayList<String> relatedFigures = new ArrayList<>();
+		List<String> relatedFigures = new ArrayList<>();
 		
 		String link = "";
 		for (Element aTag : aTags) {

@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.google.gson.reflect.TypeToken;
@@ -26,9 +24,9 @@ public class FestivalCrawler implements ICrawler{
 		festivalIO.writeJson(crawlWiki(), "src/main/resources/json/Festivals.json");
 	}
 
-    public ArrayList<Festival> crawlWiki() {
+    public List<Festival> crawlWiki() {
         Document doc;
-        ArrayList<Festival> festivals = new ArrayList<>();
+        List<Festival> festivals = new ArrayList<>();
 
         try {
             String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam?fbclid=IwAR1Qp43JccDCCImhhHwycn6jRup0POXf_qq-doZ4AuPtLRorscpvjYdaQYs", StandardCharsets.UTF_8.name());
@@ -47,7 +45,7 @@ public class FestivalCrawler implements ICrawler{
                 String startingDay = cells.get(0).text();
                 String location = cells.get(1).text();
                 String tempString = cells.get(4).text();
-                ArrayList<String> relatedFigures = new ArrayList<>();
+                List<String> relatedFigures = new ArrayList<>();
 
                 //Default
                 if (name.isEmpty()) name = "Không rõ";

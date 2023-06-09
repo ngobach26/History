@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
@@ -29,10 +30,9 @@ public class EraCrawler implements ICrawler{
 	}
 	
 	
-	public ArrayList<Era> crawlVanSu(){
-		ArrayList<Era> eras = new ArrayList<>();
+	public List<Era> crawlVanSu(){
+		List<Era> eras = new ArrayList<>();
 		String url = "https://vansu.vn/viet-nam/nien-bieu-lich-su";
-		HashSet<String> eraNames = new FigureCrawler().getUniqueEras();
 		Document doc;
 		
 		try {
@@ -67,7 +67,7 @@ public class EraCrawler implements ICrawler{
 		String endYear = "Không rõ";
 		String description = "";
 		String capital = "Không rõ";
-		ArrayList<String> kings = new ArrayList<>();
+		List<String> kings = new ArrayList<>();
 		
 		//extract startYear, endYear from eraName
 		String stringArr[] = eraName.split("\\(");
@@ -81,7 +81,7 @@ public class EraCrawler implements ICrawler{
 		}
 		
 		//eraNames standardization between Figures.json and Eras.json
-		HashSet<String> eraNames = new FigureCrawler().getUniqueEras();
+		Set<String> eraNames = new FigureCrawler().getUniqueEras();
 		for (String newName : eraNames) {
 			if (newName.contains(startYear) && newName.contains(endYear)) {
 				eraName = newName;
@@ -90,7 +90,7 @@ public class EraCrawler implements ICrawler{
 		}
 		
 		//crawl capital
-		ArrayList<Capital> eraCapitals = crawlCapital();
+		List<Capital> eraCapitals = crawlCapital();
 		if (!eraName.equals("Thời tiền sử")) {
 			int startYearInt = convertYearStringToInt(startYear);
 			int endYearInt = convertYearStringToInt(endYear);
@@ -136,10 +136,10 @@ public class EraCrawler implements ICrawler{
         return pattern.matcher(text).find();
     }
 	
-	public ArrayList<Capital> crawlCapital() {
+	public List<Capital> crawlCapital() {
 		String url = "https://quynhluu2.edu.vn/Giao-vien/DANH-SACH-CAC-KINH-DO-THU-DO-CUA-VIET-NAM-765.html";
 		Document doc;
-		ArrayList<Capital> eraCapitals = new ArrayList<>();
+		List<Capital> eraCapitals = new ArrayList<>();
 		
 		try {
 			doc = Jsoup.connect(url).get();
@@ -197,7 +197,7 @@ public class EraCrawler implements ICrawler{
 	
 	public static void main(String[] args) {
 		EraCrawler eraCrawler = new EraCrawler();
-		eraCrawler.crawlVanSu();
+		eraCrawler.crawl();
 	}
 }
 

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,9 +25,9 @@ public class RelicCrawler implements ICrawler {
         relicIO.writeJson(crawlWiki(), "src/main/resources/json/Relics.json");
     }
     
-    public ArrayList<Relic> crawlWiki() {
+    public List<Relic> crawlWiki() {
         Document doc;
-        ArrayList<Relic> relics = new ArrayList<>();
+        List<Relic> relics = new ArrayList<>();
         
         try {
         	String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_Di_t%C3%ADch_qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam", StandardCharsets.UTF_8.name());
@@ -44,15 +45,15 @@ public class RelicCrawler implements ICrawler {
                         String location = cells.get(2).text();
                         String category = "Không rõ";
                         String approvedYear = "Không rõ";
-                        String overView = cells.get(3).text();
+                        String description = cells.get(3).text();
 
                         //Add relic
-                        relics.add(new Relic(name, location, category, approvedYear, overView));
+                        relics.add(new Relic(name, location, category, approvedYear, description));
                         System.out.println(name);
                         System.out.println(location);
                         System.out.println(category);
                         System.out.println(approvedYear);
-                        System.out.println(overView);                 
+                        System.out.println(description);                 
                         System.out.println("-------------");
                     }
                     continue;
@@ -68,7 +69,7 @@ public class RelicCrawler implements ICrawler {
                         String location = cells.get(1).text();
                         String category = cells.get(2).text();
                         String approvedYear = cells.get(3).text();
-                        String overView = "Không rõ";
+                        String description = "Không rõ";
 
                         if (name.isEmpty()) name = "Không rõ";
                         if (location.isEmpty()) location = "Không rõ";
@@ -76,12 +77,12 @@ public class RelicCrawler implements ICrawler {
                         if (approvedYear.isEmpty()) approvedYear = "Không rõ";
 
                         //Add relic
-                        relics.add(new Relic(name, location, category, approvedYear, overView));
+                        relics.add(new Relic(name, location, category, approvedYear, description));
                         System.out.println(name);
                         System.out.println(location);
                         System.out.println(category);
                         System.out.println(approvedYear);
-                        System.out.println(overView);                 
+                        System.out.println(description);                 
                         System.out.println("-------------");
                     } catch (IndexOutOfBoundsException e) {
                         e.printStackTrace();

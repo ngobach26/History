@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -17,7 +18,7 @@ public class JsonIO<T>{
 		this.type = type;
 	}
 	
-	public void writeJson(ArrayList<T> list, String path) {
+	public void writeJson(List<T> list, String path) {
 		try (FileWriter fileWriter = new FileWriter(path)){
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			fileWriter.write(gson.toJson(list));
@@ -27,8 +28,8 @@ public class JsonIO<T>{
 		}	
 	}
 
-	public ArrayList<T> loadJson(String path) {
-		ArrayList<T> list = null;
+	public List<T> loadJson(String path) {
+		List<T> list = null;
 		try (FileReader fileReader = new FileReader(path)){
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			list = gson.fromJson(fileReader, type);
