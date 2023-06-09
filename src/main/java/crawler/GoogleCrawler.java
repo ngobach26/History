@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -34,8 +35,8 @@ public class GoogleCrawler {
 		return result;
 	}
 	
-	public static ArrayList<String> advancedCrawl(String text) {
-		ArrayList<String> results = new ArrayList<>();
+	public static List<String> advancedCrawl(String text) {
+		List<String> results = new ArrayList<>();
 		try {
 			String url = URLDecoder.decode("https://www.google.com/search?q=" + text, StandardCharsets.UTF_8.name());
 
