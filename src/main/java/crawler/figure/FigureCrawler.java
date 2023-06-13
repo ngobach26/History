@@ -189,11 +189,21 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	
+	public Set<String> getUniqueSurnames() {
+		Set<String> surnames = new HashSet<>();
+		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		for (Figure figure : figures) {
+			surnames.add((figure.getName().split("\\s+"))[0]);
+//			for (String otherName : figure.getOtherNames()) {
+//				surnames.add((otherName.split("\\s+"))[0]);
+//			}
+		}
+		return surnames;
+	}
 	public static void main(String[] args) {
 		FigureCrawler figureCrawler = new FigureCrawler();
-		figureCrawler.crawl();
-		System.out.println(figureCrawler.getUniqueEras());
+//		figureCrawler.crawl();
+		System.out.println(figureCrawler.getUniqueSurnames());
 	}
 	
 }
