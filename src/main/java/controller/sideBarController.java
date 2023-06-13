@@ -54,4 +54,7 @@ public class sideBarController {
     public void exitSwitch(ActionEvent event) throws IOException {
         Platform.exit();
     }
+
+    public void searchSwitch(ActionEvent actionEvent) {
+    }
 }

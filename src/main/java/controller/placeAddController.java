@@ -1,2 +1,4 @@
-package controller;public class placeAddController {
+package controller;
+
+public class placeAddController {
 }

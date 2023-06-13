@@ -1,2 +1,4 @@
-package controller;public class figureAddController {
+package controller;
+
+public class figureAddController {
 }

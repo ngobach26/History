@@ -1,2 +1,4 @@
-package controller;public class festivalAddController {
+package controller;
+
+public class festivalAddController {
 }

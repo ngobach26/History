@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.figureDetailController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.figureDetailController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -39,7 +40,7 @@
         <fx:include fx:id="sideBar" source="sideBar.fxml" />
     </left>
     <center>
-        <VBox styleClass="background" stylesheets="@../stylesheet/mainScreen.css" BorderPane.alignment="CENTER">
+        <VBox BorderPane.alignment="CENTER">
             <children>
                 <HBox />
                 <HBox alignment="CENTER">
@@ -143,7 +144,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Thời gian tại chức">
+                                        <Label text="Loại nhân vật">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -175,6 +176,24 @@
                                 </VBox>
                             </children>
                         </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefHeight="18.0" prefWidth="176.0">
+                           <children>
+                              <Label text="Nơi ở">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fx:id="locText" strokeType="OUTSIDE" strokeWidth="0.0" text="locationText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                         <HBox layoutX="10.0" layoutY="490.0">
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
@@ -215,7 +234,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Tiền nhiệm">
+                                        <Label text="Vợ/Chồng">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -224,7 +243,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="precededText" strokeType="OUTSIDE" strokeWidth="0.0" text="precededText" wrappingWidth="368.5367126464844" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="spouseText" strokeType="OUTSIDE" strokeWidth="0.0" text="spouseText" wrappingWidth="368.5367126464844" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -233,7 +252,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Kế nhiệm">
+                                        <Label text="Con">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -247,16 +266,27 @@
                                 </VBox>
                             </children>
                         </HBox>
+                  <Button mnemonicParsing="false" onAction="#onDeleteInfo" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #db1637;" text="Delete information (Be careful)" textFill="#fafafa">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                     <font>
+                        <Font name="Gill Sans MT" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                     </children>
                     <VBox.margin>
                         <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                     </VBox.margin>
                 </VBox>
-                <Button mnemonicParsing="false" onAction="#onClickBack" text="Go Back">
-                    <font>
-                        <Font name="Gill Sans MT" size="12.0" />
-                    </font>
-                </Button>
             </children>
             <BorderPane.margin>
                 <Insets />

@@ -1,2 +1,8 @@
-package controller;public class eraAddController {
+package controller;
+
+import javafx.event.ActionEvent;
+
+public class eraAddController {
+    public void onClickBack(ActionEvent actionEvent) {
+    }
 }
