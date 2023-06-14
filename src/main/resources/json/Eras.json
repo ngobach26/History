@@ -3,6 +3,7 @@
     "startYear": "Không rõ",
     "endYear": "Không rõ",
     "kings": {},
+    "nationNames": [],
     "capital": "Không rõ",
     "id": 1,
     "name": "Thời tiền sử",
@@ -12,6 +13,9 @@
     "startYear": "2000 trCN",
     "endYear": "258 trCN",
     "kings": {},
+    "nationNames": [
+      "Văn Lang"
+    ],
     "capital": "Phong Châu (Phú Thọ)",
     "id": 2,
     "name": "Thời kỳ dựng nước (2000 - 258 trCN)",
@@ -21,6 +25,9 @@
     "startYear": "257 trCN",
     "endYear": "208 trCN",
     "kings": {},
+    "nationNames": [
+      "Âu Lạc"
+    ],
     "capital": "Cổ Loa",
     "id": 3,
     "name": "Nhà Thục (257- 208 trCN)",
@@ -30,6 +37,11 @@
     "startYear": "207 trCN",
     "endYear": "39",
     "kings": {},
+    "nationNames": [
+      "Âu Lạc",
+      "Nam Việt",
+      "Giao Chỉ"
+    ],
     "capital": "Không rõ",
     "id": 4,
     "name": "Bắc thuộc lần 1 (207 trCN - 39)",
@@ -39,6 +51,9 @@
     "startYear": "40",
     "endYear": "43",
     "kings": {},
+    "nationNames": [
+      "Lĩnh Nam"
+    ],
     "capital": "Mê Linh (Vĩnh Phúc)",
     "id": 5,
     "name": "Trưng Nữ Vương (40-43)",
@@ -48,6 +63,10 @@
     "startYear": "43",
     "endYear": "542",
     "kings": {},
+    "nationNames": [
+      "Giao Chỉ",
+      "Giao Châu"
+    ],
     "capital": "Không rõ",
     "id": 6,
     "name": "Bắc thuộc lần 2 (43-542)",
@@ -62,6 +81,9 @@
       "Hậu Lý Nam Đế": 0,
       "Triệu Việt Vương": 0
     },
+    "nationNames": [
+      "Vạn Xuân"
+    ],
     "capital": "Long Biên",
     "id": 7,
     "name": "Nhà Tiền Lý, Triệu (544-602)",
@@ -71,6 +93,13 @@
     "startYear": "603",
     "endYear": "939",
     "kings": {},
+    "nationNames": [
+      "Giao Châu",
+      "An Nam",
+      "Trấn Nam",
+      "An Nam",
+      "Tĩnh Hải quân"
+    ],
     "capital": "Không rõ",
     "id": 8,
     "name": "Bắc thuộc lần lần 3 (603-939)",
@@ -85,6 +114,9 @@
       "Dương Đình Nghệ": 0,
       "Khúc Hạo": 0
     },
+    "nationNames": [
+      "Tĩnh Hải quân"
+    ],
     "capital": "Đại La",
     "id": 9,
     "name": "Xây nền tự chủ (905 - 938)",
@@ -97,6 +129,9 @@
       "Hậu Ngô Vương": 0,
       "Ngô Vương": 0
     },
+    "nationNames": [
+      "Tĩnh Hải quân"
+    ],
     "capital": "Loa Thành",
     "id": 10,
     "name": "Nhà Ngô (939-965)",
@@ -106,6 +141,9 @@
     "startYear": "968",
     "endYear": "980",
     "kings": {},
+    "nationNames": [
+      "Đại Cồ Việt"
+    ],
     "capital": "Hoa Lư (Ninh Bình)",
     "id": 11,
     "name": "Nhà Đinh (968-980)",
@@ -119,6 +157,9 @@
       "Lê Đại Hành": 0,
       "Lê Trung Tông": 0
     },
+    "nationNames": [
+      "Đại Cồ Việt"
+    ],
     "capital": "Hoa Lư (Ninh Bình)",
     "id": 12,
     "name": "Nhà Tiền Lê (980-1009)",
@@ -138,6 +179,10 @@
       "Lý Chiêu Hoàng": 0,
       "Lý Cao Tông": 0
     },
+    "nationNames": [
+      "Đại Cồ Việt",
+      "Đại Việt"
+    ],
     "capital": "Thăng Long",
     "id": 13,
     "name": "Nhà Lý (1010-1225)",
@@ -160,6 +205,9 @@
       "Trần Thái Tông": 0,
       "Trần Dụ Tông": 0
     },
+    "nationNames": [
+      "Đại Việt"
+    ],
     "capital": "Thăng Long",
     "id": 14,
     "name": "Nhà Trần (1225-1400)",
@@ -172,6 +220,9 @@
       "Hồ Hán Thương": 0,
       "Hồ Quý Ly": 0
     },
+    "nationNames": [
+      "Đại Ngu"
+    ],
     "capital": "Tây Đô (Thanh Hóa)",
     "id": 15,
     "name": "Nhà Hồ (1400-1407)",
@@ -184,6 +235,9 @@
       "Trùng Quang Đế": 0,
       "Giản Định Đế": 0
     },
+    "nationNames": [
+      "Giao Chỉ"
+    ],
     "capital": "Không rõ",
     "id": 16,
     "name": "Hậu Trần (1407-1413)",
@@ -193,6 +247,9 @@
     "startYear": "1414",
     "endYear": "1427",
     "kings": {},
+    "nationNames": [
+      "Giao Chỉ"
+    ],
     "capital": "Không rõ",
     "id": 17,
     "name": "Thuộc Minh (1414-1427)",
@@ -213,6 +270,9 @@
       "Lê Nhân Tông": 0,
       "Lê Hiến Tông": 0
     },
+    "nationNames": [
+      "Đại Việt"
+    ],
     "capital": "Đông Đô / Thăng Long",
     "id": 18,
     "name": "Triều Lê Sơ (1428-1527)",
@@ -236,6 +296,9 @@
       "Bình An Vương": 0,
       "Lê Trung Tông": 0
     },
+    "nationNames": [
+      "Đại Việt"
+    ],
     "capital": "Đông Đô / Thăng Long",
     "id": 19,
     "name": "Nam - Bắc Triều (1527-1592)",
@@ -276,6 +339,9 @@
       "Nguyễn Phúc Thái": 0,
       "Điện Đô Vương": 0
     },
+    "nationNames": [
+      "Đại Việt"
+    ],
     "capital": "Đông Đô / Thăng Long",
     "id": 20,
     "name": "Trịnh - Nguyễn (1533-1788)",
@@ -289,6 +355,9 @@
       "Hoàng đế Quang Trung": 0,
       "Thái Đức Hoàng Đế": 0
     },
+    "nationNames": [
+      "Đại Việt"
+    ],
     "capital": "Không rõ",
     "id": 21,
     "name": "Nhà Tây Sơn (1778-1802)",
@@ -303,6 +372,11 @@
       "Tự Đức": 0,
       "Minh Mạng": 0
     },
+    "nationNames": [
+      "Đại Việt",
+      "Việt Nam",
+      "Đại Nam"
+    ],
     "capital": "Huế",
     "id": 22,
     "name": "Nhà Nguyễn độc lập (1802-1883)",
@@ -322,6 +396,10 @@
       "Khải Định": 0,
       "Duy Tân": 0
     },
+    "nationNames": [
+      "Đại Nam",
+      "Đông Dương (Bắc/Trung/Nam Kỳ)"
+    ],
     "capital": "Huế",
     "id": 23,
     "name": "Pháp đô hộ (1883-1945)",
@@ -331,6 +409,10 @@
     "startYear": "1945",
     "endYear": "đến nay",
     "kings": {},
+    "nationNames": [
+      "Đông Dương (Bắc/Trung/Nam Kỳ)",
+      "Việt Nam"
+    ],
     "capital": "Hà Nội",
     "id": 24,
     "name": "Nước Việt Nam mới (1945 – đến nay)",
