@@ -40,6 +40,6 @@ public class placeDetailController {
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
         approvedYearText.setText(relic.getApprovedYear());
-        overviewText.setText(relic.getOverView());
+        overviewText.setText(relic.getDescription());
     }
 }

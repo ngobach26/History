@@ -35,7 +35,6 @@ public class eventDetailController {
         timeText.setText(event.getTime());
         locationText.setText(event.getLocation());
         overviewText.setText(event.getDescription());
-        causeText.setText(event.getCause());
         resultText.setText(event.getResult());
     }
 }

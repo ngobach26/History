@@ -6,14 +6,13 @@ public class Relic extends HistoricalEntity{
     private String location;
     private String category;
     private String approvedYear;
-    private String overView;
 
-    public Relic(String name, String location, String category, String approvedYear, String overView) {
-        super(++numRelic, name);
+
+    public Relic(String name, String location, String category, String approvedYear, String description) {
+        super(++numRelic, name,description);
         this.location = location;
         this.category = category;
         this.approvedYear = approvedYear;
-        this.overView = overView;
     }
 
     public String getLocation() {
@@ -40,11 +39,4 @@ public class Relic extends HistoricalEntity{
         this.approvedYear = approvedYear;
     }
 
-    public String getOverView() {
-        return overView;
-    }
-
-    public void setOverView(String overView) {
-        this.overView = overView;
-    }
 }

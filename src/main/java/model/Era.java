@@ -5,8 +5,8 @@ public class Era extends HistoricalEntity{
 	private String startYear;
 	private String endYear;
 	
-	public Era(String name, String startYear, String endYear) {
-		super(++numEras, name);
+	public Era(String name, String startYear, String endYear,String description) {
+		super(++numEras, name,description);
 		this.startYear = startYear;
 		this.endYear = endYear;
 	}

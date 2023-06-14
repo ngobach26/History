@@ -15,12 +15,11 @@ public class Figure extends HistoricalEntity {
 	private HashMap<String, Integer> mother = new HashMap<>();
 	private HashMap<String, Integer> father = new HashMap<>();
 	private HashMap<String, Integer> children = new HashMap<>();
-	private String description;
 
 	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
 			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
 			HashMap<String, Integer> father, HashMap<String, Integer> children, String description) {
-		super(id, name);
+		super(id, name,description);
 		this.bornYear = bornYear;
 		this.diedYear = diedYear;
 		this.eras = eras;
