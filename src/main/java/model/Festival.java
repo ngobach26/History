@@ -22,6 +22,16 @@ public class Festival extends HistoricalEntity{
         }
     }
     
+    public Festival(String name, String location, String firstTime, String startingDay, String description, List<String> relatedFigures) {
+        super(++numFes, name, description);
+        this.location = location;
+        this.firstTime = firstTime;
+        this.startingDay = startingDay;
+        for (String figure : relatedFigures) {
+        	this.relatedFigures.put(figure,0); 
+        }
+    }
+    
     public String getRelatedFigureString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");

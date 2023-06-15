@@ -13,6 +13,19 @@ public class EntityCollection<T extends HistoricalEntity> {
         this.data = FXCollections.observableArrayList(d);
     }
 
+    public T get(Integer id){
+        for (T entity : data){
+            if (entity.getId() == id) return entity;
+        }
+        return null;
+    }
+    public T findName(String name){
+        for (T entity : data){
+            if (entity.getName().equals(name)) return entity;
+        }
+        return null;
+    }
+
     public ObservableList<T> getData() {
         return this.data;
     }

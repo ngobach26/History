@@ -1,6 +1,6 @@
 package model;
 
-public class HistoricalEntity {
+public abstract class HistoricalEntity {
     protected int id;
     protected String name;
     protected String description;

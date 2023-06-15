@@ -19,7 +19,7 @@ public class RelicCollection {
     }
 
     public static void loadJson(){
-        ArrayList<Relic> data = new JsonIO<Relic>(token).loadJson(path);
+        ArrayList<Relic> data = (ArrayList<Relic>) new JsonIO<Relic>(token).loadJson(path);
         collection.setData(data);
     }
 }

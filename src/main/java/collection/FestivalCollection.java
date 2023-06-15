@@ -19,7 +19,7 @@ public class FestivalCollection {
     }
 
     public static void loadJson(){
-        ArrayList<Festival> data = new JsonIO<Festival>(token).loadJson(path);
+        ArrayList<Festival> data = (ArrayList<Festival>) new JsonIO<Festival>(token).loadJson(path);
         collection.setData(data);
     }
 }

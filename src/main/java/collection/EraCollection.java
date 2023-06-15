@@ -19,7 +19,7 @@ public class EraCollection {
     }
 
     public static void loadJson(){
-        ArrayList<Era> data = new JsonIO<Era>(token).loadJson(path);
+        ArrayList<Era> data = (ArrayList<Era>) new JsonIO<Era>(token).loadJson(path);
         collection.setData(data);
     }
 }

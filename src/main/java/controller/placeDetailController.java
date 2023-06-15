@@ -30,16 +30,22 @@ public class placeDetailController {
     private Text festivalsText;
     @FXML
     private FlowPane relatedCharsFlowPane;
+
     @FXML
     public void onClickBack(ActionEvent relic) throws IOException {
         App.setRoot("placeView");
     }
 
-    public void setRelic(Relic relic){
+    public void setRelic(Relic relic) {
         nameText.setText(relic.getName());
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
         approvedYearText.setText(relic.getApprovedYear());
         overviewText.setText(relic.getDescription());
+    }
+
+    @FXML
+    public void onDeleteInfo() {
+
     }
 }

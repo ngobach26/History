@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -27,10 +29,10 @@ public class FigureCrawler implements ICrawler{
 		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
 	}
 	
-	public ArrayList<Figure> crawlVanSu() {
+	public List<Figure> crawlVanSu() {
 		String url = "https://vansu.vn/viet-nam/viet-nam-nhan-vat?page=";
 		Document doc;
-		ArrayList<Figure> figures = new ArrayList<>();
+		List<Figure> figures = new ArrayList<>();
 		
 		//crawl 120 pages
 		for (int i=0; i<120; i++) {
@@ -44,8 +46,9 @@ public class FigureCrawler implements ICrawler{
 		            Element row = rows.get(j); 
 		            Elements cells = row.select("td");
 		            
-		            ArrayList<String> eras = new ArrayList<>(); 
-		            ArrayList<String> names = new ArrayList<>(); 
+		            List<String> eras = new ArrayList<>(); 
+		            List<String> otherNames = new ArrayList<>(); 
+		            String mainName = "Không rõ";
 		            String bornYear = "Không rõ";
 		            String diedYear = "Không rõ";
 		            String location = cells.get(2).text();  
@@ -53,7 +56,7 @@ public class FigureCrawler implements ICrawler{
 		            String shortDescription = "Không rõ";
 		            
 		            //crawl figure's main name
-		            names.add(cells.get(0).text());
+		            mainName = cells.get(0).text();
 		            String eraArr[] = cells.get(1).html().split("<br>");
 		            for (int k=0; k<eraArr.length; k++) {
 		            	eras.add(eraArr[k].trim().substring(2));
@@ -80,7 +83,7 @@ public class FigureCrawler implements ICrawler{
 		            	else if (linkDocRow.selectFirst("td").text().equals("Tên khác")) {
 		            		String nameArr[] = linkDocRow.select("td").get(1).text().split("-");
 		            		for (String name : nameArr) {
-		            			names.add(name.trim());
+		            			otherNames.add(name.trim());
 		            		}
 		            	}
 		            }
@@ -95,7 +98,7 @@ public class FigureCrawler implements ICrawler{
 		            //crawl short description
 		            shortDescription = lastLinkDocRow.selectFirst("p").text();
 
-		            figures.add(new Figure(names, bornYear, diedYear, eras, location, role, shortDescription));	
+		            figures.add(new Figure(mainName, otherNames, bornYear, diedYear, eras, location, role, shortDescription));	
 		            
 		         }
 				 System.out.println("Complete page " + i);
@@ -108,43 +111,49 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	public HashSet<String> getUniqueEras(){
-		HashSet<String> eras = new HashSet<>();
-		ArrayList<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+	public Set<String> getUniqueEras(){
+		Set<String> eras = new HashSet<>();
+		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		for (Figure figure : figures) {
 			eras.addAll(figure.getEras().keySet());
 		}
 		return eras;
 	}
 	
-	public ArrayList<Figure> addDetails(){
-		ArrayList<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+	public List<Figure> addDetails(){
+		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		
 		//add details for each figure
-		for (int i=1200;i<1500;i++) {
-			HashMap<String, Integer> mother = new HashMap<>();
-			HashMap<String, Integer> father = new HashMap<>();
-			HashMap<String, Integer> children = new HashMap<>();
-			HashMap<String, Integer> spouses = new HashMap<>();
+		for (int i=1;i<20;i++) {
+			Map<String, Integer> mother = new HashMap<>();
+			Map<String, Integer> father = new HashMap<>();
+			Map<String, Integer> children = new HashMap<>();
+			Map<String, Integer> spouses = new HashMap<>();
 			
 			Figure figure = figures.get(i);
-			String motherName ="", fatherName = "";
-			for (String name : figure.getNames()) {
+			List<String> nameList = new ArrayList<>();
+			nameList.add(figure.getName());
+			for (String otherName : figure.getOtherNames()) {
+				nameList.add(otherName);
+			}
+			
+			String motherName, fatherName;
+			for (String name : nameList) {
 				motherName = GoogleCrawler.crawl("Mẹ của " + name);
 				if (!motherName.equals("Không rõ")) {  
 					mother.put(motherName, 0);
 					break;
 				}
 			}
-			for (String name : figure.getNames()) {
+			for (String name : nameList) {
 				fatherName = GoogleCrawler.crawl("Cha của " + name);
 				if (!fatherName.equals("Không rõ")) {
 					father.put(fatherName, 0);
 					break;
 				}
 			}		
-			ArrayList<String> childrenNames = new ArrayList<>();
-			for (String name : figure.getNames()) {
+			List<String> childrenNames;
+			for (String name : nameList) {
 				childrenNames = GoogleCrawler.advancedCrawl("Con của " + name);
 				if (!childrenNames.isEmpty()) {
 					for (String childName : childrenNames) {
@@ -153,8 +162,8 @@ public class FigureCrawler implements ICrawler{
 					break;
 				}
 			}
-			ArrayList<String> spouseNames = new ArrayList<>();
-			for (String name : figure.getNames()) {
+			List<String> spouseNames;
+			for (String name : nameList) {
 				spouseNames = GoogleCrawler.advancedCrawl("Vợ của " + name);
 				if (!spouseNames.isEmpty()) {
 					for (String spouseName : spouseNames) {
@@ -180,11 +189,21 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	
+	public Set<String> getUniqueSurnames() {
+		Set<String> surnames = new HashSet<>();
+		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		for (Figure figure : figures) {
+			surnames.add((figure.getName().split("\\s+"))[0]);
+//			for (String otherName : figure.getOtherNames()) {
+//				surnames.add((otherName.split("\\s+"))[0]);
+//			}
+		}
+		return surnames;
+	}
 	public static void main(String[] args) {
 		FigureCrawler figureCrawler = new FigureCrawler();
-		figureCrawler.crawl();
-		System.out.println(figureCrawler.getUniqueEras());
+//		figureCrawler.crawl();
+		System.out.println(figureCrawler.getUniqueSurnames());
 	}
 	
 }

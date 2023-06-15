@@ -45,6 +45,9 @@ public class sideBarController {
         App.setRoot("aboutUsView");
     }
 
+    public void searchSwitch(ActionEvent actionEvent) {
+    }
+
     public void exitSwitch(ActionEvent event) throws IOException {
         Platform.exit();
     }

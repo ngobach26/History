@@ -19,7 +19,7 @@ public class EventCollection {
     }
 
     public static void loadJson(){
-        ArrayList<Event> data = new JsonIO<Event>(token).loadJson(path);
+        ArrayList<Event> data = (ArrayList<Event>) new JsonIO<Event>(token).loadJson(path);
         collection.setData(data);
     }
 }

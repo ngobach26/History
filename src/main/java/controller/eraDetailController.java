@@ -36,4 +36,8 @@ public class eraDetailController {
     public void setEra(Era era){
         nameText.setText(era.getName());
     }
+    @FXML
+    public void onDeleteInfo(){
+        
+    }
 }

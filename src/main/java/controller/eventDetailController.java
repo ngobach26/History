@@ -37,4 +37,8 @@ public class eventDetailController {
         overviewText.setText(event.getDescription());
         resultText.setText(event.getResult());
     }
+    @FXML
+    public void onDeleteInfo(){
+        
+    }
 }

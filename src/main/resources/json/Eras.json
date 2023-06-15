@@ -1,146 +1,421 @@
 [
   {
+    "startYear": "Không rõ",
+    "endYear": "Không rõ",
+    "kings": {},
+    "nationNames": [],
+    "capital": "Không rõ",
     "id": 1,
     "name": "Thời tiền sử",
-    "startYear": "Không rõ",
-    "endYear": "Không rõ"
+    "description": "- Thời đồ đá cũ: con người đã xuất hiện ở Việt Nam khoảng 10.000 - 30.000 năm trước với các dấu tích của nền văn hóa Núi Đọ, Thần Sa, Sơn Vi. - Thời đồ đá mới: tiêu biểu với nền văn hóa Hòa Bình, Bắc Sơn khoảng 6.000 - 10.000 năm trước. - Thời đại kim khí: cách đây khoảng 4.000 năm. "
   },
   {
+    "startYear": "2000 trCN",
+    "endYear": "258 trCN",
+    "kings": {},
+    "nationNames": [
+      "Văn Lang"
+    ],
+    "capital": "Phong Châu (Phú Thọ)",
     "id": 2,
-    "name": "Dựng nước (2000 - 258 trCN)",
-    "startYear": "2000",
-    "endYear": "258 trCN"
+    "name": "Thời kỳ dựng nước (2000 - 258 trCN)",
+    "description": "Kinh Dương Vương là Thủy tổ của dân tộc Việt Nam có con Lạc Long Quân lấy Âu Cơ sinh ra một bọc một trăm trứng nở ra một trăm người con trai là tổ tiên của người Bách Việt. Con trưởng làm Hùng Vương nối ngôi. Nước Văn Lang kéo dài gần 2000 năm, trải qua 18 đời vua Hùng, đóng đô ở Phong Châu. "
   },
   {
+    "startYear": "257 trCN",
+    "endYear": "208 trCN",
+    "kings": {},
+    "nationNames": [
+      "Âu Lạc"
+    ],
+    "capital": "Cổ Loa",
     "id": 3,
     "name": "Nhà Thục (257- 208 trCN)",
-    "startYear": "257",
-    "endYear": "208 trCN"
+    "description": "Thục Phán hợp nhất Âu Việt với Văn Lang lập nên nhà Thục, lấy quốc hiệu là Âu Lạc , đóng đô ở Cổ Loa, xưng là An Dương Vương. "
   },
   {
+    "startYear": "207 trCN",
+    "endYear": "39",
+    "kings": {},
+    "nationNames": [
+      "Âu Lạc",
+      "Nam Việt",
+      "Giao Chỉ"
+    ],
+    "capital": "Không rõ",
     "id": 4,
     "name": "Bắc thuộc lần 1 (207 trCN - 39)",
-    "startYear": "207 trCN",
-    "endYear": "39"
+    "description": "Nhà Triệu (207 - 111 trCN) chiếm Âu Lạc rồi đổi tên nước thành Nam Việt. Nhà Hán (111 trCN - 39) chiếm Nam Việt rồi đổi thành Giao Chỉ bộ. "
   },
   {
+    "startYear": "40",
+    "endYear": "43",
+    "kings": {},
+    "nationNames": [
+      "Lĩnh Nam"
+    ],
+    "capital": "Mê Linh (Vĩnh Phúc)",
     "id": 5,
     "name": "Trưng Nữ Vương (40-43)",
-    "startYear": "40",
-    "endYear": "43"
+    "description": "Trưng Trắc đánh đuổi quân Hán, lên ngôi vua đóng đô tại Mê Linh. "
   },
   {
+    "startYear": "43",
+    "endYear": "542",
+    "kings": {},
+    "nationNames": [
+      "Giao Chỉ",
+      "Giao Châu"
+    ],
+    "capital": "Không rõ",
     "id": 6,
     "name": "Bắc thuộc lần 2 (43-542)",
-    "startYear": "43",
-    "endYear": "542"
+    "description": "Trải qua các triều sau: Đông Hán, Đông Ngô, Tây Tấn, Lương. Nổi bật nhất là cuộc khởi nghĩa của Bà Triệu (248) và Lý Bôn (542) "
   },
   {
+    "startYear": "544",
+    "endYear": "602",
+    "kings": {
+      "Lý Nam Đế": 0,
+      "Lý Đào Lang": 0,
+      "Hậu Lý Nam Đế": 0,
+      "Triệu Việt Vương": 0
+    },
+    "nationNames": [
+      "Vạn Xuân"
+    ],
+    "capital": "Long Biên",
     "id": 7,
     "name": "Nhà Tiền Lý, Triệu (544-602)",
-    "startYear": "544",
-    "endYear": "602"
+    "description": "Lý Bôn đánh đuổi quân Lương lấy quốc hiệu Vạn Xuân , đóng đô ở Long Biên "
   },
   {
+    "startYear": "603",
+    "endYear": "939",
+    "kings": {},
+    "nationNames": [
+      "Giao Châu",
+      "An Nam",
+      "Trấn Nam",
+      "An Nam",
+      "Tĩnh Hải quân"
+    ],
+    "capital": "Không rõ",
     "id": 8,
     "name": "Bắc thuộc lần lần 3 (603-939)",
-    "startYear": "603",
-    "endYear": "939"
+    "description": "Lý Phật Tử đầu hàng, nước ta rơi vào tay nhà Tùy (603) rồi sau đó là nhà Đường (618). Các cuộc khởi nghĩa tiêu biểu: Mai Thúc Loan (722), Phùng Hưng (766-791), Dương Thanh (819-820). "
   },
   {
+    "startYear": "905",
+    "endYear": "938",
+    "kings": {
+      "Khúc Thừa Mỹ": 0,
+      "Khúc Thừa Dụ": 0,
+      "Dương Đình Nghệ": 0,
+      "Khúc Hạo": 0
+    },
+    "nationNames": [
+      "Tĩnh Hải quân"
+    ],
+    "capital": "Đại La",
     "id": 9,
     "name": "Xây nền tự chủ (905 - 938)",
-    "startYear": "905",
-    "endYear": "938"
+    "description": "Khúc Thừa Dụ đuổi giặc về nước, tự xưng là Tiết độ sứ. Nhà Đường công nhận ông là người đứng đầu đất Việt. "
   },
   {
+    "startYear": "939",
+    "endYear": "965",
+    "kings": {
+      "Hậu Ngô Vương": 0,
+      "Ngô Vương": 0
+    },
+    "nationNames": [
+      "Tĩnh Hải quân"
+    ],
+    "capital": "Loa Thành",
     "id": 10,
     "name": "Nhà Ngô (939-965)",
-    "startYear": "939",
-    "endYear": "965"
+    "description": "Ngô Quyền là con rể Dương Đình Nghệ, giết Kiều Công Tiễn trả thù cho bố vợ, đánh thắng quân Nam Hán, lập ra triều Ngô, đóng đô ở Cổ Loa. Dương Tam Kha cướp ngôi nhà Ngô, các nơi không chịu thuần phục, mỗi thủ lĩnh cát cứ một vùng gọi là \"Loạn 12 sứ quân\". "
   },
   {
+    "startYear": "968",
+    "endYear": "980",
+    "kings": {},
+    "nationNames": [
+      "Đại Cồ Việt"
+    ],
+    "capital": "Hoa Lư (Ninh Bình)",
     "id": 11,
     "name": "Nhà Đinh (968-980)",
-    "startYear": "968",
-    "endYear": "980"
+    "description": "Đinh Bộ Lĩnh dẹp xong loạn 12 sứ quân, lên ngôi Hoàng đế lấy niên hiệu là Tiên Hoàng đế, đặt quốc hiệu là Đại Cồ Việt , đóng đô ở Hoa Lư. Năm 979, Đinh Tiên Hoàng và và con là Đinh Liễn bị giết chết trong khi uống rượu ngủ say. Đinh Toàn mới 6 tuổi lên ngôi (979-980). "
   },
   {
+    "startYear": "980",
+    "endYear": "1009",
+    "kings": {
+      "Lê Ngọa Triều": 0,
+      "Lê Đại Hành": 0,
+      "Lê Trung Tông": 0
+    },
+    "nationNames": [
+      "Đại Cồ Việt"
+    ],
+    "capital": "Hoa Lư (Ninh Bình)",
     "id": 12,
     "name": "Nhà Tiền Lê (980-1009)",
-    "startYear": "980",
-    "endYear": "1009"
+    "description": "Nhà Tống xâm lược nước ta, Lê Hoàn được Thái hậu Dương Vân Nga trao ngôi vua, lấy niên hiệu là Lê Đại Hành, đánh tan quân Tống và chấn hưng đất nước. "
   },
   {
+    "startYear": "1010",
+    "endYear": "1225",
+    "kings": {
+      "Lý Nhân Tông": 0,
+      "Lý Huệ Tông": 0,
+      "Lý Anh Tông": 0,
+      "Lý Thái Tông": 0,
+      "Lý Thánh Tông": 0,
+      "Lý Thái Tổ": 0,
+      "Lý Thần Tông": 0,
+      "Lý Chiêu Hoàng": 0,
+      "Lý Cao Tông": 0
+    },
+    "nationNames": [
+      "Đại Cồ Việt",
+      "Đại Việt"
+    ],
+    "capital": "Thăng Long",
     "id": 13,
     "name": "Nhà Lý (1010-1225)",
-    "startYear": "1010",
-    "endYear": "1225"
+    "description": "Lê Ngọa Triều mất, triều thần tôn Lý Công Uẩn lên ngôi Hoàng đế. Tháng 7-1010, Lý Công Uẩn dời đô về Thăng Long, năm 1054 lấy quốc hiệu là Đại Việt "
   },
   {
+    "startYear": "1225",
+    "endYear": "1400",
+    "kings": {
+      "Trần Anh Tông": 0,
+      "Trần Minh Tông": 0,
+      "Trần Thuận Tông": 0,
+      "Trần Nghệ Tông": 0,
+      "Trần Nhân Tông": 0,
+      "Trần Hiến Tông": 0,
+      "Trần Thiếu Đế": 0,
+      "Trần Phế Đế": 0,
+      "Trần Thánh Tông": 0,
+      "Trần Duệ Tông": 0,
+      "Trần Thái Tông": 0,
+      "Trần Dụ Tông": 0
+    },
+    "nationNames": [
+      "Đại Việt"
+    ],
+    "capital": "Thăng Long",
     "id": 14,
     "name": "Nhà Trần (1225-1400)",
-    "startYear": "1225",
-    "endYear": "1400"
+    "description": "Năm 1208, Thái tử Sảm (sau thành vua Lý Huệ Tông) chạy loạn về Hải Ấp (Thái Bình) vào ở nhà ông Trần Lý làm nghề đánh cá rồi cưới con gái Trần Lý là Trần Thị Dung. Anh em nhà Trần mộ quân giúp Thái tử Sảm khôi phục kinh đô Thăng Long. Từ đó nhà Trần mà đứng đầu là Trần Thủ Độ dần thao túng quyền lực. Trần Thủ Độ ép Lý Chiêu Hoàng (8 tuổi) lấy và nhường ngôi cho Trần Cảnh, chấm dứt sự tồn tại của nhà Lý trên đà suy vong. Chiến công vẻ vang nhất của nhà Trần là 3 lần đánh thắng quân Nguyên. "
   },
   {
+    "startYear": "1400",
+    "endYear": "1407",
+    "kings": {
+      "Hồ Hán Thương": 0,
+      "Hồ Quý Ly": 0
+    },
+    "nationNames": [
+      "Đại Ngu"
+    ],
+    "capital": "Tây Đô (Thanh Hóa)",
     "id": 15,
     "name": "Nhà Hồ (1400-1407)",
-    "startYear": "1400",
-    "endYear": "1407"
+    "description": "Nhà Trần suy yếu. Hồ Quý Ly thâu tóm quyền lực, bức vua Thuận Tông phải dời kinh về Tây Đô (1397), ép Trần Thiếu Đế phải nhường ngôi (1400) rồi bức tử, lấy quốc hiệu là Đại Ngu .Hồ Quý Ly thực hiện nhiều cải cách táo bạo đi trước thời đại. Nhưng do mắc tội giết vua cùng tôn tộc và quan lại nhà Trần nên ông đã không tập hợp được lực lượng toàn dân để chống giặc Minh. "
   },
   {
+    "startYear": "1407",
+    "endYear": "1413",
+    "kings": {
+      "Trùng Quang Đế": 0,
+      "Giản Định Đế": 0
+    },
+    "nationNames": [
+      "Giao Chỉ"
+    ],
+    "capital": "Không rõ",
     "id": 16,
     "name": "Hậu Trần (1407-1413)",
-    "startYear": "1407",
-    "endYear": "1413"
+    "description": "Trần Ngỗi là con thứ của Trần Nghệ Tông, cuối thời Hồ đã khởi binh khôi phục nhà Trần. Đến đời vua Trùng Quang Đế do quân ít nên không chống nổi giặc Minh. "
   },
   {
+    "startYear": "1414",
+    "endYear": "1427",
+    "kings": {},
+    "nationNames": [
+      "Giao Chỉ"
+    ],
+    "capital": "Không rõ",
     "id": 17,
     "name": "Thuộc Minh (1414-1427)",
-    "startYear": "1414",
-    "endYear": "1427"
+    "description": "Quân Minh chiếm nước ta, cai trị nhân dân ta vô cùng hà khắc. Ngày 7/2/1418, Lê Lợi phất cờ khởi nghĩa ở Lam Sơn kéo dài suốt 10 năm và giành thắng lợi. "
   },
   {
+    "startYear": "1428",
+    "endYear": "1527",
+    "kings": {
+      "Lê Uy Mục": 0,
+      "Lê Thái Tông": 0,
+      "Lê Tương Dực": 0,
+      "Lê Thái Tổ": 0,
+      "Lê Túc Tông": 0,
+      "Lê Chiêu Tông": 0,
+      "Lê Cung Hoàng": 0,
+      "Lê Thánh Tông": 0,
+      "Lê Nhân Tông": 0,
+      "Lê Hiến Tông": 0
+    },
+    "nationNames": [
+      "Đại Việt"
+    ],
+    "capital": "Đông Đô / Thăng Long",
     "id": 18,
     "name": "Triều Lê Sơ (1428-1527)",
-    "startYear": "1428",
-    "endYear": "1527"
+    "description": "Ngày 15/4 Mậu Thân - 1428, Lê Lợi chính thức lên ngôi Vua, đặt tên nước là Đại Việt , đóng đô ở Đông Đô (Hà Nội). "
   },
   {
+    "startYear": "1527",
+    "endYear": "1592",
+    "kings": {
+      "Lê Trang Tông": 0,
+      "Giai đoạn rút lên Cao bằng": 0,
+      "Mạc Mậu Hợp": 0,
+      "Lê Thế Tông": 0,
+      "Thế tổ Minh khang Thái vương": 0,
+      "Mạc Đăng Dung": 0,
+      "Mạc Phúc Hải": 0,
+      "Lê Anh Tông": 0,
+      "Mạc Đăng Doanh": 0,
+      "Nguyễn Hoàng": 0,
+      "Mạc Phúc Nguyên": 0,
+      "Bình An Vương": 0,
+      "Lê Trung Tông": 0
+    },
+    "nationNames": [
+      "Đại Việt"
+    ],
+    "capital": "Đông Đô / Thăng Long",
     "id": 19,
     "name": "Nam - Bắc Triều (1527-1592)",
-    "startYear": "1527",
-    "endYear": "1592"
+    "description": "Trải qua 3 đời vua Lê, Mạc Đăng Dung được phong Thái sư Nhân quốc công rồi đến An hưng vương. Lợi dụng lúc vua Lê Cung Hoàng ươn hèn, Mạc Đăng Dung đem quân về kinh đô ép vua nhường ngôi, lập nên triều Mạc ở miền Bắc gọi là Bắc Triều .  Nguyễn Kim giúp vua Lê Trang Tông chiếm được Nghệ An lập nên Nam Triều . Nguyễn Kim bị đánh thuốc độc chết (1545). Con rể là Trịnh Kiểm nắm giữ binh quyền, ngấm ngầm ám hại các em vợ. Nguyễn Hoàng là con Nguyễn Kim xin vào trấn thủ Thuận Hóa nên thoát chết và đã gây dựng giang sơn riêng của nhà Nguyễn ở Đàng Trong.  Nam Triều giao tranh với Bắc Triều của nhà Mạc gần 50 năm (1543-1592). Trịnh Tùng đánh bại được nhà Mạc (1592) rồi đón vua Lê Thế Tông vào Thăng Long (1595), mở đầu thời kỳ \"Vua Lê, Chúa Trịnh\" . Mọi việc trong triều do chúa quyết, vua chỉ nghe theo.        "
   },
   {
+    "startYear": "1533",
+    "endYear": "1788",
+    "kings": {
+      "Tĩnh đô vương": 0,
+      "Lê Huyền Tông": 0,
+      "Lê Thuần Tông": 0,
+      "Lê Hiển Tông": 0,
+      "Lê Ý Tông": 0,
+      "Minh đô vương": 0,
+      "Lê Dụ Tông": 0,
+      "Đoan Nam Vương": 0,
+      "Nguyễn Phúc Chu": 0,
+      "Nguyễn Phúc Thụ": 0,
+      "Lê Hy Tông": 0,
+      "Lê Mẫn Đế": 0,
+      "Lê Gia Tông": 0,
+      "An đô vương": 0,
+      "Nguyễn Phúc Nguyên": 0,
+      "Uy nam vương": 0,
+      "Tây Đô Vương": 0,
+      "Chúa Nguyễn Phúc Lan": 0,
+      "Lê Duy Phường": 0,
+      "Định Vương": 0,
+      "Nguyễn Phúc Khoát": 0,
+      "Nguyễn Phúc Thuần": 0,
+      "Án Đô Vương": 0,
+      "Lê Kính Tông": 0,
+      "Nguyễn Phúc Tần": 0,
+      "Lê Thần Tông": 0,
+      "Thanh Đô Vương": 0,
+      "Lê Chân Tông": 0,
+      "Nguyễn Phúc Thái": 0,
+      "Điện Đô Vương": 0
+    },
+    "nationNames": [
+      "Đại Việt"
+    ],
+    "capital": "Đông Đô / Thăng Long",
     "id": 20,
     "name": "Trịnh - Nguyễn (1533-1788)",
-    "startYear": "1533",
-    "endYear": "1788"
+    "description": "Cuộc chiến Trịnh (Đàng Ngoài) - Nguyễn (Đàng Trong) phân tranh mở đầu khi Trịnh Tráng đem quân đánh Nguyễn Phúc Nguyên (1627). Đến năm 1672 hai bên tạm ngừng chiến, lấy sông Gianh làm giới tuyến.    "
   },
   {
+    "startYear": "1778",
+    "endYear": "1802",
+    "kings": {
+      "Hoàng đế Cảnh Thịnh": 0,
+      "Hoàng đế Quang Trung": 0,
+      "Thái Đức Hoàng Đế": 0
+    },
+    "nationNames": [
+      "Đại Việt"
+    ],
+    "capital": "Không rõ",
     "id": 21,
     "name": "Nhà Tây Sơn (1778-1802)",
-    "startYear": "1778",
-    "endYear": "1802"
+    "description": "Năm 1771 anh em Tây Sơn phất cờ khởi nghĩa đến năm 1778 thì diệt được chúa Nguyễn ở Đàng Trong, chỉ có Nguyễn Ánh chạy thoát. Nguyễn Nhạc lên ngôi Hoàng đế lập nên Triều đại nhà Tây Sơn, đặt niên hiệu là Thái Đức. "
   },
   {
+    "startYear": "1802",
+    "endYear": "1883",
+    "kings": {
+      "Gia Long": 0,
+      "Thiệu Trị": 0,
+      "Tự Đức": 0,
+      "Minh Mạng": 0
+    },
+    "nationNames": [
+      "Đại Việt",
+      "Việt Nam",
+      "Đại Nam"
+    ],
+    "capital": "Huế",
     "id": 22,
     "name": "Nhà Nguyễn độc lập (1802-1883)",
-    "startYear": "1802",
-    "endYear": "1883"
+    "description": "Năm 1802, Nguyễn Ánh diệt xong nhà Tây Sơn đang suy yếu, lên ngôi hoàng đế, niên hiệu là Gia Long đóng đô tại thành Phú Xuân, đặt quốc hiệu là Việt Nam . Năm 1820 vua Minh Mạng đổi quốc hiệu thành Đại Nam  "
   },
   {
+    "startYear": "1883",
+    "endYear": "1945",
+    "kings": {
+      "Hiệp Hoà": 0,
+      "Bảo Đại": 0,
+      "Dục Đức": 0,
+      "Hàm Nghi": 0,
+      "Kiến Phúc": 0,
+      "Đồng Khánh": 0,
+      "Thành Thái": 0,
+      "Khải Định": 0,
+      "Duy Tân": 0
+    },
+    "nationNames": [
+      "Đại Nam",
+      "Đông Dương (Bắc/Trung/Nam Kỳ)"
+    ],
+    "capital": "Huế",
     "id": 23,
     "name": "Pháp đô hộ (1883-1945)",
-    "startYear": "1883",
-    "endYear": "1945"
+    "description": "Triều đình Huế đời vua Tự Đức ký hòa ước Quý Mùi (1883), rồi hòa ước Pa-tơ-nốt (1885), đất nước ta bị chia làm 3 kỳ (Bắc kỳ, Trung kỳ, Nam kỳ) chịu sự bảo hộ của đế quốc Pháp. "
   },
   {
+    "startYear": "1945",
+    "endYear": "đến nay",
+    "kings": {},
+    "nationNames": [
+      "Đông Dương (Bắc/Trung/Nam Kỳ)",
+      "Việt Nam"
+    ],
+    "capital": "Hà Nội",
     "id": 24,
     "name": "Nước Việt Nam mới (1945 – đến nay)",
-    "startYear": "1945",
-    "endYear": "đến nay"
+    "description": "Dưới sự lãnh đạo của lãnh tụ Nguyễn Ái Quốc, dân tộc ta đã khởi nghĩa làm cuộc Cách mạng tháng Tám (19-8-1945) thành công, đánh đổ đế quốc Pháp và phát xít Nhật. Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc \"Tuyên ngôn độc lập\" tại Quảng trường Ba Đình lập nên nước Việt Nam Dân Chủ Cộng Hòa với thủ đô là Hà Nội. "
   }
 ]

@@ -2,24 +2,26 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Figure extends HistoricalEntity {
 	private static int numFigures = 0;
-	private ArrayList<String> otherNames;
+	private List<String> otherNames;
 	private String bornYear;
 	private String diedYear;
-	private HashMap<String, Integer> eras = new HashMap<>();
+	private Map<String, Integer> eras = new HashMap<>();
 	private String location;
 	private String role;
-	private HashMap<String, Integer> spouses = new HashMap<>();
-	private HashMap<String, Integer> mother = new HashMap<>();
-	private HashMap<String, Integer> father = new HashMap<>();
-	private HashMap<String, Integer> children = new HashMap<>();
+	private Map<String, Integer> spouses = new HashMap<>();
+	private Map<String, Integer> mother = new HashMap<>();
+	private Map<String, Integer> father = new HashMap<>();
+	private Map<String, Integer> children = new HashMap<>();
 
 	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
 			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
 			HashMap<String, Integer> father, HashMap<String, Integer> children, String description) {
-		super(id, name,description);
+		super(id, name, description);
 		this.bornYear = bornYear;
 		this.diedYear = diedYear;
 		this.eras = eras;
@@ -32,12 +34,28 @@ public class Figure extends HistoricalEntity {
 		this.description = description;
 	}
 
+	public Figure(String name, List<String> otherNames, String bornYear, String diedYear, List<String> eras, String location, String role, String description) {
+		super(++numFigures, name, description);
+		this.otherNames = otherNames;
+		this.bornYear = bornYear;
+		this.diedYear = diedYear;
+		for (String era : eras) {
+			this.eras.put(era, 0);
+		}
+		this.location = location;
+		this.role = role;
+	}
+
 	public static int getNumFigures() {
 		return numFigures;
 	}
 
-	public static void setNumFigures(int numFigures) {
-		Figure.numFigures = numFigures;
+	public List<String> getOtherNames() {
+		return otherNames;
+	}
+
+	public void setOtherNames(List<String> otherNames) {
+		this.otherNames = otherNames;
 	}
 
 	public String getBornYear() {
@@ -56,11 +74,11 @@ public class Figure extends HistoricalEntity {
 		this.diedYear = diedYear;
 	}
 
-	public HashMap<String, Integer> getEras() {
+	public Map<String, Integer> getEras() {
 		return eras;
 	}
 
-	public void setEras(HashMap<String, Integer> eras) {
+	public void setEras(Map<String, Integer> eras) {
 		this.eras = eras;
 	}
 
@@ -80,54 +98,37 @@ public class Figure extends HistoricalEntity {
 		this.role = role;
 	}
 
-	public HashMap<String, Integer> getSpouses() {
+	public Map<String, Integer> getSpouses() {
 		return spouses;
 	}
 
-	public void setSpouses(HashMap<String, Integer> spouses) {
+	public void setSpouses(Map<String, Integer> spouses) {
 		this.spouses = spouses;
 	}
 
-	public HashMap<String, Integer> getMother() {
+	public Map<String, Integer> getMother() {
 		return mother;
 	}
 
-	public void setMother(HashMap<String, Integer> mother) {
+	public void setMother(Map<String, Integer> mother) {
 		this.mother = mother;
 	}
 
-	public HashMap<String, Integer> getFather() {
+	public Map<String, Integer> getFather() {
 		return father;
 	}
 
-	public void setFather(HashMap<String, Integer> father) {
+	public void setFather(Map<String, Integer> father) {
 		this.father = father;
 	}
 
-	public HashMap<String, Integer> getChildren() {
+	public Map<String, Integer> getChildren() {
 		return children;
 	}
 
-	public void setChildren(HashMap<String, Integer> children) {
+	public void setChildren(Map<String, Integer> children) {
 		this.children = children;
 	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public ArrayList<String> getOtherNames() {
-		return otherNames;
-	}
-
-	public void setOtherNames(ArrayList<String> otherNames) {
-		this.otherNames = otherNames;
-	}
-	
 
 	public String getEraString() {
 		StringBuilder sb = new StringBuilder();

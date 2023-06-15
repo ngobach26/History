@@ -29,6 +29,3 @@ build/
 # Operating System generated files
 .DS_Store
 Thumbs.db
-
-#Vscode
-.vscode

@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -11,8 +12,11 @@ public class searchBarController {
     private TextField searchBox;
     private SearchBoxListener searchBoxListener;
 
-    public void setSearchBoxListener(SearchBoxListener searchBoxListener){
+    public void setSearchBoxListener(SearchBoxListener searchBoxListener) {
         this.searchBoxListener = searchBoxListener;
+    }
+
+    public void addSection(ActionEvent actionEvent) {
     }
 
     @FXML
@@ -23,7 +27,7 @@ public class searchBarController {
         filterComboBox.getSelectionModel().selectFirst();
 
         filterComboBox.setOnAction((e) -> {
-            if (searchBox.getText().isBlank()){
+            if (searchBox.getText().isBlank()) {
                 searchBoxListener.handleBlank();
             } else {
                 if (filterComboBox.getSelectionModel().getSelectedItem().equals("By ID")) {
@@ -36,19 +40,16 @@ public class searchBarController {
             }
         });
 
-        searchBox.textProperty().addListener((
-                (observableValue, oldValue, newValue) -> {
-                    if (newValue.isBlank()){
-                        searchBoxListener.handleBlank();
-                    } else {
-                        if (filterComboBox.getValue().equals("By ID")){
-                            searchBoxListener.handleSearchId(newValue);
-                        }
-                        else if (filterComboBox.getValue().equals("By Name")){
-                            searchBoxListener.handleSearchName(newValue);
-                        }
-                    }
+        searchBox.textProperty().addListener(((observableValue, oldValue, newValue) -> {
+            if (newValue.isBlank()) {
+                searchBoxListener.handleBlank();
+            } else {
+                if (filterComboBox.getValue().equals("By ID")) {
+                    searchBoxListener.handleSearchId(newValue);
+                } else if (filterComboBox.getValue().equals("By Name")) {
+                    searchBoxListener.handleSearchName(newValue);
                 }
-        ));
+            }
+        }));
     }
 }

@@ -5,10 +5,13 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 import com.google.gson.reflect.TypeToken;
@@ -16,20 +19,21 @@ import com.google.gson.reflect.TypeToken;
 import crawler.ICrawler;
 import helper.JsonIO;
 import model.Event;
+import model.Figure;
 
 public class EventCrawler implements ICrawler{
 	private JsonIO<Event> eventIO = new JsonIO<>(new TypeToken<ArrayList<Event>>() {}.getType());
 	
 	@Override
 	public void crawl() {
-		ArrayList<Event> events = new ArrayList<>();
+		List<Event> events = new ArrayList<>();
 		events = crawlNguoiKeSu();
 		events.addAll(crawlWiki());
 		eventIO.writeJson(events, "src/main/resources/json/Events.json");
 	}
 	
-	public ArrayList<Event> crawlNguoiKeSu(){
-		ArrayList<Event> events = new ArrayList<>();
+	public List<Event> crawlNguoiKeSu(){
+		List<Event> events = new ArrayList<>();
 		String url ="https://nguoikesu.com/tu-lieu/quan-su?start=";
 		Document doc;
 		
@@ -46,7 +50,8 @@ public class EventCrawler implements ICrawler{
 					String time = "Không rõ";
 					String location = "Không rõ";
 					String result = "Không rõ";
-					ArrayList<String> relatedFigures = new ArrayList<>();
+					String description = "Không rõ";
+					List<String> relatedFigures = new ArrayList<>();
 					
 					//crawl eventName
 					Element header = eventDoc.selectFirst(".page-header h1");
@@ -92,7 +97,14 @@ public class EventCrawler implements ICrawler{
 		            		}
 		            	}
 		            }
-					
+		            
+		            //crawl description
+		            Element overviewPara = articleBody.selectFirst("> p");
+		            if (overviewPara != null) {
+		            	overviewPara.select("sup").remove();
+		            	description = (overviewPara.text().split("(?<=\\.)\\s+(?=[A-Z])"))[0];
+		            }
+				
 		            
 					
 					System.out.println(eventName);
@@ -100,8 +112,9 @@ public class EventCrawler implements ICrawler{
 					System.out.println(location);
 					System.out.println(result);
 					System.out.println(relatedFigures);
+					System.out.println(description);
 					System.out.println("--------------------------");
-					events.add(new Event(eventName, time, location, result, relatedFigures));
+					events.add(new Event(eventName, time, location, result, relatedFigures, description));
 					
 				}
 			} catch (IOException e) {
@@ -111,8 +124,8 @@ public class EventCrawler implements ICrawler{
 		return events;
 	}
 	
-	public ArrayList<Event> crawlWiki(){
-		ArrayList<Event> events = new ArrayList<>();
+	public List<Event> crawlWiki(){
+		List<Event> events = new ArrayList<>();
 		Document doc;
 		
 		try {
@@ -127,29 +140,31 @@ public class EventCrawler implements ICrawler{
 				String year = pTag.select("b").text();
 				
 				Element nextElement = pTag.nextElementSibling();
+				//many events in a year
 				if (nextElement != null && nextElement.tagName().equals("dl")) {
 					Elements ddElements = nextElement.select("dd");
 					for (Element ddElement : ddElements) {
 						String month = ddElement.select("b").text();
 						String time = month + " " + year;
 						ddElement.select("b").remove();
-						String eventName = ddElement.text();
+						String eventName = ddElement.text();				
 						
-						System.out.println(time);
-						System.out.println(eventName);
-						System.out.println("---------------");
-						events.add(new Event(eventName, time));
+						//crawl more information
+						Elements aTags = ddElement.select("a[href]");				
+						
+						events.add(addInformationWiki(aTags, eventName, time));
 					}
 				}
+				//only one event in one year
 				else {
 					String time = year;
 					pTag.select("b").remove();
 					String eventName = pTag.text();
 					
-					System.out.println(time);
-					System.out.println(eventName);
-					System.out.println("-------------------");
-					events.add(new Event(eventName, time));
+					//crawl more information
+					Elements aTags = pTag.select("a[href]");
+					
+					events.add(addInformationWiki(aTags, eventName, time));
 				}
 			}
 		} catch (UnsupportedEncodingException e) {
@@ -161,6 +176,90 @@ public class EventCrawler implements ICrawler{
 		return events;
 	}
 	
+	private Event addInformationWiki(Elements aTags, String eventName, String time) {
+		String location = "Không rõ";
+		String result = "Không rõ";
+		String description = "Không rõ";
+		List<String> relatedFigures = new ArrayList<>();
+		
+		String link = "";
+		for (Element aTag : aTags) {
+			String aText = aTag.text();
+			//only get relavant links with certain keywords
+			if (aText.contains("Văn hóa") || aText.contains("Hòa ước") || aText.contains("Chiến tranh") ||
+					aText.contains("Khởi nghĩa") || aText.contains("khởi nghĩa") || aText.contains("Trận") ||
+					aText.contains("Loạn") || aText.contains("Hội nghị") || aText.contains("Nổi dậy") || 
+					aText.contains("Phong trào") || aText.contains("Cách mạng") || aText.contains("Chiến dịch") || 
+					aText.contains("chiến tranh") || aText.contains("Xô Viết Nghệ Tĩnh") || aText.contains("Đổi Mới")) {
+				try {
+					//only get active links
+					if (aTag.attr("href").contains("/wiki")) {
+						link = URLDecoder.decode(aTag.attr("abs:href"), StandardCharsets.UTF_8.name());
+					}	
+				} catch (UnsupportedEncodingException e) {
+					e.printStackTrace();
+				}
+				break;
+			}
+		}
+		
+		if (!link.equals("")) {
+			//connect to detail page of the event
+			Document eventDoc;
+			try {
+				eventDoc = Jsoup.connect(link).get();
+				String paragraph = eventDoc.select("div.mw-parser-output > p").text();
+				if (paragraph.isBlank()) {
+					paragraph = eventDoc.select("div.mw-parser-output > p:nth-child(2)").text();
+				}
+				//get the first sentence
+				description = (paragraph.split("(?<=\\.)\\s+(?=[A-Z])"))[0];
+				Element infoTable = eventDoc.selectFirst("div.mw-parser-output table.infobox tr table");
+				if (infoTable != null) {
+					Elements infoRows = infoTable.select("tr");
+					for (Element inforRow : infoRows) {
+					    Element infoHeading = inforRow.selectFirst("> th");
+					    Element infoData = inforRow.selectFirst("> td");
+					    if (infoHeading != null && infoHeading.text().equals("Địa điểm")) {
+					        location = infoData.text();
+					    }
+					    if (infoHeading != null && infoHeading.text().equals("Kết quả")) {
+					        result = infoData.text();
+					    }
+					}
+				}
+				
+				Elements rows = eventDoc.select("div.mw-parser-output table.infobox > tbody > tr");
+				for (Element row : rows) {
+					if (row.text().equals("Chỉ huy và lãnh đạo")) {
+						row = row.nextElementSibling();
+						Elements figureLinks = row.select("td > a[href]");
+						for (Element figureLink : figureLinks) {
+							if (figureLink.attr("title").equals("Tử trận")) {
+								continue;
+							}
+							relatedFigures.add(figureLink.text());
+						}
+						break;
+					}
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println(time);
+		System.out.println(eventName);
+		System.out.println(location);
+		System.out.println(result);
+		System.out.println(description);
+		System.out.println(relatedFigures);
+		System.out.println("---------------");
+		
+		return new Event(eventName, time, location, result, relatedFigures, description);
+						
+	}
 	public static void main(String[] args) {
 		EventCrawler eventCrawler = new EventCrawler();
 		eventCrawler.crawl();

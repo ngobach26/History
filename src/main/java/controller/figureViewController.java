@@ -20,9 +20,9 @@ public class figureViewController implements Initializable {
     @FXML
     private TableColumn<Figure, Integer> colFigureId;
     @FXML
-    private TableColumn<Figure, ArrayList<String>> colFigureName;
+    private TableColumn<Figure, List<String>> colFigureName;
     @FXML
-    private TableColumn<Figure, HashMap<String, Integer>> colFigureEra;
+    private TableColumn<Figure, Map<String, Integer>> colFigureEra;
     @FXML
     private TableColumn<Figure, String> colFigureOverview;
     @FXML
@@ -50,9 +50,9 @@ public class figureViewController implements Initializable {
         colFigureName.setCellValueFactory(new PropertyValueFactory<>("name"));
         
         colFigureEra.setCellFactory(column -> {
-            TableCell<Figure, HashMap<String, Integer>> cell = new TableCell<Figure, HashMap<String, Integer>>() {
+            TableCell<Figure, Map<String, Integer>> cell = new TableCell<Figure, Map<String, Integer>>() {
                 @Override
-                protected void updateItem(HashMap<String, Integer> eras, boolean empty) {
+                protected void updateItem(Map<String, Integer> eras, boolean empty) {
                     super.updateItem(eras, empty);
         
                     if (eras == null || empty) {

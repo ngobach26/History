@@ -18,7 +18,7 @@ public class FigureCollection {
     }
 
     public static void loadJson(){
-        ArrayList<Figure> data = new JsonIO<Figure>(token).loadJson(path);
+        ArrayList<Figure> data = (ArrayList<Figure>) new JsonIO<Figure>(token).loadJson(path);
         collection.setData(data);
     }
 }

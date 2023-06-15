@@ -63,7 +63,10 @@ public class figureDetailController {
         motherText.setText(figure.getMotherString());
 
         spouseText.setText(figure.getSpouseString());
-        childrenText.setText(figure.getChildrenString());
+        // childrenText.setText(figure.getChildrenString());
     }
-
+    @FXML
+    public void onDeleteInfo(){
+        
+    }
 }
