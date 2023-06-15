@@ -158,11 +158,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="festivalsText" strokeType="OUTSIDE" strokeWidth="0.0" text="festivalsText" wrappingWidth="301.3366394042969" />
-                                    </children>
-                                </VBox>
+                                <FlowPane fx:id="relatedFesFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox layoutX="10.0" layoutY="141.0">

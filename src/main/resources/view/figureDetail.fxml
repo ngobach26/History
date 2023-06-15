@@ -205,11 +205,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="fatherText" strokeType="OUTSIDE" strokeWidth="0.0" text="fatherText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
-                                    </children>
-                                </VBox>
+                                <FlowPane fx:id="fatherFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                         <HBox layoutX="10.0" layoutY="586.0">
@@ -223,11 +219,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="motherText" strokeType="OUTSIDE" strokeWidth="0.0" text="motherText" wrappingWidth="370.1366882324219" VBox.vgrow="ALWAYS" />
-                                    </children>
-                                </VBox>
+                                <FlowPane fx:id="motherFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                         <HBox layoutX="10.0" layoutY="682.0">
@@ -241,11 +233,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="spouseText" strokeType="OUTSIDE" strokeWidth="0.0" text="spouseText" wrappingWidth="368.5367126464844" VBox.vgrow="ALWAYS" />
-                                    </children>
-                                </VBox>
+                                <FlowPane fx:id="spouseFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                         <HBox layoutX="10.0" layoutY="778.0">
@@ -259,11 +247,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="succeededText" strokeType="OUTSIDE" strokeWidth="0.0" text="succeededText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
-                                    </children>
-                                </VBox>
+                                <FlowPane fx:id="childrenFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
                   <Button mnemonicParsing="false" onAction="#onDeleteInfo" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #db1637;" text="Delete information (Be careful)" textFill="#fafafa">
