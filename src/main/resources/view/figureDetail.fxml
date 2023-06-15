@@ -169,11 +169,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="eraText" strokeType="OUTSIDE" strokeWidth="0.0" text="eraText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
-                                    </children>
-                                </VBox>
+                        <FlowPane fx:id="eraFlowPane" hgap="15.0" vgap="5.0" />
                             </children>
                         </HBox>
                   <HBox>

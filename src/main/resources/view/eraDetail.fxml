@@ -121,11 +121,7 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="homelandText" strokeType="OUTSIDE" strokeWidth="0.0" text="countryText" wrappingWidth="349.6773376464844" />
-                                    </children>
-                                </VBox>
+                        <FlowPane fx:id="countryFlowPane" hgap="15.0" vgap="5.0" />
                             </children>
                         </HBox>
                         <HBox>
