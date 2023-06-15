@@ -26,6 +26,9 @@ dependency-reduced-pom.xml
 .gradle/
 build/
 
+#VsCode
+.vscode
+
 # Operating System generated files
 .DS_Store
 Thumbs.db
