@@ -1,17 +1,20 @@
-package controller;
+package controller.overview;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import collection.EventCollection;
+import controller.SearchBarController;
+import controller.SearchBoxListener;
+import controller.detail.EventDetailController;
 import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Event;
 
-public class eventViewController implements Initializable {
+public class EventViewController implements Initializable {
 
     @FXML
     private TableView<Event> eventTable;
@@ -26,7 +29,7 @@ public class eventViewController implements Initializable {
     private TableColumn<Event, String> colEventLocate;
 
     @FXML
-    private searchBarController searchBarController;
+    private SearchBarController searchBarController;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -66,7 +69,7 @@ public class eventViewController implements Initializable {
                     Event ev = row.getItem();
                     try {
                         FXMLLoader loader = App.setRoot("eventDetail");
-                        eventDetailController controller = loader.getController();
+                        EventDetailController controller = loader.getController();
                         controller.setEvent(ev);
                     } catch (IOException e) {
                         e.printStackTrace();

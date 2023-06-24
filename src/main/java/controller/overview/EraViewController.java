@@ -1,10 +1,13 @@
-package controller;
+package controller.overview;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import collection.EraCollection;
+import controller.SearchBarController;
+import controller.SearchBoxListener;
+import controller.detail.EraDetailController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +19,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Era;
 
-public class eraViewController implements Initializable {
+
+public class EraViewController implements Initializable {
 
     @FXML
     private TableView<Era> eraTable;
@@ -30,7 +34,7 @@ public class eraViewController implements Initializable {
     @FXML
     private TableColumn<Era, String> colEraTimeStamp;
     @FXML
-    private searchBarController searchBarController;
+    private SearchBarController searchBarController;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -41,19 +45,19 @@ public class eraViewController implements Initializable {
             String endYear =cellData.getValue().getEndYear();
             return new SimpleStringProperty(startYear + " - " + endYear);
         });
-        eraTable.setItems(EraCollection.collection.getData());
+        eraTable.setItems(EraCollection.getCollection().getData());
         searchBarController.setSearchBoxListener(
                 new SearchBoxListener() {
                     @Override
                     public void handleSearchName(String name) {
-                        eraTable.setItems(EraCollection.collection.searchByName(name));
+                        eraTable.setItems(EraCollection.getCollection().searchByName(name));
                     }
 
                     @Override
                     public void handleSearchId(String id) {
                         try {
                             int intId = Integer.parseInt(id);
-                            eraTable.setItems(EraCollection.collection.searchByID(intId));
+                            eraTable.setItems(EraCollection.getCollection().searchByID(intId));
                         } catch (Exception e){
                             System.err.println("Cannot find the entity with the id " + id);
                         }
@@ -61,7 +65,7 @@ public class eraViewController implements Initializable {
 
                     @Override
                     public void handleBlank() {
-                        eraTable.setItems(EraCollection.collection.getData());
+                        eraTable.setItems(EraCollection.getCollection().getData());
                     }
                 }
         );
@@ -72,7 +76,7 @@ public class eraViewController implements Initializable {
                     Era era = row.getItem();
                     try {
                         FXMLLoader loader =  App.setRoot("EraDetail");
-                        eraDetailController controller = loader.getController();
+                        EraDetailController controller = loader.getController();
                         controller.setEra(era);
                     } catch (IOException e){
                         e.printStackTrace();

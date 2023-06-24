@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-public class searchBarController {
+public class SearchBarController {
     @FXML
     public ComboBox<String> filterComboBox;
     @FXML
@@ -17,6 +17,7 @@ public class searchBarController {
     }
 
     public void addSection(ActionEvent actionEvent) {
+
     }
 
     @FXML

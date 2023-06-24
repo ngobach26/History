@@ -6,15 +6,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+import java.util.Stack;
 import collection.EraCollection;
 import collection.EventCollection;
 import collection.FestivalCollection;
 import collection.FigureCollection;
 import collection.RelicCollection;
+import model.HistoricalEntity;
 
 public class App extends Application {
     private static Scene scene;
+    public static Stack<HistoricalEntity> stack = new Stack<HistoricalEntity>();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,6 +29,7 @@ public class App extends Application {
         stage.show();
     }
 
+
     public static FXMLLoader setRoot(String fxml) throws IOException {
         FXMLLoader loader = loadFXML(fxml);
         scene.setRoot(loader.load());
@@ -38,7 +41,8 @@ public class App extends Application {
         return fxmlLoader;
     }
 
-    private static void loadData(){
+
+    private static void loadData() {
         FigureCollection.loadJson();
         EventCollection.loadJson();
         FestivalCollection.loadJson();

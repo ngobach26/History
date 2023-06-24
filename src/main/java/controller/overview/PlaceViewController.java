@@ -1,10 +1,13 @@
-package controller;
+package controller.overview;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import collection.RelicCollection;
+import controller.SearchBarController;
+import controller.SearchBoxListener;
+import controller.detail.PlaceDetailController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,7 +18,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Relic;
 
-public class placeViewController implements Initializable{
+public class PlaceViewController implements Initializable{
     @FXML
     private TableView<Relic> siteTable;
 
@@ -29,7 +32,7 @@ public class placeViewController implements Initializable{
     private TableColumn<Relic, String> colSiteLocate;
 
     @FXML
-    private searchBarController searchBarController;
+    private SearchBarController searchBarController;
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         colSiteId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -66,7 +69,7 @@ public class placeViewController implements Initializable{
                     Relic relic = row.getItem();
                     try {
                         FXMLLoader loader = App.setRoot("placeDetail");
-                        placeDetailController controller = loader.getController();
+                        PlaceDetailController controller = loader.getController();
                         controller.setRelic(relic);
                     } catch (IOException e) {
                         e.printStackTrace();

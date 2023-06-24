@@ -9,9 +9,9 @@ import helper.JsonIO;
 import model.Figure;
 
 public class FigureCollection {
-    public static Type token = new TypeToken<ArrayList<Figure>>() {}.getType();
+    private static Type token = new TypeToken<ArrayList<Figure>>() {}.getType();
     public static EntityCollection<Figure> collection = new EntityCollection<>();
-    public static String path = "src/main/resources/json/Figures.json";
+    private static String path = "src/main/resources/json/Figures.json";
 
     public static void writeJson(){
 

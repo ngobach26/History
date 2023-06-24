@@ -9,4 +9,8 @@ module main {
     exports controller;
     opens controller to javafx.fxml;
     opens model to com.google.gson, javafx.base;
+    exports controller.overview;
+    opens controller.overview to javafx.fxml;
+    exports controller.detail;
+    opens controller.detail to javafx.fxml;
 }

@@ -1,4 +1,4 @@
-package controller;
+package controller.detail;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 import main.App;
 import model.Era;
 
-public class eraDetailController {
+public class EraDetailController {
     @FXML
     private Text nameText;
     @FXML

@@ -1,10 +1,13 @@
-package controller;
+package controller.overview;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import collection.FestivalCollection;
+import controller.SearchBarController;
+import controller.SearchBoxListener;
+import controller.detail.FestivalDetailController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,7 +18,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Festival;
 
-public class festivalViewController implements Initializable {
+public class FestivalViewController implements Initializable {
     @FXML
     private TableView<Festival> fesTable;
 
@@ -29,7 +32,7 @@ public class festivalViewController implements Initializable {
     private TableColumn<Festival, String> colFesLocate;
 
     @FXML
-    private searchBarController searchBarController;
+    private SearchBarController searchBarController;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -67,7 +70,7 @@ public class festivalViewController implements Initializable {
                     Festival festival = row.getItem();
                     try {
                         FXMLLoader loader = App.setRoot("festivalDetail");
-                        festivalDetailController controller = loader.getController();
+                        FestivalDetailController controller = loader.getController();
                         controller.setFestival(festival);
                     } catch (IOException e) {
                         e.printStackTrace();

@@ -20,6 +20,7 @@
     -fx-background-color : #beccc2 ;
 }
 
+
 .table-view .column-header,
 .table-view .column-header-background .filler {
     -fx-cell-size : 20;

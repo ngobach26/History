@@ -1,4 +1,4 @@
-package controller;
+package controller.overview;
 
 import java.io.IOException;
 import java.net.URL;
@@ -6,6 +6,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import collection.FigureCollection;
+import controller.SearchBarController;
+import controller.SearchBoxListener;
+import controller.detail.FigureDetailController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,7 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Figure;
 
-public class figureViewController implements Initializable {
+public class FigureViewController implements Initializable {
     @FXML
     private TableView<Figure> tblFigure;
     @FXML
@@ -26,27 +29,11 @@ public class figureViewController implements Initializable {
     @FXML
     private TableColumn<Figure, String> colFigureOverview;
     @FXML
-    private searchBarController searchBarController;
+    private SearchBarController searchBarController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         colFigureId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        // colFigureName.setCellFactory(column -> {
-        //     TableCell<Figure, ArrayList<String>> cell = new TableCell<Figure, ArrayList<String>>() {
-        //         @Override
-        //         protected void updateItem(ArrayList<String> names, boolean empty) {
-        //             super.updateItem(names, empty);
-
-        //             if (names == null || empty) {
-        //                 setText(null);
-        //             } else {
-        //                 String namesString = String.join(", ", names);
-        //                 setText(namesString);
-        //             }
-        //         }
-        //     };
-        //     return cell;
-        // });
         colFigureName.setCellValueFactory(new PropertyValueFactory<>("name"));
         
         colFigureEra.setCellFactory(column -> {
@@ -91,23 +78,25 @@ public class figureViewController implements Initializable {
                     }
                 }
         );
-
         tblFigure.setRowFactory(tableView -> {
             TableRow<Figure> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
-                if(event.getClickCount() == 2 && (!row.isEmpty())){
+                if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Figure figure = row.getItem();
                     try {
-                        FXMLLoader loader =  App.setRoot("figureDetail");
-                        figureDetailController controller = loader.getController();
+                        FXMLLoader loader = App.setRoot("figureDetail");
+                        FigureDetailController controller = loader.getController();
                         controller.setFigure(figure);
-                    } catch (IOException e){
+                        App.stack.push(figure);
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             });
             return row;
         });
+        // UIUtils.setFigureClickHandler(tblFigure);
+        
 
     }
 

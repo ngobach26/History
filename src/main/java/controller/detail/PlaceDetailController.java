@@ -1,4 +1,4 @@
-package controller;
+package controller.detail;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 import main.App;
 import model.Relic;
 
-public class placeDetailController {
+public class PlaceDetailController {
     @FXML
     private Text nameText;
     @FXML
@@ -27,7 +27,7 @@ public class placeDetailController {
     @FXML
     private Text approvedYearText;
     @FXML
-    private Text festivalsText;
+    private FlowPane relatedFesFlowPane;
     @FXML
     private FlowPane relatedCharsFlowPane;
 
@@ -41,7 +41,6 @@ public class placeDetailController {
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
         approvedYearText.setText(relic.getApprovedYear());
-        overviewText.setText(relic.getDescription());
     }
 
     @FXML

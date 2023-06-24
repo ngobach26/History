@@ -14,10 +14,7 @@ public class EntityCollection<T extends HistoricalEntity> {
     }
 
     public T get(Integer id){
-        for (T entity : data){
-            if (entity.getId() == id) return entity;
-        }
-        return null;
+        return data.get(id-1);
     }
     public T findName(String name){
         for (T entity : data){

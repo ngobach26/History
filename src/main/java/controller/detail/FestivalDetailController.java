@@ -1,4 +1,4 @@
-package controller;
+package controller.detail;
 
 import java.io.IOException;
 import java.util.Map;
@@ -14,7 +14,7 @@ import main.App;
 import model.Festival;
 import model.Figure;
 
-public class festivalDetailController {
+public class FestivalDetailController {
     @FXML
     private Text nameText;
     @FXML
@@ -46,7 +46,7 @@ public class festivalDetailController {
                     Figure figure = FigureCollection.collection.findName(entry.getKey());
                     try {
                         FXMLLoader loader = App.setRoot("figureDetail");
-                        figureDetailController controller = loader.getController();
+                        FigureDetailController controller = loader.getController();
                         controller.setFigure(figure);
                     } catch (IOException e) {
                         e.printStackTrace();
