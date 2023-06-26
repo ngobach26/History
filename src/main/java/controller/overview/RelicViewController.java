@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import collection.FestivalData;
+import collection.RelicData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
 import controller.helper.HandleDetailHelp;
@@ -15,43 +15,42 @@ import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
-import model.Festival;
+import model.Relic;
 
-public class FestivalViewController implements Initializable {
+public class RelicViewController implements Initializable{
     @FXML
-    private TableView<Festival> fesTable;
+    private TableView<Relic> siteTable;
 
     @FXML
-    private TableColumn<Festival, Integer> colFesId;
+    private TableColumn<Relic, Integer> colSiteId;
     @FXML
-    private TableColumn<Festival, String> colFesName;
+    private TableColumn<Relic, String> colSiteName;
     @FXML
-    private TableColumn<Festival, String> colFesDate;
+    private TableColumn<Relic, String> colSiteDate;
     @FXML
-    private TableColumn<Festival, String> colFesLocate;
+    private TableColumn<Relic, String> colSiteLocate;
 
     @FXML
     private SearchBarController searchBarController;
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        colFesId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colFesName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colFesDate.setCellValueFactory(new PropertyValueFactory<>("startingDay"));
-        colFesLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
-        fesTable.setItems(FestivalData.data.getData());
+        colSiteId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colSiteName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colSiteDate.setCellValueFactory(new PropertyValueFactory<>("approvedYear"));
+        colSiteLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
+        siteTable.setItems(RelicData.data.getData());
         searchBarController.setSearchBoxListener(
                 new SearchBoxListener() {
                     @Override
                     public void handleSearchName(String name) {
-                        fesTable.setItems(FestivalData.data.searchByName(name));
+                        siteTable.setItems(RelicData.data.searchByName(name));
                     }
 
                     @Override
                     public void handleSearchId(String id) {
                         try {
                             int intId = Integer.parseInt(id);
-                            fesTable.setItems(FestivalData.data.searchByID(intId));
+                            siteTable.setItems(RelicData.data.searchByID(intId));
                         } catch (Exception e) {
                             System.err.println("Cannot find the entity with the id " + id);
                         }
@@ -59,17 +58,17 @@ public class FestivalViewController implements Initializable {
 
                     @Override
                     public void handleBlank() {
-                        fesTable.setItems(FestivalData.data.getData());
+                        siteTable.setItems(RelicData.data.getData());
                     }
                 });
-        fesTable.setRowFactory(tableView -> {
-            TableRow<Festival> row = new TableRow<>();
+        siteTable.setRowFactory(tableView -> {
+            TableRow<Relic> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
-                    Festival festival = row.getItem();
+                    Relic relic = row.getItem();
                     try {
-                        HandleDetailHelp.Festival(festival);
-                        App.clickBackService.addEntityToClickBackStack(festival);
+                        HandleDetailHelp.Relic(relic);
+                        App.clickBackService.addEntityToClickBackStack(relic);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -77,7 +76,5 @@ public class FestivalViewController implements Initializable {
             });
             return row;
         });
-
     }
-
 }

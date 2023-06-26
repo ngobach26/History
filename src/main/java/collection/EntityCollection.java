@@ -13,7 +13,7 @@ public class EntityCollection<T extends HistoricalEntity> {
         this.data = FXCollections.observableArrayList(d);
     }
 
-    public T get(Integer id){
+    public T getById(Integer id){
         return data.get(id-1);
     }
     public T findName(String name){

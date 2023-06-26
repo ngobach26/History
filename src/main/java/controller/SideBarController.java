@@ -4,6 +4,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import main.App;
+import main.EntityPages;
+import main.StaticPages;
 
 import java.io.IOException;
 
@@ -11,44 +13,43 @@ public class SideBarController {
 
     @FXML
     void mainSwitch(ActionEvent event) throws IOException {
-        App.setRoot("homepageView");
-        App.stack.clear();
+        App.setAndReturnRoot(StaticPages.HOME_PAGE.getUrl());
     }
 
     @FXML
     void figuresSwitch(ActionEvent event) throws IOException {
-        App.setRoot("figureView");
-        App.stack.clear();
+        App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     @FXML
-    void placeSwitch(ActionEvent event) throws IOException {
-        App.setRoot("placeView");
-        App.stack.clear();
+    void relicSwitch(ActionEvent event) throws IOException {
+        App.setAndReturnRoot(EntityPages.RELIC_PAGES.getViewPage());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     @FXML
     void erasSwitch(ActionEvent event) throws IOException {
-        App.setRoot("eraView");
-        App.stack.clear();
+        App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     @FXML
     void eventsSwitch(ActionEvent event) throws IOException {
-        App.setRoot("eventView");
-        App.stack.clear();
+        App.setAndReturnRoot(EntityPages.EVENT_PAGES.getViewPage());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     @FXML
     void festivalsSwitch(ActionEvent event) throws IOException {
-        App.setRoot("festivalView");
-        App.stack.clear();
+        App.setAndReturnRoot(EntityPages.FESTIVAL_PAGES.getViewPage());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     @FXML
     void aboutusSwitch(ActionEvent event) throws IOException {
-        App.setRoot("aboutUsView");
-        App.stack.clear();
+        App.setAndReturnRoot(StaticPages.ABOUT_US_PAGE.getUrl());
+        App.clickBackService.handleClickBacktoViews();
     }
 
     public void searchSwitch(ActionEvent actionEvent) {

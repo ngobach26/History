@@ -27,7 +27,7 @@ public class EventDetailController {
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        App.setRoot("eventView");
+        App.setAndReturnRoot("eventView");
     }
 
     public void setEvent(Event event){

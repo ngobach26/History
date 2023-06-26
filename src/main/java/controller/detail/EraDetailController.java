@@ -30,7 +30,7 @@ public class EraDetailController {
     private FlowPane kingsFlowPane;
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        App.setRoot("eraView");
+        App.setAndReturnRoot("eraView");
     }
 
     public void setEra(Era era){

@@ -20,52 +20,21 @@ public class Event extends HistoricalEntity{
 			 this.relatedFigures.put(figure, 0);
 		 }
 	 }
-	 
-	 public String getRelatedFigureString() {
-			StringBuilder sb = new StringBuilder();
-			sb.append("");
-			if (relatedFigures.isEmpty()) {
-				return "không rõ";
-			}
-			for (String figure : relatedFigures.keySet()) {
-				int id = relatedFigures.get(figure);
-				sb.append(figure).append(" (").append(id).append("), ");
-			}
-			sb.replace(sb.length() - 2, sb.length(), "");
-			return sb.toString();
-		}
 
 	public String getTime() {
 		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
 	}
 
 	public String getLocation() {
 		return location;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
 	public String getResult() {
 		return result;
-	}
-
-	public void setResult(String result) {
-		this.result = result;
 	}
 
 	public Map<String, Integer> getRelatedFigures() {
 		return relatedFigures;
 	}
-
-	public void setRelatedFigures(Map<String, Integer> relatedFigures) {
-		this.relatedFigures = relatedFigures;
-	}
-		
-	 
+	 	 
 }

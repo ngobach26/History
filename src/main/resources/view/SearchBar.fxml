@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="428.0" spacing="20.0"
+   xmlns="http://javafx.com/javafx/19"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchBarController">
+   <children>
+      <ComboBox fx:id="filterComboBox" prefHeight="26.0" prefWidth="110.0" styleClass="search-box" stylesheets="@../stylesheet/mainScreen.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <TextField fx:id="searchBox" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="242.0" promptText="Search Here..." styleClass="search-box" stylesheets="@../stylesheet/mainScreen.css">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/searchIcon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button mnemonicParsing="false" onAction="#addSection" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #80fa57;" text="Add info">
+         <font>
+            <Font name="Bell MT" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+   </padding>
+</HBox>
