@@ -5,35 +5,25 @@ public abstract class HistoricalEntity {
     protected String name;
     protected String description;
 
-    public HistoricalEntity(int id, String name,String description) {
+    public HistoricalEntity(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public int getId() {
-        return id;
+    public boolean containsName(String name) {
+        if (name == null)
+            return false;
+
+        if (this.name == null)
+            return false;
+
+        return this.name.toLowerCase().contains(name.toLowerCase());
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public boolean containsID(int id) {
+        return this.id == id;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -56,17 +46,16 @@ public abstract class HistoricalEntity {
         return true;
     }
 
-    public boolean containsName(String name) {
-        if (name == null)
-            return false;
-
-        if (this.name == null)
-            return false;
-
-        return this.name.toLowerCase().contains(name.toLowerCase());
+    public int getId() {
+        return id;
     }
 
-    public boolean containsID(int id) {
-        return this.id == id;
+    public String getName() {
+        return name;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
 }

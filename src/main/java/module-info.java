@@ -13,4 +13,6 @@ module main {
     opens controller.overview to javafx.fxml;
     exports controller.detail;
     opens controller.detail to javafx.fxml;
+    exports controller.add;
+    opens controller.add to javafx.fxml;
 }

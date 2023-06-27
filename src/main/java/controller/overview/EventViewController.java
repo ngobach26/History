@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import collection.EventCollection;
+import collection.EventData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import controller.detail.EventDetailController;
+import controller.helper.HandleDetailHelp;
 import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -37,20 +37,20 @@ public class EventViewController implements Initializable {
         colEventName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colEventDate.setCellValueFactory(new PropertyValueFactory<>("time"));
         colEventLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
-        eventTable.setItems(EventCollection.collection.getData());
+        eventTable.setItems(EventData.data.getData());
 
         searchBarController.setSearchBoxListener(
                 new SearchBoxListener() {
                     @Override
                     public void handleSearchName(String name) {
-                        eventTable.setItems(EventCollection.collection.searchByName(name));
+                        eventTable.setItems(EventData.data.searchByName(name));
                     }
 
                     @Override
                     public void handleSearchId(String id) {
                         try {
                             int intId = Integer.parseInt(id);
-                            eventTable.setItems(EventCollection.collection.searchByID(intId));
+                            eventTable.setItems(EventData.data.searchByID(intId));
                         } catch (Exception e) {
                             System.err.println("Cannot find the entity with the id " + id);
                         }
@@ -58,7 +58,7 @@ public class EventViewController implements Initializable {
 
                     @Override
                     public void handleBlank() {
-                        eventTable.setItems(EventCollection.collection.getData());
+                        eventTable.setItems(EventData.data.getData());
                     }
                 });
 
@@ -68,9 +68,8 @@ public class EventViewController implements Initializable {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Event ev = row.getItem();
                     try {
-                        FXMLLoader loader = App.setRoot("eventDetail");
-                        EventDetailController controller = loader.getController();
-                        controller.setEvent(ev);
+                        HandleDetailHelp.Event(ev);
+                        App.clickBackService.addEntityToClickBackStack(ev);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

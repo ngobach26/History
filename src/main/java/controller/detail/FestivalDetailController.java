@@ -3,7 +3,7 @@ package controller.detail;
 import java.io.IOException;
 import java.util.Map;
 
-import collection.FigureCollection;
+import collection.FigureData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +30,7 @@ public class FestivalDetailController {
 
     @FXML
     public void onClickBack(ActionEvent festival) throws IOException {
-        App.setRoot("festivalView");
+        App.setAndReturnRoot("festivalView");
     }
 
     public void setFestival(Festival festival) {
@@ -43,9 +43,9 @@ public class FestivalDetailController {
             if (entry.getValue() != null) {
                 figureText.setFill(Color.web("#3498db"));
                 figureText.setOnMouseClicked(mouseEvent -> {
-                    Figure figure = FigureCollection.collection.findName(entry.getKey());
+                    Figure figure = FigureData.data.findName(entry.getKey());
                     try {
-                        FXMLLoader loader = App.setRoot("figureDetail");
+                        FXMLLoader loader = App.setAndReturnRoot("figureDetail");
                         FigureDetailController controller = loader.getController();
                         controller.setFigure(figure);
                     } catch (IOException e) {

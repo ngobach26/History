@@ -4,13 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import collection.EraCollection;
+import collection.EraData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import controller.detail.EraDetailController;
+import controller.helper.HandleDetailHelp;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
@@ -45,19 +44,21 @@ public class EraViewController implements Initializable {
             String endYear =cellData.getValue().getEndYear();
             return new SimpleStringProperty(startYear + " - " + endYear);
         });
-        eraTable.setItems(EraCollection.getCollection().getData());
+
+        eraTable.setItems(EraData.getData().getData());
+
         searchBarController.setSearchBoxListener(
                 new SearchBoxListener() {
                     @Override
                     public void handleSearchName(String name) {
-                        eraTable.setItems(EraCollection.getCollection().searchByName(name));
+                        eraTable.setItems(EraData.getData().searchByName(name));
                     }
 
                     @Override
                     public void handleSearchId(String id) {
                         try {
                             int intId = Integer.parseInt(id);
-                            eraTable.setItems(EraCollection.getCollection().searchByID(intId));
+                            eraTable.setItems(EraData.getData().searchByID(intId));
                         } catch (Exception e){
                             System.err.println("Cannot find the entity with the id " + id);
                         }
@@ -65,19 +66,19 @@ public class EraViewController implements Initializable {
 
                     @Override
                     public void handleBlank() {
-                        eraTable.setItems(EraCollection.getCollection().getData());
+                        eraTable.setItems(EraData.getData().getData());
                     }
                 }
         );
+
         eraTable.setRowFactory(tableView -> {
             TableRow<Era> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if(event.getClickCount() == 2 && (!row.isEmpty())){
                     Era era = row.getItem();
                     try {
-                        FXMLLoader loader =  App.setRoot("EraDetail");
-                        EraDetailController controller = loader.getController();
-                        controller.setEra(era);
+                        HandleDetailHelp.Era(era);
+                        App.clickBackService.addEntityToClickBackStack(era);
                     } catch (IOException e){
                         e.printStackTrace();
                     }

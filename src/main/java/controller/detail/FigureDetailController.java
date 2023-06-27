@@ -6,14 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
+import main.EntityPages;
 import model.Figure;
 
 import java.io.IOException;
 
-import helper.controllerUltil.UIUtils;
+import controller.helper.UIHelp;
 import model.HistoricalEntity;
 
-public class FigureDetailController {
+public class FigureDetailController implements DetailAction{
     @FXML
     private Text nameText;
 
@@ -43,21 +44,9 @@ public class FigureDetailController {
 
     @FXML
     private FlowPane spouseFlowPane;
+
     @FXML
     private FlowPane aliasFlowPane;
-
-    @FXML
-    public void onClickBack(ActionEvent event) throws IOException {
-        if(App.stack.isEmpty()){
-            App.setRoot("figureView");
-        }else{
-            HistoricalEntity entity = App.stack.pop();
-            FXMLLoader loader = App.setRoot("figureDetail");
-            FigureDetailController controller = loader.getController();
-            controller.setFigure((Figure) entity);
-        }
-
-    }
 
     public void setFigure(Figure figure) {
         nameText.setText(figure.getName());
@@ -69,12 +58,24 @@ public class FigureDetailController {
         bornText.setText(figure.getBornYear());
         diedText.setText(figure.getDiedYear());
         overviewText.setText(figure.getDescription());
-        // eraText.setText(figure.getEraString());
-        UIUtils.populateFlowPane(figure.getFather(), fatherFlowPane);
-        UIUtils.populateFlowPane(figure.getMother(), motherFlowPane);
-        UIUtils.populateFlowPane(figure.getChildren(), childrenFlowPane);
-        UIUtils.populateFlowPane(figure.getSpouses(), spouseFlowPane);
+        UIHelp.populateFlowPane(figure.getFather(), fatherFlowPane);
+        UIHelp.populateFlowPane(figure.getMother(), motherFlowPane);
+        UIHelp.populateFlowPane(figure.getChildren(), childrenFlowPane);
+        UIHelp.populateFlowPane(figure.getSpouses(), spouseFlowPane);
     }
+
+    @FXML
+    @Override
+    public void onClickBack(ActionEvent event) throws IOException {
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());
+        }else {
+            App.clickBackService.handleClickBack();
+        }
+
+    }
+
+
 
     @FXML
     public void onDeleteInfo() {

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="950.0" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css"
+    xmlns="http://javafx.com/javafx/19"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Contact">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="no" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Forum">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="no" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Term of service">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="no" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <fx:include fx:id="sideBar" source="SideBar.fxml" />
+    </left>
+    <center>
+        <Pane prefHeight="530.0" prefWidth="506.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="149.0" layoutY="14.0" prefHeight="53.0" prefWidth="351.0" text="Welcome!!" textFill="#bc3838">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Text fill="#812222" layoutX="87.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIETNAM HISTORY WIKIAPP" wrappingWidth="402.7496337890625">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="85.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our application provides a database offering a wealth of information and detailed insights into historical periods, vibrant cultures, pivotal events, and the extraordinary lives of renowned figures that have shaped Vietnam's destiny." wrappingWidth="478.6003112792969">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="87.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group: 5" wrappingWidth="402.7496337890625">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="87.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Members:" wrappingWidth="402.7496337890625">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn Chí Long - 20210553" wrappingWidth="241.9495849609375">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn Việt Thắng - 20215245" wrappingWidth="252.34967041015625">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngô Xuân Bách - 20215181" wrappingWidth="223.549560546875">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lê Xuân Hiếu - 20215201" wrappingWidth="201.14967346191406">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đinh Việt Quang - 20215235" wrappingWidth="241.9495849609375">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="213.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyễn Đình Trung - 20215249" wrappingWidth="252.34967041015625">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="#812222" layoutX="83.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brace yourself for an immersive experience that uncovers long-held secrets and unveils the story within Vietnam's heroic history. Get ready to explore, learn, and be inspired as you navigate the depths of our captivating Vietnam History WikiApp. &lt;3" wrappingWidth="461.0004577636719">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+            <Text fill="#812222" layoutX="86.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Embark on an enlightening journey through time with our application." wrappingWidth="557.1497802734375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

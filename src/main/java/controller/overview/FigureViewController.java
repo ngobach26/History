@@ -5,12 +5,11 @@ import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import collection.FigureCollection;
+import collection.FigureData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import controller.detail.FigureDetailController;
+import controller.helper.HandleDetailHelp;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -54,19 +53,19 @@ public class FigureViewController implements Initializable {
         });
         colFigureEra.setCellValueFactory(new PropertyValueFactory<>("eras"));
         colFigureOverview.setCellValueFactory(new PropertyValueFactory<>("description"));
-        tblFigure.setItems(FigureCollection.collection.getData());
+        tblFigure.setItems(FigureData.data.getData());
         searchBarController.setSearchBoxListener(
                 new SearchBoxListener() {
                     @Override
                     public void handleSearchName(String name) {
-                        tblFigure.setItems(FigureCollection.collection.searchByName(name));
+                        tblFigure.setItems(FigureData.data.searchByName(name));
                     }
 
                     @Override
                     public void handleSearchId(String id) {
                         try {
                             int intId = Integer.parseInt(id);
-                            tblFigure.setItems(FigureCollection.collection.searchByID(intId));
+                            tblFigure.setItems(FigureData.data.searchByID(intId));
                         } catch (Exception e){
                             System.err.println("Cannot find the entity with the id " + id);
                         }
@@ -74,7 +73,7 @@ public class FigureViewController implements Initializable {
 
                     @Override
                     public void handleBlank() {
-                        tblFigure.setItems(FigureCollection.collection.getData());
+                        tblFigure.setItems(FigureData.data.getData());
                     }
                 }
         );
@@ -84,10 +83,8 @@ public class FigureViewController implements Initializable {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Figure figure = row.getItem();
                     try {
-                        FXMLLoader loader = App.setRoot("figureDetail");
-                        FigureDetailController controller = loader.getController();
-                        controller.setFigure(figure);
-                        App.stack.push(figure);
+                        HandleDetailHelp.Figure(figure);
+                        App.clickBackService.addEntityToClickBackStack(figure);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
