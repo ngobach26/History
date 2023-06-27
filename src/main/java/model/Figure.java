@@ -33,7 +33,13 @@ public class Figure extends HistoricalEntity{
 	public List<String> getOtherNames() {
 		return otherNames;
 	}
-
+	
+	public List<String> getAllNames() {
+		List<String> allNames = new ArrayList<>(otherNames);
+		allNames.add(getName());
+		return allNames;
+	}
+	
 	public void setOtherNames(List<String> otherNames) {
 		this.otherNames = otherNames;
 	}
@@ -88,6 +94,19 @@ public class Figure extends HistoricalEntity{
 
 	public void setFather(Map<String, Integer> father) {
 		this.father = father;
+	}
+	
+	@Override
+	public boolean containsName(String name) {
+		if (name.equals(getName())) {
+			return true;
+		}
+		for (String otherName : getOtherNames()) {
+			if (name.equals(otherName)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void setChildren(Map<String, Integer> children) {

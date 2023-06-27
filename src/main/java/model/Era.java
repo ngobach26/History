@@ -23,6 +23,14 @@ public class Era extends HistoricalEntity{
 		}
 	}
 	
+	public Map<String, Integer> getKings(){
+		return kings;
+	}
+	
+	public void setKings(Map<String, Integer> kings) {
+		this.kings = kings;
+	}
+	
 	public String getKingString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");

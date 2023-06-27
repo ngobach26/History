@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -25,8 +27,9 @@ public class FigureCrawler implements ICrawler{
 	
 	@Override
 	public void crawl() {
-//		figureIO.writeJson(crawlVanSu(), "src/main/resources/json/Figures.json");
-		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
+		figureIO.writeJson(merge(), "src/main/resources/json/Figures.json");
+//		figureIO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS.json");
+//		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
 	}
 	
 	public List<Figure> crawlVanSu() {
@@ -200,10 +203,184 @@ public class FigureCrawler implements ICrawler{
 		}
 		return surnames;
 	}
+	
+	public List<Figure> crawlThuVienLichSu() {
+		String url = "https://thuvienlichsu.vn/nhan-vat?page=";
+		Document doc;
+		List<Figure> figures = new ArrayList<>();
+		
+		//crawl 41 pages
+		for (int i=1; i<=41; i++) {
+			try {
+				doc = Jsoup.connect(url+i).get();
+				Elements aTags = doc.select("div.card a.click");
+				for (Element aTag : aTags) {
+					String link = aTag.attr("abs:href");
+					Document linkDoc = Jsoup.connect(link).get();
+					
+					List<String> eras = new ArrayList<>(); 
+		            List<String> otherNames = new ArrayList<>(); 
+		            String mainName = "Không rõ";
+		            String bornYear = "Không rõ";
+		            String diedYear = "Không rõ";
+		            String location = "Không rõ";  
+		            String role = "Không rõ";
+		            String description = "Không rõ";		            
+		            
+		            //extract name, bornYear, diedYear
+		            String title = linkDoc.selectFirst("div.divide-tag").text();
+		            mainName = title;	            
+		            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+		            Matcher matcher = pattern.matcher(title);
+		            if (matcher.find()) {
+		            	String timeText = matcher.group(1).trim();
+		            	mainName = mainName.replace(matcher.group(), "").trim();
+		            	List<Integer> dashIndexes = new ArrayList<>();
+		            	for (int j = 0; j < timeText.length(); j++) {
+		                    if (timeText.charAt(j) == '-') {
+		                        dashIndexes.add(j);
+		                    }
+		                }		            	
+		            	if (dashIndexes.get(0) == 0) {
+		            		bornYear = timeText.substring(0, dashIndexes.get(1)).trim();
+	            			diedYear = timeText.substring(dashIndexes.get(1) + 1, timeText.length()).trim();
+		            	}
+		            	else {
+		            		bornYear = timeText.substring(0, dashIndexes.get(0)).trim();
+		            		diedYear = timeText.substring(dashIndexes.get(0) + 1, timeText.length()).trim();
+		            	}
+		            	if (bornYear.equals("?")) {
+		    				bornYear = "Không rõ";
+		    			}
+		    			if (diedYear.equals("?")) {
+		    				diedYear = "Không rõ";
+		    			} 
+		            	System.out.println(timeText);
+		            }
+		            
+//					Element relatedEventsTable = linkDoc.select("div.divide-tag").get(1).selectFirst("table");
+					
+					
+					Element descriptionPara = linkDoc.select("div.divide-tag").get(2).selectFirst("div.card-body > p.card-text");
+					description = descriptionPara.text();
+					
+					//extract otherNames
+					pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|ban tước|ca ngợi là|còn gọi là|gọi tôn là|tên húy là|tên khác là|niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|tự xưng là|hay còn gọi là|hay|đặt tên mình là|kiểm hiệu|có tên là|tức là|được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|phong thành|lại phong|hưởng tước|phục chức|cung kính gọi là|đổi niên hiệu|tự là|xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là)(\\s+)(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+					matcher = pattern.matcher(description);
+					String otherName;
+					while (matcher.find()) {
+						otherName = matcher.group().replaceAll("còn được gọi là|tước hiệu|tên thật là|truy phong là|ban tước|ca ngợi là|còn gọi là|gọi tôn là|tên húy là|tên khác là|niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|tự xưng là|hay còn gọi là|hay|đặt tên mình là|kiểm hiệu|có tên là|tức là|được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|phong thành|lại phong|hưởng tước|phục chức|cung kính gọi là|đổi niên hiệu|tự là|xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là", "").trim();
+						if (!otherName.equals(mainName) && !otherNames.contains(otherName)) {
+							otherNames.add(otherName);
+						}
+					}
+								
+					
+					System.out.println(mainName);
+					System.out.println(otherNames);
+					System.out.println(bornYear);
+					System.out.println(diedYear);
+					System.out.println(description);
+					System.out.println("----------");
+					
+					figures.add(new Figure(mainName, otherNames, bornYear, diedYear, eras, location, role, description));
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//add location
+		url = "https://thuvienlichsu.vn/nhan-vat/theo-dia-diem-quan-huyen-tinh-thanh";
+		try {
+			doc = Jsoup.connect(url).get();
+			Elements locationDivs = doc.select("div.container > div.row div.divide-content");
+			for (Element locationDiv : locationDivs) {
+				String location = locationDiv.selectFirst("div.divide-line").text().trim();
+				System.out.println(location);
+				String link = locationDiv.selectFirst("div.watch-more a").attr("abs:href");
+				Document linkDoc = Jsoup.connect(link).get();
+				
+				//more links at the end of the page
+				Elements linkElements = linkDoc.select("ul.pagination li a");
+				for (Element linkElement : linkElements) {				
+					if (Character.isDigit(linkElement.text().trim().charAt(0))) {
+						link = linkElement.attr("abs:href");
+						linkDoc = Jsoup.connect(link).get();
+						
+						Elements figureDivs = linkDoc.select("div.container > div.row div.divide-content");
+						for (Element figureDiv : figureDivs) {
+							String mainName = figureDiv.selectFirst("div.card-body a.click").text();	            
+				            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+				            Matcher matcher = pattern.matcher(mainName);
+				            if (matcher.find()) {
+				            	mainName = mainName.replace(matcher.group(), "").trim();
+				            }
+				            System.out.println(mainName);	
+				            
+				            //add location
+				            for (Figure figure : figures) {
+				            	if (mainName.equals(figure.getName())) {
+				            		figure.setLocation(location);
+				            	}
+				            }
+						}
+					}
+				}
+				
+				System.out.println("-------------");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return figures;
+	}
+	
+	
+	public List<Figure> merge() {
+		List<Figure> figuresVS = crawlVanSu();
+		List<Figure> figuresTVLS = crawlThuVienLichSu();
+		
+		for (Figure figureTVLS : figuresTVLS) {
+			boolean isFound = false;
+			
+			for (Figure figureVS : figuresVS) {
+				List<String> updatedOtherNames = new ArrayList<>(figureVS.getOtherNames());
+				for (String figureTVLSName : figureTVLS.getAllNames()) {
+					if (figureVS.containsName(figureTVLSName)) {
+						isFound = true;
+					}
+					if (!updatedOtherNames.contains(figureTVLSName)) {
+						updatedOtherNames.add(figureTVLSName);
+					}
+				}
+				//if found, just updated other names
+				if (isFound) {					
+					//remove main name in other names
+					updatedOtherNames.remove(figureVS.getName());
+					figureVS.setOtherNames(updatedOtherNames);
+					break;
+				}
+			}
+			
+			//if not found, add new figure to the list
+			if (!isFound) {
+				figuresVS.add(figureTVLS);
+				System.out.println(figureTVLS.getName());
+				System.out.println(figureTVLS.getOtherNames());
+			}
+		}
+		
+		return figuresVS;
+		
+	}
+	
 	public static void main(String[] args) {
 		FigureCrawler figureCrawler = new FigureCrawler();
-//		figureCrawler.crawl();
-		System.out.println(figureCrawler.getUniqueSurnames());
+		figureCrawler.crawl();
+//	    figureCrawler.crawlThuVienLichSu();
+//		figureCrawler.merge();
 	}
 	
 }

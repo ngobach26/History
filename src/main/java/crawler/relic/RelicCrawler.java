@@ -86,8 +86,12 @@ public class RelicCrawler implements ICrawler {
                         String name = cells.get(0).text();
                         String location = cells.get(1).text();
                         String category = cells.get(2).text();
-                        String approvedYear = cells.get(3).text();
+                        String approvedYear = "Không rõ";
+                        if (cells.size() > 3) {
+                        	approvedYear = cells.get(3).text();
+                        }         
                         String description = "Không rõ";
+                        List<String> potentialFigureNames = new ArrayList<>();
 
                         if (name.isEmpty()) name = "Không rõ";
                         if (location.isEmpty()) location = "Không rõ";
@@ -106,12 +110,12 @@ public class RelicCrawler implements ICrawler {
                         		}
                         		if (category.contains("Lịch sử")) {
                         			Elements paras = relicDoc.select("div.mw-parser-output > p");
-                            		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");
-                        			List<String> potentialFigureNames = new ArrayList<>();
+                            		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
                             		for (Element para: paras) {
                             			Matcher matcher = pattern.matcher(para.text());
                             	        while (matcher.find()) {
-                            	            String potentialName = matcher.group().replaceAll("Động|Bia|Trận|Thành|Núi|Bộ|Đèo|Hang|Đình|Đền|Chùa|Tháp|Người|Tiếng|Bến|Phía|Theo|Nhà|Thời|Suối|Sông|Đảng|Xã|Huyện|Tỉnh|Thác|Hội|Đồn|Tại|Đàng|Sau|Châu|Biển|Chữ|Hàng|Tổng", "").trim();
+ //                           	            String potentialName = matcher.group().replaceAll("Động|Bia|Trận|Thành|Núi|Bộ|Đèo|Hang|Đình|Đền|Chùa|Tháp|Người|Tiếng|Bến|Phía|Theo|Nhà|Thời|Suối|Sông|Đảng|Xã|Huyện|Tỉnh|Thác|Hội|Đồn|Tại|Đàng|Sau|Châu|Biển|Chữ|Hàng|Tổng", "").trim();
+                            	        	String potentialName = matcher.group();
                             	            int length = potentialName.split("\\s+").length;
                             	            String surname = (potentialName.split("\\s+"))[0];
                             	            if (!potentialFigureNames.contains(potentialName) && surnames.contains(surname) && length > 1) {
@@ -120,19 +124,18 @@ public class RelicCrawler implements ICrawler {
                             	        }
                             		}
                         	        System.out.println(potentialFigureNames);
-                            		System.out.println("-------------");
                         		}
                         	}
                         }
 
                         //Add relic
-//                        relics.add(new Relic(name, location, category, approvedYear, description));
-//                        System.out.println(name);
-//                        System.out.println(location);
-//                        System.out.println(category);
-//                        System.out.println(approvedYear);
-//                        System.out.println(description);                 
-//                        System.out.println("-------------");
+                        relics.add(new Relic(name, location, category, approvedYear, description, potentialFigureNames));
+                        System.out.println(name);
+                        System.out.println(location);
+                        System.out.println(category);
+                        System.out.println(approvedYear);
+                        System.out.println(description);                 
+                        System.out.println("-------------");
                     } catch (IndexOutOfBoundsException e) {
                         e.printStackTrace();
                     }
@@ -149,6 +152,6 @@ public class RelicCrawler implements ICrawler {
 
     public static void main(String[] args) {
         RelicCrawler relicCrawler = new RelicCrawler();
-        relicCrawler.crawlWiki();
+        relicCrawler.crawl();
     }
 }

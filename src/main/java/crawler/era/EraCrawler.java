@@ -78,9 +78,6 @@ public class EraCrawler implements ICrawler{
 			stringArr = stringArr[1].replace(")", "").split("[-–]");
 			startYear = stringArr[0].trim();
 			endYear = stringArr[1].trim();
-			if (endYear.contains("trCN")) {
-				startYear += " trCN";
-			}
 		}
 		
 		//eraNames standardization between Figures.json and Eras.json
@@ -90,6 +87,11 @@ public class EraCrawler implements ICrawler{
 				eraName = newName;
 				break;
 			}
+		}
+		
+		//reformat endYear
+		if (endYear.contains("trCN")) {
+			startYear += " trCN";
 		}
 		
 		//crawl capital, nationName
@@ -125,7 +127,7 @@ public class EraCrawler implements ICrawler{
 				String text = ((TextNode) curr).text().trim();
 				if (startsWithNumber(text)) {
 					String strArr[] = text.split("[.(]");
-					kings.add(strArr[1].trim());
+					kings.add(strArr[1].replaceAll("Chúa|Hoàng đế", "").trim());
 				}
 				else {
 					description = description + text + " ";

@@ -7,6 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -260,9 +262,88 @@ public class EventCrawler implements ICrawler{
 		return new Event(eventName, time, location, result, relatedFigures, description);
 						
 	}
+	
+	public List<Event> crawlThuVienLichSu() {
+		List<Event> events = new ArrayList<>();
+		String url ="https://thuvienlichsu.vn/su-kien?page=";
+		Document doc;
+		
+		//crawl 19 pages
+		for (int i=1; i<=19; i++) {
+			try {
+				doc = Jsoup.connect(url + i).get();
+				Elements aTags = doc.select("div.card a.click");
+				for (Element aTag : aTags) {
+					String link = aTag.attr("abs:href");
+					Document linkDoc = Jsoup.connect(link).get();
+					
+					String eventName = "Không rõ";
+					String time = "Không rõ";
+					String location = "Không rõ";
+					String result = "Không rõ";
+					String description = "Không rõ";
+					List<String> relatedFigures = new ArrayList<>();
+					
+					//extract eventName, time
+					String title = linkDoc.selectFirst("div.divide-tag").text();
+					eventName = title;
+					Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+		            Matcher matcher = pattern.matcher(title);
+		            while (matcher.find()) {
+		            	if (containsNumber(matcher.group())) {
+		            		time = matcher.group(1).trim();
+			            	eventName = eventName.replace(matcher.group(), "").trim();
+			            	break;
+		            	}		            	
+		            }
+		            
+		            Elements cardElements = linkDoc.select("div.divide-tag");
+		            for (int j=1; j<cardElements.size(); j++) {
+		            	Element cardElement = cardElements.get(j);
+		            	String cardTitle = cardElement.selectFirst("div.divide-line h3.header-edge").text().trim();
+		            	if (cardTitle.equals("Diễn biễn lịch sử")) {          		
+		            		description = cardElement.selectFirst("div.card-body").text();
+		            	}
+		            	else if (cardTitle.equals("Địa điểm liên quan")) {
+		            		location = cardElement.select("div.card a.click").text();
+		            	}
+		            	else if (cardTitle.equals("Nhân vật liên quan")) {
+		            		Elements relatedFigureCards = cardElement.select("div.card div.card");
+		            		for (Element relatedFigureCard : relatedFigureCards) {
+		            			relatedFigures.add(relatedFigureCard.selectFirst("a.click").text());
+		            		}
+		            	}
+		            }
+
+		            
+		            System.out.println(eventName);
+		            System.out.println(time);
+		            System.out.println(description);
+		            System.out.println(location);
+		            System.out.println(relatedFigures);
+		            System.out.println("--------------");
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return events;
+	}
+	
+	private boolean containsNumber(String str) {
+		for (char c : str.toCharArray()) {
+			if (Character.isDigit(c)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	public static void main(String[] args) {
 		EventCrawler eventCrawler = new EventCrawler();
-		eventCrawler.crawl();
+		eventCrawler.crawlThuVienLichSu();
 	}
 	
 }

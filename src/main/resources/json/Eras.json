@@ -18,7 +18,7 @@
     ],
     "capital": "Phong Châu (Phú Thọ)",
     "id": 2,
-    "name": "Thời kỳ dựng nước (2000 - 258 trCN)",
+    "name": "Dựng nước (2000 - 258 trCN)",
     "description": "Kinh Dương Vương là Thủy tổ của dân tộc Việt Nam có con Lạc Long Quân lấy Âu Cơ sinh ra một bọc một trăm trứng nở ra một trăm người con trai là tổ tiên của người Bách Việt. Con trưởng làm Hùng Vương nối ngôi. Nước Văn Lang kéo dài gần 2000 năm, trải qua 18 đời vua Hùng, đóng đô ở Phong Châu. "
   },
   {
@@ -109,10 +109,10 @@
     "startYear": "905",
     "endYear": "938",
     "kings": {
-      "Khúc Thừa Mỹ": 0,
-      "Khúc Thừa Dụ": 0,
-      "Dương Đình Nghệ": 0,
-      "Khúc Hạo": 0
+      "Khúc Thừa Mỹ": 59,
+      "Khúc Thừa Dụ": 58,
+      "Dương Đình Nghệ": 55,
+      "Khúc Hạo": 57
     },
     "nationNames": [
       "Tĩnh Hải quân"
@@ -155,7 +155,7 @@
     "kings": {
       "Lê Ngọa Triều": 0,
       "Lê Đại Hành": 0,
-      "Lê Trung Tông": 0
+      "Lê Trung Tông": 92
     },
     "nationNames": [
       "Đại Cồ Việt"
@@ -170,14 +170,14 @@
     "endYear": "1225",
     "kings": {
       "Lý Nhân Tông": 0,
-      "Lý Huệ Tông": 0,
-      "Lý Anh Tông": 0,
-      "Lý Thái Tông": 0,
-      "Lý Thánh Tông": 0,
-      "Lý Thái Tổ": 0,
+      "Lý Huệ Tông": 142,
+      "Lý Anh Tông": 146,
+      "Lý Thái Tông": 145,
+      "Lý Thánh Tông": 144,
+      "Lý Thái Tổ": 141,
       "Lý Thần Tông": 0,
-      "Lý Chiêu Hoàng": 0,
-      "Lý Cao Tông": 0
+      "Lý Chiêu Hoàng": 181,
+      "Lý Cao Tông": 143
     },
     "nationNames": [
       "Đại Cồ Việt",
@@ -192,18 +192,18 @@
     "startYear": "1225",
     "endYear": "1400",
     "kings": {
-      "Trần Anh Tông": 0,
-      "Trần Minh Tông": 0,
+      "Trần Anh Tông": 249,
+      "Trần Minh Tông": 259,
       "Trần Thuận Tông": 0,
-      "Trần Nghệ Tông": 0,
-      "Trần Nhân Tông": 0,
-      "Trần Hiến Tông": 0,
+      "Trần Nghệ Tông": 263,
+      "Trần Nhân Tông": 255,
+      "Trần Hiến Tông": 272,
       "Trần Thiếu Đế": 0,
       "Trần Phế Đế": 0,
-      "Trần Thánh Tông": 0,
-      "Trần Duệ Tông": 0,
-      "Trần Thái Tông": 0,
-      "Trần Dụ Tông": 0
+      "Trần Thánh Tông": 253,
+      "Trần Duệ Tông": 258,
+      "Trần Thái Tông": 251,
+      "Trần Dụ Tông": 252
     },
     "nationNames": [
       "Đại Việt"
@@ -217,7 +217,7 @@
     "startYear": "1400",
     "endYear": "1407",
     "kings": {
-      "Hồ Hán Thương": 0,
+      "Hồ Hán Thương": 285,
       "Hồ Quý Ly": 0
     },
     "nationNames": [
@@ -260,14 +260,14 @@
     "endYear": "1527",
     "kings": {
       "Lê Uy Mục": 0,
-      "Lê Thái Tông": 0,
+      "Lê Thái Tông": 379,
       "Lê Tương Dực": 0,
-      "Lê Thái Tổ": 0,
+      "Lê Thái Tổ": 374,
       "Lê Túc Tông": 0,
       "Lê Chiêu Tông": 0,
       "Lê Cung Hoàng": 0,
-      "Lê Thánh Tông": 0,
-      "Lê Nhân Tông": 0,
+      "Lê Thánh Tông": 391,
+      "Lê Nhân Tông": 365,
       "Lê Hiến Tông": 0
     },
     "nationNames": [
@@ -282,19 +282,19 @@
     "startYear": "1527",
     "endYear": "1592",
     "kings": {
-      "Lê Trang Tông": 0,
+      "Lê Trang Tông": 650,
       "Giai đoạn rút lên Cao bằng": 0,
-      "Mạc Mậu Hợp": 0,
+      "Mạc Mậu Hợp": 506,
       "Lê Thế Tông": 0,
       "Thế tổ Minh khang Thái vương": 0,
-      "Mạc Đăng Dung": 0,
-      "Mạc Phúc Hải": 0,
-      "Lê Anh Tông": 0,
-      "Mạc Đăng Doanh": 0,
-      "Nguyễn Hoàng": 0,
-      "Mạc Phúc Nguyên": 0,
-      "Bình An Vương": 0,
-      "Lê Trung Tông": 0
+      "Mạc Đăng Dung": 499,
+      "Mạc Phúc Hải": 509,
+      "Lê Anh Tông": 490,
+      "Mạc Đăng Doanh": 498,
+      "Nguyễn Hoàng": 724,
+      "Mạc Phúc Nguyên": 510,
+      "Bình An Vương": 808,
+      "Lê Trung Tông": 92
     },
     "nationNames": [
       "Đại Việt"
@@ -309,33 +309,33 @@
     "endYear": "1788",
     "kings": {
       "Tĩnh đô vương": 0,
-      "Lê Huyền Tông": 0,
+      "Lê Huyền Tông": 656,
       "Lê Thuần Tông": 0,
-      "Lê Hiển Tông": 0,
-      "Lê Ý Tông": 0,
+      "Lê Hiển Tông": 642,
+      "Lê Ý Tông": 654,
       "Minh đô vương": 0,
-      "Lê Dụ Tông": 0,
-      "Đoan Nam Vương": 0,
-      "Nguyễn Phúc Chu": 0,
+      "Lê Dụ Tông": 643,
+      "Đoan Nam Vương": 806,
+      "Nguyễn Phúc Chu": 743,
       "Nguyễn Phúc Thụ": 0,
       "Lê Hy Tông": 0,
       "Lê Mẫn Đế": 0,
-      "Lê Gia Tông": 0,
+      "Lê Gia Tông": 644,
       "An đô vương": 0,
-      "Nguyễn Phúc Nguyên": 0,
+      "Nguyễn Phúc Nguyên": 747,
       "Uy nam vương": 0,
       "Tây Đô Vương": 0,
-      "Chúa Nguyễn Phúc Lan": 0,
       "Lê Duy Phường": 0,
-      "Định Vương": 0,
-      "Nguyễn Phúc Khoát": 0,
-      "Nguyễn Phúc Thuần": 0,
+      "Định Vương": 749,
+      "Nguyễn Phúc Khoát": 745,
+      "Nguyễn Phúc Thuần": 749,
       "Án Đô Vương": 0,
       "Lê Kính Tông": 0,
-      "Nguyễn Phúc Tần": 0,
-      "Lê Thần Tông": 0,
-      "Thanh Đô Vương": 0,
-      "Lê Chân Tông": 0,
+      "Nguyễn Phúc Tần": 748,
+      "Nguyễn Phúc Lan": 746,
+      "Lê Thần Tông": 648,
+      "Thanh Đô Vương": 807,
+      "Lê Chân Tông": 646,
       "Nguyễn Phúc Thái": 0,
       "Điện Đô Vương": 0
     },
@@ -351,9 +351,9 @@
     "startYear": "1778",
     "endYear": "1802",
     "kings": {
-      "Hoàng đế Cảnh Thịnh": 0,
-      "Hoàng đế Quang Trung": 0,
-      "Thái Đức Hoàng Đế": 0
+      "Thái Đức Hoàng Đế": 0,
+      "Quang Trung": 833,
+      "Cảnh Thịnh": 0
     },
     "nationNames": [
       "Đại Việt"
@@ -367,10 +367,10 @@
     "startYear": "1802",
     "endYear": "1883",
     "kings": {
-      "Gia Long": 0,
-      "Thiệu Trị": 0,
-      "Tự Đức": 0,
-      "Minh Mạng": 0
+      "Gia Long": 1095,
+      "Thiệu Trị": 1104,
+      "Tự Đức": 1098,
+      "Minh Mạng": 1096
     },
     "nationNames": [
       "Đại Việt",
@@ -387,14 +387,14 @@
     "endYear": "1945",
     "kings": {
       "Hiệp Hoà": 0,
-      "Bảo Đại": 0,
-      "Dục Đức": 0,
-      "Hàm Nghi": 0,
-      "Kiến Phúc": 0,
-      "Đồng Khánh": 0,
-      "Thành Thái": 0,
-      "Khải Định": 0,
-      "Duy Tân": 0
+      "Bảo Đại": 1542,
+      "Dục Đức": 1537,
+      "Hàm Nghi": 1540,
+      "Kiến Phúc": 1538,
+      "Đồng Khánh": 1539,
+      "Thành Thái": 1990,
+      "Khải Định": 1534,
+      "Duy Tân": 1541
     },
     "nationNames": [
       "Đại Nam",
