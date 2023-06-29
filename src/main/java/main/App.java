@@ -3,6 +3,7 @@ package main;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,6 +28,8 @@ public class App extends Application {
         scene.getStylesheets().add(getClass().getResource("/stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle(appName);
+        Image icon = new Image(getClass().getResourceAsStream("/img/vn_pic.png"));
+        stage.getIcons().add(icon);
         stage.show();
     }
 

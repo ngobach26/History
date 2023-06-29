@@ -2,6 +2,12 @@
     -fx-background-image: url("../img/bg1.png");
     -fx-background-color: transparent;
 }
+
+.backgroundForHomepage {
+    -fx-background-image: url("../img/appBg.jpg");
+    -fx-background-color: transparent;
+}
+
 .titlebar {
     -fx-background-image: url("../img/viewbg.jpg");
     -fx-background-color: transparent;
