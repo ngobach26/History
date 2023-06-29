@@ -11,6 +11,7 @@ import model.Figure;
 public class FigureData {
     private static final Type TOKEN = new TypeToken<ArrayList<Figure>>() {}.getType();
     public static EntityCollection<Figure> data = new EntityCollection<>();
+    private static int numOfFigure;
     private static final String SOURCE_PATH = "src/main/resources/json/Figures.json";
 
     public static void writeJson(){
@@ -20,5 +21,10 @@ public class FigureData {
     public static void loadJson(){
         ArrayList<Figure> data = (ArrayList<Figure>) new JsonIO<Figure>(TOKEN).loadJson(SOURCE_PATH);
         FigureData.data.setData(data);
+        numOfFigure = data.size();
+    }
+
+    public static int getNumOfFigure() {
+        return numOfFigure;
     }
 }

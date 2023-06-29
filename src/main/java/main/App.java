@@ -1,5 +1,6 @@
 package main;
 
+import controller.services.CLickBackService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,12 +14,10 @@ import collection.EventData;
 import collection.FestivalData;
 import collection.FigureData;
 import collection.RelicData;
-import controller.services.CLickBackService;
 
 public class App extends Application {
-    private static Scene scene;
     public static CLickBackService clickBackService = new CLickBackService();
-
+    private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {

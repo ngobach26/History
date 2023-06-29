@@ -2,7 +2,6 @@ package controller.detail;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
@@ -11,8 +10,7 @@ import model.Figure;
 
 import java.io.IOException;
 
-import controller.helper.UIHelp;
-import model.HistoricalEntity;
+import controller.helper.FigureFlowPaneUIHelp;
 
 public class FigureDetailController implements DetailAction{
     @FXML
@@ -58,10 +56,10 @@ public class FigureDetailController implements DetailAction{
         bornText.setText(figure.getBornYear());
         diedText.setText(figure.getDiedYear());
         overviewText.setText(figure.getDescription());
-        UIHelp.populateFlowPane(figure.getFather(), fatherFlowPane);
-        UIHelp.populateFlowPane(figure.getMother(), motherFlowPane);
-        UIHelp.populateFlowPane(figure.getChildren(), childrenFlowPane);
-        UIHelp.populateFlowPane(figure.getSpouses(), spouseFlowPane);
+        FigureFlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane);
+        FigureFlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane);
+        FigureFlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane);
+        FigureFlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane);
     }
 
     @FXML
@@ -70,7 +68,7 @@ public class FigureDetailController implements DetailAction{
         if(App.clickBackService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleClickBack();
+            App.clickBackService.handleBackToPreDetailPage();
         }
 
     }

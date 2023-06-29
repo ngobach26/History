@@ -2,11 +2,13 @@ package controller.detail;
 
 import java.io.IOException;
 
+import controller.helper.FigureFlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
+import main.EntityPages;
 import model.Era;
 
 public class EraDetailController {
@@ -30,11 +32,16 @@ public class EraDetailController {
     private FlowPane kingsFlowPane;
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        App.setAndReturnRoot("eraView");
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
+        }else {
+            App.clickBackService.handleBackToPreDetailPage();
+        }
     }
 
     public void setEra(Era era){
         nameText.setText(era.getName());
+        FigureFlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane);
     }
     @FXML
     public void onDeleteInfo(){

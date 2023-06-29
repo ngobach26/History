@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
+import main.EntityPages;
 import model.Relic;
 
 public class RelicDetailController {
@@ -33,7 +34,11 @@ public class RelicDetailController {
 
     @FXML
     public void onClickBack(ActionEvent relic) throws IOException {
-        App.setAndReturnRoot("placeView");
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setAndReturnRoot(EntityPages.RELIC_PAGES.getViewPage());
+        }else {
+            App.clickBackService.handleBackToPreDetailPage();
+        }
     }
 
     public void setRelic(Relic relic) {
@@ -41,6 +46,7 @@ public class RelicDetailController {
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
         approvedYearText.setText(relic.getApprovedYear());
+
     }
 
     @FXML

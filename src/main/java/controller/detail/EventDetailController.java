@@ -2,11 +2,13 @@ package controller.detail;
 
 import java.io.IOException;
 
+import controller.helper.FigureFlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
+import main.EntityPages;
 import model.Event;
 
 public class EventDetailController {
@@ -27,7 +29,11 @@ public class EventDetailController {
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        App.setAndReturnRoot("eventView");
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setAndReturnRoot(EntityPages.EVENT_PAGES.getViewPage());
+        }else {
+            App.clickBackService.handleBackToPreDetailPage();
+        }
     }
 
     public void setEvent(Event event){
@@ -36,6 +42,7 @@ public class EventDetailController {
         locationText.setText(event.getLocation());
         overviewText.setText(event.getDescription());
         resultText.setText(event.getResult());
+        FigureFlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane);
     }
     @FXML
     public void onDeleteInfo(){

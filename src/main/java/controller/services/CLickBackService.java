@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class CLickBackService {
-    public   Stack<HistoricalEntity> clickBackStack = new Stack<HistoricalEntity>();
+    public Stack<HistoricalEntity> clickBackStack = new Stack<HistoricalEntity>();
 
     public  void handleClickBacktoViews(){
         if(!clickBackStack.isEmpty()){
@@ -19,7 +19,7 @@ public class CLickBackService {
         clickBackStack.push(entity);
     }
 
-    public void handleClickBack() throws IOException {
+    public void handleBackToPreDetailPage() throws IOException {
         HistoricalEntity entity = clickBackStack.pop();
         if (entity instanceof Figure) {
             HandleDetailHelp.Figure(entity);
