@@ -12,9 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="titlebar" stylesheets="@../stylesheet/mainScreen.css"
-    xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.overview.EraViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="titlebar" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.overview.EraViewController">
     <top>
         <MenuBar stylesheets="@../stylesheet/mainScreen.css" BorderPane.alignment="CENTER">
             <menus>
@@ -55,10 +53,9 @@
                     <children>
                         <TableView fx:id="eraTable" prefWidth="536.0" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" HBox.hgrow="ALWAYS">
                             <columns>
-                                <TableColumn fx:id="colEraId" minWidth="0.0" prefWidth="75.0" text="Mã" />
-                                <TableColumn fx:id="colEraName" prefWidth="191.19993591308594" text="Tên thời đại" />
-                                <TableColumn fx:id="colEraDate" prefWidth="197.59994506835938" text="Thời gian" />
-                                <TableColumn fx:id="colEraTimeStamp" prefWidth="212.00006103515625" text="Thuộc thời gian" />
+                                <TableColumn fx:id="colEraId" minWidth="0.0" prefWidth="139.20000612735748" text="Mã" />
+                                <TableColumn fx:id="colEraName" prefWidth="247.20004272460938" text="Tên thời đại" />
+                                <TableColumn fx:id="colEraDate" prefWidth="198.39999389648438" text="Thời gian" />
                             </columns>
                             <columnResizePolicy>
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

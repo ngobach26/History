@@ -14,9 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css"
-    xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventDetailController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventDetailController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -59,24 +57,6 @@
                         <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                     </VBox.margin>
                     <children>
-                        <HBox>
-                            <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
-                                        <Label text="Tên sự kiện">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="nameEventId" strokeType="OUTSIDE" strokeWidth="0.0" text="nameEventText" wrappingWidth="346.9366760253906" />
-                                    </children>
-                                </VBox>
-                            </children>
-                        </HBox>
                         <HBox>
                             <children>
                                 <VBox prefWidth="176.0">
@@ -127,24 +107,6 @@
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
                                         <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="overviewText" wrappingWidth="346.9366760253906" />
-                                    </children>
-                                </VBox>
-                            </children>
-                        </HBox>
-                        <HBox layoutX="10.0" layoutY="61.0">
-                            <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
-                                        <Label text="Nguyên nhân">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <VBox HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <Text fx:id="causeText" strokeType="OUTSIDE" strokeWidth="0.0" text="causeText" wrappingWidth="346.9366760253906" />
                                     </children>
                                 </VBox>
                             </children>
