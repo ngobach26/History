@@ -14,9 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css"
-    xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.FigureDetailController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.FigureDetailController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -164,7 +162,7 @@
                             <children>
                                 <VBox prefHeight="18.0" prefWidth="176.0">
                                     <children>
-                                        <Label text="Triều đại">
+                                        <Label text="Triều đại (Thời kỳ)">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -248,14 +246,48 @@
                                 <FlowPane fx:id="childrenFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
-                        <Button mnemonicParsing="false" onAction="#onDeleteInfo" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #db1637;" text="Delete information (Be careful)" textFill="#fafafa">
-                            <font>
-                                <Font name="Bell MT" size="14.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </Button>
+                  <HBox>
+                     <children>
+                        <VBox prefHeight="18.0" prefWidth="176.0">
+                           <children>
+                              <Label text="Sự kiện liên quan">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <FlowPane fx:id="eventFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefHeight="18.0" prefWidth="176.0">
+                           <children>
+                              <Label text="Di tích lịch sử liên quan">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <FlowPane fx:id="relicFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefHeight="18.0" prefWidth="176.0">
+                           <children>
+                              <Label text="Lễ hội liên quan">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <FlowPane fx:id="festivalFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
                         <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
                             <font>
                                 <Font name="Gill Sans MT" size="12.0" />

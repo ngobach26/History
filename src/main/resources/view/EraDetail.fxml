@@ -129,7 +129,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Kinh đô">
+                                        <Label text="Kinh đô (Thủ đô)">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -157,6 +157,20 @@
                                 <FlowPane fx:id="kingsFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefWidth="176.0">
+                           <children>
+                              <Label text="Các sự kiện liên quan">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <FlowPane fx:id="kingsFlowPane1" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
                         <Button mnemonicParsing="false" onAction="#onDeleteInfo" style="-fx-background-color: #db1637;" text="Delete information (Be careful)" textFill="#fafafa">
                             <font>
                                 <Font name="Bell MT" size="14.0" />

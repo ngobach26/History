@@ -61,7 +61,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Thời gian">
+                                        <Label text="Thời gian bắt đầu">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -75,6 +75,24 @@
                                 </VBox>
                             </children>
                         </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefWidth="176.0">
+                           <children>
+                              <Label text="Thời gian kết thúc">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fx:id="endtimeText" strokeType="OUTSIDE" strokeWidth="0.0" text="endtimeText" wrappingWidth="346.9366760253906" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                         <HBox layoutX="10.0" layoutY="10.0">
                             <children>
                                 <VBox prefWidth="176.0">
@@ -93,11 +111,25 @@
                                 </VBox>
                             </children>
                         </HBox>
+                  <HBox>
+                     <children>
+                        <VBox prefWidth="176.0">
+                           <children>
+                              <Label text="Thời kỳ">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <FlowPane fx:id="relatedEraFlowPane" hgap="15.0" prefWidth="200.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
                         <HBox layoutX="10.0" layoutY="36.0">
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Tóm tắt">
+                                        <Label text="Tóm tắt (mô tả)">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
