@@ -2,7 +2,7 @@ package controller.detail;
 
 import java.io.IOException;
 
-import controller.helper.FigureFlowPaneUIHelp;
+import controller.helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -15,21 +15,19 @@ public class EraDetailController {
     @FXML
     private Text nameText;
     @FXML
-    private Text realnameText;
-    @FXML
     private Text overviewText;
     @FXML
     private Text timeStampText;
     @FXML
-    private Text homelandText;
-    @FXML
-    private Text founderText;
+    private Text timeStampEndText;
     @FXML
     private Text capLocateText;
     @FXML
-    private Text timeText;
-    @FXML
     private FlowPane kingsFlowPane;
+    @FXML
+    private FlowPane eventsFlowPane;
+    @FXML
+    private FlowPane countryFlowPane;
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
         if(App.clickBackService.clickBackStack.isEmpty()){
@@ -41,7 +39,18 @@ public class EraDetailController {
 
     public void setEra(Era era){
         nameText.setText(era.getName());
-        FigureFlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane);
+        overviewText.setText(era.getDescription());
+        timeStampText.setText(era.getStartYear());
+        timeStampEndText.setText(era.getEndYear());
+        capLocateText.setText(era.getCapital());
+
+        for (String nation : era.getNationNames()) {
+            Text nationText = new Text(nation);
+            countryFlowPane.getChildren().add(nationText);
+        }
+
+        FlowPaneUIHelp.populateEvent(era.getRelatedEvents(),eventsFlowPane);
+        FlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane);
     }
     @FXML
     public void onDeleteInfo(){

@@ -8,6 +8,7 @@ import collection.EventData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
 import controller.helper.HandleDetailHelp;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,7 +36,12 @@ public class EventViewController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         colEventId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colEventName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colEventDate.setCellValueFactory(new PropertyValueFactory<>("time"));
+        colEventDate.setCellValueFactory(cellData -> {
+            String startYear = cellData.getValue().getStartYear();
+            String endYear = cellData.getValue().getEndYear();
+            String dateRange = endYear + "-" + startYear;
+            return new SimpleStringProperty(dateRange);
+        });
         colEventLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
         eventTable.setItems(EventData.data.getData());
 

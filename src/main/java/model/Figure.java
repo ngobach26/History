@@ -16,6 +16,11 @@ public class Figure extends HistoricalEntity {
 	private Map<String, Integer> mother = new HashMap<>();
 	private Map<String, Integer> father = new HashMap<>();
 	private Map<String, Integer> children = new HashMap<>();
+	private Map<String, Integer> relatedEvents = new HashMap<>();
+	private Map<String, Integer> relatedRelics = new HashMap<>();
+	private Map<String, Integer> relatedFestivals = new HashMap<>();
+
+
 
 	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
 			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
@@ -99,5 +104,17 @@ public class Figure extends HistoricalEntity {
 
 	public void setChildren(Map<String, Integer> children) {
 		this.children = children;
+	}
+
+	public Map<String, Integer> getRelatedEvents() {
+		return relatedEvents;
+	}
+
+	public Map<String, Integer> getRelatedRelics() {
+		return relatedRelics;
+	}
+
+	public Map<String, Integer> getRelatedFestivals() {
+		return relatedFestivals;
 	}
 }

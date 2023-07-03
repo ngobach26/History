@@ -2,6 +2,7 @@ package controller.detail;
 
 import java.io.IOException;
 
+import controller.helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -16,19 +17,11 @@ public class RelicDetailController {
     @FXML
     private Text locationText;
     @FXML
-    private Text constructionDateText;
-    @FXML
-    private Text founderText;
-    @FXML
     private Text overviewText;
-    @FXML
-    private Text noteText;
     @FXML
     private Text categoryText;
     @FXML
     private Text approvedYearText;
-    @FXML
-    private FlowPane relatedFesFlowPane;
     @FXML
     private FlowPane relatedCharsFlowPane;
 
@@ -45,8 +38,10 @@ public class RelicDetailController {
         nameText.setText(relic.getName());
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
+        overviewText.setText(relic.getDescription());
         approvedYearText.setText(relic.getApprovedYear());
 
+        FlowPaneUIHelp.populateFigure(relic.getRelatedCharsFlowPane(),relatedCharsFlowPane);
     }
 
     @FXML

@@ -10,7 +10,7 @@ import model.Figure;
 
 import java.io.IOException;
 
-import controller.helper.FigureFlowPaneUIHelp;
+import controller.helper.FlowPaneUIHelp;
 
 public class FigureDetailController implements DetailAction{
     @FXML
@@ -28,8 +28,14 @@ public class FigureDetailController implements DetailAction{
     @FXML
     private Text overviewText;
 
-    // @FXML
-    // private FlowPane eraFlowPane;
+    @FXML
+    private Text locText;
+
+    @FXML
+    private Text workTimeText;
+
+     @FXML
+     private FlowPane eraFlowPane;
 
     @FXML
     private FlowPane fatherFlowPane;
@@ -46,20 +52,48 @@ public class FigureDetailController implements DetailAction{
     @FXML
     private FlowPane aliasFlowPane;
 
+    @FXML
+    private FlowPane eventFlowPane;
+
+    @FXML
+    private FlowPane relicFlowPane;
+
+    @FXML
+    private FlowPane festivalFlowPane;
+
+
+
     public void setFigure(Figure figure) {
+
         nameText.setText(figure.getName());
         realNameText.setText(figure.getName());
+        bornText.setText(figure.getBornYear());
+        diedText.setText(figure.getDiedYear());
+        overviewText.setText(figure.getDescription());
+        workTimeText.setText(figure.getRole());
+        locText.setText(figure.getLocation());
+
+
         for (String f : figure.getOtherNames()) {
             Text aliasText = new Text(f);
             aliasFlowPane.getChildren().add(aliasText);
         }
-        bornText.setText(figure.getBornYear());
-        diedText.setText(figure.getDiedYear());
-        overviewText.setText(figure.getDescription());
-        FigureFlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane);
-        FigureFlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane);
-        FigureFlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane);
-        FigureFlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane);
+
+        FlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane);
+
+        FlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane);
+
+        FlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane);
+
+        FlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane);
+
+        FlowPaneUIHelp.populateEvent(figure.getRelatedEvents(), eventFlowPane);
+
+        FlowPaneUIHelp.populateRelic(figure.getRelatedRelics(), relicFlowPane);
+
+        FlowPaneUIHelp.polulateFestival(figure.getRelatedFestivals(),festivalFlowPane);
+
+        FlowPaneUIHelp.polulateEra(figure.getEras(), eraFlowPane);
     }
 
     @FXML

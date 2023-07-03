@@ -1,11 +1,16 @@
 package model;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Relic extends HistoricalEntity{
     private static int numRelic = 0;
     private String location;
     private String category;
     private String approvedYear;
+
+    private Map<String, Integer> relatedCharsFlowPane = new HashMap<>();
 
     public Relic(String name, String location, String category, String approvedYear, String description) {
         super(++numRelic, name,description);
@@ -16,6 +21,10 @@ public class Relic extends HistoricalEntity{
 
     public static int getNumRelic() {
         return numRelic;
+    }
+
+    public Map<String, Integer> getRelatedCharsFlowPane() {
+        return relatedCharsFlowPane;
     }
 
     public String getLocation() {

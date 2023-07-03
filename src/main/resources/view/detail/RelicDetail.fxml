@@ -7,18 +7,14 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css"
-    xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.add.RelicAddController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.RelicDetailController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -41,14 +37,15 @@
         </MenuBar>
     </top>
     <left>
-        <fx:include fx:id="sideBar" source="SideBar.fxml" />
+        <fx:include fx:id="sideBar" source="../SideBar.fxml" />
     </left>
     <center>
-        <VBox BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
             <children>
-                <HBox alignment="CENTER" prefWidth="572.0">
+                <HBox />
+                <HBox alignment="CENTER" prefWidth="550.0">
                     <children>
-                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÊM DI TÍCH" wrappingWidth="587.8800551891327">
+                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN DI TÍCH" wrappingWidth="589.6101531982422">
                             <font>
                                 <Font name="Monospaced Bold" size="40.0" />
                             </font>
@@ -64,28 +61,6 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Tên di tích">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <FlowPane fx:id="aliasFlowPane1" hgap="15.0" vgap="5.0">
-                                            <children>
-                                                <TextField prefHeight="26.0" prefWidth="266.0" />
-                                            </children>
-                                        </FlowPane>
-                                    </children>
-                                </VBox>
-                            </children>
-                        </HBox>
-                        <HBox>
-                            <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
                                         <Label text="Địa điểm">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
@@ -93,36 +68,14 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <FlowPane fx:id="aliasFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS">
+                                <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
-                                    </children>
-                                </FlowPane>
-                            </children>
-                        </HBox>
-                        <HBox>
-                            <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
-                                        <Label text="Mô tả">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <FlowPane fx:id="aliasFlowPane2" hgap="15.0" vgap="5.0">
-                                            <children>
-                                                <TextField prefHeight="26.0" prefWidth="266.0" />
-                                            </children>
-                                        </FlowPane>
+                                        <Text fx:id="locationText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="394.9365539550781" />
                                     </children>
                                 </VBox>
                             </children>
                         </HBox>
-                        <HBox>
+                        <HBox layoutX="10.0" layoutY="189.0">
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
@@ -133,14 +86,14 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <FlowPane fx:id="aliasFlowPane7" hgap="15.0" vgap="5.0">
+                                <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
+                                        <Text fx:id="categoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="393.33660888671875" />
                                     </children>
-                                </FlowPane>
+                                </VBox>
                             </children>
                         </HBox>
-                        <HBox layoutX="10.0" layoutY="10.0">
+                        <HBox layoutX="10.0" layoutY="272.0">
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
@@ -151,14 +104,32 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <FlowPane fx:id="aliasFlowPane6" hgap="15.0" vgap="5.0">
+                                <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
+                                        <Text fx:id="approvedYearText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="393.33660888671875" />
                                     </children>
-                                </FlowPane>
+                                </VBox>
                             </children>
                         </HBox>
-                        <HBox>
+                        <HBox layoutX="10.0" layoutY="76.0">
+                            <children>
+                                <VBox prefWidth="176.0">
+                                    <children>
+                                        <Label text="Mô tả">
+                                            <font>
+                                                <Font name="Segoe UI Bold Italic" size="12.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="393.33660888671875" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="141.0">
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
@@ -169,46 +140,20 @@
                                         </Label>
                                     </children>
                                 </VBox>
-                                <FlowPane fx:id="aliasFlowPane71" hgap="15.0" vgap="5.0">
-                                    <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
-                                    </children>
-                                </FlowPane>
+                                <FlowPane fx:id="relatedCharsFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                             </children>
                         </HBox>
-                        <HBox>
-                            <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
-                                        <Label text="Lễ hội liên quan ">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <FlowPane fx:id="aliasFlowPane72" hgap="15.0" vgap="5.0">
-                                    <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
-                                    </children>
-                                </FlowPane>
-                            </children>
-                        </HBox>
-                        <Pane prefHeight="97.0" prefWidth="576.0">
-                            <children>
-                                <Button layoutX="257.0" layoutY="33.0" mnemonicParsing="false" onAction="#addInfo" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #80fa57;" text="ADD">
-                                    <font>
-                                        <Font name="Bell MT" size="12.0" />
-                                    </font>
-                                    <cursor>
-                                        <Cursor fx:constant="HAND" />
-                                    </cursor>
-                                </Button>
-                            </children>
-                        </Pane>
+                        <Button mnemonicParsing="false" onAction="#onDeleteInfo" prefHeight="27.0" prefWidth="197.0" style="-fx-background-color: #db1637;" text="Delete information (Be careful)" textFill="#fafafa">
+                            <font>
+                                <Font name="Bell MT" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
                     </children>
                 </VBox>
-                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onClickBack" prefHeight="24.0" prefWidth="61.0" text="Go Back">
+                <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
                     <font>
                         <Font name="Gill Sans MT" size="12.0" />
                     </font>

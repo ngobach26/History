@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css"
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../../stylesheet/mainScreen.css"
     xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.add.EventAddController">
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.add.FestivalAddController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -41,14 +41,14 @@
         </MenuBar>
     </top>
     <left>
-        <fx:include fx:id="sideBar" source="SideBar.fxml" />
+        <fx:include fx:id="sideBar" source="../SideBar.fxml" />
     </left>
     <center>
         <VBox BorderPane.alignment="CENTER">
             <children>
                 <HBox alignment="CENTER" prefWidth="572.0">
                     <children>
-                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÊM SỰ KIỆN" wrappingWidth="587.8800551891327">
+                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÊM LỄ HỘI" wrappingWidth="587.8800551891327">
                             <font>
                                 <Font name="Monospaced Bold" size="40.0" />
                             </font>
@@ -64,7 +64,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Tên sự kiện">
+                                        <Label text="Tên lễ hội">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -126,7 +126,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Tóm tắt">
+                                        <Label text="Lần đầu tổ chức">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -144,7 +144,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Nguyên nhân">
+                                        <Label text="Mô tả">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -162,7 +162,7 @@
                             <children>
                                 <VBox prefWidth="176.0">
                                     <children>
-                                        <Label text="Kết quả">
+                                        <Label text="Nhân vật liên quan">
                                             <font>
                                                 <Font name="Segoe UI Bold Italic" size="12.0" />
                                             </font>
@@ -176,42 +176,27 @@
                                 </FlowPane>
                             </children>
                         </HBox>
-                        <HBox>
+                        <Pane prefHeight="140.0" prefWidth="576.0">
                             <children>
-                                <VBox prefWidth="176.0">
-                                    <children>
-                                        <Label text="Nhân vật liên quan">
-                                            <font>
-                                                <Font name="Segoe UI Bold Italic" size="12.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </VBox>
-                                <FlowPane fx:id="aliasFlowPane61" hgap="15.0" vgap="5.0">
-                                    <children>
-                                        <TextField prefHeight="26.0" prefWidth="266.0" />
-                                    </children>
-                                </FlowPane>
+                                <Button layoutX="256.0" layoutY="32.0" mnemonicParsing="false" onAction="#addInfo" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #80fa57;" text="ADD">
+                                    <font>
+                                        <Font name="Bell MT" size="12.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
                             </children>
-                        </HBox>
+                        </Pane>
                     </children>
                 </VBox>
-                <Pane prefHeight="142.0" prefWidth="598.0">
-                    <children>
-                        <Button layoutX="262.0" layoutY="42.0" mnemonicParsing="false" onAction="#addInfo" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #80fa57;" text="ADD">
-                            <font>
-                                <Font name="Bell MT" size="12.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </Button>
-                    </children>
-                </Pane>
                 <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onClickBack" prefHeight="24.0" prefWidth="61.0" text="Go Back">
                     <font>
                         <Font name="Gill Sans MT" size="12.0" />
                     </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Button>
             </children>
             <BorderPane.margin>

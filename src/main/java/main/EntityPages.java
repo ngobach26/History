@@ -1,11 +1,11 @@
 package main;
 
 public enum EntityPages {
-    FIGURE_PAGES("FigureView","FigureDetail"),
-    ERA_PAGES("EraView","EraDetail"),
-    EVENT_PAGES("EventView","EventDetail"),
-    FESTIVAL_PAGES("FestivalView","FestivalDetail"),
-    RELIC_PAGES("RelicView","RelicDetail");
+    FIGURE_PAGES("overview/FigureView","detail/FigureDetail"),
+    ERA_PAGES("overview/EraView","detail/EraDetail"),
+    EVENT_PAGES("overview/EventView","detail/EventDetail"),
+    FESTIVAL_PAGES("overview/FestivalView","detail/FestivalDetail"),
+    RELIC_PAGES("overview/RelicView","detail/RelicDetail");
     private String viewPage;
     private  String detailPage;
 

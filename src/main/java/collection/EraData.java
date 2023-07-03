@@ -11,9 +11,9 @@ import model.Era;
 
 public class EraData {
     private static final Type TOKEN = new TypeToken<ArrayList<Era>>() {}.getType();
-    private static EntityCollection<Era> data = new EntityCollection<>();
+    public static EntityCollection<Era> data = new EntityCollection<>();
     private static final String SOURCE_PATH = "src/main/resources/json/Eras.json";
-
+    private static int numOfEra;
     public static void writeJson(){
 
     }
@@ -21,10 +21,14 @@ public class EraData {
     public static void loadJson(){
         ArrayList<Era> data = (ArrayList<Era>) new JsonIO<Era>(TOKEN).loadJson(SOURCE_PATH);
         EraData.data.setData(data);
+        numOfEra = data.size();
     }
 
     public static EntityCollection<Era> getData() {
         return data;
     }
 
+    public static int getNumOfEra() {
+        return numOfEra;
+    }
 }

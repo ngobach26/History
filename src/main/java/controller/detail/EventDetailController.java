@@ -2,7 +2,7 @@ package controller.detail;
 
 import java.io.IOException;
 
-import controller.helper.FigureFlowPaneUIHelp;
+import controller.helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -17,15 +17,17 @@ public class EventDetailController {
     @FXML
     private Text timeText;
     @FXML
+    private Text endtimeText;
+    @FXML
     private Text locationText;
     @FXML
     private Text overviewText;
     @FXML
-    private Text causeText;
-    @FXML
     private Text resultText;
     @FXML
     private FlowPane relatedCharsFlowPane;
+    @FXML
+    private FlowPane relatedEraFlowPane;
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
@@ -38,11 +40,14 @@ public class EventDetailController {
 
     public void setEvent(Event event){
         nameText.setText(event.getName());
-        timeText.setText(event.getTime());
+        timeText.setText(event.getStartYear());
+        endtimeText.setText(event.getEndYear());
         locationText.setText(event.getLocation());
         overviewText.setText(event.getDescription());
         resultText.setText(event.getResult());
-        FigureFlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane);
+
+        FlowPaneUIHelp.polulateEra(event.getEras(),relatedEraFlowPane);
+        FlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane);
     }
     @FXML
     public void onDeleteInfo(){

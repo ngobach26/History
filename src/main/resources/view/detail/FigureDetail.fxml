@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.FigureDetailController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.FigureDetailController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -37,7 +37,7 @@
         </MenuBar>
     </top>
     <left>
-        <fx:include fx:id="sideBar" source="SideBar.fxml" />
+        <fx:include fx:id="sideBar" source="../SideBar.fxml" />
     </left>
     <center>
         <VBox BorderPane.alignment="CENTER">
@@ -67,7 +67,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="realNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="realNameText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="realNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -99,7 +99,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="bornText" strokeType="OUTSIDE" strokeWidth="0.0" text="bornText" wrappingWidth="370.1365661621094" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="bornText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="370.1365661621094" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -117,7 +117,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="diedText" strokeType="OUTSIDE" strokeWidth="0.0" text="diedText" wrappingWidth="368.5365905761719" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="diedText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="368.5365905761719" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -135,7 +135,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="overviewText" wrappingWidth="370.9366149902344" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="370.9366149902344" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -153,7 +153,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="workTimeText" strokeType="OUTSIDE" strokeWidth="0.0" text="workTimeText" wrappingWidth="370.1366882324219" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="workTimeText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="370.1366882324219" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -185,7 +185,7 @@
                                 </VBox>
                                 <VBox HBox.hgrow="ALWAYS">
                                     <children>
-                                        <Text fx:id="locText" strokeType="OUTSIDE" strokeWidth="0.0" text="locationText" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
+                                        <Text fx:id="locText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="369.3366394042969" VBox.vgrow="ALWAYS" />
                                     </children>
                                 </VBox>
                             </children>
@@ -288,7 +288,7 @@
                         <FlowPane fx:id="festivalFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
-                        <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                        <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
                             <font>
                                 <Font name="Gill Sans MT" size="12.0" />
                             </font>

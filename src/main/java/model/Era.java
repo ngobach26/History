@@ -11,6 +11,7 @@ public class Era extends HistoricalEntity {
 	private Map<String, Integer> kings = new HashMap<>();
 	private List<String> nationNames;
 	private String capital;
+	private Map<String, Integer> relatedEvents = new HashMap<>();
 
 	public Era(String eraName, String startYear, String endYear, String description, String capital,
 			List<String> nationNames, List<String> kings) {
@@ -43,5 +44,8 @@ public class Era extends HistoricalEntity {
 	public String getCapital() {
 		return capital;
 	}
-	
+
+	public Map<String, Integer> getRelatedEvents() {
+		return relatedEvents;
+	}
 }
