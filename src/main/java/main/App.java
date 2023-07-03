@@ -23,7 +23,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         loadData();
         final String appName = "Vietnam History Wikiapp";
-        scene = new Scene(loadFXML(StaticPages.HOME_PAGE.getUrl()).load(), 950, 750);
+        scene = new Scene(loadFXML(StaticPages.HOME_PAGE.getUrl()).load(), 950, 800);
         scene.getStylesheets().add(getClass().getResource("/stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle(appName);
