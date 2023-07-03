@@ -170,7 +170,7 @@
                                     </Text>
                                  </children>
                               </VBox>
-                              <ScrollPane prefHeight="200.0" prefWidth="381.0">
+                              <ScrollPane hbarPolicy="ALWAYS" prefHeight="162.0" prefWidth="410.0">
                                  <content>
                                     <FlowPane fx:id="eventsFlowPane" hgap="15.0" vgap="5.0" />
                                  </content>
