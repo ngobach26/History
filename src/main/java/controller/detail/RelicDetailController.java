@@ -26,7 +26,7 @@ public class RelicDetailController {
     private FlowPane relatedCharsFlowPane;
 
     @FXML
-    public void onClickBack(ActionEvent relic) throws IOException {
+    public void onClickBack(ActionEvent event) throws IOException {
         if(App.clickBackService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.RELIC_PAGES.getViewPage());
         }else {

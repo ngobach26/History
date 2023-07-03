@@ -36,7 +36,7 @@ public class FestivalDetailController {
     }
 
     @FXML
-    public void onClickBack(ActionEvent festival) throws IOException {
+    public void onClickBack(ActionEvent event) throws IOException {
         if(App.clickBackService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.FESTIVAL_PAGES.getViewPage());
         }else {
