@@ -2,7 +2,7 @@ package controller.detail;
 
 import java.io.IOException;
 
-import controller.helper.FlowPaneUIHelp;
+import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -28,14 +28,6 @@ public class EraDetailController {
     private FlowPane eventsFlowPane;
     @FXML
     private FlowPane countryFlowPane;
-    @FXML
-    public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
-            App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
-        }else {
-            App.clickBackService.handleBackToPreDetailPage();
-        }
-    }
 
     public void setEra(Era era){
         nameText.setText(era.getName());
@@ -52,6 +44,16 @@ public class EraDetailController {
         FlowPaneUIHelp.populateEvent(era.getRelatedEvents(),eventsFlowPane);
         FlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane);
     }
+
+    @FXML
+    public void onClickBack(ActionEvent event) throws IOException {
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
+        }else {
+            App.clickBackService.handleBackToPreDetailPage();
+        }
+    }
+
     @FXML
     public void onDeleteInfo(){
         

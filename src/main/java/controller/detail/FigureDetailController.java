@@ -10,7 +10,7 @@ import model.Figure;
 
 import java.io.IOException;
 
-import controller.helper.FlowPaneUIHelp;
+import helper.FlowPaneUIHelp;
 
 public class FigureDetailController implements DetailAction{
     @FXML
@@ -104,7 +104,6 @@ public class FigureDetailController implements DetailAction{
         }else {
             App.clickBackService.handleBackToPreDetailPage();
         }
-
     }
 
 

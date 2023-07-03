@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 import collection.EraData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import controller.helper.HandleDetailHelp;
+import helper.HandleDetailHelp;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

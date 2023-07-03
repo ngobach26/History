@@ -2,7 +2,7 @@ package controller.detail;
 
 import java.io.IOException;
 
-import controller.helper.FlowPaneUIHelp;
+import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;

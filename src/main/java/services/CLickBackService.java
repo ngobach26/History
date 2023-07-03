@@ -1,6 +1,6 @@
 package services;
 
-import controller.helper.HandleDetailHelp;
+import helper.HandleDetailHelp;
 import model.*;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package controller.helper;
+package helper;
 
 import controller.detail.*;
 import javafx.fxml.FXMLLoader;
