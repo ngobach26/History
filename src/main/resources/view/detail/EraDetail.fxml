@@ -15,183 +15,187 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-size: cover;" styleClass="background" stylesheets="@../../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.detail.EraDetailController">
-    <top>
-        <MenuBar BorderPane.alignment="CENTER">
-            <menus>
-                <Menu mnemonicParsing="false" text="Contact">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="no" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Forum">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="no" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Term of service">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="no" />
-                    </items>
-                </Menu>
-            </menus>
-        </MenuBar>
-    </top>
-    <left>
-        <fx:include fx:id="sideBar" source="../SideBar.fxml" />
-    </left>
-    <center>
-        <ScrollPane stylesheets="@../../stylesheet/mainScreen.css">
-            <content>
-                <VBox BorderPane.alignment="CENTER">
-                    <children>
-                        <HBox alignment="CENTER" prefWidth="572.0">
-                            <children>
-                                <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN TRIỀU ĐẠI" wrappingWidth="587.8800551891327">
-                                    <font>
-                                        <Font name="Monospaced Bold" size="40.0" />
-                                    </font>
-                                </Text>
-                            </children>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Contact">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="no" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Forum">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="no" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Term of service">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="no" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <fx:include fx:id="sideBar" source="../SideBar.fxml" />
+   </left>
+   <center>
+      <ScrollPane stylesheets="@../../stylesheet/mainScreen.css">
+         <content>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefWidth="572.0">
+                     <children>
+                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN TRIỀU ĐẠI" wrappingWidth="587.8800551891327">
+                           <font>
+                              <Font name="Monospaced Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <VBox spacing="15.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox />
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thời gian bắt đầu">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="timeStampText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
+                                 </children>
+                              </VBox>
+                           </children>
                         </HBox>
-                        <VBox spacing="15.0" VBox.vgrow="ALWAYS">
-                            <VBox.margin>
-                                <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
-                            </VBox.margin>
-                            <children>
-                                <HBox />
-                                <HBox>
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thời gian bắt đầu">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                            <children>
-                                                <Text fx:id="timeStampText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
-                                            </children>
-                                        </VBox>
-                                    </children>
-                                </HBox>
-                                <HBox>
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thời gian kết thúc">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                            <children>
-                                                <Text fx:id="timeStampEndText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
-                                            </children>
-                                        </VBox>
-                                    </children>
-                                </HBox>
-                                <HBox layoutX="10.0" layoutY="10.0">
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nước">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <FlowPane fx:id="countryFlowPane" hgap="15.0" vgap="5.0" />
-                                    </children>
-                                </HBox>
-                                <HBox>
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mô tả">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                            <children>
-                                                <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
-                                            </children>
-                                        </VBox>
-                                    </children>
-                                </HBox>
-                                <HBox layoutX="10.0" layoutY="61.0">
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kinh đô (Thủ đô)">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                            <children>
-                                                <Text fx:id="capLocateText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
-                                            </children>
-                                        </VBox>
-                                    </children>
-                                </HBox>
-                                <HBox layoutX="10.0" layoutY="112.0">
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Những vị vua trị vì">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <FlowPane fx:id="kingsFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
-                                    </children>
-                                </HBox>
-                                <HBox>
-                                    <children>
-                                        <VBox prefWidth="176.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Các sự kiện liên quan">
-                                                    <font>
-                                                        <Font name="Segoe UI Bold Italic" size="12.0" />
-                                                    </font>
-                                                </Text>
-                                            </children>
-                                        </VBox>
-                                        <FlowPane fx:id="eventsFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
-                                    </children>
-                                </HBox>
-                                <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
-                                    <font>
-                                        <Font name="Gill Sans MT" size="12.0" />
-                                    </font>
-                                    <cursor>
-                                        <Cursor fx:constant="HAND" />
-                                    </cursor>
-                                </Button>
-                            </children>
-                        </VBox>
-                    </children>
-                    <BorderPane.margin>
-                        <Insets />
-                    </BorderPane.margin>
-                    <padding>
-                        <Insets bottom="5.0" left="20.0" right="20.0" top="10.0" />
-                    </padding>
-                </VBox>
-            </content>
-        </ScrollPane>
-    </center>
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thời gian kết thúc">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="timeStampEndText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nước">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <FlowPane fx:id="countryFlowPane" hgap="15.0" vgap="5.0" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mô tả">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="61.0">
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kinh đô (Thủ đô)">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="capLocateText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="112.0">
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Những vị vua trị vì">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <FlowPane fx:id="kingsFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="176.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Các sự kiện liên quan">
+                                       <font>
+                                          <Font name="Segoe UI Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <ScrollPane prefHeight="200.0" prefWidth="381.0">
+                                 <content>
+                                    <FlowPane fx:id="eventsFlowPane" hgap="15.0" vgap="5.0" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                           <font>
+                              <Font name="Gill Sans MT" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
 </BorderPane>
