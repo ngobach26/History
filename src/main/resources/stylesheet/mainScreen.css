@@ -13,6 +13,16 @@
     -fx-background-color: transparent;
 }
 
+.scroll-pane {
+    -fx-padding: 1.0;
+    -fx-background : transparent;
+    -fx-background-color: transparent;
+    -fx-hbar-policy: never;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
 .button
 {
     -fx-background-color : #F3F3F3;
