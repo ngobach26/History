@@ -1,6 +1,4 @@
-package controller.services.searchHistoryService;
-
-import model.HistoricalEntity;
+package services.searchHistoryService;
 
 public class History {
     private String type;

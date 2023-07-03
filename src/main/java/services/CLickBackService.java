@@ -1,4 +1,4 @@
-package controller.services;
+package services;
 
 import controller.helper.HandleDetailHelp;
 import model.*;
