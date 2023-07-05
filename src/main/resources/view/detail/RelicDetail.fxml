@@ -157,16 +157,16 @@
                         <FlowPane fx:id="relatedFesFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
+                      <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                          <font>
+                              <Font name="Gill Sans MT" size="12.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Button>
                     </children>
                 </VBox>
-                <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
-                    <font>
-                        <Font name="Gill Sans MT" size="12.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </Button>
             </children>
             <BorderPane.margin>
                 <Insets />
