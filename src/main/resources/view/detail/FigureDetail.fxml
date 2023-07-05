@@ -54,7 +54,7 @@
                                 </Text>
                             </children>
                         </HBox>
-                        <VBox spacing="15.0" VBox.vgrow="ALWAYS">
+                        <VBox prefHeight="576.0" prefWidth="650.0" spacing="15.0" VBox.vgrow="ALWAYS">
                             <children>
                                 <HBox>
                                     <children>
@@ -137,7 +137,7 @@
                                         </VBox>
                                         <VBox HBox.hgrow="ALWAYS">
                                  <children>
-                                    <ScrollPane prefHeight="80.0" prefWidth="403.0">
+                                    <ScrollPane prefHeight="50.0" prefWidth="403.0">
                                        <content>
                                            <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="402.9366149902344" />
                                        </content>
@@ -263,7 +263,7 @@
                                                 </Text>
                                             </children>
                                         </VBox>
-                              <ScrollPane prefHeight="28.0" prefWidth="398.0">
+                              <ScrollPane prefHeight="36.0" prefWidth="459.0">
                                  <content>
                                               <FlowPane fx:id="eventFlowPane" hgap="15.0" vgap="5.0" />
                                  </content>
@@ -281,7 +281,7 @@
                                                 </Text>
                                             </children>
                                         </VBox>
-                              <ScrollPane prefHeight="26.0" prefWidth="398.0">
+                              <ScrollPane prefHeight="36.0" prefWidth="459.0">
                                  <content>
                                               <FlowPane fx:id="relicFlowPane" hgap="15.0" vgap="5.0" />
                                  </content>
@@ -299,26 +299,26 @@
                                                 </Text>
                                             </children>
                                         </VBox>
-                              <ScrollPane prefHeight="38.0" prefWidth="402.0">
+                              <ScrollPane prefHeight="38.0" prefWidth="464.0">
                                  <content>
                                               <FlowPane fx:id="festivalFlowPane" hgap="15.0" vgap="5.0" />
                                  </content>
                               </ScrollPane>
                                     </children>
                                 </HBox>
-                                <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
-                                    <font>
-                                        <Font name="Gill Sans MT" size="12.0" />
-                                    </font>
-                                    <cursor>
-                                        <Cursor fx:constant="HAND" />
-                                    </cursor>
-                                </Button>
                             </children>
                             <VBox.margin>
                                 <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                             </VBox.margin>
                         </VBox>
+                          <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                              <font>
+                                  <Font name="Gill Sans MT" size="12.0" />
+                              </font>
+                              <cursor>
+                                  <Cursor fx:constant="HAND" />
+                              </cursor>
+                          </Button>
                     </children>
                     <BorderPane.margin>
                         <Insets />
