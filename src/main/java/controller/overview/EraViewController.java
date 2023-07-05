@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import collection.EraData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import helper.HandleDetailHelp;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -77,8 +76,7 @@ public class EraViewController implements Initializable {
                 if(event.getClickCount() == 2 && (!row.isEmpty())){
                     Era era = row.getItem();
                     try {
-                        HandleDetailHelp.Era(era);
-                        App.clickBackService.addEntityToClickBackStack(era);
+                        App.pageNavigationService.handleViewtoDetail(era);
                     } catch (IOException e){
                         e.printStackTrace();
                     }

@@ -37,16 +37,16 @@ public class EventDetailController {
         overviewText.setText(event.getDescription());
         resultText.setText(event.getResult());
 
-        FlowPaneUIHelp.polulateEra(event.getEras(),relatedEraFlowPane);
-        FlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane);
+        FlowPaneUIHelp.polulateEra(event.getEras(),relatedEraFlowPane,event);
+        FlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane,event);
     }
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
+        if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.EVENT_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleBackToPreDetailPage();
+            App.pageNavigationService.handleBackToPreDetailPage();
         }
     }
 

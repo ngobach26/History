@@ -1,6 +1,6 @@
 package main;
 
-import services.CLickBackService;
+import services.PageNavigationService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,7 +16,7 @@ import collection.FigureData;
 import collection.RelicData;
 
 public class App extends Application {
-    public static CLickBackService clickBackService = new CLickBackService();
+    public static PageNavigationService pageNavigationService = new PageNavigationService();
     private static Scene scene;
 
     @Override

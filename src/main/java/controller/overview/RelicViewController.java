@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import collection.RelicData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import helper.HandleDetailHelp;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -61,14 +60,14 @@ public class RelicViewController implements Initializable{
                         siteTable.setItems(RelicData.data.getData());
                     }
                 });
+
         siteTable.setRowFactory(tableView -> {
             TableRow<Relic> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Relic relic = row.getItem();
                     try {
-                        HandleDetailHelp.Relic(relic);
-                        App.clickBackService.addEntityToClickBackStack(relic);
+                        App.pageNavigationService.handleViewtoDetail(relic);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

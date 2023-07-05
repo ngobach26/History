@@ -41,16 +41,16 @@ public class EraDetailController {
             countryFlowPane.getChildren().add(nationText);
         }
 
-        FlowPaneUIHelp.populateEvent(era.getRelatedEvents(),eventsFlowPane);
-        FlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane);
+        FlowPaneUIHelp.populateEvent(era.getRelatedEvents(),eventsFlowPane,era);
+        FlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane,era);
     }
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
+        if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleBackToPreDetailPage();
+            App.pageNavigationService.handleBackToPreDetailPage();
         }
     }
 

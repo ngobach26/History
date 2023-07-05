@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import collection.FestivalData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import helper.HandleDetailHelp;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -68,8 +67,7 @@ public class FestivalViewController implements Initializable {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Festival festival = row.getItem();
                     try {
-                        HandleDetailHelp.Festival(festival);
-                        App.clickBackService.addEntityToClickBackStack(festival);
+                        App.pageNavigationService.handleViewtoDetail(festival);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

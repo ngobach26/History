@@ -126,7 +126,7 @@
                                         </VBox>
                                         <VBox HBox.hgrow="ALWAYS">
                                             <children>
-                                                <Text fx:id="noteText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="301.33673095703125" />
+                                                <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="301.33673095703125" />
                                             </children>
                                         </VBox>
                                     </children>

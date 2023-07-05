@@ -32,15 +32,15 @@ public class FestivalDetailController {
         locationText.setText(festival.getLocation());
         firstTimeText.setText(festival.getFirstTime());
 
-        FlowPaneUIHelp.populateFigure(festival.getRelatedFigures(), relatedCharsFlowPane);
+        FlowPaneUIHelp.populateFigure(festival.getRelatedFigures(), relatedCharsFlowPane,festival);
     }
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
+        if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.FESTIVAL_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleBackToPreDetailPage();
+            App.pageNavigationService.handleBackToPreDetailPage();
         }
     }
 

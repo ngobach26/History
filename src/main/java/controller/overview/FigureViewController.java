@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import collection.FigureData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import helper.HandleDetailHelp;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -83,8 +82,7 @@ public class FigureViewController implements Initializable {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Figure figure = row.getItem();
                     try {
-                        HandleDetailHelp.Figure(figure);
-                        App.clickBackService.addEntityToClickBackStack(figure);
+                        App.pageNavigationService.handleViewtoDetail(figure);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -92,9 +90,6 @@ public class FigureViewController implements Initializable {
             });
             return row;
         });
-        // UIUtils.setFigureClickHandler(tblFigure);
-        
-
     }
 
 }

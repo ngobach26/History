@@ -32,15 +32,15 @@ public class RelicDetailController {
         overviewText.setText(relic.getDescription());
         approvedYearText.setText(relic.getApprovedYear());
 
-        FlowPaneUIHelp.populateFigure(relic.getRelatedCharsFlowPane(),relatedCharsFlowPane);
+        FlowPaneUIHelp.populateFigure(relic.getRelatedCharsFlowPane(),relatedCharsFlowPane,relic);
     }
 
     @FXML
     public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
+        if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.RELIC_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleBackToPreDetailPage();
+            App.pageNavigationService.handleBackToPreDetailPage();
         }
     }
 

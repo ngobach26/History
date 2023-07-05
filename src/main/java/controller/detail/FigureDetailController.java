@@ -79,30 +79,30 @@ public class FigureDetailController implements DetailAction{
             aliasFlowPane.getChildren().add(aliasText);
         }
 
-        FlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane);
+        FlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane,figure);
 
-        FlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane);
+        FlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane,figure);
 
-        FlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane);
+        FlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane,figure);
 
-        FlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane);
+        FlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane,figure);
 
-        FlowPaneUIHelp.populateEvent(figure.getRelatedEvents(), eventFlowPane);
+        FlowPaneUIHelp.populateEvent(figure.getRelatedEvents(), eventFlowPane,figure);
 
-        FlowPaneUIHelp.populateRelic(figure.getRelatedRelics(), relicFlowPane);
+        FlowPaneUIHelp.populateRelic(figure.getRelatedRelics(), relicFlowPane,figure);
 
-        FlowPaneUIHelp.polulateFestival(figure.getRelatedFestivals(),festivalFlowPane);
+        FlowPaneUIHelp.polulateFestival(figure.getRelatedFestivals(),festivalFlowPane,figure);
 
-        FlowPaneUIHelp.polulateEra(figure.getEras(), eraFlowPane);
+        FlowPaneUIHelp.polulateEra(figure.getEras(), eraFlowPane,figure);
     }
 
     @FXML
     @Override
     public void onClickBack(ActionEvent event) throws IOException {
-        if(App.clickBackService.clickBackStack.isEmpty()){
+        if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());
         }else {
-            App.clickBackService.handleBackToPreDetailPage();
+            App.pageNavigationService.handleBackToPreDetailPage();
         }
     }
 

@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import collection.EventData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import helper.HandleDetailHelp;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.*;
 import javafx.scene.control.*;
@@ -74,8 +73,7 @@ public class EventViewController implements Initializable {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Event ev = row.getItem();
                     try {
-                        HandleDetailHelp.Event(ev);
-                        App.clickBackService.addEntityToClickBackStack(ev);
+                        App.pageNavigationService.handleViewtoDetail(ev);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
