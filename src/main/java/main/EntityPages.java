@@ -6,8 +6,8 @@ public enum EntityPages {
     EVENT_PAGES("overview/EventView","detail/EventDetail"),
     FESTIVAL_PAGES("overview/FestivalView","detail/FestivalDetail"),
     RELIC_PAGES("overview/RelicView","detail/RelicDetail");
-    private String viewPage;
-    private  String detailPage;
+    private final String viewPage;
+    private final String detailPage;
 
     EntityPages(String viewPage, String detailPage) {
         this.viewPage = viewPage;

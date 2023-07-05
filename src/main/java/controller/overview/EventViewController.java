@@ -8,8 +8,11 @@ import collection.EventData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.fxml.*;
-import javafx.scene.control.*;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
 import model.Event;
@@ -33,6 +36,14 @@ public class EventViewController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        setupTableColumns();
+        populateData();
+
+        setupSearchBar();
+        setupDoubleClickHandler();
+    }
+
+    private void setupTableColumns() {
         colEventId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colEventName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colEventDate.setCellValueFactory(cellData -> {
@@ -42,31 +53,17 @@ public class EventViewController implements Initializable {
             return new SimpleStringProperty(dateRange);
         });
         colEventLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
+    }
+
+    private void populateData() {
         eventTable.setItems(EventData.data.getData());
+    }
 
-        searchBarController.setSearchBoxListener(
-                new SearchBoxListener() {
-                    @Override
-                    public void handleSearchName(String name) {
-                        eventTable.setItems(EventData.data.searchByName(name));
-                    }
+    private void setupSearchBar() {
+        searchBarController.setSearchBoxListener(new EventSearchBoxListener());
+    }
 
-                    @Override
-                    public void handleSearchId(String id) {
-                        try {
-                            int intId = Integer.parseInt(id);
-                            eventTable.setItems(EventData.data.searchByID(intId));
-                        } catch (Exception e) {
-                            System.err.println("Cannot find the entity with the id " + id);
-                        }
-                    }
-
-                    @Override
-                    public void handleBlank() {
-                        eventTable.setItems(EventData.data.getData());
-                    }
-                });
-
+    private void setupDoubleClickHandler() {
         eventTable.setRowFactory(tableView -> {
             TableRow<Event> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -81,6 +78,27 @@ public class EventViewController implements Initializable {
             });
             return row;
         });
+    }
 
+    private class EventSearchBoxListener implements SearchBoxListener {
+        @Override
+        public void handleSearchName(String name) {
+            eventTable.setItems(EventData.data.searchByName(name));
+        }
+
+        @Override
+        public void handleSearchId(String id) {
+            try {
+                int intId = Integer.parseInt(id);
+                eventTable.setItems(EventData.data.searchByID(intId));
+            } catch (Exception e) {
+                System.err.println("Cannot find the entity with the id " + id);
+            }
+        }
+
+        @Override
+        public void handleBlank() {
+            eventTable.setItems(EventData.data.getData());
+        }
     }
 }

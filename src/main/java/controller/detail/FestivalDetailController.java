@@ -9,6 +9,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
+import main.EntityType;
 import model.Festival;
 
 public class FestivalDetailController {
@@ -32,7 +33,7 @@ public class FestivalDetailController {
         locationText.setText(festival.getLocation());
         firstTimeText.setText(festival.getFirstTime());
 
-        FlowPaneUIHelp.populateFigure(festival.getRelatedFigures(), relatedCharsFlowPane,festival);
+        FlowPaneUIHelp.populateEntity(festival.getRelatedFigures(), relatedCharsFlowPane,festival, EntityType.FIGURE);
     }
 
     @FXML

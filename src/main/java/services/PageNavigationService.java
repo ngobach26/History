@@ -11,7 +11,7 @@ public class PageNavigationService {
     public Stack<HistoricalEntity> clickBackStack = new Stack<HistoricalEntity>();
     private HistoricalEntity currentView;
 
-    public  void handleClickBacktoViews(){
+    public void handleClickBacktoViews(){
         if(!clickBackStack.isEmpty()){
             clickBackStack.clear();
         }

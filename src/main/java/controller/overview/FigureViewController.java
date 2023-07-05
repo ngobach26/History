@@ -5,14 +5,17 @@ import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import collection.FestivalData;
 import collection.FigureData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
+import model.Festival;
 import model.Figure;
 
 public class FigureViewController implements Initializable {
@@ -31,15 +34,22 @@ public class FigureViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setupTableColumns();
+        populateData();
+        setupSearchBar();
+        setupDoubleClickHandler();
+    }
+
+    private void setupTableColumns() {
         colFigureId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colFigureName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        
+
         colFigureEra.setCellFactory(column -> {
             TableCell<Figure, Map<String, Integer>> cell = new TableCell<Figure, Map<String, Integer>>() {
                 @Override
                 protected void updateItem(Map<String, Integer> eras, boolean empty) {
                     super.updateItem(eras, empty);
-        
+
                     if (eras == null || empty) {
                         setText(null);
                     } else {
@@ -52,30 +62,17 @@ public class FigureViewController implements Initializable {
         });
         colFigureEra.setCellValueFactory(new PropertyValueFactory<>("eras"));
         colFigureOverview.setCellValueFactory(new PropertyValueFactory<>("description"));
+    }
+
+    private void populateData() {
         tblFigure.setItems(FigureData.data.getData());
-        searchBarController.setSearchBoxListener(
-                new SearchBoxListener() {
-                    @Override
-                    public void handleSearchName(String name) {
-                        tblFigure.setItems(FigureData.data.searchByName(name));
-                    }
+    }
 
-                    @Override
-                    public void handleSearchId(String id) {
-                        try {
-                            int intId = Integer.parseInt(id);
-                            tblFigure.setItems(FigureData.data.searchByID(intId));
-                        } catch (Exception e){
-                            System.err.println("Cannot find the entity with the id " + id);
-                        }
-                    }
+    private void setupSearchBar() {
+        searchBarController.setSearchBoxListener(new FigureSearchBoxListener());
+    }
 
-                    @Override
-                    public void handleBlank() {
-                        tblFigure.setItems(FigureData.data.getData());
-                    }
-                }
-        );
+    private void setupDoubleClickHandler() {
         tblFigure.setRowFactory(tableView -> {
             TableRow<Figure> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -90,6 +87,28 @@ public class FigureViewController implements Initializable {
             });
             return row;
         });
+    }
+
+    private class FigureSearchBoxListener implements SearchBoxListener {
+        @Override
+        public void handleSearchName(String name) {
+            tblFigure.setItems(FigureData.data.searchByName(name));
+        }
+
+        @Override
+        public void handleSearchId(String id) {
+            try {
+                int intId = Integer.parseInt(id);
+                tblFigure.setItems(FigureData.data.searchByID(intId));
+            } catch (Exception e){
+                System.err.println("Cannot find the entity with the id " + id);
+            }
+        }
+
+        @Override
+        public void handleBlank() {
+            tblFigure.setItems(FigureData.data.getData());
+        }
     }
 
 }

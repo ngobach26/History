@@ -3,8 +3,12 @@ package controller;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
+/**
+ * Controller for the search bar component.
+ */
 public class SearchBarController {
     @FXML
     public ComboBox<String> filterComboBox;
@@ -16,41 +20,47 @@ public class SearchBarController {
         this.searchBoxListener = searchBoxListener;
     }
 
-    public void addSection(ActionEvent actionEvent) {
-
-    }
-
     @FXML
     public void initialize() {
+        setupFilterComboBox();
+        setupSearchBox();
+    }
 
+    private void setupFilterComboBox() {
         filterComboBox.setItems(FXCollections.observableArrayList("By Name", "By ID"));
-
         filterComboBox.getSelectionModel().selectFirst();
+        filterComboBox.setOnAction((ActionEvent e) -> handleFilterComboBoxSelection());
+    }
 
-        filterComboBox.setOnAction((e) -> {
-            if (searchBox.getText().isBlank()) {
-                searchBoxListener.handleBlank();
-            } else {
-                if (filterComboBox.getSelectionModel().getSelectedItem().equals("By ID")) {
-                    /* Thực thi khi chuyển comboBox sang By ID */
-                    searchBoxListener.handleSearchId(searchBox.getText());
-                } else if (filterComboBox.getSelectionModel().getSelectedItem().equals("By Name")) {
-                    /* Thực thi khi chuyển comboBox sang By Name */
-                    searchBoxListener.handleSearchName(searchBox.getText());
-                }
-            }
-        });
+    private void setupSearchBox() {
+        searchBox.textProperty().addListener((observableValue, oldValue, newValue) -> handleSearchBoxChange(newValue));
+    }
 
-        searchBox.textProperty().addListener(((observableValue, oldValue, newValue) -> {
-            if (newValue.isBlank()) {
-                searchBoxListener.handleBlank();
-            } else {
-                if (filterComboBox.getValue().equals("By ID")) {
-                    searchBoxListener.handleSearchId(newValue);
-                } else if (filterComboBox.getValue().equals("By Name")) {
-                    searchBoxListener.handleSearchName(newValue);
-                }
+    private void handleFilterComboBoxSelection() {
+        String searchValue = searchBox.getText().trim();
+        if (searchValue.isEmpty()) {
+            searchBoxListener.handleBlank();
+        } else {
+            String selectedItem = filterComboBox.getSelectionModel().getSelectedItem();
+            if ("By ID".equals(selectedItem)) {
+                searchBoxListener.handleSearchId(searchValue);
+            } else if ("By Name".equals(selectedItem)) {
+                searchBoxListener.handleSearchName(searchValue);
             }
-        }));
+        }
+    }
+
+    private void handleSearchBoxChange(String newValue) {
+        String searchValue = newValue.trim();
+        if (searchValue.isEmpty()) {
+            searchBoxListener.handleBlank();
+        } else {
+            String selectedItem = filterComboBox.getValue();
+            if ("By ID".equals(selectedItem)) {
+                searchBoxListener.handleSearchId(searchValue);
+            } else if ("By Name".equals(selectedItem)) {
+                searchBoxListener.handleSearchName(searchValue);
+            }
+        }
     }
 }

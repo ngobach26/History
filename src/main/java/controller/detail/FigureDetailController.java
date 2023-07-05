@@ -6,13 +6,14 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
+import main.EntityType;
 import model.Figure;
 
 import java.io.IOException;
 
 import helper.FlowPaneUIHelp;
 
-public class FigureDetailController implements DetailAction{
+public class FigureDetailController{
     @FXML
     private Text nameText;
 
@@ -79,25 +80,24 @@ public class FigureDetailController implements DetailAction{
             aliasFlowPane.getChildren().add(aliasText);
         }
 
-        FlowPaneUIHelp.populateFigure(figure.getFather(), fatherFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getFather(), fatherFlowPane,figure, EntityType.FIGURE);
 
-        FlowPaneUIHelp.populateFigure(figure.getMother(), motherFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getMother(), motherFlowPane,figure,EntityType.FIGURE);
 
-        FlowPaneUIHelp.populateFigure(figure.getChildren(), childrenFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getChildren(), childrenFlowPane,figure,EntityType.FIGURE);
 
-        FlowPaneUIHelp.populateFigure(figure.getSpouses(), spouseFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getSpouses(), spouseFlowPane,figure,EntityType.FIGURE);
 
-        FlowPaneUIHelp.populateEvent(figure.getRelatedEvents(), eventFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedEvents(), eventFlowPane,figure,EntityType.EVENT);
 
-        FlowPaneUIHelp.populateRelic(figure.getRelatedRelics(), relicFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedRelics(), relicFlowPane,figure,EntityType.RELIC);
 
-        FlowPaneUIHelp.polulateFestival(figure.getRelatedFestivals(),festivalFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedFestivals(),festivalFlowPane,figure,EntityType.FESTIVAL);
 
-        FlowPaneUIHelp.polulateEra(figure.getEras(), eraFlowPane,figure);
+        FlowPaneUIHelp.populateEntity(figure.getEras(), eraFlowPane,figure,EntityType.ERA);
     }
 
     @FXML
-    @Override
     public void onClickBack(ActionEvent event) throws IOException {
         if(App.pageNavigationService.clickBackStack.isEmpty()){
             App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());

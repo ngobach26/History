@@ -9,6 +9,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
+import main.EntityType;
 import model.Relic;
 
 public class RelicDetailController {
@@ -32,7 +33,7 @@ public class RelicDetailController {
         overviewText.setText(relic.getDescription());
         approvedYearText.setText(relic.getApprovedYear());
 
-        FlowPaneUIHelp.populateFigure(relic.getRelatedFigures(),relatedCharsFlowPane,relic);
+        FlowPaneUIHelp.populateEntity(relic.getRelatedFigures(),relatedCharsFlowPane,relic, EntityType.FIGURE);
     }
 
     @FXML

@@ -9,9 +9,11 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
+import main.EntityType;
 import model.Era;
+import model.HistoricalEntity;
 
-public class EraDetailController {
+public class EraDetailController{
     @FXML
     private Text nameText;
     @FXML
@@ -41,8 +43,8 @@ public class EraDetailController {
             countryFlowPane.getChildren().add(nationText);
         }
 
-        FlowPaneUIHelp.populateEvent(era.getRelatedEvents(),eventsFlowPane,era);
-        FlowPaneUIHelp.populateFigure(era.getKings(), kingsFlowPane,era);
+        FlowPaneUIHelp.populateEntity(era.getRelatedEvents(),eventsFlowPane,era, EntityType.EVENT);
+        FlowPaneUIHelp.populateEntity(era.getKings(), kingsFlowPane,era,EntityType.FIGURE);
     }
 
     @FXML
@@ -54,8 +56,4 @@ public class EraDetailController {
         }
     }
 
-    @FXML
-    public void onDeleteInfo(){
-        
-    }
 }

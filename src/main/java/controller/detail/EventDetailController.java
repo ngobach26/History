@@ -9,9 +9,10 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
+import main.EntityType;
 import model.Event;
 
-public class EventDetailController {
+public class EventDetailController{
     @FXML
     private Text nameText;
     @FXML
@@ -37,8 +38,8 @@ public class EventDetailController {
         overviewText.setText(event.getDescription());
         resultText.setText(event.getResult());
 
-        FlowPaneUIHelp.polulateEra(event.getEras(),relatedEraFlowPane,event);
-        FlowPaneUIHelp.populateFigure(event.getRelatedFigures(), relatedCharsFlowPane,event);
+        FlowPaneUIHelp.populateEntity(event.getEras(),relatedEraFlowPane,event, EntityType.ERA);
+        FlowPaneUIHelp.populateEntity(event.getRelatedFigures(), relatedCharsFlowPane,event,EntityType.FIGURE);
     }
 
     @FXML

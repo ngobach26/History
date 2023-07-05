@@ -34,33 +34,28 @@ public class FestivalViewController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        setupTableColumns();
+        populateData();
+        setupSearchBar();
+        setupDoubleClickHandler();
+    }
+
+    private void setupTableColumns() {
         colFesId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colFesName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colFesDate.setCellValueFactory(new PropertyValueFactory<>("startingDay"));
         colFesLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
+    }
+
+    private void populateData() {
         fesTable.setItems(FestivalData.data.getData());
-        searchBarController.setSearchBoxListener(
-                new SearchBoxListener() {
-                    @Override
-                    public void handleSearchName(String name) {
-                        fesTable.setItems(FestivalData.data.searchByName(name));
-                    }
+    }
 
-                    @Override
-                    public void handleSearchId(String id) {
-                        try {
-                            int intId = Integer.parseInt(id);
-                            fesTable.setItems(FestivalData.data.searchByID(intId));
-                        } catch (Exception e) {
-                            System.err.println("Cannot find the entity with the id " + id);
-                        }
-                    }
+    private void setupSearchBar() {
+        searchBarController.setSearchBoxListener(new FestivalSearchBoxListener());
+    }
 
-                    @Override
-                    public void handleBlank() {
-                        fesTable.setItems(FestivalData.data.getData());
-                    }
-                });
+    private void setupDoubleClickHandler() {
         fesTable.setRowFactory(tableView -> {
             TableRow<Festival> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -75,7 +70,27 @@ public class FestivalViewController implements Initializable {
             });
             return row;
         });
-
     }
 
+    private class FestivalSearchBoxListener implements SearchBoxListener {
+        @Override
+        public void handleSearchName(String name) {
+            fesTable.setItems(FestivalData.data.searchByName(name));
+        }
+
+        @Override
+        public void handleSearchId(String id) {
+            try {
+                int intId = Integer.parseInt(id);
+                fesTable.setItems(FestivalData.data.searchByID(intId));
+            } catch (Exception e) {
+                System.err.println("Cannot find the entity with the id " + id);
+            }
+        }
+
+        @Override
+        public void handleBlank() {
+            fesTable.setItems(FestivalData.data.getData());
+        }
+    }
 }
