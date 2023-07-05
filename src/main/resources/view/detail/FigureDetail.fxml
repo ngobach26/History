@@ -136,9 +136,13 @@
                                             </children>
                                         </VBox>
                                         <VBox HBox.hgrow="ALWAYS">
-                                            <children>
-                                                <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="370.9366149902344" VBox.vgrow="ALWAYS" />
-                                            </children>
+                                 <children>
+                                    <ScrollPane prefHeight="80.0" prefWidth="403.0">
+                                       <content>
+                                           <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="402.9366149902344" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
                                         </VBox>
                                     </children>
                                 </HBox>
