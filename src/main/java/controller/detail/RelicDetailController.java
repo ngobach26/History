@@ -32,7 +32,7 @@ public class RelicDetailController {
         overviewText.setText(relic.getDescription());
         approvedYearText.setText(relic.getApprovedYear());
 
-        FlowPaneUIHelp.populateFigure(relic.getRelatedCharsFlowPane(),relatedCharsFlowPane,relic);
+        FlowPaneUIHelp.populateFigure(relic.getRelatedFigures(),relatedCharsFlowPane,relic);
     }
 
     @FXML
