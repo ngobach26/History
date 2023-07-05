@@ -122,7 +122,11 @@
                               </VBox>
                               <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="349.6773376464844" />
+                                    <ScrollPane prefHeight="99.0" prefWidth="411.0">
+                                       <content>
+                                          <Text fx:id="overviewText" strokeType="OUTSIDE" strokeWidth="0.0" text="không rõ" wrappingWidth="409.6773376464844" />
+                                       </content>
+                                    </ScrollPane>
                                  </children>
                               </VBox>
                            </children>
@@ -170,7 +174,7 @@
                                     </Text>
                                  </children>
                               </VBox>
-                              <ScrollPane hbarPolicy="ALWAYS" prefHeight="125.0" prefWidth="410.0">
+                              <ScrollPane hbarPolicy="ALWAYS" prefHeight="130.0" prefWidth="410.0">
                                  <content>
                                     <FlowPane fx:id="eventsFlowPane" hgap="15.0" vgap="5.0" />
                                  </content>
