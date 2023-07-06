@@ -19,21 +19,23 @@ import com.google.gson.reflect.TypeToken;
 
 import crawler.GoogleCrawler;
 import crawler.ICrawler;
-import crawler.JsonIO;
+import helper.JsonIO;
+import helper.StringHelper;
 import model.Event;
 import model.Figure;
 
 public class FigureCrawler implements ICrawler{
-	private JsonIO<Figure> figureIO = new JsonIO<>(new TypeToken<ArrayList<Figure>>() {}.getType());
+	private static final JsonIO<Figure> FIGURE_IO = new JsonIO<>(new TypeToken<ArrayList<Figure>>() {}.getType());
+	private static final String PATH = "src/main/resources/json/Figures.json";
 	
 	@Override
 	public void crawl() {
 //		List<Figure> vs = crawlVanSu();
 //		List<Figure> tvls = crawlThuVienLichSu();
-//		figureIO.writeJson(merge(vs, tvls), "src/main/resources/json/Figures.json");
-//		figureIO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS2.json");
-		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
-		figureIO.writeJson(processDetails(), "src/main/resources/json/Figures.json");
+//		FIGURE_IO.writeJson(merge(vs, tvls), "src/main/resources/json/Figures.json");
+//		FIGURE_IO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS2.json");
+//		FIGURE_IO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
+		processDetails();
 	}
 	
 	private List<Figure> crawlVanSu() {
@@ -120,7 +122,7 @@ public class FigureCrawler implements ICrawler{
 	
 	public Set<String> getUniqueEras(){
 		Set<String> eras = new HashSet<>();
-		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
 		for (Figure figure : figures) {
 			eras.addAll(figure.getEras().keySet());
 		}
@@ -128,7 +130,7 @@ public class FigureCrawler implements ICrawler{
 	}
 	
 	private List<Figure> addDetails(){
-		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
 		
 		//add details for each figure
 		for (int i=2030;i<2035;i++) {  //  2278-2281 2244-2248 2746 2721 2618 2529
@@ -197,7 +199,7 @@ public class FigureCrawler implements ICrawler{
 	}
 	
 	private List<Figure> processDetails() { 
-		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
 		
 		int j = 0;
 		for (Figure figure : figures) {
@@ -329,7 +331,7 @@ public class FigureCrawler implements ICrawler{
 	
 	public Set<String> getUniqueSurnames() {
 		Set<String> surnames = new HashSet<>();
-		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
 		for (Figure figure : figures) {
 			surnames.add((figure.getName().split("\\s+"))[0]);
 		}
@@ -395,16 +397,17 @@ public class FigureCrawler implements ICrawler{
 					
 					
 					//extract otherNames
+					//find name that first appears in description
 					pattern = Pattern.compile("^((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
 					matcher = pattern.matcher(description);
 					String otherName;
 					if (matcher.find()) {
 						otherName = matcher.group();
-						if (!otherName.equals(mainName)) {
+						if (!otherName.equalsIgnoreCase(mainName)) {
 							otherNames.add(otherName);
 						}
 					}
-					
+					//find names that follow certain word groups
 					pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|"
 							+ "ban tước|ca ngợi là|còn gọi là|gọi tôn là|húy là|tên khác là|"
 							+ "niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|"
@@ -419,7 +422,7 @@ public class FigureCrawler implements ICrawler{
 					matcher = pattern.matcher(description);					
 					while (matcher.find()) {
 						otherName = matcher.group(2);
-						if (!otherName.equals(mainName) && !otherNames.contains(otherName)) {
+						if (!otherName.equalsIgnoreCase(mainName) && !StringHelper.containString(otherNames, otherName)) {
 							otherNames.add(otherName);
 						}
 					}

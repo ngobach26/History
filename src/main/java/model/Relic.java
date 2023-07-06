@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 public class Relic extends HistoricalEntity{
-    private static int numRelic = 0;
+    private static int numRelics = 0;
     private String location;
     private String category;
     private String approvedYear;
     private Map<String, Integer> relatedFestivals = new HashMap<>();
     private Map<String, Integer> relatedFigures = new HashMap<>();
 
-    public Relic(String name, String location, String category, String approvedYear, String description, List<String> relatedFigures) {
-        super(++numRelic, name, description);
+    public Relic(String relicName, String location, String category, String approvedYear, String description, List<String> relatedFigures) {
+        super(++numRelics, relicName, description);
         this.location = location;
         this.category = category;
         this.approvedYear = approvedYear;
@@ -21,6 +21,22 @@ public class Relic extends HistoricalEntity{
         	this.relatedFigures.put(figure, 0);
         }
     }
+
+	public String getLocation() {
+		return location;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public String getApprovedYear() {
+		return approvedYear;
+	}
+
+	public Map<String, Integer> getRelatedFestivals() {
+		return relatedFestivals;
+	}
 
 	public Map<String, Integer> getRelatedFigures() {
 		return relatedFigures;

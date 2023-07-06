@@ -24,21 +24,40 @@ public class Era extends HistoricalEntity{
 		}
 	}
 	
-	public Map<String, Integer> getKings(){
-		return kings;
-	}
-	
-	public void setKings(Map<String, Integer> kings) {
-		this.kings = kings;
-	}
-	
 	public String getStartYear() {
 		return startYear;
 	}
 
+
 	public String getEndYear() {
 		return endYear;
 	}
+
+
+	public Map<String, Integer> getKings() {
+		return kings;
+	}
+
+
+	public Map<String, Integer> getRelatedEvents() {
+		return relatedEvents;
+	}
+
+
+	public List<String> getNationNames() {
+		return nationNames;
+	}
+
+
+	public String getCapital() {
+		return capital;
+	}
+
+
+	public void setKings(Map<String, Integer> kings) {
+		this.kings = kings;
+	}
+	
 	
 	public void addRelatedEvents(String newEvent, int id) {
 		boolean isFound = false;
@@ -51,20 +70,6 @@ public class Era extends HistoricalEntity{
 		if (!isFound) {
 			relatedEvents.put(newEvent, id);
 		}		
-	}
-
-	public String getKingString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("");
-		if (kings.isEmpty()) {
-			return "không rõ";
-		}
-		for (String king : kings.keySet()) {
-			int id = kings.get(king);
-			sb.append(king).append(" (").append(id).append("), ");
-		}
-		sb.replace(sb.length() - 2, sb.length(), "");
-		return sb.toString();
 	}
 
 }

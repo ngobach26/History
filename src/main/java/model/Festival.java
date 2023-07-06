@@ -12,8 +12,9 @@ public class Festival extends HistoricalEntity{
     private Map<String, Integer> relatedRelics = new HashMap<>();
     private Map<String, Integer> relatedFigures = new HashMap<>();
 
-    public Festival(String name, String location, String firstTime, String startingDay, String description, List<String> relatedFigures, List<String> relatedRelics) {
-        super(++numFes, name, description);
+    public Festival(String FesName, String location, String firstTime, String startingDay, String description, 
+    		List<String> relatedFigures, List<String> relatedRelics) {
+        super(++numFes, FesName, description);
         this.location = location;
         this.firstTime = firstTime;
         this.startingDay = startingDay;
@@ -29,7 +30,15 @@ public class Festival extends HistoricalEntity{
 		return location;
 	}
     
-    public Map<String, Integer> getRelatedRelics() {
+    public String getFirstTime() {
+		return firstTime;
+	}
+
+	public String getStartingDay() {
+		return startingDay;
+	}
+
+	public Map<String, Integer> getRelatedRelics() {
 		return relatedRelics;
 	}
 
@@ -43,19 +52,6 @@ public class Festival extends HistoricalEntity{
 
 	public void setRelatedFigures(Map<String, Integer> relatedFigures) {
 		this.relatedFigures = relatedFigures;
-	}
-
-	public void addRelatedFigures(String newFigure, int id) {
-		boolean isFound = false;
-		for (String relatedFigure : relatedFigures.keySet()) {
-			if (relatedFigure.equalsIgnoreCase(newFigure)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
-			relatedFigures.put(newFigure, id);
-		}		
 	}
 	
 	public void addRelatedRelics(String newRelic, int id) {
@@ -71,17 +67,17 @@ public class Festival extends HistoricalEntity{
 		}		
 	}
 
-	public String getRelatedFigureString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("");
-		if (relatedFigures.isEmpty()) {
-			return "không rõ";
+	public void addRelatedFigures(String newFigure, int id) {
+		boolean isFound = false;
+		for (String relatedFigure : relatedFigures.keySet()) {
+			if (relatedFigure.equalsIgnoreCase(newFigure)) {
+				isFound = true;
+				break;
+			}
 		}
-		for (String figure : relatedFigures.keySet()) {
-			int id = relatedFigures.get(figure);
-			sb.append(figure).append(" (").append(id).append("), ");
-		}
-		sb.replace(sb.length() - 2, sb.length(), "");
-		return sb.toString();
+		if (!isFound) {
+			relatedFigures.put(newFigure, id);
+		}		
 	}
+	
 }

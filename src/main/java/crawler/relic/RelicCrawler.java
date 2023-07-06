@@ -17,8 +17,8 @@ import org.jsoup.select.Elements;
 import com.google.gson.reflect.TypeToken;
 
 import crawler.ICrawler;
-import crawler.JsonIO;
 import crawler.figure.FigureCrawler;
+import helper.JsonIO;
 import model.Relic;
 
 public class RelicCrawler implements ICrawler {

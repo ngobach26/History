@@ -1,4 +1,4 @@
-package crawler;
+package helper;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,11 +11,13 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class JsonIO<T>{
-	private final Type type;   //the type of objects to be deserialized from Json
+import model.HistoricalEntity;
+
+public class JsonIO<T extends HistoricalEntity>{
+	private final Type TYPE;   //the type of objects to be deserialized from Json
 	
 	public JsonIO(Type type) {
-		this.type = type;
+		this.TYPE = type;
 	}
 	
 	public void writeJson(List<T> list, String path) {
@@ -32,7 +34,7 @@ public class JsonIO<T>{
 		List<T> list = null;
 		try (FileReader fileReader = new FileReader(path)){
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			list = gson.fromJson(fileReader, type);
+			list = gson.fromJson(fileReader, TYPE);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

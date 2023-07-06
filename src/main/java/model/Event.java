@@ -15,7 +15,8 @@ public class Event extends HistoricalEntity{
 	 private Map<String, Integer> eras = new HashMap<>();
 	 private Map<String, Integer> relatedFigures = new HashMap<>();
 	 
-	 public Event(String eventName, String startYear, String endYear, String location, String result, List<String> relatedFigures, String description) {
+	 public Event(String eventName, String startYear, String endYear, String location, String result,
+			 List<String> relatedFigures, String description) {
 		 super(++numEvents, eventName, description);
 		 this.startYear = startYear;
 		 this.endYear = endYear;
@@ -58,6 +59,14 @@ public class Event extends HistoricalEntity{
 	public void setResult(String result) {
 		this.result = result;
 	}
+	
+	public Map<String, Integer> getEras() {
+		return eras;
+	}
+
+	public void setEras(Map<String, Integer> eras) {
+		this.eras = eras;
+	}
 
 	public Map<String, Integer> getRelatedFigures() {
 		return relatedFigures;
@@ -79,36 +88,4 @@ public class Event extends HistoricalEntity{
 			relatedFigures.put(newFigure, id);
 		}		
 	}
-	
-	public void setEras(Map<String, Integer> eras) {
-		this.eras = eras;
-	}
-
-	public void addEras(String newEra, int id) {
-		boolean isFound = false;
-		for (String era : eras.keySet()) {
-			if (era.equalsIgnoreCase(newEra)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
-			eras.put(newEra, id);
-		}		
-	}
-
-	public String getRelatedFigureString() {
-			StringBuilder sb = new StringBuilder();
-			sb.append("");
-			if (relatedFigures.isEmpty()) {
-				return "không rõ";
-			}
-			for (String figure : relatedFigures.keySet()) {
-				int id = relatedFigures.get(figure);
-				sb.append(figure).append(" (").append(id).append("), ");
-			}
-			sb.replace(sb.length() - 2, sb.length(), "");
-			return sb.toString();
-		}
-	 
 }

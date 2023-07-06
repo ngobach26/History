@@ -18,7 +18,7 @@ import org.jsoup.select.Elements;
 import com.google.gson.reflect.TypeToken;
 
 import crawler.ICrawler;
-import crawler.JsonIO;
+import helper.JsonIO;
 import model.Festival;
 
 public class FestivalCrawler implements ICrawler{
@@ -1432,6 +1432,7 @@ public class FestivalCrawler implements ICrawler{
     				if (provinceFest.getDescription().equals("Không rõ")) {
     					provinceFest.setDescription(festival2.getDescription());
     				}
+    				
     				Set<String> newRelics = festival2.getRelatedRelics().keySet();
     				Set<String> newFigures = festival2.getRelatedFigures().keySet();
     				for (String newRelic : newRelics) {
