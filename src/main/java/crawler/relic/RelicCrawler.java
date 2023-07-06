@@ -51,6 +51,7 @@ public class RelicCrawler implements ICrawler {
                         String category = "Không rõ";
                         String approvedYear = "Không rõ";
                         String description = cells.get(3).text();
+                        List<String> potentialFigureNames = new ArrayList<>();
                         
                         Element aTag = cells.get(1).selectFirst("a[href]");
                         if (aTag != null) {
@@ -62,17 +63,32 @@ public class RelicCrawler implements ICrawler {
                         			overviewPara.select("sup").remove();
                         			description = overviewPara.text();
                         		}
+                        		
+                        		Elements paras = relicDoc.select("div.mw-parser-output > p");
+                        		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
+                        		for (Element para: paras) {
+                        			Matcher matcher = pattern.matcher(para.text());
+                        	        while (matcher.find()) {
+                        	        	String potentialName = matcher.group();
+                        	            int length = potentialName.split("\\s+").length;
+                        	            String surname = (potentialName.split("\\s+"))[0];
+                        	            if (!potentialFigureNames.contains(potentialName) && surnames.contains(surname) && length > 1) {
+                        	            	potentialFigureNames.add(potentialName.replaceAll("\\s+", " "));
+                        	            }
+                        	        }
+                        		}
+                    	        System.out.println(potentialFigureNames);
                         	}
                         }
 
                         //Add relic
-//                        relics.add(new Relic(name, location, category, approvedYear, description));
-//                        System.out.println(name);
-//                        System.out.println(location);
-//                        System.out.println(category);
-//                        System.out.println(approvedYear);
-//                        System.out.println(description);                 
-//                        System.out.println("-------------");
+                        relics.add(new Relic(name, location, category, approvedYear, description, potentialFigureNames));
+                        System.out.println(name);
+                        System.out.println(location);
+                        System.out.println(category);
+                        System.out.println(approvedYear);
+                        System.out.println(description);                 
+                        System.out.println("-------------");
                     }
                     continue;
                 }
@@ -114,7 +130,6 @@ public class RelicCrawler implements ICrawler {
                             		for (Element para: paras) {
                             			Matcher matcher = pattern.matcher(para.text());
                             	        while (matcher.find()) {
- //                           	            String potentialName = matcher.group().replaceAll("Động|Bia|Trận|Thành|Núi|Bộ|Đèo|Hang|Đình|Đền|Chùa|Tháp|Người|Tiếng|Bến|Phía|Theo|Nhà|Thời|Suối|Sông|Đảng|Xã|Huyện|Tỉnh|Thác|Hội|Đồn|Tại|Đàng|Sau|Châu|Biển|Chữ|Hàng|Tổng", "").trim();
                             	        	String potentialName = matcher.group();
                             	            int length = potentialName.split("\\s+").length;
                             	            String surname = (potentialName.split("\\s+"))[0];

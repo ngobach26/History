@@ -5,12 +5,14 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 import com.google.gson.reflect.TypeToken;
@@ -26,18 +28,42 @@ public class FestivalCrawler implements ICrawler{
 	public void crawl() {
     	List<Festival> allFestivals = new ArrayList<>();
         allFestivals = crawlWiki();
-        allFestivals.addAll(crawlFesND());
-        allFestivals.addAll(crawlFesAG());
-        allFestivals.addAll(crawlFesLS());
-        allFestivals.addAll(crawlFesQNam());
-        allFestivals.addAll(crawlFesHue());
-        allFestivals.addAll(crawlFesTH());
-        allFestivals.addAll(crawlFesNA());
-        allFestivals.addAll(crawlFesHP());
-        allFestivals.addAll(crawlFesHCM());
-        allFestivals.addAll(crawlFesQNinh());
-        allFestivals.addAll(crawlFesBN());
-		festivalIO.writeJson(allFestivals, "src/main/resources/json/Festivals.json");
+//        allFestivals.addAll(crawlFesND());
+//        allFestivals.addAll(crawlFesAG());
+//        allFestivals.addAll(crawlFesLS());
+//        allFestivals.addAll(crawlFesQNam());
+//        allFestivals.addAll(crawlFesHue());
+//        allFestivals.addAll(crawlFesTH());
+//        allFestivals.addAll(crawlFesNA());
+//        allFestivals.addAll(crawlFesHP());
+//        allFestivals.addAll(crawlFesHCM());
+//        allFestivals.addAll(crawlFesQNinh());
+//        allFestivals.addAll(crawlFesBN());
+//        allFestivals.addAll(crawlFesVP());
+//        allFestivals.addAll(crawlFesQB());
+//        allFestivals.addAll(crawlFesHT());
+//        allFestivals.addAll(crawlFesTN());
+//        allFestivals.addAll(crawlFesBRVT());
+		
+        
+        merge(allFestivals, crawlFesND(), "Nam Định");
+        merge(allFestivals, crawlFesAG(), "An Giang");
+        merge(allFestivals, crawlFesLS(), "Lạng Sơn");
+        merge(allFestivals, crawlFesQNam(), "Quảng Nam");
+        merge(allFestivals, crawlFesHue(), "Huế");
+        merge(allFestivals, crawlFesTH(), "Thanh Hóa");
+        merge(allFestivals, crawlFesNA(), "Nghệ An");
+        merge(allFestivals, crawlFesHCM(), "Hồ Chí Minh");
+        merge(allFestivals, crawlFesQNinh(), "Quảng Ninh");
+        merge(allFestivals, crawlFesBN(), "Bắc Ninh");
+        merge(allFestivals, crawlFesVP(), "Vĩnh Phúc");
+        merge(allFestivals, crawlFesQB(), "Quảng Bình");
+        merge(allFestivals, crawlFesHT(), "Hà Tĩnh");
+        merge(allFestivals, crawlFesTN(), "Tây Ninh");
+        merge(allFestivals, crawlFesBRVT(), "Vũng Tàu");
+        merge(allFestivals, crawlFesHN(), "Hà Nội");
+        festivalIO.writeJson(allFestivals, "src/main/resources/json/Festivals.json");
+        
 	}
 
     public List<Festival> crawlWiki() {
@@ -62,14 +88,33 @@ public class FestivalCrawler implements ICrawler{
                 String location = cells.get(1).text();
                 String tempString = cells.get(4).text();
                 String description = "Không rõ";
+                List<String> relatedRelics = new ArrayList<>();
                 List<String> relatedFigures = new ArrayList<>();
 
                 //Default
-                if (name.isEmpty()) name = "Không rõ";
+                if (name.isEmpty()) {
+                	name = "Không rõ";
+                }
+                else {
+                	getRelatedRelics(relatedRelics, name);
+                }
                 if (firstTime.isEmpty()) firstTime = "Không rõ";
                 if (startingDay.isEmpty()) startingDay = "Không rõ";
                 if (location.isEmpty()) location = "Không rõ";
                 if (tempString.isEmpty()) tempString = "Không rõ";
+                
+                Element aElement = cells.get(2).selectFirst("a[href]");
+                if (aElement != null) {
+                	String link = URLDecoder.decode(aElement.attr("abs:href"), StandardCharsets.UTF_8.name());
+                	if (!link.contains("/w/index.php")) {
+                		Document linkDoc = Jsoup.connect(link).get();
+                		description = linkDoc.selectFirst("div.mw-parser-output > p").text();
+                		
+            			getRelatedRelics(relatedRelics, description);
+						
+                		System.out.println("Description: " + description);
+                	}
+                }
             
                 //Add related figures to hashmap
                 if (tempString != "Không rõ") {
@@ -98,13 +143,14 @@ public class FestivalCrawler implements ICrawler{
                 }
 
                 //Add festivals
-                festivals.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures));
+                festivals.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures, relatedRelics));
 
                 System.out.println(name);
                 System.out.println(location);
                 System.out.println(startingDay);
                 System.out.println(firstTime);
                 System.out.println(relatedFigures);
+                System.out.println(relatedRelics);
                 System.out.println("-------------------");
             }
         } catch (IOException e) {
@@ -112,6 +158,27 @@ public class FestivalCrawler implements ICrawler{
         }
 
         return festivals;
+    }
+    
+    private void getRelatedRelics(List<String> relatedRelics, String text) {
+    	Pattern pattern = Pattern.compile("((?i)(chùa|đền|Đền|đình|Đình|chợ|núi|miếu|"
+    			+ "đầm|điện|Điện|gò|thành|dinh|động|lăng))"
+				+ "\\s+((\\p{Lu}\\p{Ll}*\\s*)+)");
+		Matcher matcher = pattern.matcher(text);						
+		while (matcher.find()) {
+			boolean isDuplicate = false;
+			String newRelic = matcher.group().trim();
+			//check duplicated			
+			for (String relatedRelic : relatedRelics) {
+				if (relatedRelic.equalsIgnoreCase(newRelic)) {
+					isDuplicate = true;
+					break;
+				}
+			}
+			if (!isDuplicate) {
+			    relatedRelics.add(newRelic);
+			}										
+		}
     }
     
     public List<Festival> crawlFesND() {
@@ -133,15 +200,19 @@ public class FestivalCrawler implements ICrawler{
                 String location = cells.get(3).text();
                 String firstTime = "Không rõ";
                 String description = "Không rõ";
+                List<String> relatedRelics = new ArrayList<>();
                 List<String> relatedFigures = new ArrayList<>();
+                
+                getRelatedRelics(relatedRelics, name);
 
-                festivals_ND.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures));
+                festivals_ND.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures, relatedRelics));
                 System.out.println(name);
                 System.out.println(startingDay);
                 System.out.println(location);
                 System.out.println(firstTime);
                 System.out.println(description);
                 System.out.println(relatedFigures);
+                System.out.println(relatedRelics);
                 System.out.println("---------------");
             }
         } catch (IOException e) {
@@ -169,7 +240,19 @@ public class FestivalCrawler implements ICrawler{
                 //Get name
                 Elements nameElements = elements.select("h2");
                 for (Element nameElement: nameElements) {
-                    name.add(nameElement.text().substring(nameElement.text().indexOf(" ") + 1));
+                    String temp = nameElement.text().substring(nameElement.text().indexOf(" ") + 1);
+                    String tempArr[] = temp.split("-");
+                    if (tempArr.length == 2) {
+                    	if (tempArr[0].contains("Lạng Sơn")) {
+                    		name.add(tempArr[1].trim());
+                    	}
+                    	else {
+                    		name.add(tempArr[0].trim());
+                    	}
+                    }
+                    else {
+                    	name.add(temp);
+                    }     
                 }
 
                 String currentLocation = ""; 
@@ -201,7 +284,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < name.size(); i++) {
-            festivals_LS.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_LS.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -234,8 +319,19 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("[-–]");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Quảng Nam")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }
             }
 
             //Get time, location and description
@@ -289,7 +385,9 @@ public class FestivalCrawler implements ICrawler{
         }
         
         for (int i = 0; i < name.size(); i++) {
-            festivals_QNam.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_QNam.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -321,8 +419,19 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("[-:\\?]");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Nghệ An")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }                
             }
 
             String currentLocation = ""; 
@@ -358,7 +467,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < name.size(); i++) {
-            festivals_NA.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_NA.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -389,8 +500,8 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                name.add(temp);
             }
 
             String currentLocation = ""; 
@@ -411,14 +522,14 @@ public class FestivalCrawler implements ICrawler{
 
                 String temp = locTimeElement.text();
                 if (temp.contains("Địa chỉ:")) {
-                    currentDate = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian tổ chức tham khảo:"));
-                    startingDay.add(currentDate);
+                    currentLocation = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian tổ chức tham khảo:"));
+                    location.add(currentLocation);
                     temp = temp.substring(temp.indexOf("Thời gian tổ chức tham khảo:"));
                 } 
 
                 if (temp.contains("Thời gian tổ chức tham khảo:")) {
-                    currentLocation = temp.substring(temp.indexOf(":") + 2);
-                    location.add(currentLocation);
+                    currentDate = temp.substring(temp.indexOf(":") + 2);                    
+                    startingDay.add(currentDate);
                 }
             }
 
@@ -427,7 +538,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < 15; i++) {
-            festivals_TH.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_TH.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -495,7 +608,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < 10; i++) {
-            festivals_HP.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_HP.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -526,8 +641,19 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("-");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("HCM")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }
             }
 
             String currentLocation = ""; 
@@ -563,7 +689,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < 10; i++) {
-            festivals_HCM.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_HCM.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -594,9 +722,19 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
-                System.out.println(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("-");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Hạ Long")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }
             }
 
             String currentLocation = ""; 
@@ -617,13 +755,13 @@ public class FestivalCrawler implements ICrawler{
                 String temp = locTimeElement.text();
                 if (temp.contains("Địa điểm tổ chức:")) {
                     currentLocation = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian diễn ra tham khảo:"));
-                    startingDay.add(currentLocation);
+                    location.add(currentLocation);
                     temp = temp.substring(temp.indexOf("Thời gian diễn ra tham khảo:"));
                 } 
 
                 if (temp.contains("Thời gian diễn ra tham khảo:")) {
                     currentDate = temp.substring(temp.indexOf(":") + 2);
-                    location.add(currentDate);
+                    startingDay.add(currentDate);
                 }
 
             }
@@ -632,7 +770,9 @@ public class FestivalCrawler implements ICrawler{
         }
 
         for (int i = 0; i < 10; i++) {
-            festivals_QNinh.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_QNinh.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -695,7 +835,9 @@ public class FestivalCrawler implements ICrawler{
         }
         
         for (int i = 0; i < name.size(); i++) {
-            festivals_Hue.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures));
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_Hue.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
             System.out.println(name.get(i));
             System.out.println(location.get(i));
             System.out.println(startingDay.get(i));
@@ -709,7 +851,7 @@ public class FestivalCrawler implements ICrawler{
 
     public List<Festival> crawlFesAG() {
         Document doc;
-       List<Festival> festivals_AG = new ArrayList<>();
+        List<Festival> festivals_AG = new ArrayList<>();
 
         try {
             String url = "https://angiangtourist.vn/thoi-gian-va-dia-diem-to-chuc-cac-le-hoi-lon-o-an-giang/?fbclid=IwAR0Pgns8nI19fWKvq-9yAMzjg4QNIJwsqgl2mld8inhNlS49f2IwcUqzUyE";
@@ -721,6 +863,7 @@ public class FestivalCrawler implements ICrawler{
             for (Element pElement: subList) {
 
                 List<String> relatedFigures = new ArrayList<>();
+                List<String> relatedRelics = new ArrayList<>();
 
                 Element temp = doc.selectFirst("#post-2598 > div > div.entry-content.single-page > p:nth-child(11)");
                 Element temp1 = doc.selectFirst("#post-2598 > div > div.entry-content.single-page > p:nth-child(12)");
@@ -734,8 +877,10 @@ public class FestivalCrawler implements ICrawler{
                 String related = "";
 
                 name = lineText.substring(0, lineText.indexOf("Thời gian:"));
-                lineText = lineText.substring(lineText.indexOf("Thời gian:"));
+                lineText = lineText.substring(lineText.indexOf("Thời gian:"));               
                 System.out.println(name);
+                
+                getRelatedRelics(relatedRelics, name);
 
                 startingDay = lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Địa điểm:"));
                 lineText = lineText.substring(lineText.indexOf("Địa điểm:"));
@@ -746,7 +891,7 @@ public class FestivalCrawler implements ICrawler{
                 System.out.println(location);
                 
 
-                related = lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Đặc điểm:"));
+                related = (lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Đặc điểm:")).replace(".","").split("[(,]"))[0].trim();
                 lineText = lineText.substring(lineText.indexOf("Đặc điểm: "));
                 relatedFigures.add(related);
                 System.out.println(related);
@@ -756,7 +901,7 @@ public class FestivalCrawler implements ICrawler{
                 
                 System.out.println("--------------------");
 
-                festivals_AG.add(new Festival(name, location, related, startingDay, description, relatedFigures));
+                festivals_AG.add(new Festival(name, location, related, startingDay, description, relatedFigures, relatedRelics));
 
             }
             
@@ -794,12 +939,15 @@ public class FestivalCrawler implements ICrawler{
             for (Element pElement: subList) {
 
                 List<String> relatedFigures = new ArrayList<>();
+                List<String> relatedRelics = new ArrayList<>();
                 String nameString = name.get(idx++);
                 String lineText = pElement.text();
                 String loc = "";
                 String startingD = "";
                 String descrip = "";
                 String related = "";
+                
+                getRelatedRelics(relatedRelics, nameString);
 
                 if (pElement.equals(subList.get(3))) {
                     startingD = lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Địa điểm:"));
@@ -831,7 +979,7 @@ public class FestivalCrawler implements ICrawler{
                     descrip = lineText.substring(lineText.indexOf(":") + 2);
                 }
 
-                festivals_BN.add(new Festival(nameString, loc, "Không rõ", startingD, descrip, relatedFigures));
+                festivals_BN.add(new Festival(nameString, loc, "Không rõ", startingD, descrip, relatedFigures, relatedRelics));
                 System.out.println(nameString);
                 System.out.println(loc);
                 System.out.println(startingD);
@@ -847,6 +995,464 @@ public class FestivalCrawler implements ICrawler{
         return festivals_BN;
     }
 
+    public List<Festival> crawlFesVP() {
+        Document doc;
+        List<Festival> festivals_VP = new ArrayList<>();
+        List<String> name = new ArrayList<>();
+        List<String> startingDay = new ArrayList<>();
+        List<String> location = new ArrayList<>();
+        List<String> description = new ArrayList<>();
+        List<String> relatedFigures = new ArrayList<>();
+
+        try {
+            String url = "https://dulichchaovietnam.com/9-le-hoi-o-dac-sac-o-vinh-phuc.html?fbclid=IwAR0bnCuhgGAOBMTV-8TfOYri-Q_NPE07Zi2iXt8gLPTMcRIjH2suxgCXIt8";
+            doc = Jsoup.connect(url).get();
+
+            Elements elements = doc.select("body > main > div > div.col-sm-9 > article.p-home.paddtb15 > div > div > div");
+
+            Elements pElements = elements.select("p");
+            List<Element> subList = pElements.subList(3, 47);
+
+            for (Element pElement: subList) {
+                String text = pElement.text();
+                if (text.isEmpty()) continue;
+
+                String check = "";
+
+                Pattern pattern = Pattern.compile("\\d+\\.\\s+(.+)");
+                Matcher matcher = pattern.matcher(text);
+                while (matcher.find()) {
+                    check = matcher.group(1).trim();
+                    name.add(check);
+                }
+
+                if (!check.isEmpty()) continue;
+    
+
+                if (text.contains("Thời gian:")) {
+                    String temp = text.substring(text.indexOf(":") + 2);
+                    startingDay.add(temp);
+                } else if (text.contains("Địa điểm:")) {
+                    String temp = text.substring(text.indexOf(":") + 2);
+                    location.add(temp); 
+                } else {
+                    description.add(text);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < name.size(); i++) {
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_VP.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
+            System.out.println(name.get(i));
+            System.out.println(location.get(i));
+            System.out.println(startingDay.get(i));
+            System.out.println(description.get(i));
+            System.out.println(relatedFigures);
+            System.out.println("---------------------------");
+        }
+
+        return festivals_VP;
+    }
+    
+    public List<Festival> crawlFesQB() {
+        Document doc;
+        List<Festival> festivals_QB = new ArrayList<>();
+        List<String> name = new ArrayList<>();
+        List<String> startingDay = new ArrayList<>();
+        List<String> location = new ArrayList<>();
+        List<String> description = new ArrayList<>();
+        List<String> relatedFigures = new ArrayList<>();
+
+        try {
+            String url = "https://www.bestprice.vn/blog/van-hoa-am-thuc-6/top-8-le-hoi-quang-binh-mang-dam-van-hoa-truyen-thong-doc-dao_14-8311.html?fbclid=IwAR23tVZkTbC7DBboNIUgDs2Wt1pUAOrk20oSixGDr9QlDQG7w0QSX5WJcWc";
+            doc = Jsoup.connect(url).get();
+
+            Elements elements = doc.select("body > main > section.bpt-blog.container.blog-page.mart10-only-xs.margin-bottom-20 > div.blog-category-container.bpv-col-left.article-details.no-padding.article-content.responsive-description > article > div.content-article.margin-top-15");
+
+            Elements nameElements = elements.select("h2");
+            for (Element nameElement: nameElements) {
+            	String tempArr[] = nameElement.text().split("-");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Quảng Bình")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(nameElement.text());
+                }       
+            }
+
+            String currentLocation = ""; 
+            String currentDate = "";
+
+                //Get startingDay, location, description
+            Elements locTimeElements = elements.select("ul");
+                
+            for (Element locTimeElement: locTimeElements) {
+                Element firstP = locTimeElement.nextElementSibling(); 
+
+                while (!firstP.tagName().equals("p")) {
+                    firstP = firstP.nextElementSibling();
+                }
+
+                description.add(firstP.text());
+                String temp = locTimeElement.text();
+                if (temp.contains("Thời gian:")) {
+                    currentDate = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Địa điểm tổ chức:"));
+                    startingDay.add(currentDate);
+                    temp = temp.substring(temp.indexOf("Địa điểm tổ chức:"));
+                } 
+
+                if (temp.contains("Địa điểm tổ chức:")) {
+                    currentLocation = temp.substring(temp.indexOf(":") + 2);
+                    location.add(currentLocation);
+                }
+            }
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < name.size(); i++) {
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_QB.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
+            System.out.println(name.get(i));
+            System.out.println(location.get(i));
+            System.out.println(startingDay.get(i));
+            System.out.println(description.get(i));
+            System.out.println(relatedFigures);
+            System.out.println("---------------------------");
+        }
+
+
+        return festivals_QB;
+    }
+
+    public List<Festival> crawlFesHT() {
+        Document doc;
+        List<Festival> festivals_HT = new ArrayList<>();
+        List<String> name = new ArrayList<>();
+        List<String> startingDay = new ArrayList<>();
+        List<String> location = new ArrayList<>();
+        List<String> description = new ArrayList<>();
+        List<String> relatedFigures = new ArrayList<>();
+
+        try {
+            String url = "https://vinpearl.com/vi/kham-pha-y-nghia-va-nhung-trai-nghiem-doc-dao-tai-7-le-hoi-o-ha-tinh?fbclid=IwAR0a16Jnu2pyCyEMt62PpP__6J2Bq15PCJchWA1KzPf_G0p91luCgBp6tFA";
+            doc = Jsoup.connect(url).get();
+
+            Elements elements = doc.select("#block-porto-content > div > div.container.detail.news-full > div > div.main-body-wrapper > div.content-wrapper.read-more > div.content");
+            Elements nameElements = elements.select("h2");
+
+            for (Element nameElement: nameElements) {
+                String temp = nameElement.text();
+                int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("[-:\\?]");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Hà Tĩnh")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }       
+            }
+
+            String currentLocation = ""; 
+            String currentDate = "";
+
+                //Get startingDay, location, description
+            Elements locTimeElements = elements.select("ul");
+                
+            for (Element locTimeElement: locTimeElements) {
+                Element firstP = locTimeElement.nextElementSibling(); 
+
+                while (!firstP.tagName().equals("p")) {
+                    firstP = firstP.nextElementSibling();
+                }
+
+                description.add(firstP.text());
+                String temp = locTimeElement.text();
+                if (temp.contains("Địa điểm:")) {
+                    currentLocation = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian tổ chức tham khảo:"));
+                    location.add(currentLocation);
+                    temp = temp.substring(temp.indexOf("Thời gian tổ chức tham khảo:"));
+                } 
+
+                if (temp.contains("Thời gian tổ chức tham khảo:")) {
+                    currentDate = temp.substring(temp.indexOf(":") + 2);
+                    startingDay.add(currentDate);
+                }
+            }
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < name.size(); i++) {
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_HT.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
+            System.out.println(name.get(i));
+            System.out.println(location.get(i));
+            System.out.println(startingDay.get(i));
+            System.out.println(description.get(i));
+            System.out.println(relatedFigures);
+            System.out.println("---------------------------");
+        }
+
+        return festivals_HT;
+    }
+
+    public List<Festival> crawlFesTN() {
+        Document doc;
+        List<Festival> festivals_TN = new ArrayList<>();
+        List<String> name = new ArrayList<>();
+        List<String> startingDay = new ArrayList<>();
+        List<String> location = new ArrayList<>();
+        List<String> description = new ArrayList<>();
+        List<String> relatedFigures = new ArrayList<>();
+
+        try {
+            String url = "https://vinpearl.com/vi/le-hoi-tay-ninh-kham-pha-7-su-kien-dac-sac-bac-nhat-dat-thanh?fbclid=IwAR28z8FgSAt31a9S4sM_5nM6cQ2iH4gSv9HzqM0CGZWmkCIpHr3243U5_2U";
+            doc = Jsoup.connect(url).get();
+
+            Elements elements = doc.select("#block-porto-content > div > div.container.detail.news-full > div > div.main-body-wrapper > div.content-wrapper.read-more > div.content");
+            Elements nameElements = elements.select("h2");
+
+            for (Element nameElement: nameElements) {
+                String temp = nameElement.text();
+                int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
+                temp = temp.substring(separatorIndex + 2);
+                String tempArr[] = temp.split("-");
+                if (tempArr.length == 2) {
+                	if (tempArr[0].contains("Tây Ninh")) {
+                		name.add(tempArr[1].trim());
+                	}
+                	else {
+                		name.add(tempArr[0].trim());
+                	}
+                }
+                else {
+                	name.add(temp);
+                }                
+            }
+
+            String currentLocation = ""; 
+            String currentDate = "";
+
+                //Get startingDay, location, description
+            Elements locTimeElements = elements.select("ul");
+                
+            for (Element locTimeElement: locTimeElements) {
+                Element firstP = locTimeElement.nextElementSibling(); 
+
+                while (!firstP.tagName().equals("p")) {
+                    firstP = firstP.nextElementSibling();
+                }
+
+                description.add(firstP.text());
+                String temp = locTimeElement.text();
+                if (temp.contains("Thời gian diễn ra tham khảo:")) {
+                    currentDate = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Địa điểm tổ chức:"));
+                    startingDay.add(currentDate);
+                    temp = temp.substring(temp.indexOf("Địa điểm tổ chức:"));
+                } 
+
+                if (temp.contains("Địa điểm tổ chức:")) {
+                    currentLocation = temp.substring(temp.indexOf(":") + 2);
+                    location.add(currentLocation);
+                }
+            }
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < name.size(); i++) {
+        	List<String> relatedRelics = new ArrayList<>();
+        	getRelatedRelics(relatedRelics, name.get(i));
+            festivals_TN.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
+            System.out.println(name.get(i));
+            System.out.println(location.get(i));
+            System.out.println(startingDay.get(i));
+            System.out.println(description.get(i));
+            System.out.println(relatedFigures);
+            System.out.println("---------------------------");
+        }
+
+        return festivals_TN;
+    }
+
+    public List<Festival> crawlFesBRVT() {
+        Document doc;
+        List<Festival> festivals_BRVT = new ArrayList<>();
+
+        try {
+            String url = "https://baria-vungtau.gov.vn/sphere/baria/vungtau/page/print.cpx?uuid=5c00ed8c1bd20b280b643764&fbclid=IwAR23tVZkTbC7DBboNIUgDs2Wt1pUAOrk20oSixGDr9QlDQG7w0QSX5WJcWc";
+            doc = Jsoup.connect(url).get();
+
+            Elements tables = doc.select("body > div > div > div > div.print-view-content.content > table");
+
+            for (Element table: tables) {
+                Elements rows  = table.select("tr");
+
+                for (int i = 1; i < rows.size(); i++) {
+                Elements cells = rows.get(i).select("td");
+
+                String name = cells.get(1).text();
+                String startingDay = cells.get(2).text();
+                String location = cells.get(3).text();
+                String firstTime = "Không rõ";
+                String description = cells.get(4).text();
+                List<String> relatedFigures = new ArrayList<>();
+                List<String> relatedRelics = new ArrayList<>();
+                
+            	getRelatedRelics(relatedRelics, name);
+
+                if (description.isEmpty()) description = "Không rõ";
+                if (location.isEmpty()) location = "Không rõ";
+
+                festivals_BRVT.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures, relatedRelics));
+                System.out.println(name);
+                System.out.println(startingDay);
+                System.out.println(location);
+                System.out.println(firstTime);
+                System.out.println(description);
+                System.out.println(relatedFigures);
+                System.out.println("---------------");
+            }
+                
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return festivals_BRVT;
+    }
+    
+    public List<Festival> crawlFesHN() {
+    	Document doc;
+    	List<Festival> festivals_HN = new ArrayList<>();
+    	String url = "https://evbn.org/danh-sach-cac-le-hoi-o-ha-noi-1650760290/";
+    	
+    	try {
+			doc = Jsoup.connect(url).get();
+			Elements pElements = doc.select("div#maincontent div.content-post > div:nth-of-type(2) > p");
+			for (int i=0; i<pElements.size()-1; i++) {
+				Element pElement = pElements.get(i);
+				String name = pElement.selectFirst("strong").text();
+				String startingDay = "Không rõ";
+                String location = "Không rõ";
+                String firstTime = "Không rõ";
+                String description = "Không rõ";
+                List<String> relatedFigures = new ArrayList<>();
+                List<String> relatedRelics = new ArrayList<>();
+				
+				List<TextNode> textNodes = pElement.textNodes();
+				for (TextNode textNode : textNodes) {
+					String text = textNode.text();
+					if (text.contains("Thời gian:")) {
+						startingDay = text.replace("Thời gian:", "").trim();
+					}
+					else if (text.contains("Địa điểm:") || text.contains("Địa điểm tổ chức:")) {
+						location = text.replace("Địa điểm:", "").replace("Địa điểm tổ chức:","").trim();
+					}
+					else if (text.contains("Tôn vinh:")) {						
+						text = text.replace("Tôn vinh:", "").replace("Quốc Tổ", "").replace("Quốc Mẫu", "")
+								.replace("thần", "Thần").replace("đại vương", "Đại Vương");
+						Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+						Matcher matcher = pattern.matcher(text);
+						while (matcher.find()) {
+							String newFigure = matcher.group();
+							if (!relatedFigures.contains(newFigure) && 
+								!newFigure.equals("Thanh Oai") && 
+								!newFigure.equals("Việt Nam")) {
+								if (newFigure.equals("Tản Viên")) {
+									newFigure = "Đức Thánh Tản Viên";
+								}
+								relatedFigures.add(newFigure);
+							}							
+						}
+						System.out.println(text);
+					}
+					else if (text.contains("Đặc điểm:")) {
+						description = text.replace("Đặc điểm:", "").trim();
+						getRelatedRelics(relatedRelics, name);
+					}
+				}
+				System.out.println(name);
+                System.out.println(startingDay);
+                System.out.println(location);
+                System.out.println(firstTime);
+                System.out.println(description);
+                System.out.println(relatedFigures);
+                System.out.println(relatedRelics);
+				System.out.println("------------");
+				
+				festivals_HN.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures, relatedRelics));
+			}
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}    	
+    	
+    	return festivals_HN;
+    }
+    
+    //list 2 is added to base list 1, list 2 is a list of festivals in a province
+    public List<Festival> merge(List<Festival> list1, List<Festival> list2, String province) {
+    	List<Festival> provinceFests = new ArrayList<>();
+    	for (Festival festival1 : list1) {
+    		if (festival1.getLocation().contains(province)) {
+    			provinceFests.add(festival1);
+    		}
+    	}
+    	
+    	for (Festival festival2: list2) {
+    		String festival2Name = festival2.getName().replaceAll("Hội|Lễ hội|Lễ", "").trim();
+    		boolean isFound = false;
+    		for (Festival provinceFest : provinceFests) {
+    			String provinceFestName = provinceFest.getName().replaceAll("Hội|Lễ hội|Lễ", "").trim();
+    			if (provinceFestName.toLowerCase().contains(festival2Name.toLowerCase()) || 
+    				festival2Name.toLowerCase().contains(provinceFestName.toLowerCase())) {
+    				
+    				if (provinceFest.getDescription().equals("Không rõ")) {
+    					provinceFest.setDescription(festival2.getDescription());
+    				}
+    				Set<String> newRelics = festival2.getRelatedRelics().keySet();
+    				Set<String> newFigures = festival2.getRelatedFigures().keySet();
+    				for (String newRelic : newRelics) {
+    					provinceFest.addRelatedRelics(newRelic, 0);
+    				}
+    				for (String newFigure : newFigures) {
+    					provinceFest.addRelatedFigures(newFigure, 0);
+    				}
+    				System.out.println("Updated: " + provinceFest.getName());
+    				System.out.println("Removed: " + festival2.getName());
+    				isFound = true;
+    				break;
+    			}
+    		}
+    		if (!isFound) {
+    			list1.add(festival2);
+    		}
+    	}
+    	return list1;
+    }
+    
     public static void main(String[] args) {
         FestivalCrawler festivalCrawler = new FestivalCrawler();
         festivalCrawler.crawl();

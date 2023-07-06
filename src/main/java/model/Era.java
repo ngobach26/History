@@ -9,6 +9,7 @@ public class Era extends HistoricalEntity{
 	private String startYear;
 	private String endYear;
 	private Map<String, Integer> kings = new HashMap<>();
+	private Map<String, Integer> relatedEvents = new HashMap<>();
 	private List<String> nationNames;
 	private String capital;
 	
@@ -31,6 +32,27 @@ public class Era extends HistoricalEntity{
 		this.kings = kings;
 	}
 	
+	public String getStartYear() {
+		return startYear;
+	}
+
+	public String getEndYear() {
+		return endYear;
+	}
+	
+	public void addRelatedEvents(String newEvent, int id) {
+		boolean isFound = false;
+		for (String relatedEvent : relatedEvents.keySet()) {
+			if (relatedEvent.equalsIgnoreCase(newEvent)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			relatedEvents.put(newEvent, id);
+		}		
+	}
+
 	public String getKingString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("");

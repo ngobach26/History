@@ -17,6 +17,9 @@ public class Figure extends HistoricalEntity{
 	private Map<String, Integer> mother = new HashMap<>();
 	private Map<String, Integer> father = new HashMap<>();
 	private Map<String, Integer> children = new HashMap<>();
+	private Map<String, Integer> relatedEvents = new HashMap<>();
+	private Map<String, Integer> relatedRelics = new HashMap<>();
+	private Map<String, Integer> relatedFestivals = new HashMap<>();
 	
 	public Figure(String name, List<String> otherNames, String bornYear, String diedYear, List<String> eras, String location, String role, String description) {
 		super(++numFigures, name, description);
@@ -84,6 +87,22 @@ public class Figure extends HistoricalEntity{
 		this.role = role;
 	}
 
+	public Map<String, Integer> getSpouses() {
+		return spouses;
+	}
+
+	public Map<String, Integer> getMother() {
+		return mother;
+	}
+
+	public Map<String, Integer> getFather() {
+		return father;
+	}
+
+	public Map<String, Integer> getChildren() {
+		return children;
+	}
+
 	public void setSpouses(Map<String, Integer> spouses) {
 		this.spouses = spouses;
 	}
@@ -96,21 +115,73 @@ public class Figure extends HistoricalEntity{
 		this.father = father;
 	}
 	
+	public void setChildren(Map<String, Integer> children) {
+		this.children = children;
+	}
+	
+	public void addRelatedEvents(String newEvent, int id) {
+		boolean isFound = false;
+		for (String relatedEvent : relatedEvents.keySet()) {
+			if (relatedEvent.equalsIgnoreCase(newEvent)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			relatedEvents.put(newEvent, id);
+		}		
+	}
+	
+	public void addRelatedRelics(String newRelic, int id) {
+		boolean isFound = false;
+		for (String relatedRelic : relatedRelics.keySet()) {
+			if (relatedRelic.equalsIgnoreCase(newRelic)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			relatedRelics.put(newRelic, id);
+		}		
+	}
+	
+	public void addRelatedFestivals(String newFestival, int id) {
+		boolean isFound = false;
+		for (String relatedFestival : relatedFestivals.keySet()) {
+			if (relatedFestival.equalsIgnoreCase(newFestival)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			relatedFestivals.put(newFestival, id);
+		}		
+	}
+	
+	public void addChildren(String newChild, int id) {
+		boolean isFound = false;
+		for (String child : children.keySet()) {
+			if (child.equalsIgnoreCase(newChild)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			children.put(newChild, id);
+		}		
+	}
+
 	@Override
 	public boolean containsName(String name) {
-		if (name.equals(getName())) {
+		if (name.equalsIgnoreCase(getName())) {
 			return true;
 		}
 		for (String otherName : getOtherNames()) {
-			if (name.equals(otherName)) {
+			if (name.equalsIgnoreCase(otherName)) {
 				return true;
 			}
 		}
 		return false;
-	}
-
-	public void setChildren(Map<String, Integer> children) {
-		this.children = children;
 	}
 
 	public static int getNumFigures() {

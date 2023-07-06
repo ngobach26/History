@@ -25,6 +25,19 @@ import model.Era;
 
 public class EraCrawler implements ICrawler{
 	private JsonIO<Era> eraIO = new JsonIO<>(new TypeToken<ArrayList<Era>>() {}.getType());
+	
+	//This class stores capital/nationName in each era.
+	class PeriodEntity{
+		String name;
+		int startYear;
+		int endYear;
+		
+		public PeriodEntity(String name, int startYear, int endYear) {
+			this.name = name;
+			this.startYear = startYear;
+			this.endYear = endYear;
+		}
+	}
 
 	@Override
 	public void crawl() {
@@ -88,16 +101,24 @@ public class EraCrawler implements ICrawler{
 				break;
 			}
 		}
+		if (eraName.equals("Nước Việt Nam mới (1945 – đến nay)")) {
+			eraName = "Nước Việt Nam mới";
+		}
+	
 		
 		//reformat endYear
 		if (endYear.contains("trCN")) {
-			startYear += " trCN";
+			startYear = "-" + startYear.replaceAll("[^\\d]", "");
+			endYear = "-" + endYear.replaceAll("[^\\d]", "");
+		}
+		if (startYear.contains("trCN")) {
+			startYear = "-" + startYear.replaceAll("[^\\d]", "");
 		}
 		
 		//crawl capital, nationName
 		List<PeriodEntity> eraCapitals = crawlCapital();
 		List<PeriodEntity> nationNameEntities = crawlNationName();
-		if (!eraName.equals("Thời tiền sử")) {
+		if (!startYear.equals("Không rõ") && !endYear.equals("Không rõ")) {
 			int startYearInt = convertYearStringToInt(startYear);
 			int endYearInt = convertYearStringToInt(endYear);
 			for (PeriodEntity eraCapital : eraCapitals) {
@@ -234,7 +255,7 @@ public class EraCrawler implements ICrawler{
 	
 	private int convertYearStringToInt(String yearStr) {
 		int yearInt;
-		if (yearStr.contains("TCN") || yearStr.contains("trCN")) {
+		if (yearStr.contains("TCN")) {
 			yearInt = -(Integer.parseInt(yearStr.replaceAll("[^\\d]", "")));
 		}
 		else if (yearStr.contains("nay")) {
@@ -246,24 +267,14 @@ public class EraCrawler implements ICrawler{
 		return yearInt;
 	}
 	
+	
 	public static void main(String[] args) {
 		EraCrawler eraCrawler = new EraCrawler();
 		eraCrawler.crawl();
 	}
 }
 
-//This class stores capital/nationName in each era.
-class PeriodEntity{
-	String name;
-	int startYear;
-	int endYear;
-	
-	public PeriodEntity(String name, int startYear, int endYear) {
-		this.name = name;
-		this.startYear = startYear;
-		this.endYear = endYear;
-	}
-}
+
 
 
 

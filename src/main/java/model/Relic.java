@@ -9,6 +9,7 @@ public class Relic extends HistoricalEntity{
     private String location;
     private String category;
     private String approvedYear;
+    private Map<String, Integer> relatedFestivals = new HashMap<>();
     private Map<String, Integer> relatedFigures = new HashMap<>();
 
     public Relic(String name, String location, String category, String approvedYear, String description, List<String> relatedFigures) {
@@ -27,6 +28,19 @@ public class Relic extends HistoricalEntity{
 
 	public void setRelatedFigures(Map<String, Integer> relatedFigures) {
 		this.relatedFigures = relatedFigures;
+	}
+	
+	public void addRelatedFestivals(String newFestival, int id) {
+		boolean isFound = false;
+		for (String relatedFestival : relatedFestivals.keySet()) {
+			if (relatedFestival.equalsIgnoreCase(newFestival)) {
+				isFound = true;
+				break;
+			}
+		}
+		if (!isFound) {
+			relatedFestivals.put(newFestival, id);
+		}		
 	}
 	
 }

@@ -20,6 +20,7 @@ import com.google.gson.reflect.TypeToken;
 import crawler.GoogleCrawler;
 import crawler.ICrawler;
 import crawler.JsonIO;
+import model.Event;
 import model.Figure;
 
 public class FigureCrawler implements ICrawler{
@@ -27,12 +28,15 @@ public class FigureCrawler implements ICrawler{
 	
 	@Override
 	public void crawl() {
-		figureIO.writeJson(merge(), "src/main/resources/json/Figures.json");
-//		figureIO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS.json");
-//		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
+//		List<Figure> vs = crawlVanSu();
+//		List<Figure> tvls = crawlThuVienLichSu();
+//		figureIO.writeJson(merge(vs, tvls), "src/main/resources/json/Figures.json");
+//		figureIO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS2.json");
+		figureIO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
+		figureIO.writeJson(processDetails(), "src/main/resources/json/Figures.json");
 	}
 	
-	public List<Figure> crawlVanSu() {
+	private List<Figure> crawlVanSu() {
 		String url = "https://vansu.vn/viet-nam/viet-nam-nhan-vat?page=";
 		Document doc;
 		List<Figure> figures = new ArrayList<>();
@@ -123,11 +127,11 @@ public class FigureCrawler implements ICrawler{
 		return eras;
 	}
 	
-	public List<Figure> addDetails(){
+	private List<Figure> addDetails(){
 		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		
 		//add details for each figure
-		for (int i=1;i<20;i++) {
+		for (int i=2030;i<2035;i++) {  //  2278-2281 2244-2248 2746 2721 2618 2529
 			Map<String, Integer> mother = new HashMap<>();
 			Map<String, Integer> father = new HashMap<>();
 			Map<String, Integer> children = new HashMap<>();
@@ -192,19 +196,147 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
+	private List<Figure> processDetails() { 
+		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
+		
+		int j = 0;
+		for (Figure figure : figures) {
+			Map<String, Integer> mother = new HashMap<>();
+			Map<String, Integer> father = new HashMap<>();
+			Map<String, Integer> children = new HashMap<>();
+			Map<String, Integer> spouses = new HashMap<>();
+			
+			String motherName = "";
+			String fatherName = "";
+			Set<String> spouseNames = new HashSet<>();
+			Set<String> childrenNames = new HashSet<>();
+
+			for (String motherText : figure.getMother().keySet()) {				
+				if (motherText.toLowerCase().contains("vương") || motherText.toLowerCase().contains("sư") ||
+					motherText.toLowerCase().contains("vua") || motherText.toLowerCase().contains("đế")) {
+					continue;
+				}
+				motherText = motherText.replaceAll("\\([^()]*\\)", "").replaceAll("(?i)thái hậu", "Thái Hậu")
+									   .replaceAll("(?i)hoàng hậu", "Hoàng Hậu").replaceAll("(?i)quốc mẫu", "Quốc Mẫu")
+									   .replaceAll("(?i)quý phi", "Quý Phi").replaceAll("(?i)thái phi", "Thái Phi")
+									   .replaceAll("(?i)(bà|cụ)", "");
+				if (motherText.contains("Quý Phi")) {
+					motherText = motherText.replace("thị", "Thị");
+				}
+				Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}+\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+				Matcher matcher = pattern.matcher(motherText);
+				if (matcher.find()) {
+					motherName = matcher.group();
+				}
+			}
+			
+			for (String fatherText : figure.getFather().keySet()) {
+				if (fatherText.toLowerCase().contains("hoàng hậu") || fatherText.toLowerCase().contains("thái hậu") ||
+					fatherText.toLowerCase().contains("quý phi") || fatherText.toLowerCase().contains("thái phi") ||
+					fatherText.toLowerCase().contains("quốc mẫu")) {
+					continue;
+				}
+				fatherText = fatherText.replaceAll("\\([^()]*\\)", "").replace("vương", "Vương")
+									   .replaceAll("(?i)(Ông|cụ)", "");
+				Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}+\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+				Matcher matcher = pattern.matcher(fatherText);
+				if (matcher.find()) {
+					fatherName = matcher.group();
+					if (fatherName.equals(motherName) && !fatherName.equals("")) {
+						if (motherName.contains("Thị")) {
+							fatherName = "";
+						}
+						else {
+							motherName = "";
+						}
+					}
+				}
+			}
+			
+			for (String spouseText : figure.getSpouses().keySet()) {
+				spouseText = spouseText.replaceAll("\\([^()]*\\)", "").replaceAll("(?i)thái hậu", "Thái Hậu")
+						   			  .replaceAll("(?i)hoàng hậu", "Hoàng Hậu").replaceAll("(?i)quốc mẫu", "Quốc Mẫu")
+						   			  .replaceAll("(?i)quý phi", "Quý Phi").replaceAll("(?i)thái phi", "Thái Phi")
+						   			  .replace("vương", "Vương")
+						   			  .replaceAll("(?i)(Ông|bà|cụ|cô|chị)", "");
+				Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}+\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+				Matcher matcher = pattern.matcher(spouseText);
+				while (matcher.find()) {
+					spouseNames.add(matcher.group());
+				}
+			}
+			
+			for (String childrenText : figure.getChildren().keySet()) {
+				childrenText = childrenText.replaceAll("\\([^()]*\\)", "").replaceAll("(?i)thái hậu", "Thái Hậu")
+						   			  .replaceAll("(?i)hoàng hậu", "Hoàng Hậu").replaceAll("(?i)quốc mẫu", "Quốc Mẫu")
+						   			  .replaceAll("(?i)quý phi", "Quý Phi").replaceAll("(?i)thái phi", "Thái Phi")
+						   			  .replace("vương", "Vương")
+						   			  .replaceAll("(?i)(Ông|bà|cụ|cô|chị)", "");
+				Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}+\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+				Matcher matcher = pattern.matcher(childrenText);
+				while (matcher.find()) {
+					childrenNames.add(matcher.group());
+				}
+			}
+			
+			//avoid same motherName and spouseName/childrenName
+			if (childrenNames.contains(motherName) || spouseNames.contains(motherName)) {
+				childrenNames.remove(motherName);
+				spouseNames.remove(motherName);
+				motherName = "";
+			}
+			//avoid same fatherName and spouseName/childrenName
+			if (childrenNames.contains(fatherName) || spouseNames.contains(fatherName)) {
+				childrenNames.remove(fatherName);
+				spouseNames.remove(fatherName);
+				fatherName = "";
+			}
+			
+			//avoid same spouseName/childrenName
+			Set<String> spouseNamesCopy = new HashSet<>(spouseNames);
+			spouseNames.removeAll(childrenNames);
+			childrenNames.removeAll(spouseNamesCopy);
+			
+			if (!motherName.equals("") && !figure.containsName(motherName)) {
+				mother.put(motherName, 0);
+				System.out.println("Mother: " + motherName);
+			}
+			if (!fatherName.equals("") && !figure.containsName(fatherName)) {
+				father.put(fatherName, 0);
+				System.out.println("Father: " + fatherName);
+			}
+			for (String spouseName : spouseNames) {
+				if (!figure.containsName(spouseName)) {
+					spouses.put(spouseName, 0);
+				}				
+			}
+			for (String childName : childrenNames) {
+				if (!figure.containsName(childName)) {
+					children.put(childName, 0);
+				}				
+			}			
+			System.out.println("-------------------");
+			
+			figure.setMother(mother);
+			figure.setFather(father);
+			figure.setSpouses(spouses);
+			figure.setChildren(children);
+		}
+		
+		
+		return figures;
+	}
+	
 	public Set<String> getUniqueSurnames() {
 		Set<String> surnames = new HashSet<>();
 		List<Figure> figures = figureIO.loadJson("src/main/resources/json/Figures.json");
 		for (Figure figure : figures) {
 			surnames.add((figure.getName().split("\\s+"))[0]);
-//			for (String otherName : figure.getOtherNames()) {
-//				surnames.add((otherName.split("\\s+"))[0]);
-//			}
 		}
 		return surnames;
 	}
 	
-	public List<Figure> crawlThuVienLichSu() {
+	private List<Figure> crawlThuVienLichSu() {
 		String url = "https://thuvienlichsu.vn/nhan-vat?page=";
 		Document doc;
 		List<Figure> figures = new ArrayList<>();
@@ -234,7 +366,7 @@ public class FigureCrawler implements ICrawler{
 		            Matcher matcher = pattern.matcher(title);
 		            if (matcher.find()) {
 		            	String timeText = matcher.group(1).trim();
-		            	mainName = mainName.replace(matcher.group(), "").trim();
+		            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
 		            	List<Integer> dashIndexes = new ArrayList<>();
 		            	for (int j = 0; j < timeText.length(); j++) {
 		                    if (timeText.charAt(j) == '-') {
@@ -257,29 +389,60 @@ public class FigureCrawler implements ICrawler{
 		    			} 
 		            	System.out.println(timeText);
 		            }
-		            
-//					Element relatedEventsTable = linkDoc.select("div.divide-tag").get(1).selectFirst("table");
 					
+		            Element descriptionPara = linkDoc.select("div.divide-tag").get(2).selectFirst("div.card-body > p.card-text");
+					description = descriptionPara.text().replace("đế", "Đế").replace("vương", "Vương").replace("hậu", "Hậu");
 					
-					Element descriptionPara = linkDoc.select("div.divide-tag").get(2).selectFirst("div.card-body > p.card-text");
-					description = descriptionPara.text();
 					
 					//extract otherNames
-					pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|ban tước|ca ngợi là|còn gọi là|gọi tôn là|tên húy là|tên khác là|niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|tự xưng là|hay còn gọi là|hay|đặt tên mình là|kiểm hiệu|có tên là|tức là|được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|phong thành|lại phong|hưởng tước|phục chức|cung kính gọi là|đổi niên hiệu|tự là|xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là)(\\s+)(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");
+					pattern = Pattern.compile("^((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
 					matcher = pattern.matcher(description);
 					String otherName;
+					if (matcher.find()) {
+						otherName = matcher.group();
+						if (!otherName.equals(mainName)) {
+							otherNames.add(otherName);
+						}
+					}
+					
+					pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|"
+							+ "ban tước|ca ngợi là|còn gọi là|gọi tôn là|húy là|tên khác là|"
+							+ "niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|"
+							+ "tự xưng là|đặt tên mình là|kiểm hiệu|có tên là|tức là|hay còn gọi|"
+							+ "được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|"
+							+ "lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|"
+							+ "phong thành|lại phong|hưởng tước|cung kính gọi là|đổi niên hiệu|tự là|"
+							+ "xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|"
+							+ "Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là|"
+							+ "tên thật)"
+							+ "\\s+((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
+					matcher = pattern.matcher(description);					
 					while (matcher.find()) {
-						otherName = matcher.group().replaceAll("còn được gọi là|tước hiệu|tên thật là|truy phong là|ban tước|ca ngợi là|còn gọi là|gọi tôn là|tên húy là|tên khác là|niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|tự xưng là|hay còn gọi là|hay|đặt tên mình là|kiểm hiệu|có tên là|tức là|được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|phong thành|lại phong|hưởng tước|phục chức|cung kính gọi là|đổi niên hiệu|tự là|xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là", "").trim();
+						otherName = matcher.group(2);
 						if (!otherName.equals(mainName) && !otherNames.contains(otherName)) {
 							otherNames.add(otherName);
 						}
 					}
 								
+					//extract role
+					pattern = Pattern.compile("(là|là một vị|là một|là vị|là một trong những|là nữ|là một nữ)\\s+" +
+							  "(?i)(vua|hoàng đế|thái sư|danh tướng|tướng|thái tử|anh hùng|danh nhân|"
+							  + "thiền sư|hoàng hậu|nhà|hiệu trưởng|giảng viên|học giả|triết gia|"
+							  + "chính khách|giáo sư|phó giáo sư|quan|chuyên gia|danh sĩ|diễn viên|"
+							  + "doanh nhân|sĩ quan|cựu tướng|thủ tướng|nghệ sĩ|cận vệ|thủ lĩnh|chí sĩ|"
+							  + "trí thức|tu sĩ|võ tướng|linh mục|chiến sĩ|học giả|nhạc sĩ|thẩm phán|"
+							  + "sĩ phu|ca sĩ|tiến sĩ|liệt sĩ|cựu thần|hào trưởng)" + 
+							  "(.*?)(\\.|,|và)");
+					matcher = pattern.matcher(description);
+					if (matcher.find()) {
+			            role = matcher.group(2) + matcher.group(3);
+			        }
 					
 					System.out.println(mainName);
 					System.out.println(otherNames);
 					System.out.println(bornYear);
 					System.out.println(diedYear);
+					System.out.println(role);
 					System.out.println(description);
 					System.out.println("----------");
 					
@@ -314,7 +477,7 @@ public class FigureCrawler implements ICrawler{
 				            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
 				            Matcher matcher = pattern.matcher(mainName);
 				            if (matcher.find()) {
-				            	mainName = mainName.replace(matcher.group(), "").trim();
+				            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
 				            }
 				            System.out.println(mainName);	
 				            
@@ -337,50 +500,57 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	
-	public List<Figure> merge() {
-		List<Figure> figuresVS = crawlVanSu();
-		List<Figure> figuresTVLS = crawlThuVienLichSu();
-		
-		for (Figure figureTVLS : figuresTVLS) {
+	private List<Figure> merge(List<Figure> list1, List<Figure> list2) {
+		//list 2 is added to base list1
+		int sizeList1 = list1.size();		
+		for (Figure figure2 : list2) {
 			boolean isFound = false;
 			
-			for (Figure figureVS : figuresVS) {
-				List<String> updatedOtherNames = new ArrayList<>(figureVS.getOtherNames());
-				for (String figureTVLSName : figureTVLS.getAllNames()) {
-					if (figureVS.containsName(figureTVLSName)) {
+			for (int i=0; i<sizeList1; i++) {
+				Figure figure1 = list1.get(i);
+				String figure1MainName = figure1.getName();
+				List<String> updatedOtherNames = new ArrayList<>(figure1.getOtherNames());
+				for (String figure2Name : figure2.getAllNames()) {
+					if (figure1.containsName(figure2Name)) {
 						isFound = true;
 					}
-					if (!updatedOtherNames.contains(figureTVLSName)) {
-						updatedOtherNames.add(figureTVLSName);
+					if (!updatedOtherNames.contains(figure2Name) && !figure2Name.equalsIgnoreCase(figure1MainName)) {
+						updatedOtherNames.add(figure2Name);
 					}
 				}
-				//if found, just updated other names
-				if (isFound) {					
-					//remove main name in other names
-					updatedOtherNames.remove(figureVS.getName());
-					figureVS.setOtherNames(updatedOtherNames);
+				//if found, just updated other names, location, bornYear, diedYear
+				if (isFound) {
+					System.out.println("Updated: " + figure1MainName);
+					System.out.println("Removed: " + figure2.getName());
+					System.out.println("------------------");
+					figure1.setOtherNames(updatedOtherNames);					
+					if (figure1.getLocation().equals("Không rõ")) {
+						figure1.setLocation(figure2.getLocation());
+					}
+					if (figure1.getBornYear().equals("Không rõ")) {
+						figure1.setBornYear(figure2.getBornYear());
+					}
+					if (figure1.getDiedYear().equals("Không rõ")) {
+						figure1.setDiedYear(figure2.getDiedYear());
+					}
 					break;
 				}
 			}
 			
 			//if not found, add new figure to the list
 			if (!isFound) {
-				figuresVS.add(figureTVLS);
-				System.out.println(figureTVLS.getName());
-				System.out.println(figureTVLS.getOtherNames());
+				list1.add(figure2);
 			}
 		}
 		
-		return figuresVS;
+		return list1;
 		
 	}
+	
 	
 	public static void main(String[] args) {
 		FigureCrawler figureCrawler = new FigureCrawler();
 		figureCrawler.crawl();
-//	    figureCrawler.crawlThuVienLichSu();
-//		figureCrawler.merge();
 	}
 	
 }
