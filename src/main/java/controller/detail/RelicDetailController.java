@@ -34,7 +34,7 @@ public class RelicDetailController {
         approvedYearText.setText(relic.getApprovedYear());
 
         FlowPaneUIHelp.populateEntity(relic.getRelatedFigures(),relatedCharsFlowPane,relic, EntityType.FIGURE);
-        FlowPaneUIHelp.populateEntity(relic.getRelatedFestivals(),relatedFesFlowPane,relic,EntityType.RELIC);
+        FlowPaneUIHelp.populateEntity(relic.getRelatedFestivals(),relatedFesFlowPane,relic,EntityType.FESTIVAL);
     }
 
     @FXML
