@@ -1,6 +1,5 @@
 package helper;
 
-import java.io.IOException;
 import java.util.Map;
 
 import collection.*;
@@ -14,6 +13,14 @@ import main.EntityType;
 
 public class FlowPaneUIHelp {
 
+    /**
+     * Tạo liên kết dựa trên entityMap được cung cấp.
+     *
+     * @param entityMap     Map chứa tên của các entity và các ID tương ứng
+     * @param flowPane      FlowPane để chứa các liên kết
+     * @param currentEntity entity hiện tại để lưu trữ vào stack nhằm việc quay lại trang đó
+     * @param type          kiểu của entity trong entityMap
+     */
     public static void populateEntity(Map<String, Integer> entityMap, FlowPane flowPane, HistoricalEntity currentEntity, EntityType type) {
         if (entityMap == null) {
             return;
@@ -44,33 +51,35 @@ public class FlowPaneUIHelp {
         });
     }
 
-    private static void navigateLink(int id, HistoricalEntity entity, EntityType type) {
-        try {
-            App.pageNavigationService.addEntityToClickBackStack(entity);
 
+    private static void navigateLink(int id, HistoricalEntity currentView, EntityType type) {
+        try {
+            App.clickBackService.addEntityToClickBackStack(currentView);
+            // Khi chuyển sang trang khác thì sẽ push HistoricalEntity hiện tại vào stack
             switch (type) {
                 case ERA:
-                    HandleDetailHelp.Era(EraData.data.getById(id));
+                    HandleDetailHelp.Era(EraData.getEraCollection().getById(id));
                     break;
                 case FESTIVAL:
-                    HandleDetailHelp.Festival(FestivalData.data.getById(id));
+                    HandleDetailHelp.Festival(FestivalData.getFestivalCollection().getById(id));
                     break;
                 case FIGURE:
-                    HandleDetailHelp.Figure(FigureData.data.getById(id));
+                    HandleDetailHelp.Figure(FigureData.getFigureCollection().getById(id));
                     break;
                 case EVENT:
-                    HandleDetailHelp.Event(EventData.data.getById(id));
+                    HandleDetailHelp.Event(EventData.getEventCollection().getById(id));
                     break;
                 case RELIC:
-                    HandleDetailHelp.Relic(RelicData.data.getById(id));
+                    HandleDetailHelp.Relic(RelicData.getRelicCollection().getById(id));
                     break;
                 default:
                     throw new IllegalArgumentException("Invalid entity type: " + type);
             }
-        } catch (IOException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
+
 
     private static boolean isValidId(int id) {
         return id > 0;

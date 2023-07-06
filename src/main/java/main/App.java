@@ -1,6 +1,6 @@
 package main;
 
-import services.PageNavigationService;
+import services.ClickBackService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,7 +16,7 @@ import collection.FigureData;
 import collection.RelicData;
 
 public class App extends Application {
-    public static PageNavigationService pageNavigationService = new PageNavigationService();
+    public static ClickBackService clickBackService = new ClickBackService();
     private static Scene scene;
 
     @Override
@@ -32,10 +32,24 @@ public class App extends Application {
         stage.show();
     }
 
-    public static FXMLLoader setAndReturnRoot(String fxml) throws IOException {
-        FXMLLoader loader = loadFXML(fxml);
-        scene.setRoot(loader.load());
-        return loader;
+    public static FXMLLoader setAndReturnRoot(String fxml) {
+        FXMLLoader loader = null;
+        try {
+            loader = loadFXML(fxml);
+            scene.setRoot(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return loader;// Ở đây có thể trả về null, nên cần phải xử lí NullPointerException khi gọi hàm này
+    }
+
+    public static void setRoot(String fxml){
+        try{
+            FXMLLoader loader = loadFXML(fxml);
+            scene.setRoot(loader.load());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     private static FXMLLoader loadFXML(String fxml) throws IOException {

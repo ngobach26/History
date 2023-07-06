@@ -1,7 +1,5 @@
 package controller.detail;
 
-import java.io.IOException;
-
 import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +9,6 @@ import main.App;
 import main.EntityPages;
 import main.EntityType;
 import model.Era;
-import model.HistoricalEntity;
 
 public class EraDetailController{
     @FXML
@@ -48,11 +45,11 @@ public class EraDetailController{
     }
 
     @FXML
-    public void onClickBack(ActionEvent event) throws IOException {
-        if(App.pageNavigationService.clickBackStack.isEmpty()){
-            App.setAndReturnRoot(EntityPages.ERA_PAGES.getViewPage());
+    public void onClickBack(ActionEvent event){
+        if(App.clickBackService.clickBackStack.isEmpty()){
+                App.setRoot(EntityPages.ERA_PAGES.getViewPage());
         }else {
-            App.pageNavigationService.handleBackToPreDetailPage();
+            App.clickBackService.handleBackToPreDetailPage();
         }
     }
 

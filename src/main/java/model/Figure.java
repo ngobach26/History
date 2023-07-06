@@ -20,23 +20,32 @@ public class Figure extends HistoricalEntity {
 	private Map<String, Integer> relatedRelics = new HashMap<>();
 	private Map<String, Integer> relatedFestivals = new HashMap<>();
 
+	/**
+	 * Vì Figure có thêm các otherNames nên cần viết lại hàm containsName.
+	 *
+	 * @param name tên cần kiểm tra
+	 * @return {@code true} nếu danh sách tên chứa tên được cung cấp, ngược lại {@code false}
+	 */
 	@Override
 	public boolean containsName(String name) {
-		if (name == null)
+		if (name == null || this.name == null) {
 			return false;
+		}
 
-		if (this.name == null)
-			return false;
-		if(this.name.toLowerCase().contains(name.toLowerCase())){
+		String lowerCaseName = name.toLowerCase();
+		if (this.name.toLowerCase().contains(lowerCaseName)) {
 			return true;
 		}
-		for(String n : otherNames){
-			if(n.toLowerCase().contains(name.toLowerCase())){
+
+		for (String n : otherNames) {
+			if (n.toLowerCase().contains(lowerCaseName)) {
 				return true;
 			}
 		}
+
 		return false;
 	}
+
 
 
 	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,

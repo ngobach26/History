@@ -9,8 +9,6 @@ import main.EntityPages;
 import main.EntityType;
 import model.Figure;
 
-import java.io.IOException;
-
 import helper.FlowPaneUIHelp;
 
 public class FigureDetailController{
@@ -98,18 +96,12 @@ public class FigureDetailController{
     }
 
     @FXML
-    public void onClickBack(ActionEvent event) throws IOException {
-        if(App.pageNavigationService.clickBackStack.isEmpty()){
-            App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getViewPage());
+    public void onClickBack(ActionEvent event) {
+        if(App.clickBackService.clickBackStack.isEmpty()){
+                App.setRoot(EntityPages.FIGURE_PAGES.getViewPage());
         }else {
-            App.pageNavigationService.handleBackToPreDetailPage();
+            App.clickBackService.handleBackToPreDetailPage();
         }
     }
 
-
-
-    @FXML
-    public void onDeleteInfo() {
-
-    }
 }

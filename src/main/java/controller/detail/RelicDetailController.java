@@ -1,7 +1,5 @@
 package controller.detail;
 
-import java.io.IOException;
-
 import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,16 +35,12 @@ public class RelicDetailController {
     }
 
     @FXML
-    public void onClickBack(ActionEvent event) throws IOException {
-        if(App.pageNavigationService.clickBackStack.isEmpty()){
-            App.setAndReturnRoot(EntityPages.RELIC_PAGES.getViewPage());
+    public void onClickBack(ActionEvent event) {
+        if(App.clickBackService.clickBackStack.isEmpty()){
+            App.setRoot(EntityPages.RELIC_PAGES.getViewPage());
         }else {
-            App.pageNavigationService.handleBackToPreDetailPage();
+            App.clickBackService.handleBackToPreDetailPage();
         }
     }
 
-    @FXML
-    public void onDeleteInfo() {
-
-    }
 }

@@ -1,24 +1,18 @@
 package controller.overview;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
-import collection.FigureData;
 import collection.RelicData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
-import model.Figure;
 import model.Relic;
 
 public class RelicViewController implements Initializable {
@@ -52,7 +46,7 @@ public class RelicViewController implements Initializable {
         colSiteLocate.setCellValueFactory(new PropertyValueFactory<>("location"));
     }
     private void populateData() {
-        siteTable.setItems(RelicData.data.getData());
+        siteTable.setItems(RelicData.getRelicCollection().getData());
     }
 
     private void setupSearchBar() {
@@ -65,11 +59,7 @@ public class RelicViewController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Relic relic = row.getItem();
-                    try {
-                        App.pageNavigationService.handleViewtoDetail(relic);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    App.clickBackService.handleViewtoDetail(relic);
                 }
             });
             return row;
@@ -79,22 +69,22 @@ public class RelicViewController implements Initializable {
     private class RelicSearchBoxListener implements SearchBoxListener {
         @Override
         public void handleSearchName(String name) {
-            siteTable.setItems(RelicData.data.searchByName(name));
+            siteTable.setItems(RelicData.getRelicCollection().searchByName(name));
         }
 
         @Override
         public void handleSearchId(String id) {
             try {
                 int intId = Integer.parseInt(id);
-                siteTable.setItems(RelicData.data.searchByID(intId));
-            } catch (Exception e) {
-                System.err.println("Cannot find the entity with the id " + id);
+                siteTable.setItems(RelicData.getRelicCollection().searchByID(intId));
+            } catch (NumberFormatException e) {
+                System.err.println("Wrong number format or cannot find the entity with the id " + id);
             }
         }
 
         @Override
         public void handleBlank() {
-            siteTable.setItems(RelicData.data.getData());
+            siteTable.setItems(RelicData.getRelicCollection().getData());
         }
     }
 }

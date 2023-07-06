@@ -1,6 +1,5 @@
 package controller.overview;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -36,7 +35,6 @@ public class EraViewController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         setupTableColumns();
         populateData();
-
         setupSearchBar();
         setupDoubleClickHandler();
     }
@@ -52,7 +50,7 @@ public class EraViewController implements Initializable {
     }
 
     private void populateData() {
-        eraTable.setItems(EraData.getData().getData());
+        eraTable.setItems(EraData.getEraCollection().getData());
     }
 
     private void setupSearchBar() {
@@ -65,11 +63,7 @@ public class EraViewController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Era era = row.getItem();
-                    try {
-                        App.pageNavigationService.handleViewtoDetail(era);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    App.clickBackService.handleViewtoDetail(era);
                 }
             });
             return row;
@@ -79,22 +73,22 @@ public class EraViewController implements Initializable {
     private class EraSearchBoxListener implements SearchBoxListener {
         @Override
         public void handleSearchName(String name) {
-            eraTable.setItems(EraData.getData().searchByName(name));
+            eraTable.setItems(EraData.getEraCollection().searchByName(name));
         }
 
         @Override
         public void handleSearchId(String id) {
             try {
                 int intId = Integer.parseInt(id);
-                eraTable.setItems(EraData.getData().searchByID(intId));
-            } catch (Exception e) {
-                System.err.println("Cannot find the entity with the id " + id);
+                eraTable.setItems(EraData.getEraCollection().searchByID(intId));
+            } catch (NumberFormatException e) {
+                System.err.println("Wrong number format or cannot find the entity with the id " + id);
             }
         }
 
         @Override
         public void handleBlank() {
-            eraTable.setItems(EraData.getData().getData());
+            eraTable.setItems(EraData.getEraCollection().getData());
         }
     }
 }

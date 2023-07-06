@@ -6,6 +6,12 @@ import javafx.collections.*;
 import javafx.collections.transformation.FilteredList;
 import model.HistoricalEntity;
 
+
+/**
+ * Collection class nhằm lưu trữ các thực thể đóng vai trò như một database.
+ *
+ * @param <T>
+ */
 public class EntityCollection<T extends HistoricalEntity> {
     private ObservableList<T> data = FXCollections.observableArrayList();
 

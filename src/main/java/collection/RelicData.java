@@ -11,7 +11,7 @@ import model.Relic;
 
 public class RelicData {
     public static final Type TOKEN = new TypeToken<ArrayList<Relic>>() {}.getType();
-    public static EntityCollection<Relic> data = new EntityCollection<>();
+    private static EntityCollection<Relic> relicCollection = new EntityCollection<>();
     private static int numOfRelic;
     public static final String SOURCE_PATH = "src/main/resources/json/Relics.json";
 
@@ -21,11 +21,15 @@ public class RelicData {
 
     public static void loadJson(){
         ArrayList<Relic> data = (ArrayList<Relic>) new JsonIO<Relic>(TOKEN).loadJson(SOURCE_PATH);
-        RelicData.data.setData(data);
+        RelicData.relicCollection.setData(data);
         numOfRelic = data.size();
     }
 
     public static int getNumOfRelic() {
         return numOfRelic;
+    }
+
+    public static EntityCollection<Relic> getRelicCollection() {
+        return relicCollection;
     }
 }

@@ -1,21 +1,17 @@
 package controller.overview;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import collection.FestivalData;
 import collection.FigureData;
 import controller.SearchBarController;
 import controller.SearchBoxListener;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import main.App;
-import model.Festival;
 import model.Figure;
 
 public class FigureViewController implements Initializable {
@@ -65,7 +61,7 @@ public class FigureViewController implements Initializable {
     }
 
     private void populateData() {
-        tblFigure.setItems(FigureData.data.getData());
+        tblFigure.setItems(FigureData.getFigureCollection().getData());
     }
 
     private void setupSearchBar() {
@@ -78,11 +74,7 @@ public class FigureViewController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Figure figure = row.getItem();
-                    try {
-                        App.pageNavigationService.handleViewtoDetail(figure);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    App.clickBackService.handleViewtoDetail(figure);
                 }
             });
             return row;
@@ -92,22 +84,22 @@ public class FigureViewController implements Initializable {
     private class FigureSearchBoxListener implements SearchBoxListener {
         @Override
         public void handleSearchName(String name) {
-            tblFigure.setItems(FigureData.data.searchByName(name));
+            tblFigure.setItems(FigureData.getFigureCollection().searchByName(name));
         }
 
         @Override
         public void handleSearchId(String id) {
             try {
                 int intId = Integer.parseInt(id);
-                tblFigure.setItems(FigureData.data.searchByID(intId));
-            } catch (Exception e){
-                System.err.println("Cannot find the entity with the id " + id);
+                tblFigure.setItems(FigureData.getFigureCollection().searchByID(intId));
+            } catch (NumberFormatException e){
+                System.err.println("Wrong number format or cannot find the entity with the id " + id);
             }
         }
 
         @Override
         public void handleBlank() {
-            tblFigure.setItems(FigureData.data.getData());
+            tblFigure.setItems(FigureData.getFigureCollection().getData());
         }
     }
 

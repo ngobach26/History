@@ -29,27 +29,17 @@ public class SearchBarController {
     private void setupFilterComboBox() {
         filterComboBox.setItems(FXCollections.observableArrayList("By Name", "By ID"));
         filterComboBox.getSelectionModel().selectFirst();
-        filterComboBox.setOnAction((ActionEvent e) -> handleFilterComboBoxSelection());
     }
 
     private void setupSearchBox() {
         searchBox.textProperty().addListener((observableValue, oldValue, newValue) -> handleSearchBoxChange(newValue));
     }
 
-    private void handleFilterComboBoxSelection() {
-        String searchValue = searchBox.getText().trim();
-        if (searchValue.isEmpty()) {
-            searchBoxListener.handleBlank();
-        } else {
-            String selectedItem = filterComboBox.getSelectionModel().getSelectedItem();
-            if ("By ID".equals(selectedItem)) {
-                searchBoxListener.handleSearchId(searchValue);
-            } else if ("By Name".equals(selectedItem)) {
-                searchBoxListener.handleSearchName(searchValue);
-            }
-        }
-    }
-
+    /**
+     * Xử lý sự kiện khi giá trị tìm kiếm trong search box thay đổi.
+     *
+     * @param newValue giá trị mới của search box
+     */
     private void handleSearchBoxChange(String newValue) {
         String searchValue = newValue.trim();
         if (searchValue.isEmpty()) {
