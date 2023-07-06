@@ -10,6 +10,7 @@ public class Festival extends HistoricalEntity{
     private String firstTime;
     private String startingDay;
     private Map<String, Integer> relatedFigures = new HashMap<>();
+    private Map<String, Integer> relatedRelics = new HashMap<>();
 
     public Festival(String name, String location, String firstTime, String startingDay, List<String> relatedFigures) {
         super(++numFes, name, "Không rõ");
@@ -46,5 +47,8 @@ public class Festival extends HistoricalEntity{
     public Map<String, Integer> getRelatedFigures() {
         return relatedFigures;
     }
-       
+
+    public Map<String, Integer> getRelatedRelics() {
+        return relatedRelics;
+    }
 }

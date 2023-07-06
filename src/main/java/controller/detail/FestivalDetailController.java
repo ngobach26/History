@@ -23,6 +23,8 @@ public class FestivalDetailController {
     private Text overviewText;
     @FXML
     private FlowPane relatedCharsFlowPane;
+    @FXML
+    private FlowPane relatedRelicFlowPane;
 
     public void setFestival(Festival festival) {
         nameText.setText(festival.getName());
@@ -32,6 +34,7 @@ public class FestivalDetailController {
         firstTimeText.setText(festival.getFirstTime());
 
         FlowPaneUIHelp.populateEntity(festival.getRelatedFigures(), relatedCharsFlowPane,festival, EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(festival.getRelatedRelics(), relatedRelicFlowPane,festival, EntityType.RELIC);
     }
 
     @FXML

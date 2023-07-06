@@ -23,6 +23,8 @@ public class RelicDetailController {
     private Text approvedYearText;
     @FXML
     private FlowPane relatedCharsFlowPane;
+    @FXML
+    private FlowPane relatedFesFlowPane;
 
     public void setRelic(Relic relic) {
         nameText.setText(relic.getName());
@@ -32,6 +34,7 @@ public class RelicDetailController {
         approvedYearText.setText(relic.getApprovedYear());
 
         FlowPaneUIHelp.populateEntity(relic.getRelatedFigures(),relatedCharsFlowPane,relic, EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(relic.getRelatedFestivals(),relatedFesFlowPane,relic,EntityType.RELIC);
     }
 
     @FXML

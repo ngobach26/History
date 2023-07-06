@@ -16,6 +16,8 @@ public class HandleDetailHelp {
             controller.setFigure((Figure) entity);
         }catch (NullPointerException e){
             e.printStackTrace();
+        }catch (ClassCastException e){
+            e.printStackTrace();
         }
     }
 
@@ -25,6 +27,8 @@ public class HandleDetailHelp {
             EraDetailController controller = loader.getController();
             controller.setEra((Era) entity);
         }catch (NullPointerException e){
+            e.printStackTrace();
+        }catch (ClassCastException e){
             e.printStackTrace();
         }
     }
@@ -36,6 +40,8 @@ public class HandleDetailHelp {
             controller.setEvent((Event) entity);
         }catch (NullPointerException e){
             e.printStackTrace();
+        }catch (ClassCastException e){
+            e.printStackTrace();
         }
     }
 
@@ -46,6 +52,8 @@ public class HandleDetailHelp {
             controller.setFestival((Festival) entity);
         }catch (NullPointerException e){
             e.printStackTrace();
+        }catch (ClassCastException e){
+            e.printStackTrace();
         }
     }
 
@@ -55,6 +63,8 @@ public class HandleDetailHelp {
             RelicDetailController controller = loader.getController();
             controller.setRelic((Relic) entity);
         }catch (NullPointerException e){
+            e.printStackTrace();
+        }catch (ClassCastException e){
             e.printStackTrace();
         }
     }
