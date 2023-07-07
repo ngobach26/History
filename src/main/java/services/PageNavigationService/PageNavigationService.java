@@ -20,6 +20,22 @@ public class PageNavigationService {
         App.setRoot(page);
         currentView = null;
     }
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder();
+//        Stack<HistoricalEntity> tempStack = new Stack<>();
+//        int count = 0;
+//        while (count < 5 && !clickBackStack.isEmpty()) {
+//            HistoricalEntity entity = clickBackStack.pop();
+//            sb.append(entity.getName()).append("\n");
+//            tempStack.push(entity);
+//            count++;
+//        }
+//        while (!tempStack.isEmpty()) {
+//            clickBackStack.push(tempStack.pop());
+//        }
+//        return sb.append("----------").toString();
+//    }
 
 
     public void handleViewtoDetail(HistoricalEntity entity) {
@@ -49,6 +65,7 @@ public class PageNavigationService {
             return;
         }
         HistoricalEntity entity = clickBackStack.pop();
+        System.out.println(App.pageNavigationService.toString());
         if (entity instanceof Figure) {
             HandleDetailHelp.Figure(entity);
         } else if (entity instanceof Era) {
@@ -65,6 +82,7 @@ public class PageNavigationService {
     public void handleDetailToDetail(int id,String type){
         try {
             addEntityToClickBackStack(currentView);
+            System.out.println(App.pageNavigationService.toString());
             switch (type) {
                 case "Era":
                     Era era = EraData.getEraCollection().getById(id);
@@ -103,9 +121,15 @@ public class PageNavigationService {
         }
     }
     private void addEntityToClickBackStack(HistoricalEntity entity) {
-        if(entity!=null){
-            clickBackStack.push(entity);
+        try{
+            if(entity!=null){
+                clickBackStack.push(entity);
+            }
+        }catch (StackOverflowError e){
+            System.err.println("The click back stack is overflow! Don't navigate link anymore");
+            clickBackStack.clear();
         }
+
     }
 }
 

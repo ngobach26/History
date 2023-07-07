@@ -19,10 +19,6 @@ public class Relic extends HistoricalEntity {
         this.approvedYear = approvedYear;
     }
 
-    public static int getNumRelic() {
-        return numRelic;
-    }
-
     public Map<String, Integer> getRelatedFigures() {
         return relatedFigures;
     }
