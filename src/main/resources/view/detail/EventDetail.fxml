@@ -40,7 +40,7 @@
         <fx:include fx:id="sideBar" source="../SideBar.fxml" />
     </left>
     <center>
-        <ScrollPane stylesheets="@../../stylesheet/mainScreen.css">
+        <ScrollPane fitToWidth="true" stylesheets="@../../stylesheet/mainScreen.css">
             <content>
                 <VBox BorderPane.alignment="CENTER">
                     <children>
@@ -53,7 +53,7 @@
                                 </Text>
                             </children>
                         </HBox>
-                  <ScrollPane prefHeight="650.0" prefWidth="590.0">
+                  <ScrollPane fitToWidth="true" prefHeight="650.0" prefWidth="590.0">
                      <content>
                               <VBox prefHeight="600.0" prefWidth="650.0" spacing="15.0">
                                   <children>
