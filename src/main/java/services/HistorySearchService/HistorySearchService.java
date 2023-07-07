@@ -19,6 +19,7 @@ public class HistorySearchService {
     }
 
     public void writeJson(){
+        deteleOldHistory();
         ArrayList<History> data = new ArrayList<>(histories);
         new JsonIO<History>(TOKEN).writeJson(data, SOURCE_PATH);
     }
@@ -29,6 +30,10 @@ public class HistorySearchService {
 
     public ObservableList<History> getHistories() {
         return histories;
+    }
+
+    private void deteleOldHistory(){
+        histories.remove(50, histories.size());
     }
 
 }

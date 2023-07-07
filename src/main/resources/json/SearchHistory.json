@@ -1,5 +1,35 @@
 [
   {
+    "id": 3,
+    "name": "Ngô Quyền xưng vương, đóng đô ở Cổ Loa",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 18:43:05"
+  },
+  {
+    "id": 299,
+    "name": "Dương Tam Kha cướp ngôi Ngô Xương Ngập",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 18:42:53"
+  },
+  {
+    "id": 10,
+    "name": "Nhà Ngô (939-965)",
+    "typeOfEntity": "Era",
+    "timestamp": "07/07/2023 18:42:51"
+  },
+  {
+    "id": 3,
+    "name": "Ngô Quyền xưng vương, đóng đô ở Cổ Loa",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 18:42:48"
+  },
+  {
+    "id": 10,
+    "name": "Nhà Ngô (939-965)",
+    "typeOfEntity": "Era",
+    "timestamp": "07/07/2023 18:42:46"
+  },
+  {
     "id": 352,
     "name": "Đền Hùng",
     "typeOfEntity": "Relic",
