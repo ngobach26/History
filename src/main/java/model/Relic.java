@@ -12,13 +12,6 @@ public class Relic extends HistoricalEntity {
     private Map<String, Integer> relatedFigures = new HashMap<>();
     private Map<String, Integer> relatedFestivals = new HashMap<>();
 
-    public Relic(String name, String location, String category, String approvedYear, String description) {
-        super(++numRelic, name, description);
-        this.location = location;
-        this.category = category;
-        this.approvedYear = approvedYear;
-    }
-
     public Map<String, Integer> getRelatedFigures() {
         return relatedFigures;
     }

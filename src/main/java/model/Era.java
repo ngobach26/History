@@ -13,18 +13,6 @@ public class Era extends HistoricalEntity {
 	private String capital;
 	private Map<String, Integer> relatedEvents = new HashMap<>();
 
-	public Era(String eraName, String startYear, String endYear, String description, String capital,
-			List<String> nationNames, List<String> kings) {
-		super(++numEras, eraName, description);
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.capital = capital;
-		this.nationNames = nationNames;
-		for (String king : kings) {
-			this.kings.put(king, 0);
-		}
-	}
-
 	public String getStartYear() {
 		return startYear;
 	}

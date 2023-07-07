@@ -2,8 +2,10 @@ package controller.detail;
 
 import java.util.Map;
 
+import javafx.geometry.Insets;
 import javafx.scene.Cursor;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import main.App;
@@ -17,11 +19,13 @@ public class FlowPaneUIHelp {
      * @param flowPane  FlowPane để chứa các liên kết
      * @param type      kiểu của entity trong entityMap
      */
-    public static void populateEntity(Map<String, Integer> entityMap, FlowPane flowPane,
-                                      String type) {
+    public static void populateEntity(Map<String, Integer> entityMap, FlowPane flowPane, String type) {
         if (entityMap == null) {
             return;
         }
+
+        VBox vbox = new VBox(); // Use VBox to stack each entityText vertically
+        vbox.setSpacing(5); // Set spacing between each entityText
 
         for (Map.Entry<String, Integer> entry : entityMap.entrySet()) {
             Text entityText = new Text(entry.getKey());
@@ -32,9 +36,16 @@ public class FlowPaneUIHelp {
                 entityText.setOnMouseClicked(mouseEvent -> navigateLink(id, type));
             }
 
-            flowPane.getChildren().add(entityText);
+            VBox.setMargin(entityText, new Insets(0, 0, 5, 0)); // Add margin to separate each entityText
+
+            vbox.getChildren().add(entityText);
         }
+
+        flowPane.getChildren().clear();
+        flowPane.getChildren().add(vbox);
+
     }
+
 
     private static void setLinkStyle(Text textLink) {
         textLink.setFill(Color.web("#3498db"));

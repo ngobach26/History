@@ -47,35 +47,6 @@ public class Figure extends HistoricalEntity {
 		return false;
 	}
 
-	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
-			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
-			HashMap<String, Integer> father, HashMap<String, Integer> children, String description) {
-		super(id, name, description);
-		this.bornYear = bornYear;
-		this.diedYear = diedYear;
-		this.eras = eras;
-		this.location = location;
-		this.role = role;
-		this.spouses = spouses;
-		this.mother = mother;
-		this.father = father;
-		this.children = children;
-		this.description = description;
-	}
-
-	public Figure(String name, List<String> otherNames, String bornYear, String diedYear, List<String> eras,
-			String location, String role, String description) {
-		super(++numFigures, name, description);
-		this.otherNames = otherNames;
-		this.bornYear = bornYear;
-		this.diedYear = diedYear;
-		for (String era : eras) {
-			this.eras.put(era, 0);
-		}
-		this.location = location;
-		this.role = role;
-	}
-
 	public List<String> getOtherNames() {
 		return otherNames;
 	}

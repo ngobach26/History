@@ -5,12 +5,6 @@ public abstract class HistoricalEntity {
     protected String name;
     protected String description;
 
-    public HistoricalEntity(int id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
-
     public boolean containsName(String name) {
         if (name == null)
             return false;

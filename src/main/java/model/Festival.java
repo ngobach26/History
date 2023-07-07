@@ -12,27 +12,6 @@ public class Festival extends HistoricalEntity {
     private Map<String, Integer> relatedFigures = new HashMap<>();
     private Map<String, Integer> relatedRelics = new HashMap<>();
 
-    public Festival(String name, String location, String firstTime, String startingDay, List<String> relatedFigures) {
-        super(++numFes, name, "Không rõ");
-        this.location = location;
-        this.firstTime = firstTime;
-        this.startingDay = startingDay;
-        for (String figure : relatedFigures) {
-            this.relatedFigures.put(figure, 0);
-        }
-    }
-
-    public Festival(String name, String location, String firstTime, String startingDay, String description,
-            List<String> relatedFigures) {
-        super(++numFes, name, description);
-        this.location = location;
-        this.firstTime = firstTime;
-        this.startingDay = startingDay;
-        for (String figure : relatedFigures) {
-            this.relatedFigures.put(figure, 0);
-        }
-    }
-
     public String getLocation() {
         return location;
     }

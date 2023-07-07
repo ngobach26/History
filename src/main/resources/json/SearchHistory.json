@@ -1,5 +1,35 @@
 [
   {
+    "id": 2001,
+    "name": "Nguyễn Tất Thành",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 00:11:47"
+  },
+  {
+    "id": 2001,
+    "name": "Nguyễn Tất Thành",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 00:10:08"
+  },
+  {
+    "id": 2001,
+    "name": "Nguyễn Tất Thành",
+    "typeOfEntity": "Figure",
+    "timestamp": "07/07/2023 23:59:37"
+  },
+  {
+    "id": 1,
+    "name": "An Tiêm",
+    "typeOfEntity": "Figure",
+    "timestamp": "07/07/2023 23:59:24"
+  },
+  {
+    "id": 5,
+    "name": "Chử Đồng Tử",
+    "typeOfEntity": "Figure",
+    "timestamp": "07/07/2023 23:59:21"
+  },
+  {
     "id": 7,
     "name": "Nhà Tiền Lý, Triệu (544-602)",
     "typeOfEntity": "Era",
@@ -268,35 +298,5 @@
     "name": "Trịnh Sâm",
     "typeOfEntity": "Figure",
     "timestamp": "07/07/2023 19:16:45"
-  },
-  {
-    "id": 804,
-    "name": "Trịnh Sâm",
-    "typeOfEntity": "Figure",
-    "timestamp": "07/07/2023 19:16:44"
-  },
-  {
-    "id": 804,
-    "name": "Trịnh Sâm",
-    "typeOfEntity": "Figure",
-    "timestamp": "07/07/2023 19:16:43"
-  },
-  {
-    "id": 804,
-    "name": "Trịnh Sâm",
-    "typeOfEntity": "Figure",
-    "timestamp": "07/07/2023 19:16:42"
-  },
-  {
-    "id": 804,
-    "name": "Trịnh Sâm",
-    "typeOfEntity": "Figure",
-    "timestamp": "07/07/2023 19:16:42"
-  },
-  {
-    "id": 10,
-    "name": "Hang Mường Tỉnh",
-    "typeOfEntity": "Relic",
-    "timestamp": "07/07/2023 23:22:03"
   }
 ]
