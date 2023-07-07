@@ -5,52 +5,47 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import main.App;
 import main.EntityPages;
-import main.StaticPages;
+import main.OtherPages;
 
 public class SideBarController {
 
     @FXML
     void mainSwitch(ActionEvent event){
-        App.setRoot(StaticPages.HOME_PAGE.getUrl());
+        App.pageNavigationService.handleSidebarAction(OtherPages.HOME_PAGE.getUrl());
     }
 
     @FXML
     void figuresSwitch(ActionEvent event){
-        App.setRoot(EntityPages.FIGURE_PAGES.getViewPage());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(EntityPages.FIGURE_PAGES.getViewPage());
     }
 
     @FXML
     void relicSwitch(ActionEvent event){
-        App.setRoot(EntityPages.RELIC_PAGES.getViewPage());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(EntityPages.RELIC_PAGES.getViewPage());
     }
 
     @FXML
     void erasSwitch(ActionEvent event){
-        App.setRoot(EntityPages.ERA_PAGES.getViewPage());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(EntityPages.ERA_PAGES.getViewPage());
     }
 
     @FXML
     void eventsSwitch(ActionEvent event){
-        App.setRoot(EntityPages.EVENT_PAGES.getViewPage());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(EntityPages.EVENT_PAGES.getViewPage());
     }
 
     @FXML
     void festivalsSwitch(ActionEvent event){
-        App.setRoot(EntityPages.FESTIVAL_PAGES.getViewPage());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(EntityPages.FESTIVAL_PAGES.getViewPage());
     }
 
     @FXML
     void aboutusSwitch(ActionEvent event){
-        App.setRoot(StaticPages.ABOUT_US_PAGE.getUrl());
-        App.clickBackService.handleClickBacktoViews();
+        App.pageNavigationService.handleSidebarAction(OtherPages.ABOUT_US_PAGE.getUrl());
     }
-
-    public void searchSwitch(ActionEvent actionEvent) {
+    @FXML
+    public void searchHistorySwitch(ActionEvent actionEvent) {
+        App.pageNavigationService.handleSidebarAction(OtherPages.SEARCH_HISTORY_PAGE.getUrl());
     }
 
     public void exitSwitch(ActionEvent event){

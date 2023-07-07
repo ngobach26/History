@@ -1,6 +1,5 @@
 package controller.detail;
 
-import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -33,17 +32,14 @@ public class FestivalDetailController {
         locationText.setText(festival.getLocation());
         firstTimeText.setText(festival.getFirstTime());
 
-        FlowPaneUIHelp.populateEntity(festival.getRelatedFigures(), relatedCharsFlowPane,festival, EntityType.FIGURE);
-        FlowPaneUIHelp.populateEntity(festival.getRelatedRelics(), relatedRelicFlowPane,festival, EntityType.RELIC);
+        FlowPaneUIHelp.populateEntity(festival.getRelatedFigures(), relatedCharsFlowPane, EntityType.FIGURE.getName());
+
+        FlowPaneUIHelp.populateEntity(festival.getRelatedRelics(), relatedRelicFlowPane, EntityType.RELIC.getName());
     }
 
     @FXML
-    public void onClickBack(ActionEvent event){
-        if(App.clickBackService.clickBackStack.isEmpty()){
-                App.setRoot(EntityPages.FESTIVAL_PAGES.getViewPage());
-        }else {
-            App.clickBackService.handleBackToPreDetailPage();
-        }
+    public void onClickBack(ActionEvent event) {
+        App.pageNavigationService.handleBackToPreviousPage(EntityPages.FESTIVAL_PAGES.getViewPage());
     }
 
 }

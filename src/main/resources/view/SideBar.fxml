@@ -10,9 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="273.0" spacing="16.0" style="-fx-background-color: #80002b; -fx-background-radius: 0 80 0 0;"
-   xmlns="http://javafx.com/javafx/19"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SideBarController">
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="273.0" spacing="16.0" style="-fx-background-color: #80002b; -fx-background-radius: 0 80 0 0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SideBarController">
    <children>
       <ImageView fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -146,7 +144,7 @@
                   <Image url="@../img/historySearchIcon.png" />
                </image>
             </ImageView>
-            <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#searchSwitch" prefHeight="28.0" prefWidth="206.0" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="LỊCH SỬ TÌM KIẾM " textAlignment="CENTER" textFill="#fcfafa">
+            <Button alignment="BASELINE_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" onAction="#searchHistorySwitch" prefHeight="28.0" prefWidth="206.0" style="-fx-background-color: #80002b;" stylesheets="@../stylesheet/mainScreen.css" text="LỊCH SỬ TÌM KIẾM " textAlignment="CENTER" textFill="#fcfafa">
                <font>
                   <Font name="Gill Sans MT" size="15.0" />
                </font>

@@ -1,6 +1,5 @@
 package controller.detail;
 
-import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -10,7 +9,7 @@ import main.EntityPages;
 import main.EntityType;
 import model.Era;
 
-public class EraDetailController{
+public class EraDetailController {
     @FXML
     private Text nameText;
     @FXML
@@ -28,7 +27,7 @@ public class EraDetailController{
     @FXML
     private FlowPane countryFlowPane;
 
-    public void setEra(Era era){
+    public void setEra(Era era) {
         nameText.setText(era.getName());
         overviewText.setText(era.getDescription());
         timeStampText.setText(era.getStartYear());
@@ -40,17 +39,14 @@ public class EraDetailController{
             countryFlowPane.getChildren().add(nationText);
         }
 
-        FlowPaneUIHelp.populateEntity(era.getRelatedEvents(),eventsFlowPane,era, EntityType.EVENT);
-        FlowPaneUIHelp.populateEntity(era.getKings(), kingsFlowPane,era,EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(era.getRelatedEvents(), eventsFlowPane, EntityType.EVENT.getName());
+
+        FlowPaneUIHelp.populateEntity(era.getKings(), kingsFlowPane, EntityType.FIGURE.getName());
     }
 
     @FXML
-    public void onClickBack(ActionEvent event){
-        if(App.clickBackService.clickBackStack.isEmpty()){
-                App.setRoot(EntityPages.ERA_PAGES.getViewPage());
-        }else {
-            App.clickBackService.handleBackToPreDetailPage();
-        }
+    public void onClickBack(ActionEvent event) {
+        App.pageNavigationService.handleBackToPreviousPage(EntityPages.ERA_PAGES.getViewPage());
     }
 
 }

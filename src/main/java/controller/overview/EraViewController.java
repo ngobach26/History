@@ -36,7 +36,7 @@ public class EraViewController implements Initializable {
         setupTableColumns();
         populateData();
         setupSearchBar();
-        setupDoubleClickHandler();
+        setupClickHandlerForEachRow();
     }
 
     private void setupTableColumns() {
@@ -57,13 +57,13 @@ public class EraViewController implements Initializable {
         searchBarController.setSearchBoxListener(new EraSearchBoxListener());
     }
 
-    private void setupDoubleClickHandler() {
+    private void setupClickHandlerForEachRow() {
         eraTable.setRowFactory(tableView -> {
             TableRow<Era> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Era era = row.getItem();
-                    App.clickBackService.handleViewtoDetail(era);
+                    App.pageNavigationService.handleViewtoDetail(era);
                 }
             });
             return row;

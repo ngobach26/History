@@ -1,6 +1,5 @@
 package controller.detail;
 
-import helper.FlowPaneUIHelp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
@@ -33,17 +32,14 @@ public class RelicDetailController {
         overviewText.setText(relic.getDescription());
         approvedYearText.setText(relic.getApprovedYear());
 
-        FlowPaneUIHelp.populateEntity(relic.getRelatedFigures(),relatedCharsFlowPane,relic, EntityType.FIGURE);
-        FlowPaneUIHelp.populateEntity(relic.getRelatedFestivals(),relatedFesFlowPane,relic,EntityType.FESTIVAL);
+        FlowPaneUIHelp.populateEntity(relic.getRelatedFigures(), relatedCharsFlowPane, EntityType.FIGURE.getName());
+
+        FlowPaneUIHelp.populateEntity(relic.getRelatedFestivals(), relatedFesFlowPane, EntityType.FESTIVAL.getName());
     }
 
     @FXML
     public void onClickBack(ActionEvent event) {
-        if(App.clickBackService.clickBackStack.isEmpty()){
-            App.setRoot(EntityPages.RELIC_PAGES.getViewPage());
-        }else {
-            App.clickBackService.handleBackToPreDetailPage();
-        }
+        App.pageNavigationService.handleBackToPreviousPage(EntityPages.RELIC_PAGES.getViewPage());
     }
 
 }

@@ -24,7 +24,8 @@ public class Figure extends HistoricalEntity {
 	 * Vì Figure có thêm các otherNames nên cần viết lại hàm containsName.
 	 *
 	 * @param name tên cần kiểm tra
-	 * @return {@code true} nếu danh sách tên chứa tên được cung cấp, ngược lại {@code false}
+	 * @return {@code true} nếu danh sách tên chứa tên được cung cấp, ngược lại
+	 *         {@code false}
 	 */
 	@Override
 	public boolean containsName(String name) {
@@ -46,8 +47,6 @@ public class Figure extends HistoricalEntity {
 		return false;
 	}
 
-
-
 	public Figure(int id, String name, String bornYear, String diedYear, HashMap<String, Integer> eras,
 			String location, String role, HashMap<String, Integer> spouses, HashMap<String, Integer> mother,
 			HashMap<String, Integer> father, HashMap<String, Integer> children, String description) {
@@ -64,7 +63,8 @@ public class Figure extends HistoricalEntity {
 		this.description = description;
 	}
 
-	public Figure(String name, List<String> otherNames, String bornYear, String diedYear, List<String> eras, String location, String role, String description) {
+	public Figure(String name, List<String> otherNames, String bornYear, String diedYear, List<String> eras,
+			String location, String role, String description) {
 		super(++numFigures, name, description);
 		this.otherNames = otherNames;
 		this.bornYear = bornYear;

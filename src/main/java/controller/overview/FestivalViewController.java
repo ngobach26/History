@@ -36,7 +36,7 @@ public class FestivalViewController implements Initializable {
         setupTableColumns();
         populateData();
         setupSearchBar();
-        setupDoubleClickHandler();
+        setupClickHandlerForEachRow();
     }
 
     private void setupTableColumns() {
@@ -54,13 +54,14 @@ public class FestivalViewController implements Initializable {
         searchBarController.setSearchBoxListener(new FestivalSearchBoxListener());
     }
 
-    private void setupDoubleClickHandler() {
+    private void setupClickHandlerForEachRow() {
         fesTable.setRowFactory(tableView -> {
             TableRow<Festival> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Festival festival = row.getItem();
-                    App.clickBackService.handleViewtoDetail(festival);
+                    App.searchHistoryService.addToSearchHistory(festival);
+                    App.pageNavigationService.handleViewtoDetail(festival);
                 }
             });
             return row;

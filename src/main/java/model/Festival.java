@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Festival extends HistoricalEntity{
+public class Festival extends HistoricalEntity {
     private static int numFes = 0;
     private String location;
     private String firstTime;
@@ -18,17 +18,18 @@ public class Festival extends HistoricalEntity{
         this.firstTime = firstTime;
         this.startingDay = startingDay;
         for (String figure : relatedFigures) {
-        	this.relatedFigures.put(figure,0); 
+            this.relatedFigures.put(figure, 0);
         }
     }
-    
-    public Festival(String name, String location, String firstTime, String startingDay, String description, List<String> relatedFigures) {
+
+    public Festival(String name, String location, String firstTime, String startingDay, String description,
+            List<String> relatedFigures) {
         super(++numFes, name, description);
         this.location = location;
         this.firstTime = firstTime;
         this.startingDay = startingDay;
         for (String figure : relatedFigures) {
-        	this.relatedFigures.put(figure,0); 
+            this.relatedFigures.put(figure, 0);
         }
     }
 

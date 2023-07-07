@@ -9,9 +9,7 @@ import main.EntityPages;
 import main.EntityType;
 import model.Figure;
 
-import helper.FlowPaneUIHelp;
-
-public class FigureDetailController{
+public class FigureDetailController {
     @FXML
     private Text nameText;
 
@@ -33,8 +31,8 @@ public class FigureDetailController{
     @FXML
     private Text workTimeText;
 
-     @FXML
-     private FlowPane eraFlowPane;
+    @FXML
+    private FlowPane eraFlowPane;
 
     @FXML
     private FlowPane fatherFlowPane;
@@ -60,8 +58,6 @@ public class FigureDetailController{
     @FXML
     private FlowPane festivalFlowPane;
 
-
-
     public void setFigure(Figure figure) {
 
         nameText.setText(figure.getName());
@@ -72,36 +68,31 @@ public class FigureDetailController{
         workTimeText.setText(figure.getRole());
         locText.setText(figure.getLocation());
 
-
         for (String f : figure.getOtherNames()) {
             Text aliasText = new Text(f);
             aliasFlowPane.getChildren().add(aliasText);
         }
 
-        FlowPaneUIHelp.populateEntity(figure.getFather(), fatherFlowPane,figure, EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(figure.getFather(), fatherFlowPane, EntityType.FIGURE.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getMother(), motherFlowPane,figure,EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(figure.getMother(), motherFlowPane, EntityType.FIGURE.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getChildren(), childrenFlowPane,figure,EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(figure.getChildren(), childrenFlowPane, EntityType.FIGURE.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getSpouses(), spouseFlowPane,figure,EntityType.FIGURE);
+        FlowPaneUIHelp.populateEntity(figure.getSpouses(), spouseFlowPane, EntityType.FIGURE.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getRelatedEvents(), eventFlowPane,figure,EntityType.EVENT);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedEvents(), eventFlowPane, EntityType.EVENT.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getRelatedRelics(), relicFlowPane,figure,EntityType.RELIC);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedRelics(), relicFlowPane, EntityType.RELIC.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getRelatedFestivals(),festivalFlowPane,figure,EntityType.FESTIVAL);
+        FlowPaneUIHelp.populateEntity(figure.getRelatedFestivals(), festivalFlowPane, EntityType.FESTIVAL.getName());
 
-        FlowPaneUIHelp.populateEntity(figure.getEras(), eraFlowPane,figure,EntityType.ERA);
+        FlowPaneUIHelp.populateEntity(figure.getEras(), eraFlowPane, EntityType.ERA.getName());
     }
 
     @FXML
     public void onClickBack(ActionEvent event) {
-        if(App.clickBackService.clickBackStack.isEmpty()){
-                App.setRoot(EntityPages.FIGURE_PAGES.getViewPage());
-        }else {
-            App.clickBackService.handleBackToPreDetailPage();
-        }
+        App.pageNavigationService.handleBackToPreviousPage(EntityPages.FIGURE_PAGES.getViewPage());
     }
 
 }

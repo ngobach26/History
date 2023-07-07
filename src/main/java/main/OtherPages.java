@@ -1,12 +1,13 @@
 package main;
 
-public enum StaticPages {
+public enum OtherPages {
     ABOUT_US_PAGE("AboutUsView"),
-    HOME_PAGE("HomepageView");
+    HOME_PAGE("HomepageView"),
+    SEARCH_HISTORY_PAGE("HistorySearchView");
 
     private final String url;
 
-    StaticPages(String url) {
+    OtherPages(String url) {
         this.url = url;
     }
 

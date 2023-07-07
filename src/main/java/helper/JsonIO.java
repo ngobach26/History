@@ -37,6 +37,15 @@ public class JsonIO<T>{
 		}
 	}
 
+	/**
+	 * Tải dữ liệu từ tệp JSON được chỉ định và trả về danh sách các đối tượng.
+	 *
+	 * @param path đường dẫn đến tệp JSON
+	 * @return danh sách các đối tượng được tải từ tệp JSON
+	 * @throws IOException nếu xảy ra lỗi khi đọc tệp JSON
+	 *
+	 * @apiNote Phương thức này sử dụng thư viện Gson để đọc dữ liệu từ tệp JSON và chuyển đổi thành danh sách các đối tượng. Tệp JSON cần tuân theo cấu trúc dữ liệu phù hợp với kiểu dữ liệu được khai báo khi khởi tạo đối tượng Gson. Nếu không thể đọc tệp JSON, phương thức sẽ in thông tin về lỗi ra đầu ra và trả về giá trị null. Hãy đảm bảo đóng tệp FileReader sau khi hoàn tất việc đọc để giải phóng tài nguyên.
+	 */
 	public List<T> loadJson(String path) {
 		List<T> list = null;
 		try{

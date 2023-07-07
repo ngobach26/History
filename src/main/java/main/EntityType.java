@@ -1,11 +1,13 @@
 package main;
 
+import model.*;
+
 public enum EntityType {
-    ERA("Era"),
-    FESTIVAL("Festival"),
-    FIGURE("Figure"),
-    EVENT("Event"),
-    RELIC("Relic");
+    ERA(Era.class.getSimpleName()),
+    FESTIVAL(Festival.class.getSimpleName()),
+    FIGURE(Figure.class.getSimpleName()),
+    EVENT(Event.class.getSimpleName()),
+    RELIC(Relic.class.getSimpleName());
 
     private final String name;
 
@@ -17,4 +19,3 @@ public enum EntityType {
         return name;
     }
 }
-

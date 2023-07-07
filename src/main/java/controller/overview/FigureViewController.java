@@ -33,7 +33,7 @@ public class FigureViewController implements Initializable {
         setupTableColumns();
         populateData();
         setupSearchBar();
-        setupDoubleClickHandler();
+        setupClickHandlerForEachRow();
     }
 
     private void setupTableColumns() {
@@ -68,13 +68,13 @@ public class FigureViewController implements Initializable {
         searchBarController.setSearchBoxListener(new FigureSearchBoxListener());
     }
 
-    private void setupDoubleClickHandler() {
+    private void setupClickHandlerForEachRow() {
         tblFigure.setRowFactory(tableView -> {
             TableRow<Figure> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Figure figure = row.getItem();
-                    App.clickBackService.handleViewtoDetail(figure);
+                    App.pageNavigationService.handleViewtoDetail(figure);
                 }
             });
             return row;

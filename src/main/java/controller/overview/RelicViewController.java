@@ -36,7 +36,7 @@ public class RelicViewController implements Initializable {
         setupTableColumns();
         populateData();
         setupSearchBar();
-        setupDoubleClickHandler();
+        setupClickHandlerForEachRow();
     }
 
     private void setupTableColumns() {
@@ -53,13 +53,13 @@ public class RelicViewController implements Initializable {
         searchBarController.setSearchBoxListener(new RelicSearchBoxListener());
     }
 
-    private void setupDoubleClickHandler() {
+    private void setupClickHandlerForEachRow() {
         siteTable.setRowFactory(tableView -> {
             TableRow<Relic> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Relic relic = row.getItem();
-                    App.clickBackService.handleViewtoDetail(relic);
+                    App.pageNavigationService.handleViewtoDetail(relic);
                 }
             });
             return row;

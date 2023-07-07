@@ -38,7 +38,7 @@ public class EventViewController implements Initializable {
         setupTableColumns();
         populateData();
         setupSearchBar();
-        setupDoubleClickHandler();
+        setupClickHandlerForEachRow();
     }
 
     private void setupTableColumns() {
@@ -61,13 +61,13 @@ public class EventViewController implements Initializable {
         searchBarController.setSearchBoxListener(new EventSearchBoxListener());
     }
 
-    private void setupDoubleClickHandler() {
+    private void setupClickHandlerForEachRow() {
         eventTable.setRowFactory(tableView -> {
             TableRow<Event> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     Event ev = row.getItem();
-                    App.clickBackService.handleViewtoDetail(ev);
+                    App.pageNavigationService.handleViewtoDetail(ev);
                 }
             });
             return row;
