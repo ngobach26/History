@@ -4,18 +4,19 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class JsonIO<T>{
-	private final Type type;   //the type of objects to be deserialized from Json
+	private final Type TYPE;   //the type of objects to be deserialized from Json
 	FileWriter fileWriter;
 	FileReader fileReader;
 	
 	public JsonIO(Type type) {
-		this.type = type;
+		this.TYPE = type;
 	}
 	
 	public void writeJson(List<T> list, String path) {
@@ -47,11 +48,11 @@ public class JsonIO<T>{
 	 * @apiNote Phương thức này sử dụng thư viện Gson để đọc dữ liệu từ tệp JSON và chuyển đổi thành danh sách các đối tượng. Tệp JSON cần tuân theo cấu trúc dữ liệu phù hợp với kiểu dữ liệu được khai báo khi khởi tạo đối tượng Gson. Nếu không thể đọc tệp JSON, phương thức sẽ in thông tin về lỗi ra đầu ra và trả về giá trị null. Hãy đảm bảo đóng tệp FileReader sau khi hoàn tất việc đọc để giải phóng tài nguyên.
 	 */
 	public List<T> loadJson(String path) {
-		List<T> list = null;
+		List<T> list = new ArrayList<>();
 		try{
 			fileReader = new FileReader(path);
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			list = gson.fromJson(fileReader, type);
+			list = gson.fromJson(fileReader, TYPE);
 			fileReader.close();
 		} catch (IOException e) {
 			e.printStackTrace();

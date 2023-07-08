@@ -31,7 +31,7 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Phù Đổng Thiên Vương": 12,
-      "Thánh Gióng": 0
+      "Thánh Gióng": 12
     },
     "id": 3,
     "name": "hội Gióng Sóc Sơn",
@@ -120,7 +120,7 @@
     "relatedFigures": {
       "Bùi Thạch Đa": 0,
       "Hà Sơn Thắng": 0,
-      "Thiều Hoa công chúa": 0,
+      "Thiều Hoa công chúa": 27,
       "Hà Hắc Long": 0,
       "Hà Hiên Cương": 0,
       "Hà Thổ Lân": 0,
@@ -234,7 +234,7 @@
     "relatedFigures": {
       "Uy Linh Lang": 275,
       "Vương Ba": 0,
-      "Vương Duy": 0
+      "Vương Duy": 1211
     },
     "id": 18,
     "name": "Lễ hội đình Yên Phụ",
@@ -383,7 +383,7 @@
       "đền Nam Trì": 0
     },
     "relatedFigures": {
-      "Công chúa Hùng vương Lâu nương": 0,
+      "Công chúa Hùng vương Lâu nương": 8,
       "Lang Công": 0,
       "Bảo Công": 0
     },
@@ -438,7 +438,7 @@
     "startingDay": "7/4",
     "relatedRelics": {},
     "relatedFigures": {
-      "Thánh Gióng": 0
+      "Thánh Gióng": 12
     },
     "id": 33,
     "name": "Hội Gióng Phù Đổng",
@@ -863,7 +863,7 @@
   },
   {
     "location": "Xã Long Phú, thị xã Tân Châu, tỉnh An Giang. ",
-    "firstTime": "Thành Hoàng bổn cảnh",
+    "firstTime": "Không rõ",
     "startingDay": "7/1 âm lịch. ",
     "relatedRelics": {
       "đình Long Phú": 0
@@ -877,7 +877,7 @@
   },
   {
     "location": "Xã Long Sơn, huyện Phú Tân, tỉnh An Giang. ",
-    "firstTime": "Lão Gia",
+    "firstTime": "Không rõ",
     "startingDay": "15/1 âm lịch. ",
     "relatedRelics": {
       "đền Bảo Sanh": 0
@@ -891,7 +891,7 @@
   },
   {
     "location": "Xã Long Kiên, huyện Chợ Mới, tỉnh An Giang. ",
-    "firstTime": "Nguyễn Trung Trực",
+    "firstTime": "Không rõ",
     "startingDay": "18 – 19/ 10 âm lịch. ",
     "relatedRelics": {
       "đền Nguyễn Trung Trực": 0
@@ -905,7 +905,7 @@
   },
   {
     "location": "Xã Phú Lâm, huyện Phú Tân, tỉnh An Giang. ",
-    "firstTime": "Bà Thượng Đồng Cổ Hỷ",
+    "firstTime": "Không rõ",
     "startingDay": "15 – 16/3 âm lịch. ",
     "relatedRelics": {
       "miếu Bằng Lang": 0
@@ -919,7 +919,7 @@
   },
   {
     "location": "Phường Châu Phú A, thị xã Châu Đốc, tỉnh An Giang. ",
-    "firstTime": "Nguyễn Hữu Cảnh",
+    "firstTime": "Không rõ",
     "startingDay": "9 – 11/5 âm lịch. ",
     "relatedRelics": {
       "đình Châu Phú": 0
@@ -1162,7 +1162,7 @@
     "relatedRelics": {},
     "relatedFigures": {},
     "id": 97,
-    "name": "Lễ tế cá Ông",
+    "name": "Lễ tế cá Ông – Lễ hội truyền thống ở Quảng Nam",
     "description": "Lễ tế cá Ông còn gọi là lễ tế cá Voi – một trong những lễ hội ở Quảng Nam có quy mô lớn nhất, đặc biệt là đối với các ngư dân nơi đây. Theo đó, trước khi ra khơi, các ngư dân thường làm lễ cúng cá Ông để bày tỏ sự tôn kính thần linh, đồng thời mong cầu bình an, tránh thiên tai, bão lũ khi ra biển khơi."
   },
   {
@@ -1286,12 +1286,106 @@
     "description": "Lễ hội Huế cuối cùng mà BestPrice muốn giới thiệu đến bạn là hội Minh Hương. Sở dĩ có tên gọi như vậy vì lễ hội này được tổ chức tại làng Minh Hương, xã Điền Hải. Vì muốn tỏ lòng biết ơn của mình tới Thần Khai canh cũng như cầu mong một mùa đi biển an bình, ấm no nên người dân địa phương đã tổ chức lễ hội này hằng năm. Ngoài phần lễ tế diễn ra hết sức trang nghiêm, lễ hội cũng có nhiều hoạt động đặc sắc và hấp dẫn như đua thuyền, rước thuyền, …"
   },
   {
+    "location": "Tại Nhà hát lớn thành phố Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm từ ngày 7 đến ngày 13 tháng 5 ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 112,
+    "name": "Lễ hội hoa phượng đỏ Hải Phòng",
+    "description": "Đây là lễ hội ở Hải Phòng được tổ chức nhằm phục vụ cho việc quảng bá du lịch, mỗi năm sẽ được thiết kế các chủ đề riêng gắn liền với hoa phượng đỏ - biểu tượng của Hải Phòng, với những màn nghệ thuật đặc sắc bao gồm trống hội, múa rồng, diễu hành carnaval, biểu diễn nghệ thuật hoành tráng..."
+  },
+  {
+    "location": "Tại Cát Bà, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức khoảng tháng 4 - 5 dương lịch hằng năm, sau khi kết thúc vụ cá Bắc mở đầu vụ cá Nam ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 113,
+    "name": "Lễ hội đua thuyền Hải Phòng",
+    "description": "Đua thuyền rồng là một lễ hội Cát Bà nổi tiếng, trở thành hình ảnh truyền thống ấn tượng của những người ngư dân đi biển tại Hải Phòng. Sự kiện chính của lễ hội là những màn đua thuyền đầy gay cấn, ngụ ý cầu mong cho một năm mưa thuận, gió hòa, sóng yên biển lặng để ngư dân ra khơi đánh cá đầy khoang, làm ăn phát đạt."
+  },
+  {
+    "location": "Tại các xã Tân Hưng, Tam Đa, Tân Liên, huyện Vĩnh Bảo, thành phố Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức ngày 3 tháng 8 âm lịch hằng năm ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 114,
+    "name": "Lễ hội Hải Phòng đánh pháo đất",
+    "description": "Lễ hội đánh pháo đất thường được tổ chức vào mùa thu. Trong hội thi, pháo đất phải được làm từ đất ở đáy sông, luyện nhào thật dẻo và nhuyễn, chuyển màu hồng mịn óng ánh như sáp thì mới được dùng để nặn pháo. Mọi người tham gia đều được đánh pháo, mỗi cổ gồm 3-4 người, nhận từ 25-30kg đất để thi làm pháo nhanh."
+  },
+  {
+    "location": "Tại Miếu thờ Thành hoàng bản thổ, thôn Hòa Liễu, xã Thuận Thiên, huyện Kiến Thụy, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm vào ngày 14 tháng Giêng, kéo dài 3 ngày tới ngày 16 tháng Giêng ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 115,
+    "name": "Lễ hội Minh Thề Hải Phòng",
+    "description": "Đây là lễ hội kết hợp giữa tín ngưỡng với giáo dục đạo lý nhân cách, thường thực hiện “Minh thề” ngay trong buổi lễ khai hội, khi các vị chủ lễ và bồi lễ đọc chúc văn lai lịch công đức của Thánh vương, thực hiện dâng hương, rượu, nước tế thần. Các nghi lễ tại đây thể hiện đúng tinh thần cương trực liêm chính, tương thân tương ái, gắn bó đoàn kết của mọi người dân."
+  },
+  {
+    "location": "Tại Kỳ Sơn, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm vào ngày 10 tháng Giêng âm lịch ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 116,
+    "name": "Lễ hội Hải Phòng rước lợn ông Bồ",
+    "description": "Lễ hội diễn ra vô cùng sôi động khi mà lợn vừa mổ thịt sẽ được làm sạch sẽ, đặt nằm trên mâm trong tình trạng tươi sống, trang trí đẹp mắt với ngũ quả, bánh dày… và được rước kiệu khắp hành trình trong tiếng trống hội làng và đội âm nhạc."
+  },
+  {
+    "location": "Tại Cụm di tích tưởng niệm tướng quân Trần Quốc Bảo nằm trong làng Tràng Kênh, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm ngày mồng 6 và ngày mồng 7 tháng Giêng âm lịch ",
+    "relatedRelics": {
+      "đền Trần Quốc Bảo": 693
+    },
+    "relatedFigures": {},
+    "id": 117,
+    "name": "Lễ hội đền Trần Quốc Bảo",
+    "description": "Lễ hội đền Trần Quốc Bảo được người dân duy trì và tổ chức đều đặn với quy mô khá lớn suốt hàng trăm năm nay, tại khu vực lăng mộ và khu vực đền thờ tướng quân Trần Quốc Bảo, vị tướng trẻ dũng mãnh, tài trí trong trận chiến Bạch Đằng thế kỷ XIII năm xưa. Trong lễ hội, người ta không chỉ thực hiện các nghi lễ trang trọng mà còn tổ chức không ít trò chơi dân gian mang đậm tinh thần dân tộc như chọi gà, kéo co, hát đúm, đu tiên,..."
+  },
+  {
+    "location": "Tại Đền bà Đế, chân núi Độc, thuộc phường Ngọc Hải, quận Đồ Sơn, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm vào những ngày đầu năm mới ",
+    "relatedRelics": {
+      "đền Bà Đế Hải Phòng": 0
+    },
+    "relatedFigures": {},
+    "id": 118,
+    "name": "Lễ hội đền Bà Đế Hải Phòng",
+    "description": "Trong các ngày lễ hội diễn ra để tưởng nhớ đến bà Đế, người dân nơi đây không chỉ thực hiện nhiều nghi thức tâm linh đặc sắc mà còn thường xuyên có lễ dâng hương vào mỗi buổi để cho du khách thập phương từ nơi xa đến tỏ lòng thành kính."
+  },
+  {
+    "location": "Tại quần thể Khu di tích Nữ tướng Lê Chân, Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức hằng năm từ ngày 7/2 đến ngày 9/2 âm lịch ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 119,
+    "name": "Lễ hội bà Lê Chân Hải Phòng",
+    "description": "Không chỉ cư dân miền biển Hải Phòng mà cả du khách thập phương cũng náo nức về đây để tham gia lễ hội tưởng nhớ và tôn vinh công lao to lớn của nữ tướng Lê Chân, người phụ nữ bản lĩnh đã khai sinh ra trấn Hải Tần phòng thủ, là tiền thân của thành phố Hải Phòng sôi động ngày nay."
+  },
+  {
+    "location": "Tại làng văn hóa Ngọc Tỉnh, xã Tân Trào, huyện Kiến Thụy, thành phố Hải Phòng",
+    "firstTime": "Không rõ",
+    "startingDay": "Thường tổ chức 3 năm 1 lần, thường vào ngày đầu năm mới, sau dịp Tết Nguyên đán ",
+    "relatedRelics": {},
+    "relatedFigures": {},
+    "id": 120,
+    "name": "rước cá sủ vàng",
+    "description": "Đây là lễ hội độc đáo mang đặc trưng riêng của ngư dân Hải Phòng để gửi gắm nguyện vọng mưa thuận gió hòa, sóng yên biển lặng, một vụ mùa được đánh bắt bội thu, thuyền bè ra khơi an toàn may mắn. Lễ hội cũng thể hiện tín ngưỡng tâm linh thờ cá sủ vàng - loài cá lớn nhất trong họ cá đù, có giá trị dinh dưỡng và kinh tế cao cùng sự quý hiếm, có từ xa xưa."
+  },
+  {
     "location": "các bản vùng cao huyện Ngọc Lặc, Lang Chánh, Bá Thước… ",
     "firstTime": "Không rõ",
     "startingDay": "các ngày rằm tháng Giêng, rằm tháng Ba và rằm tháng Bảy.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 111,
+    "id": 121,
     "name": "Lễ hội Pôôn Pôông",
     "description": "Lễ hội Pôôn Pôông được hình thành từ điều kiện sinh hoạt và cư trú của người Mường tại Thanh Hóa. Tương truyền rằng, ngày xưa, nếu như những người trong bản bị ốm đau, thì những người hái thuốc cỏ sẽ giúp chữa bệnh, vì vậy, người dân trong làng rất tôn sùng những người hái thuốc."
   },
@@ -1301,7 +1395,7 @@
     "startingDay": "từ ngày mùng 1 đến ngày 16 tháng 2 âm lịch và mùng 1 đến ngày 6 tháng 8 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 112,
+    "id": 122,
     "name": "Lễ hội Phủ Na",
     "description": "Lễ hội Pôôn Pôông được hình thành từ điều kiện sinh hoạt và cư trú của người Mường tại Thanh Hóa. Tương truyền rằng, ngày xưa, nếu như những người trong bản bị ốm đau, thì những người hái thuốc cỏ sẽ giúp chữa bệnh, vì vậy, người dân trong làng rất tôn sùng những người hái thuốc."
   },
@@ -1313,7 +1407,7 @@
       "đền Nưa": 0
     },
     "relatedFigures": {},
-    "id": 113,
+    "id": 123,
     "name": "Lễ hội đền Nưa",
     "description": "Lễ hội Phủ Na được tổ chức tại huyện Như Tranh, đây là một trong những địa phương có phong cảnh thiên nhiên tuyệt đẹp, nơi du khách có thể thư giãn lòng mình với mây ngàn, gió núi, suối reo. Đây cũng là địa phương có nhiều huyền tích kỳ ảo được bà con nhân dân lưu giữ…"
   },
@@ -1325,7 +1419,7 @@
       "đền Sòng": 1028
     },
     "relatedFigures": {},
-    "id": 114,
+    "id": 124,
     "name": "Lễ hội đền Sòng",
     "description": "Xã Tân Ninh nơi tổ chức lễ hội đền Nưa vốn dĩ được hình thành với cái tên là Kẻ Nứa. Tên gọi này xuất phát từ ngọn núi lân cận có tên là dãy núi Nưa. Vì đất đai tại ngọn núi này vô cùng tươi tốt, chính vì vậy người dân quen gọi với cái tên là núi Nứa."
   },
@@ -1335,7 +1429,7 @@
     "startingDay": "đầu xuân, thường từ mùng 5 tháng Giêng đến đầu tháng 2 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 115,
+    "id": 125,
     "name": "Lễ hội Cửa Đặt",
     "description": "Các lễ hội ở Thanh Hóa luôn được bà con nhân dân chú trọng về hình thức, lễ nghi tổ chức. Lễ hội đền Sòng cũng là một trong những lễ hội Thanh Hóa được tổ chức hoành tráng với phần lễ và phần hội."
   },
@@ -1347,7 +1441,7 @@
       "đền Độc Cước": 0
     },
     "relatedFigures": {},
-    "id": 116,
+    "id": 126,
     "name": "Lễ hội cầu phúc đền Độc Cước",
     "description": "Các lễ hội ở Thanh Hóa luôn được bà con nhân dân chú trọng về hình thức, lễ nghi tổ chức. Lễ hội đền Sòng cũng là một trong những lễ hội Thanh Hóa được tổ chức hoành tráng với phần lễ và phần hội."
   },
@@ -1357,8 +1451,8 @@
     "startingDay": "tháng 2 âm lịch hằng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 117,
-    "name": "Lễ hội rước kiệu vua Bà - Phủ Tía",
+    "id": 127,
+    "name": "Lễ hội rước kiệu vua Bà",
     "description": "Một trong những lễ hội tháng Giêng được nhiều du khách lựa chọn tham gia tại Thanh Hóa đó chính là lễ hội Cửa Đặt. Đây là một lễ hội truyền thống có từ rất lâu của bà con huyện Thường Xuân nói riêng và bà con xứ Thanh nói chung."
   },
   {
@@ -1367,7 +1461,7 @@
     "startingDay": "ngày 20 - 23/02 âm lịch hằng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 118,
+    "id": 128,
     "name": "Lễ hội Bà Triệu",
     "description": "Lễ hội cầu phúc đền Độc Cước là một trong những lễ hội Thanh Hóa được tổ chức tại Sầm Sơn nhằm mở đầu cho hoạt động du lịch tại địa phương này. Đây cũng chính là một trong những lễ hội với đa dạng các phong tục như cầu Thánh – Thần – Trời. Lễ hội được thực hiện nhằm cầu nguyện cho quốc thái dân an, người dân gặp nhiều thuận tiện, may mắn trong lao động, sản xuất."
   },
@@ -1377,7 +1471,7 @@
     "startingDay": "mùng 8 tháng Giêng hằng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 119,
+    "id": 129,
     "name": "Lễ hội rước thần cá",
     "description": "Lễ hội rước kiệu vua Bà - Phủ Tía được tổ chức vào đầu tháng 2 âm lịch hằng năm. Hoạt động tại lễ hội vẫn giữ được những nét đặc trưng về văn hóa Thanh Hóa từ xưa đến nay. Cụ thể, lễ rước kiệu với sự góp mặt của 8 nam thanh niên và 12 nữ thanh niên. Kiệu được rước từ đền chính cho đến đỉnh núi và sau đó lại tiếp tục quay về đến chính."
   },
@@ -1387,7 +1481,7 @@
     "startingDay": "ngày 7 – 9 tháng 3 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 120,
+    "id": 130,
     "name": "Lễ hội Lê Hoàn",
     "description": "Lễ hội rước kiệu vua Bà - Phủ Tía được tổ chức vào đầu tháng 2 âm lịch hằng năm. Hoạt động tại lễ hội vẫn giữ được những nét đặc trưng về văn hóa Thanh Hóa từ xưa đến nay. Cụ thể, lễ rước kiệu với sự góp mặt của 8 nam thanh niên và 12 nữ thanh niên. Kiệu được rước từ đền chính cho đến đỉnh núi và sau đó lại tiếp tục quay về đến chính."
   },
@@ -1397,7 +1491,7 @@
     "startingDay": "10/2 âm lịch hằng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 121,
+    "id": 131,
     "name": "Lễ hội Mường Xia",
     "description": "Lễ hội Bà Triệu được tổ chức hằng năm để người dân địa phương cũng như du khách có dịp để tưởng nhớ tới vị anh hùng Triệu Thị Trinh. Đây cũng là một trong những lễ hội Thanh Hóa có quy mô tổ chức rộng lớn nhất, cụ thể được tổ chức theo quy trình đền, lăng, đình."
   },
@@ -1409,8 +1503,8 @@
       "Thành Hoàng": 1190
     },
     "relatedFigures": {},
-    "id": 122,
-    "name": "Lễ hội Thành Hoàng - làng Quần Thanh",
+    "id": 132,
+    "name": "Lễ hội Thành Hoàng",
     "description": "Lễ hội rước thần cá là một trong những lễ hội người Mường được tổ chức tại bản Lương Ngọc – nơi có suối cá thần kỳ chảy qua. Đây cũng là một trong những lễ hội Thanh Hóa đã có từ rất lâu đời, đến nay vẫn được người dân lưu giữ một cách trọn vẹn."
   },
   {
@@ -1419,7 +1513,7 @@
     "startingDay": "đầu tháng 2 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 123,
+    "id": 133,
     "name": "Lễ hội Xuân Phả",
     "description": "Nhiều du khách băn khoăn Thanh Hóa có lễ hội gì trong tháng 3 âm lịch thì có thể tham khảo về lễ hội Lê Hoàn. Đây là một lễ hội có quy mô hoành tráng, được tổ chức theo hình thức cấp tỉnh."
   },
@@ -1429,7 +1523,7 @@
     "startingDay": "tổ chức vào mùng 2 và mùng 3 tháng 3 âm lịch hằng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 124,
+    "id": 134,
     "name": "Lễ hội Làng cổ Đông Sơn",
     "description": "Được xem là một trong những lễ hội Tết Thanh Hóa, được tổ chức vào đầu năm, lễ hội Mường Xia thu hút một lượng lớn người dân và du khách tham quan. Lễ hội Thanh Hóa này được tổ chức chính bởi người Thái huyện Quan Sơn, họ thực hiện lễ hội với nhiều tín ngưỡng độc đáo, đậm đà bản sắc dân tộc, khơi gợi tinh thần “uống nước nhớ nguồn” của người dân địa phương."
   },
@@ -1439,7 +1533,7 @@
     "startingDay": "mùng 10 tháng Giêng âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 125,
+    "id": 135,
     "name": "Lễ hội Mường Khô",
     "description": "Được xem là một trong những lễ hội Tết Thanh Hóa, được tổ chức vào đầu năm, lễ hội Mường Xia thu hút một lượng lớn người dân và du khách tham quan. Lễ hội Thanh Hóa này được tổ chức chính bởi người Thái huyện Quan Sơn, họ thực hiện lễ hội với nhiều tín ngưỡng độc đáo, đậm đà bản sắc dân tộc, khơi gợi tinh thần “uống nước nhớ nguồn” của người dân địa phương."
   },
@@ -1451,7 +1545,7 @@
       "đền Cờn": 1127
     },
     "relatedFigures": {},
-    "id": 126,
+    "id": 136,
     "name": "Lễ hội đền Cờn",
     "description": "Lễ hội đền Cờn Nghệ An là một trong những hoạt động nhằm tưởng nhớ đức Thánh Mẫu và tứ vị Thánh Nương – những người đã phù hộ, bảo vệ cho người dân vượt qua hiểm nguy, làm ăn thịnh vượng. Theo truyền thuyết, chính những vị thần này cũng đã nhiều lần giúp đỡ quân nhà Lê, nhà Trần vượt biển thành công. Trong khuôn khổ lễ hội sẽ tổ chức nhiều nghi lễ, tín ngưỡng văn hóa, kèm theo đó là nhiều hoạt động trò chơi dân gian như: đua thuyền, kéo co, chọi gà, đánh cờ người…"
   },
@@ -1463,7 +1557,7 @@
       "đền Cuông Nghệ An": 1087
     },
     "relatedFigures": {},
-    "id": 127,
+    "id": 137,
     "name": "Lễ hội đền Cuông Nghệ An",
     "description": "Một trong những lễ hội ở Nghệ An thu hút đông đảo khách du lịch và người dân địa phương tham gia đó chính là lễ hội đền Cuông. Đây là dịp để người dân cầu tài lộc, đồng thời bày tỏ sự thành kính, ghi nhớ đến huyền thoại An Dương Vương đưa công chúa Mỵ Châu chạy trốn khỏi kẻ thù."
   },
@@ -1473,7 +1567,7 @@
     "startingDay": "Từ ngày 17 đến ngày 19 tháng Giêng âm lịch hằng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 128,
+    "id": 138,
     "name": "Lệ hội Hang Bua",
     "description": "Lễ hội Hang Bua là một trong các lễ hội truyền thống ở Nghệ An gắn liền với nhiều nét văn hóa tâm linh, đời sống sinh hoạt của người dân đồng bào Thái cổ. Phần lễ thương được tổ chức khá đơn giản, chỉ bao gồm diễn văn khai mạc và lễ cúng thần linh. Điểm đặc sắc của lễ hội này đó chính là phần hội được tổ chức rất sinh động, bao gồm nhiều loại hình nghệ thuật dân gian và hiện đại."
   },
@@ -1485,7 +1579,7 @@
       "đền Quả Sơn": 0
     },
     "relatedFigures": {},
-    "id": 129,
+    "id": 139,
     "name": "Lễ hội đền Quả Sơn",
     "description": "Nếu bạn đang tìm hiểu về một trong các lễ hội ở Nghệ An lớn nhất thì có thể tham khảo thông tin về lễ hội đền Quả Sơn. Đây là lễ hội được tổ chức nhằm tưởng nhớ đến công đức của vị danh tướng Uy Minh Vương Lý Nhật Quang – người đã có nhiều công lao trong việc củng cố nền độc lập, bảo quốc an dân ở thế kỷ XI."
   },
@@ -1497,7 +1591,7 @@
       "đền Bạch Mã": 929
     },
     "relatedFigures": {},
-    "id": 130,
+    "id": 140,
     "name": "Lễ hội đền Bạch Mã",
     "description": "Đền Bạch Mã Nghệ An là một trong 4 ngôi đền linh thiêng bậc nhất. Nơi đây thờ vị anh hùng Phan Đà, người đã có nhiều đóng góp trong việc đánh đuổi giặc ngoại xâm cùng nghĩa quân Lê Lợi. Theo truyền thuyết, vị anh hùng này cũng đã nhiều lần giúp người dân tai qua nạn khỏi, thoát khỏi dịch bệnh, đánh thắng kẻ thù. Vì vậy, hằng năm, lễ hội đền Bạch Mã được tổ chức vừa ghi nhớ công ơn của vị anh hùng này, vừa tổ chức các hoạt động văn hóa văn nghệ, gắn kết tình cảm của người dân."
   },
@@ -1507,7 +1601,7 @@
     "startingDay": "Được tổ chức vào dịp Tết Nguyên Đán, thường bắt đầu từ mồng Hai, mồng Ba đến hết mồng Bảy tháng Giêng ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 131,
+    "id": 141,
     "name": "Hội Vật Cù Thanh Chương",
     "description": "Lễ hội Vật Cù Thanh Chương là một trong các lễ hội truyền thống ở Nghệ An. Vào những ngày đầu xuân năm mới, khi nghe âm thanh của tiếng trống hội, người dân xứ Nghệ lại nô nức rủ nhau đi xem hội vật. Lễ hội này đã có từ rất lâu đời, ban đầu mục đích tuyển chọn những lực sĩ khỏe mạnh để đầu quân cho tướng Phan Đàn."
   },
@@ -1517,7 +1611,7 @@
     "startingDay": "Ngày 30/4 và 1/5 dương lịch hằng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 132,
+    "id": 142,
     "name": "Lễ hội du lịch Cửa Lò",
     "description": "Nếu có dịp du lịch Cửa Lò Nghệ An vào ngày 30/4 hoặc 1/5, du khách nhất định không thể bỏ lỡ lễ hội du lịch vô cùng độc đáo tại đây. Đây là hoạt động mở đầu cho mùa du lịch biển tại Cửa Lò nên thu hút rất đông khách du lịch và người dân địa phương tham gia. Phần lễ thường được tổ chức bao gồm lễ khai quang, lễ yết cáo… Phần hội sẽ bao gồm các hoạt động văn nghệ, thể thao."
   },
@@ -1529,7 +1623,7 @@
       "đền Hoàng Mười": 0
     },
     "relatedFigures": {},
-    "id": 133,
+    "id": 143,
     "name": "Lễ hội đền Hoàng Mười",
     "description": "Lễ hội đền Ông Hoàng Mười Nghệ An được hình thành từ thế kỷ XVII, đây là lễ hội ở Nghệ An nổi tiếng, được tổ chức nhằm tưởng nhớ đến công đức của quan Hoàng Mười. Quy mô của lễ hội rất lớn với các nghi lễ như: lễ rước, lễ yết cáo, lễ đại tế, lễ rước sắc. Lễ hội này thu hút đông đảo du khách, kèm theo đó là khoảng 400 – 500 nhóm đến hoạt động tín ngưỡng. Lễ hội không chỉ giúp người dân gắn kết mà còn là thời điểm để bày tỏ những ước muốn, khát vọng của mình với thần linh."
   },
@@ -1541,7 +1635,7 @@
       "đền Chín Gian": 0
     },
     "relatedFigures": {},
-    "id": 134,
+    "id": 144,
     "name": "Lễ hội đền Chín Gian",
     "description": "Lễ hội đền Chín Gian là một trong những tín ngưỡng tâm linh độc đáo của đồng bào người Thái vùng Phủ Quỳ, Nghệ An. Điểm độc đáo của lễ hội này là hoạt động hiến trâu. Người dân sẽ đưa một con trâu cái trắng, được xem là vật lễ cúng tế linh thiêng nhất. Sau khi trâu được đưa xuống tắm ở bến Quan sẽ tiến hành nghi lễ chém trâu, sau đó thịt trâu sẽ được đặt ở bậc sạp cao nhất trong đền. Sau khi bà mo làm lễ nạp trâu 3 ngày 3 đêm thì phần thịt sẽ được đem chia ra, nấu lên cho dân làng cùng thưởng thức."
   },
@@ -1553,7 +1647,7 @@
       "đền Vua Mai": 0
     },
     "relatedFigures": {},
-    "id": 135,
+    "id": 145,
     "name": "Lễ hội đền Vua Mai",
     "description": "Lễ hội đền Vua Mai là một trong những lễ hội ở Nghệ An được tổ chức và dịp đầu năm, mở đầu cho các lễ hội khác tại Nghệ An. Tại đây, du khách sẽ được khám phá những bản sắc văn hóa độc đáo của người dân địa phương. Tham gia vào các hoạt động trong khuôn khổ lễ hội như: lễ rước nước, lễ yết cáo, lễ dâng hương… Bên cạnh đó, lễ hội đền Vua Mai còn có thêm nhiều hoạt động trò chơi hấp dẫn như: đu tiên, chọi gà, kéo co, hội vật…"
   },
@@ -1565,7 +1659,7 @@
       "chùa Ông": 1308
     },
     "relatedFigures": {},
-    "id": 136,
+    "id": 146,
     "name": "Hội chùa Ông",
     "description": "Lễ hội chùa Ông là một trong các lễ hội ở thành phố Hồ Chí Minh gắn liền với sinh hoạt văn hóa tín ngưỡng của người Hoa gốc Triều Châu ở Sài Gòn. Lễ hội HCM diễn ra vào ngày 24/6 âm lịch hàng năm, bao gồm lễ thỉnh và cung nghinh các vị thần, thánh như: Nguyễn Hữu Cảnh, Lỗ Ban Tiên sư, Trần Thượng Xuyên, Thiên Hậu Thánh mẫu, Thành hoàng bổn cảnh…"
   },
@@ -1577,7 +1671,7 @@
       "lăng Ông Bà Chiểu": 0
     },
     "relatedFigures": {},
-    "id": 137,
+    "id": 147,
     "name": "Lễ hội lăng Ông Bà Chiểu",
     "description": "Nếu có dịp du lịch Sài Gòn, du khách không nên bỏ qua các lễ hội văn hóa ở TP. HCM, nhất là lễ hội lăng Ông Bà Chiểu. Lăng Ông Bà Chiểu là công trình cổ xưa nhất, trải qua hơn 200 năm lịch sử và chứng kiến biết bao thăng trầm của Sài Gòn phồn hoa đô thị."
   },
@@ -1587,7 +1681,7 @@
     "startingDay": "Ngày 15 - 17/8 âm lịch hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 138,
+    "id": 148,
     "name": "Lễ nghinh Ông",
     "description": "Nhắc đến các lễ hội ở miền Nam thì không thể không nhắc đến lễ nghinh Ông (hay còn được gọi là lễ cúng Ông, lễ cầu ngư, lễ tế cá Ông, lễ rước cốt Ông, lễ nghinh Ông Thủy tướng…). Đây là một trong những lễ hội HCM đặc sắc và lớn nhất của ngư dân, phổ biến từ khu vực Quảng Bình trở vào Nam."
   },
@@ -1599,7 +1693,7 @@
       "chùa Bà Thiên Hậu": 0
     },
     "relatedFigures": {},
-    "id": 139,
+    "id": 149,
     "name": "Lễ hội chùa Bà Thiên Hậu",
     "description": "Sài Gòn có lễ hội gì đặc sắc? Đó chính là lễ hội chùa Bà Thiên Hậu, diễn ra vào ngày 23/3 âm lịch hàng năm, hay còn được gọi là ngày vía Bà. Lễ hội HCM này sẽ bắt đầu từ đêm 22/3, diễn ra lễ tắm Bà và đến sáng ngày 23/3 là lễ rước Bà."
   },
@@ -1611,7 +1705,7 @@
       "đình Bình Đông": 1600
     },
     "relatedFigures": {},
-    "id": 140,
+    "id": 150,
     "name": "Lễ Kỳ Yên đình Bình Đông",
     "description": "Một trong các lễ hội ở Hồ Chí Minh thu hút đông đảo người dân địa phương và du khách tham gia, đó chính là lễ Kỳ Yên đình Bình Đông. Lễ hội HCM này sẽ diễn ra trong 5 ngày, từ ngày 10 đến ngày 14/2 âm lịch."
   },
@@ -1623,7 +1717,7 @@
       "đình Phú Nhuận": 1618
     },
     "relatedFigures": {},
-    "id": 141,
+    "id": 151,
     "name": "Lễ Kỳ Yên đình Phú Nhuận",
     "description": "Nếu bạn đang tìm hiểu các lễ hội truyền thống ở Việt Nam nói chung hay các sự kiện ở thành phố Hồ Chí Minh, lễ hội HCM nói riêng thì có thể tham khảo thông tin về lễ Kỳ Yên đình Phú Nhuận. Đây là lễ hội lớn được tổ chức tại khu vực đình làng Phú Nhuận, thờ Phật và các vị thần."
   },
@@ -1635,7 +1729,7 @@
       "đình Trường Thọ": 1624
     },
     "relatedFigures": {},
-    "id": 142,
+    "id": 152,
     "name": "Lễ Kỳ Yên đình Trường Thọ",
     "description": "Giống như nhiều ngôi đình khác, đình Trường Thọ là nơi sinh hoạt tín ngưỡng của người dân địa phương. Lễ Kỳ Yên đình Trường Thọ là một trong những lễ hội HCM nhằm suy tôn Thành Hoàng làng, các vị Tiền hiền, Hậu hiền và cầu mưa thuận gió hòa, mùa màng tươi tốt."
   },
@@ -1645,7 +1739,7 @@
     "startingDay": "Ngày 7 - 9/2 âm lịch hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 143,
+    "id": 153,
     "name": "Lễ giỗ tổ nghề kim hoàn",
     "description": "Đây là một trong những lễ hội HCM đặc sắc, quy tụ hàng ngàn người ở TP. Hồ Chí Minh và các tỉnh Nam Bộ đến tưởng nhớ công lao của những tổ sư trong ngành kim hoàn. Lễ hội gồm 2 nghi thức chính, bao gồm: lễ tế Tổ và lễ tế những vị Tiền hiền, Hậu hiền cũng như nhiều tiết mục cải lương hấp dẫn, tạo nên bầu không khí nhộn nhịp, náo nhiệt."
   },
@@ -1657,7 +1751,7 @@
       "chùa Phước Hải": 0
     },
     "relatedFigures": {},
-    "id": 144,
+    "id": 154,
     "name": "Lễ hội chùa Phước Hải",
     "description": "Chùa Phước Hải hay còn được gọi là chùa Ngọc Hoàng, Ngọc Hoàng điện, chùa Đa Kao là một trong những ngôi chùa linh thiêng bậc nhất ở Sài Gòn. Du khách đến đây trong ngày mùng một, ngày rằm âm lịch. Tuy nhiên, dịp lễ hội HCM thu hút đông người nhất là dịp lễ vía Ngọc Hoàng diễn ra vào ngày 9/1 âm lịch hàng năm."
   },
@@ -1669,7 +1763,7 @@
       "chùa Ông Bổn": 1397
     },
     "relatedFigures": {},
-    "id": 145,
+    "id": 155,
     "name": "Lễ hội chùa Ông Bổn",
     "description": "Trong khi phần lớn các chùa, đền, miếu hay hội quán của người Hoa ở khu vực Chợ Lớn đều thờ Thiên Hậu Thánh Mẫu, Quan Đế thì chùa Ông Bổn (miếu Nhị Phủ) là nơi duy nhất thờ Bổn Đầu Công - vị thần bảo vệ đất đai và con người."
   },
@@ -1679,7 +1773,7 @@
     "startingDay": "dịp lễ 30/4 -1/5 hằng năm (từ chiều tối 25/4 - tối 1/5)",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 146,
+    "id": 156,
     "name": "Lễ hội Carnaval Hạ Long",
     "description": "Với không gian tổ chức rộng lớn và nhiều hoạt động hấp dẫn, lễ hội Carnaval Hạ Long là dịp được nhiều du khách mong chờ. Ý nghĩa lễ hội Carnaval có vai trò khởi động du lịch hè, góp phần quảng bá thương hiệu du lịch của thành phố Hạ Long và tỉnh Quảng Ninh."
   },
@@ -1691,7 +1785,7 @@
       "chùa Long Tiên": 171
     },
     "relatedFigures": {},
-    "id": 148,
+    "id": 158,
     "name": "Lễ hội chùa Long Tiên",
     "description": "Lễ hội Yên Tử được tổ chức rất lớn mỗi năm và là dịp để du khách hành hương, chiêm bái dịp đầu năm. Vùng núi linh thiêng Yên Tử Quảng Ninh sở hữu cảnh sắc thiên nhiên hùng vĩ cùng không gian thoát tục mang đến cho du khách sự tĩnh tâm, an nhiên. Du khách sẽ tham gia vào đoàn người tấp nập đi bộ lên đỉnh núi để bày tỏ lòng thành kính, cầu ban phước lành, bình an."
   },
@@ -1703,7 +1797,7 @@
       "chùa Ba Vàng": 0
     },
     "relatedFigures": {},
-    "id": 149,
+    "id": 159,
     "name": "Lễ hội chùa Ba Vàng",
     "description": "Lễ hội chùa Long Tiên là một trong những lễ hội Hạ Long, Quảng Ninh được nhiều người biết đến. Đến với lễ hội, du khách sẽ được cùng tham gia lễ rước kiệu, dâng hương lễ Phật cầu may mắn và hòa vào các trò chơi dân gian thú vị. Các hoạt động của lễ hội sẽ mang đến cho du khách những trải nghiệm mới lạ và đáng nhớ."
   },
@@ -1715,7 +1809,7 @@
       "đình Trà Cổ": 178
     },
     "relatedFigures": {},
-    "id": 150,
+    "id": 160,
     "name": "Lễ hội đình Trà Cổ",
     "description": "Du lịch chùa Ba Vàng dịp đầu xuân, du khách đừng bỏ lỡ hành trình trẩy hội, cầu bình an tại chùa Ba Vàng. Lễ hội Hạ Long, Quảng Ninh này bao gồm các nghi thức trang nghiêm như: thỉnh chuông, gióng trống, dâng hương, thả bóng bay cầu quốc thái dân an và lan tỏa những giá trị tinh thần tốt đẹp."
   },
@@ -1727,7 +1821,7 @@
       "đền Cửa Ông": 138
     },
     "relatedFigures": {},
-    "id": 151,
+    "id": 161,
     "name": "Lễ hội đền Cửa Ông",
     "description": "Lễ hội đình Trà Cổ được tổ chức với nhiều nghi thức truyền thống bày tỏ lòng biết ơn tới các vị thành hoàng như: rước thần trên biển; đóng cây cai đám, lễ rước cỗ, lễ đại tế,... Bên cạnh đó, lễ hội Hạ Long, Quảng Ninh này còn tổ chức nhiều hoạt động dân gian sôi nổi như: thi hò kéo lưới, bài chòi, kéo co, đập niêu, chấm thi “ông Voi” và chương trình văn nghệ chào mừng. Đặc biệt, du khách tham gia lễ hội còn có dịp tham quan di tích đình Trà Cổ, dâng hương cầu phúc và vui chơi, tắm biển Trà Cổ."
   },
@@ -1737,7 +1831,7 @@
     "startingDay": "mùng 8/3 âm lịch hằng năm",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 152,
+    "id": 162,
     "name": "Lễ hội Bạch Đằng",
     "description": "Lễ hội đền Cửa Ông được tổ chức để tưởng niệm và bày tỏ lòng biết ơn đối với tướng Trần Quốc Tảng - người đã có công dẹp giặc, mang lại bình yên cho dân làng."
   },
@@ -1747,7 +1841,7 @@
     "startingDay": "10/6 – 20/6 âm lịch hằng năm, ngày hội chính: 18/6 âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 153,
+    "id": 163,
     "name": "Lễ hội Quan Lạn",
     "description": "Lễ hội Bạch Đằng còn có tên gọi khác là Giỗ trận được tổ chức hằng năm với ý nghĩa tưởng nhớ chiến thắng chống giặc ngoại xâm của các vị anh hùng dân tộc. Đây là lễ hội Hạ Long, Quảng Ninh có quy mô lớn, thu hút đông đảo người dân tham gia dâng lễ, khấn bái. Lễ hội còn tổ chức nhiều cuộc thi, trò chơi dân gian tái hiện những cuộc tập trận trên sông giúp du khách hiểu hơn về những chiến tích oai hùng của dân tộc."
   },
@@ -1757,7 +1851,7 @@
     "startingDay": "thành phố Hạ Long",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 154,
+    "id": 164,
     "name": "Lễ hội hoa anh đào Nhật Bản tại Hạ Long",
     "description": "Lễ hội Quan Lạn là hội làng hằng năm của người dân xã đảo Quan Lạn. Hội làng diễn ra nhiều hoạt động truyền thống đặc sắc với tục khóa làng, lễ nghinh thần. Đặc biệt, không khí lễ hội Hạ Long, Quảng Ninh tại xã đảo vô cùng náo nhiệt, hòa trong tiếng chiêng trống, hò reo khí thế vang cả một vùng của tục đua thuyền. Dân làng xã đảo luôn chào đón du khách ghé thăm, tham gia lễ hội để cùng tưởng nhớ chiến thắng quân Nguyên Mông hào hùng, lan tỏa nét đẹp văn hóa lịch sử dân tộc."
   },
@@ -1767,7 +1861,7 @@
     "startingDay": "ngày 7/1 âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 155,
+    "id": 165,
     "name": "Lễ Hội Tiên Công",
     "description": "Lễ hội hoa anh đào là sự kiện văn hóa đặc sắc được du khách mong chờ. Du khách tham gia lễ hội sẽ được trải nghiệm không gian sinh động với những hàng hoa anh đào khoe sắc ngọt ngào và vẻ đẹp rực rỡ của mai vàng Yên Tử - loài hoa đến từ miền đất Phật Quảng Ninh. Chương trình lễ hội Hạ Long này diễn ra nhiều tiết mục giao lưu văn hóa nghệ thuật Việt - Nhật với các trò chơi dân gian và các sản phẩm tiêu biểu của hai nước."
   },
@@ -1779,7 +1873,7 @@
       "Đình Bảng": 416
     },
     "relatedFigures": {},
-    "id": 156,
+    "id": 166,
     "name": "Lễ hội làng Đình Bảng",
     "description": "Tế thần, đấu vật, chọi gà."
   },
@@ -1793,7 +1887,7 @@
     "relatedFigures": {
       "Đức Phật": 0
     },
-    "id": 157,
+    "id": 167,
     "name": "Hội chùa Bút Tháp",
     "description": "Lễ cúng Phật; lễ dâng hương; lễ cúng đàn trần tế cầu phúc; lễ cúng Tổ; hát quan họ trên thuyền; hội thi thả chim bồ câu."
   },
@@ -1808,7 +1902,7 @@
       "Phật Bà Quan Âm": 0,
       "Lý Thánh Tông": 144
     },
-    "id": 158,
+    "id": 168,
     "name": "Hội chùa Phật Tích",
     "description": "Lễ Phật, nghe giảng kinh, cầu yên, cầu phúc, thăm di tích."
   },
@@ -1818,7 +1912,7 @@
     "startingDay": "8/1 âm lịch. ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 159,
+    "id": 169,
     "name": "Hội Du xuân",
     "description": "Đây là một lễ hội ở Bắc Ninh rất độc đáo. Bốn làng từng chung sức đuổi cướp giữ làng, giúp nhau sản xuất. Trước hội bốn làng đã giúp nhau cấy lúa. Ngày 8/1, bốn làng cùng mở hội tế thần và cùng dự tiệc. Lễ hội có trò kéo co, đấu vật, đánh cờ, hát chèo."
   },
@@ -1828,7 +1922,7 @@
     "startingDay": "15/3 âm lịch. ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 160,
+    "id": 170,
     "name": "Hội làng Đông Hồ",
     "description": "Trưng bày và bán tranh dân gian Đông Hồ trong sân đình. Dựng một cầu bằng tranh trong đình tượng trưng cho sự giao lưu, hòa hợp."
   },
@@ -1842,7 +1936,7 @@
     "relatedFigures": {
       "Bà Chúa Kho": 0
     },
-    "id": 161,
+    "id": 171,
     "name": "Lễ đền Bà Chúa Kho",
     "description": "Lễ hội có tục dâng hương, khấn vay tiền Bà Chúa (tượng trưng) “cầu tài phát lộc”."
   },
@@ -1857,10 +1951,10 @@
       "Nguyễn Phan Quang": 0,
       "Thuần Dương": 0,
       "Đức Phật": 0,
-      "Đại Vương Nguyễn Tự Cường": 0,
+      "Đại Vương Nguyễn Tự Cường": 2028,
       "Quan Công": 0
     },
-    "id": 162,
+    "id": 172,
     "name": "Hội chùa Tam Sơn",
     "description": "Múa rối nước, cờ bỏi, chọi gà, đập nồi niêu (đựng trấu, nước), thi hát quan họ."
   },
@@ -1872,7 +1966,7 @@
     "relatedFigures": {
       "Nguyễn Công Truyền": 3013
     },
-    "id": 163,
+    "id": 173,
     "name": "Hội Đại Bái",
     "description": "Các trưởng họ mang sản phẩm đồng, bạc chạm dâng lên bàn thờ, dâng hương tổ sư, thắp hương của người đồng niên (49 tuổi), hát ả đào, ném cướp cây bông."
   },
@@ -1885,7 +1979,7 @@
       "Ông Bính": 0,
       "Hùng Vương": 8
     },
-    "id": 164,
+    "id": 174,
     "name": "Hội Đậu",
     "description": "Rước lớn, thi thả diều, bơi chải."
   },
@@ -1900,7 +1994,7 @@
       "Cao Lỗ": 14,
       "An Dương Vương": 15
     },
-    "id": 165,
+    "id": 175,
     "name": "Hội đền Cao Lỗ Vương (Hội làng Đại Than)",
     "description": "Lễ rước thần của 7 làng cùng thờ Cao Lỗ và tổ chức đua thuyền trên sông Lục Đầu."
   },
@@ -1918,7 +2012,7 @@
       "Pháp Vân": 0,
       "Pháp Vũ": 0
     },
-    "id": 166,
+    "id": 176,
     "name": "Hội chùa Dâu",
     "description": "Lễ rước lớn, múa rồng."
   },
@@ -1933,7 +2027,7 @@
     "relatedFigures": {
       "Phật Mẫu Man Nương": 0
     },
-    "id": 167,
+    "id": 177,
     "name": "Hội chùa Tổ (chùa Phúc Nghiêm)",
     "description": "Đọc kinh, rước oản, dâng hương lễ Phật, thi oản, thi vật, thi dệt, đua thuyền và diễn xướng dân gian."
   },
@@ -1947,7 +2041,7 @@
       "Lạc Long Quân": 13,
       "Tri Thủy": 0
     },
-    "id": 168,
+    "id": 178,
     "name": "Hội Khám",
     "description": "Lễ rước Lạc Long Quân về đình, hội đồng Thành hoàng, tế lễ cầu mùa, đón trận mưa đầu mùa."
   },
@@ -1959,7 +2053,7 @@
     "relatedFigures": {
       "Đức Vua Bà": 0
     },
-    "id": 169,
+    "id": 179,
     "name": "Hội làng Đức Vua Bà",
     "description": "Lễ giỗ tổ quan họ có hát quan cầu đảo, quan họ trùm đầu, và trò chơi cướp quả cầu nước."
   },
@@ -1969,7 +2063,7 @@
     "startingDay": "Lễ hội diễn ra trong 3 ngày, trong đó ngày 25/3 (mùng 6/2 âm lịch) là chính hội. ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 170,
+    "id": 180,
     "name": "Hội làng Diềm",
     "description": "Rước kiệu và hát quan họ"
   },
@@ -1981,7 +2075,7 @@
       "đình Tích Sơn": 0
     },
     "relatedFigures": {},
-    "id": 172,
+    "id": 182,
     "name": "Hội đình Tích Sơn",
     "description": "Hội đình Tích Sơn nhằm ghi nhớ công ơn của 7 anh em nhà họ Lỗ theo vua đánh quân Mông Nguyên. Lễ hội nổi tiếng với nghi thức “tụ quân” miêu tả lại khung cảnh tụ quân đánh giặc thời xưa. Trong lễ hội có tổ chức nhiều trò chơi thi ném lợn, thi nấu cơm, thi kéo co nam nữ,…rất được nhân dân yêu thích và hưởng ứng nhiệt tình."
   },
@@ -1991,7 +2085,7 @@
     "startingDay": "28/12 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 173,
+    "id": 183,
     "name": "Hội Bạch Lưu",
     "description": "Hội Bạch Lưu diễn ra vào ngày giáp Tết với đối tượng suy tôn là Lã Công Lô một danh tướng có công đánh quân Triệu Văn Vương. Hội được tổ chức với nghi thức cúng tế và tổ chức chọi trâu rất náo nhiệt."
   },
@@ -2001,7 +2095,7 @@
     "startingDay": "10/1 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 174,
+    "id": 184,
     "name": "Hội Thượng Lạp",
     "description": "Hội Thượng Lạp được tổ chức với ý nghĩa tưởng nhớ công ơn của tướng quân Cao Nguyên là một vị tướng giởi dưới thời Hai Bà Trưng. Vào ngày hội nghi thức tế lễ được diễn ra trang trọng và nhiều trò chơi dân gian trong đó có diễn trò phất hết – một trò chơi cũng xuất hiện dưới thời Hai Bà Trưng ngày xưa chuyên để dùng rèn luyện thể lực cho nữ tướng quân."
   },
@@ -2011,7 +2105,7 @@
     "startingDay": "14 - 23/1 âm lịch (Hội xuân) và 18/12 âm lịch (Lễ khao thọ - 55 tuổi).",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 175,
+    "id": 185,
     "name": "Hội xuân làng Thổ Tang",
     "description": "Lễ hội xuân làng là lễ hội được tổ chức hàng năm theo phong tục truyền thống của các làng xã vùng đồng bằng Bắc Bộ với sự thờ phụng Thần Đất (Nuôi Ná), Lâu Hổ Hầu (có công chống Nguyên Mông), Phùng Thị Dung tiên nương."
   },
@@ -2021,7 +2115,7 @@
     "startingDay": "6/1 - 10/2 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 177,
+    "id": 187,
     "name": "Hội Rưng",
     "description": "Lễ hội chọi trâu Hải Lựu là một trong những lễ hội chọi trâu cổ xưa nhất ở Việt Nam. Lễ hội có ý nghĩa tôn vinh tinh thần thượng võ, sự khỏe khoắn của con người đồng thời bởi nó biểu trưng cho tính cộng đồng và đặc biệt hơn gợi nhớ về cội nguồn cũng như giáo dục tình yêu quê hương sâu sắc. Lễ hội chọi trâu Hải Lựu có phần lễ tế Thành Hoàng làng và hội chọi trâu đặc sắc."
   },
@@ -2031,7 +2125,7 @@
     "startingDay": "21/4 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 178,
+    "id": 188,
     "name": "Hội Yên Lập (trong tháng 4 âm lịch)",
     "description": "Hội Rưng là lễ hội làng mang đậm dấu ấn thờ thành hoàng làng trong văn hóa dân gian. Một điều khác biệt của hội Rưng với hầu hết các lễ hội làng khác đó là, ngoài không gian tổ chức ở đình, miếu của làng, lễ hội còn diễn ra ở chốn chợ quê là chợ Rưng. Chợ diễn ra vào dịp đầu năm cho nên càng đông túc, tấp nập. Người ta đến chợ xuân mua bán cầu may như nêm, không những vậy còn có các trò đua thuyền, đấu gậy, nấu cơm thi, bắt chạch trong chum (đôi trai gái thanh tân bá vai nhau, mỗi người một tay thò vào chum có nước bắt cho được con chạch trong đó) thu hút rất nhiều người tham gia."
   },
@@ -2041,7 +2135,7 @@
     "startingDay": "25 - 27/5 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 179,
+    "id": 189,
     "name": "Hội Yên Lập (trong tháng 5 âm lịch)",
     "description": "Hội Yên Lập được tổ chức vào dịp tháng 4 âm lịch là ngày hội mang ý nghĩa suy tôn thần bản thổ có công giữ đất giữ làng, mưa thuận gió hòa. Trong hội tổ chức tiệc bánh giầy, múa gươm, chọi trâu,…rất thú vị và hấp dẫn nhiều người tham gia."
   },
@@ -2051,7 +2145,7 @@
     "startingDay": "15 - 16/5 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 180,
+    "id": 190,
     "name": "Hội làng Bồ Sao",
     "description": "Hội Yên Lập tổ chức trong tháng 5 âm lịch là một hội khác so với ngày hội trong tháng 4 âm lịch. Hội Yên Lập tổ chức trong tháng 5 nhằm suy tôn Đăng Đạo Song Nga, âm phù Hai Bà Trưng. Trong hội có lễ trình Thánh được tổ chức nghiêm cẩn, trang nghiêm, song song đó là các hoạt động ghép thuyền ba lại với nhau để thi bơi trải rất kịch tính và được sự cổ vũ nồng nhiệt của người dân."
   },
@@ -2061,7 +2155,7 @@
     "startingDay": "rằm tháng Giêng hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 181,
+    "id": 191,
     "name": "Lễ hội cầu ngư Quảng Bình",
     "description": "Lễ hội cầu ngư là lễ hội Quảng Bình lớn nhất của cư dân ven biển nơi đây. Lễ hội bắt nguồn từ tục thờ Cá Voi (cá Ông, cá Bà) của cư dân miền biển vì cá voi là loài cá đã nhiều lần trợ giúp để tàu thuyền của ngư dân không bị chìm trong gió bão. Khi cá voi chết dạt vào bờ, ngư dân sẽ chôn cất và lập miếu thờ, mong cho sóng yên biển lặng, làng xã ấm no hạnh phúc. Lễ cúng được diễn ra hàng năm với nhiều trò diễn xướng dân gian mà nổi bật là múa bông chèo cạn, múa hát dân ca hoặc còn có thêm các hoạt động mới như: đua thuyền, và lắc thúng."
   },
@@ -2071,7 +2165,7 @@
     "startingDay": "14 - 16/04 âm lịch hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 182,
+    "id": 192,
     "name": "Lễ hội cầu mùa",
     "description": "Lễ hội cầu mùa Bảo Ninh là một trong lễ hội Quảng Bình đặc sắc mà mọi người mong chờ nhất. Đây là lễ hội tiêu biểu được đình làng Bảo Ninh thờ Nhân thần (Hai cha con người đánh cá) và Cá Ông. Lễ thường được tiến hành trong ba ngày, từ 14 đến 16/04 âm lịch hàng năm. Lễ nhằm cầu mùa, cầu an, cầu mong các đấng linh thiêng phù hộ cho mùa màng bội thu, sản vật phong phú, con người ăn nên làm ra,… Do điều kiện làng xã phát triển rộng nên việc tổ chức lễ đã chia ra từng địa phương, không tổ chức tập trung như trước. Tuy nhiên, lễ hội vẫn đảm bảo được chất lượng và các phần truyền thống liên quan tín ngưỡng nghề nghiệp."
   },
@@ -2081,7 +2175,7 @@
     "startingDay": "ngày 2/9 hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 183,
+    "id": 193,
     "name": "Lễ hội đua thuyền Quảng Bình",
     "description": "Đậm chất lễ hội với hàng loạt những lá cờ đủ màu sắc sặc sỡ chính là lễ hội đua thuyền của người dân Lệ Thủy. Lễ hội được tổ chức trọng đại vào ngày Quốc khánh hàng năm trong không khí vui mừng và còn là ngày để tưởng nhớ về những anh hùng, những người đã hy sinh quên mình cho đất nước toàn vẹn."
   },
@@ -2091,7 +2185,7 @@
     "startingDay": "ngày 16 tháng giêng âm lịch hàng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 184,
+    "id": 194,
     "name": "Lễ hội đập trống",
     "description": "Hiện nay, lễ hội đập trống ở xã Thượng Trạch là lễ hội Quảng Bình được Bộ Văn hóa Thể thao và Du lịch công nhận là Di sản văn hóa phi vật thể Quốc gia. Nhiều năm gần đây, lễ hội đã thu hút khoảng hàng ngàn người dân của nhiều làng trong vùng đổ về tham dự, cũng như du khách trong nước và quốc tế. Lễ hội đập trống là lễ hội của đồng bào dân tộc thiểu số ở miền Tây Quảng Bình của người Ma Coong (dân tộc Chứt). Tiếng trống đêm lễ hội là nét văn hoá truyền thống của của đồng bào Bru Vân Kiều. Nhịp trống rộn ràng náo động vang lên thể hiện khát vọng mong muốn về một năm bội thu, may mắn, an lành, đôi lứa yêu bên nhau sẽ sớm về chung một nhà xây dựng tổ ấm của riêng mình."
   },
@@ -2101,7 +2195,7 @@
     "startingDay": "mùng 1 đến mùng 3 Tết ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 185,
+    "id": 195,
     "name": "Lễ hội Bài Chòi Quảng Bình",
     "description": "Trong danh sách lễ hội Quảng Bình độc đáo chính là lễ hội bài chòi Quảng Bình. Nghệ thuật Bài chòi Trung bộ Việt Nam vịnh dự khi được UNESCO công nhận. Bài chòi ở Quảng Bình được bắt nguồn từ đánh “bài tới”. Gọi là “bài chòi” vì khi chơi người chơi ngồi trên chòi cao, còn gọi là “tới” bởi vì khi kết thúc ván, người chơi hô “tới”. Hội bài chòi ở Quảng Bình thường được tổ chức trong dịp Tết Nguyên đán, trong các lễ hội mùa xuân hàng năm dịp Tết đến, xuân về."
   },
@@ -2111,7 +2205,7 @@
     "startingDay": "ngày 11 đến 14/07 âm lịch ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 186,
+    "id": 196,
     "name": "Lễ hội trỉa lúa",
     "description": "Lễ hội trỉa lúa của đồng bào dân tộc Bru-Vân Kiều được tổ chức vào ngày 11 đến 140/7 âm lịch với mục đích cầu xin thần linh ban cho may mắn, không cho chim chóc, muông thú phá hoại để có mùa màng tốt tươi. Lễ hội trỉa lúa còn được biết đến với tên gọi là lễ hội lấp lỗ - là một công đoạn cuối của quy trình làm nương làm rẫy đã được dân bản nâng lên thành lễ hội với ý nghĩa trỉa xuống đất cầu mong các thần giữ gìn bảo hộ cho sự sinh sôi nảy nở của hạt lúa cho tới ngày thu hoạch. Du khách hãy nhanh tay đặt phòng khách sạn ở Quảng Bình của BestPrice để được trải nghiệm trực tiếp lễ hội vô cùng đặc biệt này."
   },
@@ -2123,7 +2217,7 @@
       "động Quảng Bình": 0
     },
     "relatedFigures": {},
-    "id": 187,
+    "id": 197,
     "name": "Lễ hội hang động Quảng Bình",
     "description": "Lễ hội hang động Quảng Bình diễn ra vào khoảng cuối tháng 7 và đầu tháng 8 và được tổ chức định kỳ hàng năm. Đây là lễ hội Quảng Bình đặc sắc và ấn tượng nhất được đông đảo mọi người mong chờ. Tổ chức tại quảng trường biển Bảo Ninh, lễ hội hang động Quảng Bình là dịp để tuyên truyền, quảng bá về danh lam thắng cảnh các sản phẩm dịch vụ du lịch Quảng Bình đến với du khách trong nước và quốc tế, các nhà đầu tư và các công ty lữ hành."
   },
@@ -2133,7 +2227,7 @@
     "startingDay": "dịp đầu xuân ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 188,
+    "id": 198,
     "name": "Lễ rước thần Quảng Bình",
     "description": "Lễ rước thần Quảng Bình thường được diễn ra vào dịp đầu xuân năm mới tại các đình làng ở địa phương. Đây cũng là một dịp quan trọng của người dân làng xóm để gắn kết và thắt chặt mối quan hệ anh em láng giềng. Theo dân gian thì lễ rước thần có mục đích chính là mời các vị thần, nghinh đón thần Thành Hoàng về xem một năm qua ở hạ giá dân tình có gì đổi mới hay không. Thờ Thành Hoàng được xem là nét văn hóa đặc trưng trong sinh hoạt văn hóa làng cũng giống như thờ cúng tổ tiên, mang đậm dấu ấn tâm linh và thể hiện quan điểm “uống nước nhớ nguồn”."
   },
@@ -2143,7 +2237,7 @@
     "startingDay": "Ngày 8/4 âm lịch hằng năm",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 189,
+    "id": 199,
     "name": "Lễ hội cầu ngư Nhượng Bạn",
     "description": "Lễ hội cầu ngư Nhượng Bạn xuất phát từ tín ngưỡng thờ Ngư Ông với mong muốn tri ân, tưởng nhớ công đức và cầu Ngư Ông phù hộ mưa thuận gió hòa, biển nhiều tôm cá. Đây là di sản văn hóa phi vật thể cấp quốc gia và là niềm tự hào của người dân vùng biển huyện Cẩm Xuyên."
   },
@@ -2155,7 +2249,7 @@
       "chùa Hương Tích": 0
     },
     "relatedFigures": {},
-    "id": 190,
+    "id": 200,
     "name": "Lễ hội chùa Hương Tích ở Hà Tĩnh",
     "description": "Lễ hội chùa Hương Tích Hà Tĩnh thu hút hàng nghìn lượt người tham gia trẩy hội, vãng cảnh, dâng hương lễ phật cầu năm mới an lành, thịnh vượng. Đặc biệt, tham gia lễ hội ở Hà Tĩnh này, du khách còn được hòa mình vào nhiều hoạt động sôi nổi, thú vị như: kéo co, đấu vật, bóng chuyền, giao lưu văn hóa nghệ thuật và chiêm ngưỡng những hiện vật cổ giá trị được khai quật từ di tích Trang Vương."
   },
@@ -2165,7 +2259,7 @@
     "startingDay": "15/1 âm lịch hằng năm",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 191,
+    "id": 201,
     "name": "Lễ hội Hải Thượng Lãn Ông",
     "description": "Lễ hội ở Hà Tĩnh này được tổ chức với ý nghĩa cầu mong sức khỏe, quốc thái dân an và tưởng nhớ công đức đại danh y Lê Hữu Trác. Đến với lễ hội, du khách sẽ có dịp tham quan quần thể di tích Hải Thượng Lãn Ông Hà Tĩnh với nét đẹp thơ mộng, trữ tình và tham gia nghi lễ dâng hương, tưởng niệm, thả đèn hoa đăng,..."
   },
@@ -2177,7 +2271,7 @@
       "chùa Chân Tiên": 1165
     },
     "relatedFigures": {},
-    "id": 192,
+    "id": 202,
     "name": "Lễ hội chùa Chân Tiên",
     "description": "Mỗi năm vào dịp lễ hội chùa Chân Tiên, đông đảo tăng ni phật tử, du khách gần xa đến chùa tham dự, thắp hương cầu bình an, may mắn. Lễ hội còn diễn ra nhiều trò chơi dân gian đặc sắc như: đu tiên, đánh cù, đấu vật cùng các hoạt động văn hóa, văn nghệ. Đặc biệt, du khách còn có dịp chiêm ngưỡng bàn cờ tiên, dấu chân tiên hằn lên đá và thưởng ngoạn cảnh sắc tuyệt đẹp từ đỉnh núi Am Tiên với rừng thông trùng điệp và núi non hùng vĩ."
   },
@@ -2189,7 +2283,7 @@
       "đền Lê Khôi": 0
     },
     "relatedFigures": {},
-    "id": 193,
+    "id": 203,
     "name": "Lễ hội đền Lê Khôi",
     "description": "Lễ hội đền Lê Khôi được tổ chức hằng năm nhằm ghi ơn và tưởng nhớ công lao đánh giặc, giữ yên bờ cõi của vị tướng tài ba thời Hậu Lê. Ý nghĩa lễ hội còn mang tính tuyên truyền, giáo dục tinh thần yêu nước cho thế hệ trẻ. Lễ hội thu hút đông đảo người dân đến tham dự, thắp hương dâng lễ và cầu mong sức khỏe, gia đạo bình an tại ngôi đền nổi tiếng linh thiêng."
   },
@@ -2199,7 +2293,7 @@
     "startingDay": "Chủ nhật trung tuần tháng 5 âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 194,
+    "id": 204,
     "name": "Lễ hội đánh cá truyền thống Đồng Hoa",
     "description": "Đây là lễ hội ở Hà Tĩnh cực kỳ thú vị với trải nghiệm bắt cá đặc biệt mà bạn đừng bỏ lỡ trong chuyến du lịch. Lễ hội đánh cá truyền thống được tổ chức với tinh thần khuyến nông, khuyến ngư thể hiện tình đoàn kết, gắn bó đồng bào. Người tham gia lễ hội từ khắp nơi sẽ mang theo nơm, lưới, vợt,... và nô nức lội xuống đầm Vực bắt cá sau khi kết thúc nghi thức phần lễ. Theo quan niệm lễ hội đánh cá truyền thống Đồng Hoa, người nào bắt được cá to sẽ gặp được nhiều may mắn, mùa màng bội thu, buôn may bán đắt."
   },
@@ -2211,7 +2305,7 @@
       "đền Bà Hải": 0
     },
     "relatedFigures": {},
-    "id": 195,
+    "id": 205,
     "name": "Lễ hội đền Bà Hải",
     "description": "Lễ hội đền Bà Hải thu hút đông đảo người dân địa phương, du khách đến tham gia trẩy hội, thắp hương thỉnh cầu tài lộc, may mắn, bình an. Đây là lệ giỗ của Chế thắng Phu nhân Nguyễn Thị Bích Châu, được tổ chức nhằm tưởng nhớ và thể hiện lòng tôn kính đối với bà. Ngoài phần tế lễ, dâng hương, lễ hội ở Hà Tĩnh này còn diễn ra nhiều trò chơi dân gian sôi nổi như: đua thuyền, kéo co,..."
   },
@@ -2221,7 +2315,7 @@
     "startingDay": "Ngày mồng 4, 5, 6 tháng 5 âm lịch hằng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 196,
+    "id": 206,
     "name": "Lễ Vía Bà Linh Sơn Thánh Mẫu",
     "description": "Một trong các lễ hội ở Tây Ninh đặc sắc nhất chính là lễ Vía Bà Linh Sơn Thánh Mẫu (lễ hội chùa Bà Tây Ninh). Lễ hội này khởi đầu bằng lễ Mộc Dục (tắm tượng) vào lúc 00 giờ ngày 4/5 âm lịch tại đền."
   },
@@ -2233,7 +2327,7 @@
       "núi Bà Đen Tây Ninh": 1539
     },
     "relatedFigures": {},
-    "id": 197,
+    "id": 207,
     "name": "Lễ hội núi Bà Đen Tây Ninh",
     "description": "Lễ hội núi Bà Đen ở Tây Ninh cũng là điểm du lịch tâm linh thú vị, thu hút nhiều du khách. Hội xuân núi Bà Đen có sự kết hợp giữa những nghi thức Phật giáo với các hoạt động văn hóa dân gian đặc sắc như ca hát, múa lân. Yếu tố truyền thống và hiện đại đan xen với nhau, đưa lữ khách vào một hành trình khám phá văn hóa tâm linh đặc sắc."
   },
@@ -2245,7 +2339,7 @@
       "động Kim Quang": 0
     },
     "relatedFigures": {},
-    "id": 199,
+    "id": 209,
     "name": "Lễ hội truyền thống động Kim Quang",
     "description": "Tây Ninh có gì chơi? Mùa xuân là thời điểm tổ chức nhiều lễ hội ở Tây Ninh, trong đó có lễ hội truyền thống cách mạng động Kim Quang. Điểm đặc biệt là trong khi các hoạt động lễ hội khác đều mang tính tôn giáo, đã có từ lâu đời thì lễ hội Kim Quang là lễ hội mới do Đảng bộ và chính quyền huyện Hòa Thành tổ chức."
   },
@@ -2255,7 +2349,7 @@
     "startingDay": "Ngày 15 và 16 tháng 2 âm lịch hằng năm ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 200,
+    "id": 210,
     "name": "Lễ giỗ Quan Lớn Trà Vong",
     "description": "Lễ giỗ Quan Lớn Trà Vong là lễ hội tri ân đóng góp của 3 anh em: Huỳnh Công Giản, Huỳnh Công Thắng và Huỳnh Công Nghệ. Nghi thức lễ giỗ gần giống lễ hội Đình ở Nam Bộ và Tây Ninh. Lễ vật dâng cúng chủ yếu là thức ăn mặn, gà, lợn, hương, hoa, đèn, nến,... Nhiều nơi tổ chức hát bội và các hình thức sinh hoạt văn hóa dân gian đặc sắc, đậm đà bản sắc văn hóa dân tộc."
   },
@@ -2265,7 +2359,7 @@
     "startingDay": "14, 15, 16 tháng 3 âm lịch ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 201,
+    "id": 211,
     "name": "Lễ Kỳ Yên",
     "description": "Tây Ninh có những lễ hội truyền thống nào? Lễ Kỳ Yên là lễ hội truyền thống, được tổ chức hằng năm ở các ngôi đình tại Nam Bộ nói chung và Tây Ninh nói riêng. Ở Tây Ninh, lễ Kỳ Yên tại đình Gia Lộc (Trảng Bàng) được nhiều du khách biết đến hơn cả."
   },
@@ -2275,7 +2369,7 @@
     "startingDay": "Theo quyết định của UBND tỉnh Tây Ninh ",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 202,
+    "id": 212,
     "name": "Lễ hội bánh tráng Tây Ninh",
     "description": "Lễ hội Văn hóa - Du lịch nghề làm bánh tráng phơi sương Trảng Bàng được tổ chức thường niên với quy mô hoành tráng nhất Tây Ninh. Lễ hội được tổ chức nhằm bảo tồn và phát huy giá trị của nghề làm bánh tráng Tây Ninh, tôn vinh các nghệ nhân làm bánh tráng đã có những đóng góp lớn cho nền ẩm thực Việt Nam."
   },
@@ -2285,7 +2379,7 @@
     "startingDay": "18/10 Âm lịch hàng năm",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 203,
+    "id": 213,
     "name": "Lễ giỗ Bà Phi Yến",
     "description": "Không rõ"
   },
@@ -2297,7 +2391,7 @@
       "Đình Thắng Tam": 1552
     },
     "relatedFigures": {},
-    "id": 204,
+    "id": 214,
     "name": "Lễ hội Nghinh Ông Đình Thắng Tam",
     "description": "Không rõ"
   },
@@ -2309,7 +2403,7 @@
       "Dinh Cô Long Hải": 1571
     },
     "relatedFigures": {},
-    "id": 205,
+    "id": 215,
     "name": "Lễ hội Dinh Cô Long Hải",
     "description": "Không rõ"
   },
@@ -2319,7 +2413,7 @@
     "startingDay": "Mùng 9/9 Âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 206,
+    "id": 216,
     "name": "Lễ hội Trùng Cửu tại Nhà Lớn Long Sơn",
     "description": "Không rõ"
   },
@@ -2331,7 +2425,7 @@
       "Đình Thần Long Hương": 0
     },
     "relatedFigures": {},
-    "id": 207,
+    "id": 217,
     "name": "Lễ hội Cầu an tại Đình Thần Long Hương",
     "description": "Không rõ"
   },
@@ -2343,7 +2437,7 @@
       "Đình Thần Phước Lễ": 0
     },
     "relatedFigures": {},
-    "id": 208,
+    "id": 218,
     "name": "Lễ hội Cầu an tại Đình Thần Phước Lễ",
     "description": "Không rõ"
   },
@@ -2353,7 +2447,7 @@
     "startingDay": "Rằm tháng 3 Âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 209,
+    "id": 219,
     "name": "Lễ hội Nhan Lúa - Thần Nông (Châu Ro)",
     "description": "Tổ chức hàng năm"
   },
@@ -2363,7 +2457,7 @@
     "startingDay": "16/3 Âm lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 210,
+    "id": 220,
     "name": "Lễ hội Nhan rừng - Thần rừng",
     "description": "Tổ chức 02 năm một lần"
   },
@@ -2373,7 +2467,7 @@
     "startingDay": "10/2 Dương lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 211,
+    "id": 221,
     "name": "Lễ kỷ niệm ngày quân dân Bà Rịa – Vũng Tàu kháng chiến chống thực dân Pháp",
     "description": "Không rõ"
   },
@@ -2383,7 +2477,7 @@
     "startingDay": "2/12 Dương lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 212,
+    "id": 222,
     "name": "Lễ hội chiến thắng Bình Giã",
     "description": "Không rõ"
   },
@@ -2393,7 +2487,7 @@
     "startingDay": "27/7 Dương Lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 213,
+    "id": 223,
     "name": "Lễ hội đền ơn đáp nghĩa",
     "description": "Hàng năm"
   },
@@ -2403,7 +2497,7 @@
     "startingDay": "23/01 Dương lịch",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 214,
+    "id": 224,
     "name": "Lễ kỷ niệm ngày giỗ nữ anh hùng Võ Thị Sáu",
     "description": "Hàng năm"
   },
@@ -2415,7 +2509,7 @@
     "relatedFigures": {
       "Đức Thánh Tản Viên": 0
     },
-    "id": 215,
+    "id": 225,
     "name": "Hội làng Khê Thượng",
     "description": "tục “chém may” (thi chém thân chuối), trò đấu vật thờ thánh."
   },
@@ -2428,7 +2522,7 @@
       "Nguyễn Tam Trinh": 0,
       "Hai Bà Trưng": 31
     },
-    "id": 216,
+    "id": 226,
     "name": "Hội vật Mai Động",
     "description": "thi đấu vật."
   },
@@ -2440,9 +2534,9 @@
       "đền Xuân Lai": 0
     },
     "relatedFigures": {
-      "Thánh Gióng": 0
+      "Thánh Gióng": 12
     },
-    "id": 217,
+    "id": 227,
     "name": "Hội đền Xuân Lai",
     "description": "trò đấu vật, lấy nước, kéo lửa thổi cơm thi, cướp cờ và trò “kéo mỏ”."
   },
@@ -2456,7 +2550,7 @@
       "Hồng Nương": 0,
       "Quế Nương": 0
     },
-    "id": 218,
+    "id": 228,
     "name": "Hội làng Nghè",
     "description": "thi nấu cơm, trước đó phải thi kéo lửa bằng sợi giang kéo qua lỗ khúc tre, người giữ người kéo. Bếp thổi cơm là 3 cọc tre chôn xuống đất."
   },
@@ -2470,7 +2564,7 @@
       "Đô Đài": 0,
       "Bạch Tượng": 0
     },
-    "id": 219,
+    "id": 229,
     "name": "Hội làng Động Phí",
     "description": "kiệu bay, kiệu quay, múa sư tử, múa sênh tiền, múa trống."
   },
@@ -2482,7 +2576,7 @@
     "relatedFigures": {
       "Linh Lang": 0
     },
-    "id": 220,
+    "id": 230,
     "name": "Hội Sài Đồng",
     "description": "trình nghề nông."
   },
@@ -2495,7 +2589,7 @@
       "Âu Cơ": 2,
       "Lạc Long Quân": 13
     },
-    "id": 221,
+    "id": 231,
     "name": "Hội làng Xuân Dục",
     "description": "trò chơi húc cầu. Quả cầu tượng trưng cho mặt trời được sơn đỏ, làm bằng gỗ lục thông nặng khoảng 60-70kg."
   },
@@ -2509,7 +2603,7 @@
       "Triệu Nguyên": 0,
       "Triệu Lệnh": 0
     },
-    "id": 222,
+    "id": 232,
     "name": "Hội làng Hải Bối",
     "description": "cờ người, leo cột mỡ, tuồng, hát trống quân, hát giao duyên nam nữ: hai bên hát với nhau qua một sợi chỉ dài, nối với ống bơ được bịt bằng da ếch, gọi là “hát ống”."
   },
@@ -2523,7 +2617,7 @@
     "relatedFigures": {
       "Nguyễn Bình An": 0
     },
-    "id": 223,
+    "id": 233,
     "name": "Lễ hội chùa Trăm Gian",
     "description": "rước kiệu thánh, thi cỗ chay và trình rối cạn."
   },
@@ -2537,7 +2631,7 @@
     "relatedFigures": {
       "Đức Thánh Tản Viên": 0
     },
-    "id": 224,
+    "id": 234,
     "name": "Lễ hội đình Mông Phụ",
     "description": "rước kiệu thánh, đấu cờ người, đấu vật, chọi gà, đập niêu đất, bịt mắt bắt vịt…"
   },
@@ -2552,7 +2646,7 @@
       "Hai Bà Trưng": 31,
       "Đặng Ba": 0
     },
-    "id": 225,
+    "id": 235,
     "name": "Hội An Sơn",
     "description": "lễ cờ."
   },
@@ -2568,7 +2662,7 @@
       "Hai Bà Trưng": 31,
       "Trần Quốc Chẩn": 0
     },
-    "id": 227,
+    "id": 237,
     "name": "Lễ hội Vân Sa",
     "description": "hội làng nghề nuôi tằm dệt lụa, có lễ rước bông, các trò: cướp kén, trò tứ dân lạc nghiệp, múa Tứ Linh."
   },
@@ -2582,7 +2676,7 @@
     "relatedFigures": {
       "Đế Thích": 0
     },
-    "id": 228,
+    "id": 238,
     "name": "Lễ hội chùa Vua",
     "description": "thi đánh cờ người."
   },
@@ -2593,9 +2687,9 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Quí Minh": 0,
-      "Cao Sơn": 0
+      "Cao Sơn": 4
     },
-    "id": 229,
+    "id": 239,
     "name": "Hội Hoa Sơn",
     "description": "hội cầu mùa, trai gái bá cổ nhau “bắt lươn trong chum”."
   },
@@ -2610,7 +2704,7 @@
       "Cao Lỗ": 14,
       "An Dương Vương": 15
     },
-    "id": 230,
+    "id": 240,
     "name": "Hội đình Trần Đăng",
     "description": "trò người hóa trang hổ, đuổi bắt giặc."
   },
@@ -2624,7 +2718,7 @@
     "relatedFigures": {
       "Hai Bà Trưng": 31
     },
-    "id": 231,
+    "id": 241,
     "name": "Hội đền Hạ Lôi",
     "description": "lễ rước kiệu và giao kiệu, cúng bánh dày."
   },
@@ -2638,7 +2732,7 @@
     "relatedFigures": {
       "Phù Đổng Thiên Vương": 12
     },
-    "id": 232,
+    "id": 242,
     "name": "Hội đền Thanh Nhàn",
     "description": "đền có tượng đôi ngựa hồng và ngựa bạch bằng đồng. Tổ chức đám rước lớn của chín làng."
   },
@@ -2649,10 +2743,10 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Càn Mỹ Nương": 0,
-      "Cao Sơn": 0,
+      "Cao Sơn": 4,
       "Dung Hoa": 0
     },
-    "id": 233,
+    "id": 243,
     "name": "Hội làng Bồ Đề",
     "description": "đua thuyền."
   },
@@ -2667,7 +2761,7 @@
       "Chà Mục": 0,
       "Minh Hồ": 0
     },
-    "id": 234,
+    "id": 244,
     "name": "Hội làng Đại Lan",
     "description": "rước và làm cỗ cá lăng, hội vật, đánh gậy, múa roi."
   },
@@ -2683,7 +2777,7 @@
       "Nguyễn Quý An": 0,
       "Thủy Hải": 0
     },
-    "id": 235,
+    "id": 245,
     "name": "Hội Đại Mỗ",
     "description": "thi thổi xôi, cờ người, hát ả đào."
   },
@@ -2695,9 +2789,9 @@
       "đền Sóc": 985
     },
     "relatedFigures": {
-      "Thánh Gióng": 0
+      "Thánh Gióng": 12
     },
-    "id": 236,
+    "id": 246,
     "name": "Hội Gióng đền Sóc",
     "description": "cướp hoa tre và chém tướng giặc Ân."
   },
@@ -2715,7 +2809,7 @@
       "Hồ Nguyên Thơ": 0,
       "Bà Phương": 0
     },
-    "id": 237,
+    "id": 247,
     "name": "Hội làng Phú Đô",
     "description": "lễ tổ thành hoàng dâng cúng Mâm bún, thi làm bún, hát chèo."
   },
@@ -2729,7 +2823,7 @@
     "relatedFigures": {
       "Đức Thánh Tản Viên": 0
     },
-    "id": 238,
+    "id": 248,
     "name": "Lễ hội đền Măng Sơn",
     "description": "rước lễ vật (ngũ quả, không thể thiếu mít xanh, thịt thú rừng hoặc 3 miếng da lợn). Trò đấu vật, ném còn, hát ví, hát đúm giao duyên, bắn nỏ, đu cây."
   },
@@ -2739,7 +2833,7 @@
     "startingDay": "6-14/1 âm lịch (5 năm tổ chức một lần).",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 239,
+    "id": 249,
     "name": "Đêm hội Rã La",
     "description": "rước đêm, diễn trò săn hổ, rước hoàn cung."
   },
@@ -2755,7 +2849,7 @@
       "Nội Hầu": 0,
       "Vực Công": 0
     },
-    "id": 241,
+    "id": 251,
     "name": "Hội làng Ruộng",
     "description": "đua thuyền nữ (thuyền gỗ hình thoi, mũi thuyền đầu rồng, đầu hạc), múa rối nước."
   },
@@ -2767,10 +2861,10 @@
       "đình Thượng Lão": 851
     },
     "relatedFigures": {
-      "Cao Sơn": 0,
+      "Cao Sơn": 4,
       "An Dương Vương": 15
     },
-    "id": 243,
+    "id": 253,
     "name": "Hội đình Thượng Lão",
     "description": "ca trù, đấu vật, cờ người, thả diều."
   },
@@ -2784,7 +2878,7 @@
       "Thần Bạch Hổ": 0,
       "Linh Lang Đại Vương": 0
     },
-    "id": 244,
+    "id": 254,
     "name": "Hội làng Thúy Lĩnh",
     "description": "vật cầu (cướp cầu)."
   },
@@ -2799,7 +2893,7 @@
       "Ả Lã Nàng Đê": 0,
       "Bạch Hạc Tam Giang": 0
     },
-    "id": 245,
+    "id": 255,
     "name": "Hội làng Phú Mỹ—Kiều Mai",
     "description": "thi cây xôi (ván ép xôi thành cây)."
   },
@@ -2811,7 +2905,7 @@
     "relatedFigures": {
       "Tô Hiến Thành": 173
     },
-    "id": 246,
+    "id": 256,
     "name": "Hội Sơn Thanh",
     "description": "lễ tế tưởng niệm."
   },
@@ -2821,7 +2915,7 @@
     "startingDay": "7-12/1 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 247,
+    "id": 257,
     "name": "Hội Sốm",
     "description": "lễ kỳ an, tế xuân đình."
   },
@@ -2836,7 +2930,7 @@
       "Huyền Thiên": 0,
       "Ứng Thiên": 0
     },
-    "id": 248,
+    "id": 258,
     "name": "Hội đền Đông Bộ Đầu",
     "description": "lễ hội tưởng niệm công ơn Ứng Thiên đã diệt trừ thuồng luồng cho dân, có trò múa gậy giật giải."
   },
@@ -2849,7 +2943,7 @@
       "Chung Bảo": 0,
       "Đống Vĩnh": 0
     },
-    "id": 249,
+    "id": 259,
     "name": "Hội cướp cầu Viên Nội",
     "description": "đám rước và tế “thần Cầu” với các trò chơi dùng “ông Móc” móc cầu và giành cầu."
   },
@@ -2862,7 +2956,7 @@
       "Hoa Dung": 0,
       "Phan Tây Nhạc Đại Vương": 0
     },
-    "id": 250,
+    "id": 260,
     "name": "Lễ hội thổi cơm thi Thị Cấm",
     "description": "tế lễ, hội kéo lửa, thổi cơm thi, hát văn, hát chèo…."
   },
@@ -2878,7 +2972,7 @@
       "Chư Phật": 0,
       "Thần Pháp Vũ": 0
     },
-    "id": 251,
+    "id": 261,
     "name": "Hội chùa Đậu",
     "description": "lễ Lạp nguyệt (cuối năm), lễ rước nước từ giếng bà Giao."
   },
@@ -2892,7 +2986,7 @@
     "relatedFigures": {
       "Trần Khai Nguyên": 2927
     },
-    "id": 252,
+    "id": 262,
     "name": "Lễ hội đình Phú Gia",
     "description": "lễ tế thần, dâng hương,rước kiệu, thổi xôi, ca hát, đấu võ, chọi gà …"
   },
@@ -2904,7 +2998,7 @@
     "relatedFigures": {
       "Thái Luân": 0
     },
-    "id": 253,
+    "id": 263,
     "name": "Hội làng An Cốc (Kẻ Quán)",
     "description": "Giỗ-Tế Tổ, cúng chè kho, bánh giầy, cau, rượu."
   },
@@ -2914,11 +3008,11 @@
     "startingDay": "9-11/1 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Thánh Gióng": 0,
+      "Thánh Gióng": 12,
       "Quỳnh Hoa": 0,
       "Trang Mục Đại Vương": 0
     },
-    "id": 254,
+    "id": 264,
     "name": "Hội làng Bà Già",
     "description": "rước nước, hát ả đào."
   },
@@ -2932,9 +3026,9 @@
     "relatedFigures": {
       "Hoàng Phúc Trung": 0,
       "Đại Vương Linh Lang": 0,
-      "Bố Cái Đại Vương Phùng Hưng": 0
+      "Bố Cái Đại Vương Phùng Hưng": 53
     },
-    "id": 255,
+    "id": 265,
     "name": "Hội đình Kim Mã Hạ",
     "description": "leo cầu, thi thuyền nan tại hồ đầu làng."
   },
@@ -2946,9 +3040,9 @@
       "chợ Chuông": 0
     },
     "relatedFigures": {
-      "Đại Vương Phùng Hưng": 0
+      "Đại Vương Phùng Hưng": 53
     },
-    "id": 256,
+    "id": 266,
     "name": "Hội chợ Chuông",
     "description": "trưng bày nón, thi đánh cờ người, thổi cơm thi."
   },
@@ -2958,9 +3052,9 @@
     "startingDay": "10-12/1 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Bố Cái Đại Vương Phùng Hưng": 0
+      "Bố Cái Đại Vương Phùng Hưng": 53
     },
-    "id": 257,
+    "id": 267,
     "name": "Lễ hội làng Triều Khúc",
     "description": "Múa Rồng, múa Trống Bồng và múa Chạy cờ."
   },
@@ -2974,7 +3068,7 @@
     "relatedFigures": {
       "Quảng Xung Đại Vương": 0
     },
-    "id": 258,
+    "id": 268,
     "name": "Hội đền Hữu Vĩnh",
     "description": "lễ hội gồm có rước kiệu, trò bơi trải, đấu vật."
   },
@@ -2988,7 +3082,7 @@
     "relatedFigures": {
       "Minh Tuất Đại Vương": 0
     },
-    "id": 259,
+    "id": 269,
     "name": "Lễ hội đình La Dương",
     "description": "rước kiệu, tế lễ, văn nghệ, đánh cờ …"
   },
@@ -3002,7 +3096,7 @@
     "relatedFigures": {
       "Huyền Thiên Trấn Vũ": 0
     },
-    "id": 260,
+    "id": 270,
     "name": "Hội đền Sái (Hội rước vua sống)",
     "description": "theo tích rùa vàng giúp vua An Dương Vương trừ yêu quái, xây xong thành ốc (Cổ Loa), lễ hội có diễn trò rước vua sống do cụ già đóng vai vua, ngồi kiệu."
   },
@@ -3018,7 +3112,7 @@
       "Thủy Hải": 0,
       "Đông Hải": 0
     },
-    "id": 261,
+    "id": 271,
     "name": "Hội làng Quậy",
     "description": "Hát giao duyên, chọi gà, đấu cờ người, bịt mắt bắt dê, bơi ao bắt vịt."
   },
@@ -3032,7 +3126,7 @@
     "relatedFigures": {
       "Nguyễn Bình An": 0
     },
-    "id": 262,
+    "id": 272,
     "name": "Hội chùa Bối Khê",
     "description": "lễ rước nước, tắm tượng, dâng cỗ chay. Trò: múa rồng, múa gậy, bơi thuyền bắt vịt, cờ tướng, hát chèo, đốt cây bông."
   },
@@ -3046,7 +3140,7 @@
     "relatedFigures": {
       "Đức Thánh Quảng Hồng": 0
     },
-    "id": 263,
+    "id": 273,
     "name": "Lễ hội đền Cống Yên",
     "description": "tế nam quan, tế nữ quan, hát ca trù, chọi chim, chọi gà."
   },
@@ -3057,10 +3151,10 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Hoàng Đôn Hòa": 0,
-      "Đại Vương": 0,
+      "Đại Vương": 4,
       "Phương Dung": 0
     },
-    "id": 264,
+    "id": 274,
     "name": "Hội làng Đa Sĩ",
     "description": "tế lễ, dâng hương, rước kiệu, múa rồng, đánh đu, chọi gà, vật, hát chèo, ca trù."
   },
@@ -3074,7 +3168,7 @@
       "Hùng Vương": 8,
       "Vũ Dực Công": 0
     },
-    "id": 265,
+    "id": 275,
     "name": "Hội làng Hà Hương",
     "description": "tế lễ, rước, đấu vật."
   },
@@ -3086,7 +3180,7 @@
     "relatedFigures": {
       "Tôn Thần": 0
     },
-    "id": 266,
+    "id": 276,
     "name": "Lễ hội Võng La",
     "description": "rước kiệu, tế lễ, hát quan họ, đánh cờ, đu tre…"
   },
@@ -3098,7 +3192,7 @@
     "relatedFigures": {
       "Lê Hoàn": 84
     },
-    "id": 267,
+    "id": 277,
     "name": "Hội làng Tó",
     "description": "lễ rước, rước cỗ thờ (cơm nắm muối vừng), hát xướng, chơi cờ bỏi, cờ người, đập niêu, bắt vịt, hát trống quân nam nữ."
   },
@@ -3111,7 +3205,7 @@
       "Chu Lý Đại Vương": 0,
       "Triệu Chí Thành Đại Vương": 0
     },
-    "id": 268,
+    "id": 278,
     "name": "Hội Dịch Vọng Trung",
     "description": "Vật võ, chọi gà, cờ tướng, đập niêu, hát chèo, đu dây."
   },
@@ -3123,7 +3217,7 @@
       "đền Và": 642
     },
     "relatedFigures": {},
-    "id": 269,
+    "id": 279,
     "name": "Lễ hội đền Và",
     "description": "lễ rước qua sông sang đền Dội, tục đánh cá thờ."
   },
@@ -3135,7 +3229,7 @@
     "relatedFigures": {
       "Vãng Vị": 0
     },
-    "id": 270,
+    "id": 280,
     "name": "Hội thổi cơm thi ở Đồng Vân",
     "description": "rước nước, hát chèo, thổi cơm thi (cách lấy lửa độc đáo)."
   },
@@ -3148,7 +3242,7 @@
       "Phật A": 0,
       "Nguyễn Chí Thành": 156
     },
-    "id": 271,
+    "id": 281,
     "name": "Hội Ngũ Xã",
     "description": "triển lãm sản phẩm đúc đồng, chọi gà."
   },
@@ -3160,7 +3254,7 @@
     "relatedFigures": {
       "Bà Lý Nhũ Thái": 0
     },
-    "id": 272,
+    "id": 282,
     "name": "Hội Ninh Hiệp",
     "description": "lễ dâng hương, dân đến lễ và xin thuốc."
   },
@@ -3174,7 +3268,7 @@
       "Chu Văn An": 191,
       "Uy Mang": 0
     },
-    "id": 273,
+    "id": 283,
     "name": "Lễ hội làng Huỳnh Cung",
     "description": "tế lễ, rước kiệu, múa sư tử và các trò chơi như đá gà, đánh cờ, bóng đá ca hát…"
   },
@@ -3189,7 +3283,7 @@
       "Hắc Công": 0,
       "Đức Huyền Thiên Hắc Đế": 0
     },
-    "id": 274,
+    "id": 284,
     "name": "Lễ hội núi Sưa",
     "description": "Xuất phát từ tục kết chạ xưa của ba thôn: Ngọc Hà, Hữu Tiệp, Xuân Biểu. Có lễ tế, rước kiệu, gặp gỡ kết giao, thổi xôi, ca hát, đấu võ, chọi gà…"
   },
@@ -3202,7 +3296,7 @@
       "Lệ Mật": 0,
       "Hoàng Quý Công": 0
     },
-    "id": 275,
+    "id": 285,
     "name": "Lễ hội Thập Tam Trại",
     "description": "Góp phần giao lưu thúc đẩy mối liên hệ cộng đồng của 13 làng trại với các tiết mục lễ tế, rước kiệu của 13 làng trại, đấu võ, hát quan họ, đánh cờ…"
   },
@@ -3216,7 +3310,7 @@
     "relatedFigures": {
       "Ỷ Lan": 180
     },
-    "id": 276,
+    "id": 286,
     "name": "Lễ hội chùa Thánh Chúa",
     "description": "cúng Phật, dâng hương, trình diễn hoạt cảnh, biểu diễn văn nghệ."
   },
@@ -3230,7 +3324,7 @@
     "relatedFigures": {
       "Lữ Gia": 18
     },
-    "id": 277,
+    "id": 287,
     "name": "Lễ hội đình Ngũ Giáp",
     "description": "rước kiệu, tế lễ, văn nghệ, đánh cờ, bắt vịt …"
   },
@@ -3245,7 +3339,7 @@
     "relatedFigures": {
       "Thánh Mẫu": 0
     },
-    "id": 278,
+    "id": 288,
     "name": "Lễ hội đền Đại Lộ (đền Mẫu)",
     "description": "tế lễ, rước nước, rước kiệu, hầu Thánh, hát văn…"
   },
@@ -3258,7 +3352,7 @@
       "Hai Bà Trưng": 31,
       "Lê Hoa": 0
     },
-    "id": 279,
+    "id": 289,
     "name": "Lễ hội kén rể",
     "description": "lễ hội độc đáo để chọn rể tài hiền cho nữ tướng Lê Hoa."
   },
@@ -3270,7 +3364,7 @@
       "chùa Trầm": 0
     },
     "relatedFigures": {},
-    "id": 280,
+    "id": 290,
     "name": "Hội chùa Trầm",
     "description": "cúng (giỗ bà Trần), cầu kinh, múa rồng, múa rối nước."
   },
@@ -3282,7 +3376,7 @@
     "relatedFigures": {
       "Đức Thánh Tản Viên": 0
     },
-    "id": 281,
+    "id": 291,
     "name": "Hội đánh cá làng Me – Tường Phiêu",
     "description": "thi đánh cá tế thánh Tản Viên, làm tiệc cá,múa rối, hát đúm, đáo đĩa."
   },
@@ -3296,7 +3390,7 @@
     "relatedFigures": {
       "Hai Bà Trưng": 31
     },
-    "id": 282,
+    "id": 292,
     "name": "Lễ hội đền Đồng Nhân",
     "description": "tế lễ, rước nước, rước kiệu, đánh trận giả, hát văn, hát quan họ, đấu cờ, đấu võ …."
   },
@@ -3314,7 +3408,7 @@
       "Bà Nành": 0,
       "Đức Trần Hưng Đạo": 0
     },
-    "id": 283,
+    "id": 293,
     "name": "Lễ hội chùa Nành",
     "description": "tục cúng, nâng cây phan."
   },
@@ -3326,7 +3420,7 @@
     "relatedFigures": {
       "Đông Nhạc": 0
     },
-    "id": 284,
+    "id": 294,
     "name": "Lễ hội làng Sơn Đồng",
     "description": "lễ tế trâu, rước và thi bánh giầy, trò cướp bông."
   },
@@ -3340,7 +3434,7 @@
     "relatedFigures": {
       "Thủy Cung Thánh Mẫu": 0
     },
-    "id": 285,
+    "id": 295,
     "name": "Hội đền Dầm",
     "description": "lễ rước nước, múa rồng, múa sư tử, kéo chữ, cờ người, hát quan họ, chọi gà."
   },
@@ -3354,7 +3448,7 @@
     "relatedFigures": {
       "Nguyễn Siêu": 0
     },
-    "id": 286,
+    "id": 296,
     "name": "Lễ hội đình Đông Phù",
     "description": "lễ tế, dâng hương,rước kiệu, biểu diễn văn nghệ …"
   },
@@ -3367,7 +3461,7 @@
       "Đoàn Thượng": 123,
       "Nguyễn Phục": 0
     },
-    "id": 287,
+    "id": 297,
     "name": "Lễ hội làng Thọ Am",
     "description": "rước nước, rước sắc,rước kiệu, lễ tế, dâng hương, biểu diễn hát quan họ, chèo, hội vật, chọi gà, bắt vịt nước, thả chim bồ câu…"
   },
@@ -3378,10 +3472,10 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Bạch Đa": 0,
-      "Cao Sơn": 0,
+      "Cao Sơn": 4,
       "Linh Lang Đại Vương": 0
     },
-    "id": 288,
+    "id": 298,
     "name": "Hội làng Đông Dư",
     "description": "rước nước, đấu cờ."
   },
@@ -3397,7 +3491,7 @@
       "Phúc Thần": 0,
       "Đức Thánh Linh Lang Đại Vương": 0
     },
-    "id": 289,
+    "id": 299,
     "name": "Lễ hội đình Vạn Phúc",
     "description": "lễ tế, dâng hương, rước nước, tụng kinh cầu quốc thái dân an, biểu diễn văn nghệ, đánh cờ, chọi gà, tổ tôm điếm…"
   },
@@ -3412,7 +3506,7 @@
       "Hai Bà Trưng": 31,
       "Trương Tử Nương": 0
     },
-    "id": 290,
+    "id": 300,
     "name": "Hội đình Bà Tía",
     "description": "thi đấu vật, đánh cờ, đi cầu đập nồi niêu."
   },
@@ -3427,7 +3521,7 @@
       "Phạm Tu": 35,
       "Chu Văn An": 191
     },
-    "id": 291,
+    "id": 301,
     "name": "Hội đình Thanh Liệt",
     "description": "rước kiệu từ đình nội ra đình ngoại, diễn tuồng, chọi gà, đánh cờ bỏi."
   },
@@ -3442,7 +3536,7 @@
       "Phù Nương": 0,
       "Linh Lang Đại Vương": 0
     },
-    "id": 292,
+    "id": 302,
     "name": "Hội đình Trường Lâm",
     "description": "thi đấu vật, đánh cờ, múa “lột rắn”."
   },
@@ -3455,9 +3549,9 @@
     },
     "relatedFigures": {
       "Uy Linh Lang": 275,
-      "Đức Thánh Uy Đô Đại Vương Trần Linh Lang": 0
+      "Đức Thánh Uy Đô Đại Vương Trần Linh Lang": 275
     },
-    "id": 293,
+    "id": 303,
     "name": "Lễ hội đình Nhật Tân",
     "description": "rước nước, rước kiệu, tế lễ, dâng hương, biểu diễn chèo, đánh cờ…"
   },
@@ -3472,7 +3566,7 @@
       "Hai Bà Trưng": 31,
       "Trương Tử Nương": 0
     },
-    "id": 294,
+    "id": 304,
     "name": "Lễ hội đình Vĩnh Ninh",
     "description": "tế lễ, rước kiệu, thi đấu vật, đánh cờ, chọi gà…"
   },
@@ -3483,12 +3577,12 @@
     "relatedRelics": {},
     "relatedFigures": {
       "Bạch Đa": 0,
-      "Cao Sơn": 0,
+      "Cao Sơn": 4,
       "Đào Duy Trinh": 0,
       "Bố Cái Đại Vương": 53,
       "Linh Lang Đại Vương": 0
     },
-    "id": 295,
+    "id": 305,
     "name": "Hội làng Thổ Khối",
     "description": "không cúng gà trắng, có đua thuyền, cờ người, bơi trải, tổ tôm điếm, hát chèo, ca trù, tuồng."
   },
@@ -3504,7 +3598,7 @@
       "Chiêu Điều Đại Vương": 0,
       "Vũ Đại Vương Uy Linh Phúc Thần": 0
     },
-    "id": 296,
+    "id": 306,
     "name": "Lễ hội đình Bái Ân",
     "description": "tế lễ, rước kiệu, hát dân gian, đánh cờ…"
   },
@@ -3518,7 +3612,7 @@
     "relatedFigures": {
       "Đức Thánh Linh Lang Đại Vương": 0
     },
-    "id": 297,
+    "id": 307,
     "name": "Lễ hội đền Voi Phục",
     "description": "lễ rước kiệu, lễ tế, múa rồng, múa lân, dâng hương, đấu cờ, đập niêu, chọi gà, biểu diễn văn nghệ…"
   },
@@ -3533,7 +3627,7 @@
       "Phùng Luông": 0,
       "Hùng Lãng Công": 0
     },
-    "id": 298,
+    "id": 308,
     "name": "Hội năm làng Mọc",
     "description": "rước kiệu qua 5 làng, múa rồng, múa sư tử."
   },
@@ -3547,7 +3641,7 @@
     "relatedFigures": {
       "Tôn Thần Lý Phục Man": 0
     },
-    "id": 299,
+    "id": 309,
     "name": "Lễ hội đình Giàn",
     "description": "tế lễ, rước nước, rước kiệu, đấu cờ người…"
   },
@@ -3562,7 +3656,7 @@
       "Thánh Độc Cước": 0,
       "Lê Khôi": 371
     },
-    "id": 300,
+    "id": 310,
     "name": "Hội đình Vẽ",
     "description": "thi thả thơ, hát ca trù. Đặc sản có bánh khoái và hàng mây tre đan."
   },
@@ -3576,7 +3670,7 @@
       "Cao Lỗ": 14,
       "Đức Thánh Tản Viên": 0
     },
-    "id": 301,
+    "id": 311,
     "name": "Hội vật làng Yên Nội",
     "description": "rước kiệu, dâng hương, đấu vật, thi võ."
   },
@@ -3590,7 +3684,7 @@
     "relatedFigures": {
       "Linh Lang Đại Vương": 0
     },
-    "id": 302,
+    "id": 312,
     "name": "Hội đền Thụy Khuê",
     "description": "rước kết chạ với Thủ Lệ."
   },
@@ -3607,7 +3701,7 @@
       "Thung Vinh": 0,
       "Quý Nương": 0
     },
-    "id": 303,
+    "id": 313,
     "name": "Hội đình Gia Thuỵ",
     "description": "ca trù, đu bay, cờ người."
   },
@@ -3620,7 +3714,7 @@
       "Minh Mổ Đại Vương": 0,
       "Xoa Nương": 0
     },
-    "id": 304,
+    "id": 314,
     "name": "Hội làng Mạch Lũng",
     "description": "rước nước, rước kiệu, bơi trải."
   },
@@ -3632,7 +3726,7 @@
     "relatedFigures": {
       "Bảo Ninh": 3168
     },
-    "id": 305,
+    "id": 315,
     "name": "Hội thờ Thủy thần",
     "description": "Dâng cúng cỗ cá (bỏ đầu), chơi cờ người, bắt vịt, bơi thuyền."
   },
@@ -3646,7 +3740,7 @@
     "relatedFigures": {
       "Uy Đô Linh Lang": 0
     },
-    "id": 306,
+    "id": 316,
     "name": "Lễ hội đình Yên Phụ",
     "description": "Múa lân, múa rồng, cờ người, bơi thuyền trên hồ."
   },
@@ -3659,7 +3753,7 @@
       "Túc Chinh": 0,
       "Bạch Hạc Tam Giang": 0
     },
-    "id": 307,
+    "id": 317,
     "name": "Hội làng Yên Nội",
     "description": "Ngày hội có kết chạ với các làng lân cận. Chỉ cúng bằng cơm tẻ, muối vừng. Chơi trò trận giả ném cát."
   },
@@ -3671,9 +3765,9 @@
     "relatedFigures": {
       "Vũ Phục Chiêu": 0,
       "Thuận Chính": 0,
-      "Đại Vương": 0
+      "Đại Vương": 4
     },
-    "id": 308,
+    "id": 318,
     "name": "Hội làng Yên Thái",
     "description": "Xôi dẻo, thịt bò thui, cơm nếp, gà mái ghẹ luộc. Trò chơi đu tiên, thi cây hoa, cây cảnh xuân."
   },
@@ -3690,7 +3784,7 @@
       "Võ Quốc": 0,
       "Tây Hồ": 1211
     },
-    "id": 309,
+    "id": 319,
     "name": "Hội làng Nghi Tàm",
     "description": "Bơi trải, thi hoa cây cảnh."
   },
@@ -3705,7 +3799,7 @@
       "Đỗ Thị Thiện": 0,
       "Vũ Phục": 0
     },
-    "id": 310,
+    "id": 320,
     "name": "Hội miếu Vũ, Xuân Đỉnh",
     "description": "kiệu bay, thi bánh giầy, chè kho."
   },
@@ -3717,9 +3811,9 @@
       "đình Quảng Bá": 0
     },
     "relatedFigures": {
-      "Bố Cái Đại Vương Phùng Hưng": 0
+      "Bố Cái Đại Vương Phùng Hưng": 53
     },
-    "id": 311,
+    "id": 321,
     "name": "Hội đình Quảng Bá",
     "description": "cờ người, chọi gà."
   },
@@ -3734,7 +3828,7 @@
       "Cai Công": 0,
       "Hai Bà Trưng": 31
     },
-    "id": 312,
+    "id": 322,
     "name": "Hội đền Cai Công",
     "description": "lễ rước, cúng cỗ chay (ông Cai Công không cho cúng thịt trâu bò), cờ tướng, đấu vật, chọi gà."
   },
@@ -3746,7 +3840,7 @@
     "relatedFigures": {
       "Quốc Vương Đại Thần Hùng Công": 0
     },
-    "id": 313,
+    "id": 323,
     "name": "Lễ hội đình làng Trung Kính Thượng",
     "description": "lễ mộc dục, tế lễ, phong áo Thánh, chọi gà, chơi cờ…"
   },
@@ -3760,7 +3854,7 @@
     "relatedFigures": {
       "Trần Nguyễn Trác": 0
     },
-    "id": 314,
+    "id": 324,
     "name": "Hội đình Nhật Tảo",
     "description": "thi bánh giầy, chè kho."
   },
@@ -3774,7 +3868,7 @@
     "relatedFigures": {
       "Lý Châu Nương": 0
     },
-    "id": 315,
+    "id": 325,
     "name": "Lễ hội đình Giảng Võ",
     "description": "tế yết, dâng hương, cờ tướng, biểu diễn văn nghệ…"
   },
@@ -3789,7 +3883,7 @@
       "Lê Ngại Mỹ Châu": 0,
       "Mạo Giáp Hoa": 0
     },
-    "id": 316,
+    "id": 326,
     "name": "Lễ hộiđình Kim Giang",
     "description": "tế lễ, rước kiệu, hát dân gian, đánh cờ, chọi gà, kéo co…"
   },
@@ -3804,7 +3898,7 @@
       "Bạch Hạc Tam Giang": 0,
       "Lý Thần Tông": 2428
     },
-    "id": 317,
+    "id": 327,
     "name": "Lễ hội đình An Hòa",
     "description": "lễ tế, dâng hương, rước kiệu, văn nghệ, đánh cờ, chọi gà…"
   },
@@ -3819,7 +3913,7 @@
       "Thần Tô Lịch": 0,
       "Lê Dương Vệ": 0
     },
-    "id": 318,
+    "id": 328,
     "name": "Hội đình Gừng Khương Hạ",
     "description": "lễ chạy mã, múa rồng, múa sư tử, cờ người, vật, hát chèo."
   },
@@ -3836,7 +3930,7 @@
       "Thần Mặt": 0,
       "Thần Long Đỗ": 0
     },
-    "id": 319,
+    "id": 329,
     "name": "Lễ hội đền Bạch Mã",
     "description": "tế lễ, dâng hương, rước kiệu, múa rồng, tiến trâu, biểu diễn văn nghệ…"
   },
@@ -3852,7 +3946,7 @@
       "Các Thần Cao Sơn": 0,
       "Tràng Hán": 0
     },
-    "id": 320,
+    "id": 330,
     "name": "Hội làng Cót",
     "description": "rước lớn 7 kiệu (5 long ngai bài vị, một kiệu sắc – kiệu phù hương, một kiệu chum nước)."
   },
@@ -3867,7 +3961,7 @@
       "Thần Nguyễn Bông": 0,
       "Trần Toàn": 0
     },
-    "id": 321,
+    "id": 331,
     "name": "Hội đình An Phú",
     "description": "hội làng có trò chơi “đi Cầu Noi”."
   },
@@ -3879,9 +3973,9 @@
     "relatedFigures": {
       "Cống Lễ": 0,
       "Cá Lễ": 0,
-      "Đại Vương": 0
+      "Đại Vương": 4
     },
-    "id": 322,
+    "id": 332,
     "name": "Hội làng Hồ Khẩu",
     "description": "Múa bơi trải (múa cạn) với sự tham gia của 36 thanh niên gọi là giai"
   },
@@ -3891,14 +3985,14 @@
     "startingDay": "14-16/2 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Đại Vương": 0,
+      "Đại Vương": 4,
       "Phan Đại": 0,
       "Hồ Quốc Thần": 0,
       "Bạch Mã Thần": 0,
       "Hán Cao Tổ": 0,
       "Cai O Minh Chính": 0
     },
-    "id": 323,
+    "id": 333,
     "name": "Lễ hội làng Bát Tràng",
     "description": "rước nước, tắm bài vị, thi sáng tác ca trù để hát thờ."
   },
@@ -3910,7 +4004,7 @@
     "relatedFigures": {
       "Phù Đổng Thiên Vương": 12
     },
-    "id": 324,
+    "id": 334,
     "name": "Hội làng Cán Khê",
     "description": "rước lớn 16 đoàn được tổ chức công phu. 60 thanh niên và hơn 100 cụ tham gia đám rước."
   },
@@ -3923,7 +4017,7 @@
       "Lý Thầm": 0,
       "Hồ Bà Lam": 0
     },
-    "id": 325,
+    "id": 335,
     "name": "Hội làng Thượng Phúc",
     "description": "thi bơi thuyền trên sông, năm thì bơi thuyền gỗ, năm bơi thuyền thúng. Thổi cơm thi, đôi nam nữ vừa đi vừa thổi cơm, vừa múa. Buổi tối có hát trống quân trên thuyền."
   },
@@ -3935,7 +4029,7 @@
     "relatedFigures": {
       "Lý Thường Kiệt": 148
     },
-    "id": 326,
+    "id": 336,
     "name": "Lễ hội đình làng Nam Đồng",
     "description": "lễ tế, dâng hương, biểu diễn văn nghệ, đánh cờ, chọi gà…"
   },
@@ -3947,7 +4041,7 @@
     "relatedFigures": {
       "Nguyên Phi Ỷ Lan": 0
     },
-    "id": 327,
+    "id": 337,
     "name": "Hội đền bà Tấm",
     "description": "tục “Phất cờ tổng”."
   },
@@ -3963,7 +4057,7 @@
       "Lạc Long Quân": 13,
       "Linh Lang": 0
     },
-    "id": 328,
+    "id": 338,
     "name": "Hội đình Nội Bình Đà",
     "description": "rước lớn hoàn cung, rước và thả “bánh vía” xuống Long cung, thi đốt pháo hoa, chọi gà, đánh cờ."
   },
@@ -3977,7 +4071,7 @@
       "Đào Liên Hoa": 0,
       "Nguyên Phi Ỷ Lan": 0
     },
-    "id": 329,
+    "id": 339,
     "name": "Lễ hội làng Sủi",
     "description": "lễ hội Bông Sòng, lễ tế, rước kiệu, đấu võ, hát quan họ, đánh cờ."
   },
@@ -3989,7 +4083,7 @@
     "relatedFigures": {
       "Đại Thánh Huyền Thiên Trấn Vũ": 0
     },
-    "id": 330,
+    "id": 340,
     "name": "Hội Quán Thánh",
     "description": "giáng bút, cầu mộng, cầu lộc."
   },
@@ -4002,7 +4096,7 @@
       "Liễu Hạnh": 0,
       "Thánh Mẫu": 0
     },
-    "id": 331,
+    "id": 341,
     "name": "Hội phủ Tây Hồ",
     "description": "hội có rước, dâng hương và hát văn."
   },
@@ -4014,7 +4108,7 @@
     "relatedFigures": {
       "Huyền Thiên Trấn Vũ": 0
     },
-    "id": 332,
+    "id": 342,
     "name": "Hội làng Ngọc Trì",
     "description": "hội làng được tổ chức 5 năm một lần. Trò chơi kéo co."
   },
@@ -4028,7 +4122,7 @@
     "relatedFigures": {
       "Hai Bà Trưng": 31
     },
-    "id": 333,
+    "id": 343,
     "name": "Hội đền Hát Môn",
     "description": "ba lễ hội trong năm. Có tục dâng cúng bánh trôi. Tục thả bánh trôi trên sông vào đêm 5/3 âm lịch."
   },
@@ -4042,7 +4136,7 @@
     "relatedFigures": {
       "Từ Ðạo Hạnh": 0
     },
-    "id": 334,
+    "id": 344,
     "name": "Lễ hội chùa Thầy",
     "description": "lễ cúng Phật và chạy đàn. Trò chơi rối nước."
   },
@@ -4057,7 +4151,7 @@
       "Đức Phật": 0,
       "La Hán": 0
     },
-    "id": 335,
+    "id": 345,
     "name": "Hội chùa Tây Phương",
     "description": "Hành hương lễ Phật, tụng kinh niệm Phật."
   },
@@ -4072,7 +4166,7 @@
       "Từ Vinh": 0,
       "Từ Đạo Hạnh": 176
     },
-    "id": 336,
+    "id": 346,
     "name": "Hội chùa Tam Huyền",
     "description": "đấu roi (hai người), thi thổi xôi, vật tay, chọi gà."
   },
@@ -4085,7 +4179,7 @@
       "Nhà Lý": 0,
       "Lý Thường Kiệt": 148
     },
-    "id": 337,
+    "id": 347,
     "name": "Lễ hội làng Bắc Biên",
     "description": "rước kiệu, rước văn, lễ tế, thả cá chép ra sông, hát quan họ, đánh cờ, chọi gà…"
   },
@@ -4099,7 +4193,7 @@
     "relatedFigures": {
       "Đại Biên": 0
     },
-    "id": 338,
+    "id": 348,
     "name": "Lễ hội chùa Duệ Tú",
     "description": "tế lễ, tụng kinh, múa phượng, chọi gà, chơi cờ…"
   },
@@ -4115,7 +4209,7 @@
       "Từ Đạo Hạnh": 176,
       "Lý Thần Tông": 2428
     },
-    "id": 339,
+    "id": 349,
     "name": "Lễ hội chùa Láng",
     "description": "rước kiệu, lễ tế, dâng hương, tụng kinh, biểu diễn văn nghệ, thổi cơm thi, đập niêu, đi cầu kiều, tổ tôm điếm, thi cờ tướng…"
   },
@@ -4130,7 +4224,7 @@
       "Đức Địa Mẫu": 0,
       "Hậu Thổ": 0
     },
-    "id": 340,
+    "id": 350,
     "name": "Lễ hội đình Ứng Thiên",
     "description": "tế, lễ, dâng hương, chọi gà, chơi cờ…"
   },
@@ -4142,7 +4236,7 @@
     "relatedFigures": {
       "Bà Chúa Liễu Hạnh": 0
     },
-    "id": 341,
+    "id": 351,
     "name": "Hội Phủ Đức",
     "description": "Dâng hương, cầu cúng, hát văn, hầu đồng."
   },
@@ -4155,7 +4249,7 @@
       "Hai Bà Trưng": 31,
       "Bà Sa Lăng": 0
     },
-    "id": 342,
+    "id": 352,
     "name": "Hội Nghiềm",
     "description": "cúng thịt lợn, tế lễ, thi bơi thuyền nan trên sông Hồng."
   },
@@ -4170,7 +4264,7 @@
       "Tăng Thị Loan": 0,
       "Từ Đạo Hạnh": 176
     },
-    "id": 343,
+    "id": 353,
     "name": "Hội chùa Hoa Lăng",
     "description": "lễ đấu thần."
   },
@@ -4185,7 +4279,7 @@
       "Lê Đại Hành": 84,
       "Trần Thông": 0
     },
-    "id": 344,
+    "id": 354,
     "name": "Hội đình Phú Diễn (Hữu Hoà)",
     "description": "đấu roi, thi leo dây, múa rối nước trên sông, múa rồng, đánh vật, hát ca trù, múa sênh tiền, bịt mắt bắt dê, bơi trải."
   },
@@ -4200,7 +4294,7 @@
       "Võ Duệ": 451,
       "Lạc Long Quân": 13
     },
-    "id": 345,
+    "id": 355,
     "name": "Hội làng chài Vạn Vĩ",
     "description": "đua thuyền rồng, bơi trải, hát chèo, ca trù, múa sư tử."
   },
@@ -4214,7 +4308,7 @@
       "Trạng Trình Nguyễn Bỉnh Khiêm": 0,
       "Phương Dung": 0
     },
-    "id": 346,
+    "id": 356,
     "name": "Hội làng Thanh Am",
     "description": "lễ rước nước trên sông Đuống với trò múa cờ dẹp đường chỉ có ở Thanh Am. Hát quan, chầu văn."
   },
@@ -4227,7 +4321,7 @@
       "Đức Thánh Tam Giang": 0,
       "Bạch Hạc Tam Giang": 0
     },
-    "id": 347,
+    "id": 357,
     "name": "Lễ hội làng Đăm",
     "description": "rước kiệu, rước ngai, tế lễ, đua thuyền trên sông, chọi gà, đánh cờ, hát quan họ trên sông…"
   },
@@ -4242,7 +4336,7 @@
       "Đinh Tĩnh Nương": 0,
       "Quách Lãng": 0
     },
-    "id": 348,
+    "id": 358,
     "name": "Hội bơi Thượng Cát",
     "description": "thi đua thuyền, chọi gà, bắt vịt, đấu vật, nấu cơm thi, chạy thi."
   },
@@ -4258,7 +4352,7 @@
       "Trưng Trắc": 0,
       "Bà Man Thiện": 0
     },
-    "id": 349,
+    "id": 359,
     "name": "Hội miếu Mèn",
     "description": "rước, tế, trò leo dây, bơi thuyền, múa rối."
   },
@@ -4271,7 +4365,7 @@
       "Lý Nam Đế": 34,
       "Lý Phục Man": 0
     },
-    "id": 350,
+    "id": 360,
     "name": "Hội Quán Giá",
     "description": "tế thánh, diễn cảnh xuất trận của tướng Lý Phục Man, đấu vật, cờ tướng, đu tiên."
   },
@@ -4288,7 +4382,7 @@
       "Nguyễn Quyện": 0,
       "Trần Uất": 0
     },
-    "id": 351,
+    "id": 361,
     "name": "Hội làng Canh Hoạch (làng Vác)",
     "description": "rước quạt, đấu cờ, đánh gậy, hát chèo, đề cao truyền thống hiếu học và tinh thần thượng võ từ xưa để lại."
   },
@@ -4300,10 +4394,10 @@
     "relatedFigures": {
       "Long Linh": 0,
       "Quí Minh": 0,
-      "Cao Sơn": 0,
+      "Cao Sơn": 4,
       "Đức Thánh Tản Viên": 0
     },
-    "id": 352,
+    "id": 362,
     "name": "Hội làng Vải (hội Tầm Xá)",
     "description": "tế nhập tịch, tế chính tiệc, tế tống tịch, tế yên vị, tế tư văn, múa mặt nạ."
   },
@@ -4317,7 +4411,7 @@
     "relatedFigures": {
       "Ngọc Hoa": 3
     },
-    "id": 353,
+    "id": 363,
     "name": "Lễ hội đình Đại Yên",
     "description": "lễ tế, dâng hương, biểu diễn văn nghệ, đánh cờ, chọi gà…"
   },
@@ -4331,7 +4425,7 @@
       "Từ Thục": 0,
       "Lý Từ Huy": 0
     },
-    "id": 354,
+    "id": 364,
     "name": "Lễ hội Tổng Nam Phù",
     "description": "lễ hội được tổ chức 5 năm một lần với lễ rước nước, rước kiệu, các trò chơi dân gian, thi các nghề truyền thống, các trò chơi…"
   },
@@ -4341,9 +4435,9 @@
     "startingDay": "14-17/3 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Cao Sơn": 0
+      "Cao Sơn": 4
     },
-    "id": 355,
+    "id": 365,
     "name": "Hội làng Khê Hồi",
     "description": "hội có trò thủy chiến ở ao bán nguyệt trước đình mô phỏng lại tích những trận thủy chiến trên sông Bạch Đằng của Trần Hưng Đạo đánh giặc Nguyên và Ngô Quyền đánh quân Nam Hán, thi bắt vịt."
   },
@@ -4357,7 +4451,7 @@
       "Hai Bà Trưng": 31,
       "Phương Dung": 0
     },
-    "id": 356,
+    "id": 366,
     "name": "Hội làng Lê Xá",
     "description": "lễ rước, lễ tế, thi đánh chạc (thi bện thừng), ca trù, hát quan họ, thi bắt vịt, chọi gà."
   },
@@ -4372,7 +4466,7 @@
       "Đặng Lang": 0,
       "Đặng Xã": 0
     },
-    "id": 357,
+    "id": 367,
     "name": "Hội làng Liên Bạt",
     "description": "kiệu bay, kiệu quay, rước văn đề cao tinh thần hiếu học, quý trọng tri thức văn hóa."
   },
@@ -4385,7 +4479,7 @@
       "Đinh Tiên Hoàng": 76,
       "Nguyễn Cả": 0
     },
-    "id": 358,
+    "id": 368,
     "name": "Hội thả diều Bá Giang",
     "description": "thi thả diều, rước bánh dày, thổi cơm thi."
   },
@@ -4400,7 +4494,7 @@
     "relatedFigures": {
       "Cao Sơn Đại Vương": 4
     },
-    "id": 359,
+    "id": 369,
     "name": "Lễ hội đình và đền Kim Liên (đền Cao Sơn)",
     "description": "tế lễ, lễ rước kiệu, thi cắt tóc, chọi chim, nấu ăn và bày cỗ…"
   },
@@ -4414,7 +4508,7 @@
     "relatedFigures": {
       "Lý Nhân Tông": 2427
     },
-    "id": 360,
+    "id": 370,
     "name": "Hội đền Ninh Xá",
     "description": "lễ dâng hương, cầu phúc lộc, lên đồng."
   },
@@ -4424,9 +4518,9 @@
     "startingDay": "16/3 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Cao Sơn": 0
+      "Cao Sơn": 4
     },
-    "id": 361,
+    "id": 371,
     "name": "Hội rước thành hoàng tổng Hà Hồi",
     "description": "cờ bỏi, múa gậy, thi bơi, hội thủy chiến, hát chèo, diễn tuồng."
   },
@@ -4444,7 +4538,7 @@
       "Ý Hạnh": 0,
       "Phúc Thần": 0
     },
-    "id": 362,
+    "id": 372,
     "name": "Lễ hội đình Tứ Liên (đình Ngọc Xuyên)",
     "description": "lễ tế thần, dâng hương, rước kiệu, rước nước,thi nấu cơm, ca hát, đấu võ, chọi gà …"
   },
@@ -4454,7 +4548,7 @@
     "startingDay": "ngày 23/3 âm lịch hàng năm.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 363,
+    "id": 373,
     "name": "Hội làng Lệ Mật",
     "description": "hội có múa rắn."
   },
@@ -4470,7 +4564,7 @@
       "Đào Thành": 0,
       "Tây Sa": 0
     },
-    "id": 364,
+    "id": 374,
     "name": "Hội xã Tự Nhiên",
     "description": "rước nước, cờ bỏi."
   },
@@ -4485,7 +4579,7 @@
       "Thần Đồng Cổ": 0,
       "Trống Đồng": 0
     },
-    "id": 365,
+    "id": 375,
     "name": "Hội đền Đồng Cổ (hội thề Đồng Cổ)",
     "description": "lễ hội tưởng nhớ vua Lý Thái Tông cho rước thần núi Trống Đồng ở Đan Nê (Thanh Hóa) về lập đền thờ ở Thăng Long."
   },
@@ -4498,7 +4592,7 @@
       "Đinh Dự": 0,
       "Mãn Hoa Đường": 0
     },
-    "id": 366,
+    "id": 376,
     "name": "Hội Lỗ Khê",
     "description": "giỗ tổ nghề ca trù có tế lễ và múa hát."
   },
@@ -4508,10 +4602,10 @@
     "startingDay": "8/4 âm lịch.",
     "relatedRelics": {},
     "relatedFigures": {
-      "Thánh Gióng": 0,
+      "Thánh Gióng": 12,
       "Hiển Công": 0
     },
-    "id": 368,
+    "id": 378,
     "name": "Hội Chi Nam (hội Phù Gióng)",
     "description": "tế lễ, diễn trận, đấu gậy, trò cướp gậy, cướp dừa."
   },
@@ -4523,7 +4617,7 @@
     "relatedFigures": {
       "Dực Hòa Bảo Chính": 0
     },
-    "id": 369,
+    "id": 379,
     "name": "Hội làng Vo",
     "description": "Múa hổ."
   },
@@ -4536,7 +4630,7 @@
       "Lê Công Hành": 321,
       "Mạc Đăng Dung": 499
     },
-    "id": 370,
+    "id": 380,
     "name": "Hội Quất Động",
     "description": "lễ dâng hương, lễ cúng tưởng niệm."
   },
@@ -4546,7 +4640,7 @@
     "startingDay": "Cuối xuân, sang hè.",
     "relatedRelics": {},
     "relatedFigures": {},
-    "id": 371,
+    "id": 381,
     "name": "Hội thả chim làng Dục Tú",
     "description": "thi thả chim câu."
   },
@@ -4558,9 +4652,9 @@
       "đền Chèm": 0
     },
     "relatedFigures": {
-      "Đức Thượng Đẳng Thiên Vương Lý Ông Trọng": 0
+      "Đức Thượng Đẳng Thiên Vương Lý Ông Trọng": 11
     },
-    "id": 372,
+    "id": 382,
     "name": "Lễ hội đình-đền Chèm",
     "description": "lễ mộc dục, rước nước, rước văn, rước kiệu, lễ tế, dâng hương, biểu diễn hát quan họ, chèo, hội thi bơi, hội vật, chọi gà, bắt vịt nước, thả chim bồ câu…"
   },
@@ -4576,7 +4670,7 @@
       "Lý Ông Trọng": 11,
       "Đức Phật": 0
     },
-    "id": 373,
+    "id": 383,
     "name": "Hội chùa Hàm Long",
     "description": "lễ rước văn, lễ phát tấu cúng Phật cầu siêu cho đức thánh Chèm và phu nhân."
   },
@@ -4591,7 +4685,7 @@
       "Âu Cơ": 2,
       "Lạc Long Quân": 13
     },
-    "id": 374,
+    "id": 384,
     "name": "Hội đình Văn Khê",
     "description": "lễ rước nước, đấu vật, đánh cờ, tổ tôm điếm, diễn chèo."
   },
@@ -4603,7 +4697,7 @@
       "đền Quán Đôi": 0
     },
     "relatedFigures": {},
-    "id": 375,
+    "id": 385,
     "name": "Lễ hội đền Quán Đôi",
     "description": "tế lễ, lrước kiệu, dâng hương, biểu diễn văn nghệ, trò hội…"
   },
@@ -4615,7 +4709,7 @@
     "relatedFigures": {
       "Đỗ Kính Tu": 121
     },
-    "id": 376,
+    "id": 386,
     "name": "Hội làng Hậu Ái",
     "description": "Dân làng góp bánh tro, bánh dày, bánh chay cho làng mời khách thập phương. Cùng với các nghi lễ rước truyền thống, còn có các sinh hoạt văn hóa dân gian."
   },
@@ -4629,7 +4723,7 @@
     "relatedFigures": {
       "Mạc Trâu": 0
     },
-    "id": 377,
+    "id": 387,
     "name": "Lễ hội đền Ba Xã",
     "description": "Múa rồng, múa lân, thi chọi gà, đấu, đập bị gạo, túm nước."
   },
@@ -4644,7 +4738,7 @@
       "Túc Trinh": 0,
       "Trần Thánh Tông": 253
     },
-    "id": 378,
+    "id": 388,
     "name": "Lễ hội đền Bà Chúa",
     "description": "tế lễ, lễ mộc dục, rước kiệu, dâng hương, biểu diễn văn nghệ, trò hội, đánh cờ, chọi gà…"
   },
@@ -4658,7 +4752,7 @@
       "Mỵ Nương": 0,
       "Hai Bà Trưng": 31
     },
-    "id": 379,
+    "id": 389,
     "name": "Hội Bạch Trữ (Kẻ Bạch)",
     "description": "rước kiệu Bà, dâng lễ vật, tế lễ, thi bánh giầy."
   },
@@ -4671,7 +4765,7 @@
       "Nhã Cát Đại Vương": 0,
       "Trinh Thiên": 0
     },
-    "id": 380,
+    "id": 390,
     "name": "Hội bơi trải Vĩnh Tuy",
     "description": "đua thuyền."
   },
@@ -4686,7 +4780,7 @@
       "Tú Uyên": 0,
       "Trần Tú Uyên": 0
     },
-    "id": 381,
+    "id": 391,
     "name": "Lễ hội đền Bích Câu",
     "description": "tế lễ, dâng hương, biểu diễn ca trù, đánh cờ…."
   },
@@ -4699,7 +4793,7 @@
       "Nguyễn Kiều": 736,
       "Thánh Tăng": 0
     },
-    "id": 382,
+    "id": 392,
     "name": "Hội làng Phú Xá",
     "description": "rước Thánh Tăng."
   },
@@ -4711,7 +4805,7 @@
     "relatedFigures": {
       "Nguyễn Chính": 0
     },
-    "id": 383,
+    "id": 393,
     "name": "Hội làng Giáp Lục",
     "description": "trẻ con 4-5 tuổi được làm lễ yết thánh vào làng tại đình với 100 khẩu trầu và 1 chai rượu."
   },
@@ -4724,7 +4818,7 @@
       "Bà Chúa": 0,
       "Trần Khát Chân": 257
     },
-    "id": 384,
+    "id": 394,
     "name": "Hội đua thuyền Yên Duyên",
     "description": "đua thuyền."
   },
@@ -4741,7 +4835,7 @@
       "Đình Bất Nạo": 0,
       "Thổ Lệnh": 0
     },
-    "id": 385,
+    "id": 395,
     "name": "Hội Bất Nạo",
     "description": "tế thần, hò cửa đình, vật thịnh, mùa màng tươi tốt."
   },
@@ -4755,7 +4849,7 @@
     "relatedFigures": {
       "Nguyễn Trãi": 304
     },
-    "id": 386,
+    "id": 396,
     "name": "Hội đền Nguyễn Trãi",
     "description": "dâng hương tưởng niệm ngày giỗ ông (16/8), tham quan tượng đài và khu nhà thờ."
   },
@@ -4769,7 +4863,7 @@
       "Đức Thánh Tản Viên": 0,
       "Trầm Đồng Đại Vương": 0
     },
-    "id": 387,
+    "id": 397,
     "name": "Lễ hội làng Chàng Sơn",
     "description": "rước lễ, tế lễ, dâng hương, múa rối nước, đánh cờ …"
   },
@@ -4785,7 +4879,7 @@
       "Phạm Ngưu Tất": 0,
       "Phạm Tổ Thu": 0
     },
-    "id": 388,
+    "id": 398,
     "name": "Lễ hội đền Lư Giang",
     "description": "tế lễ, rước kiệu, dâng hương, biểu diễn văn nghệ, trò hội, đánh cờ…"
   },
@@ -4804,7 +4898,7 @@
       "Ngọc Hoàng": 0,
       "Lê Ngọc Hân": 2667
     },
-    "id": 389,
+    "id": 399,
     "name": "Hội đền Ghềnh (Hà Nội)",
     "description": "hát văn ca ngợi công đức Thánh Mẫu."
   },
@@ -4818,7 +4912,7 @@
     "relatedFigures": {
       "Trần Hưng Đạo": 268
     },
-    "id": 390,
+    "id": 400,
     "name": "Hội điện Thái Bình",
     "description": "lễ đảo thánh, dâng văn."
   },
@@ -4831,7 +4925,7 @@
       "Lý Nhân Tông": 2427,
       "Mục Thận": 152
     },
-    "id": 391,
+    "id": 401,
     "name": "Hội Võng Thị",
     "description": "cúng tế, chọi gà, hát tuồng."
   },
@@ -4849,7 +4943,7 @@
       "Vũ Định Đại Vương": 0,
       "Thiên Cương": 0
     },
-    "id": 392,
+    "id": 402,
     "name": "Hội làng Xuân Nộn",
     "description": "rước kiệu vua bà, múa rắn, tuồng tế Thánh."
   },
@@ -4861,7 +4955,7 @@
     "relatedFigures": {
       "Hai Bà Trưng": 31
     },
-    "id": 393,
+    "id": 403,
     "name": "Hội làng Lai Tảo",
     "description": "cỗ tế thành hoàng bằng thịt lợn sống và gạo nếp."
   },
@@ -4873,7 +4967,7 @@
     "relatedFigures": {
       "Doãn Văn Tài": 0
     },
-    "id": 394,
+    "id": 404,
     "name": "Hội làng Nhị Khê",
     "description": "tế tổ, cúng tế, dâng lễ vật lên tổ sư, đánh cờ, hát chèo."
   },
@@ -4886,7 +4980,7 @@
       "Đinh Thị Trạch": 0,
       "Bùi Sĩ Lương": 0
     },
-    "id": 395,
+    "id": 405,
     "name": "Lễ hội làng Hạ Thái",
     "description": "lễ rước kiệu, rước sắc, rước cỗ, lễ tế, múa rồng, hát quan họ, đánh cờ…"
   },
@@ -4898,7 +4992,7 @@
     "relatedFigures": {
       "Đương Giang": 0
     },
-    "id": 396,
+    "id": 406,
     "name": "Hội làng Mạnh Tân",
     "description": "rước kiệu, tế lễ, vật cổ truyền."
   },
@@ -4910,7 +5004,7 @@
     "relatedFigures": {
       "Lý Nam Đế": 34
     },
-    "id": 397,
+    "id": 407,
     "name": "Hội tế Trung Đồ",
     "description": "cúng, kể hạnh, đánh phết."
   },
@@ -4926,7 +5020,7 @@
       "Đỗ Cảnh Thạc": 66,
       "Hà Khôi Đại Vương": 0
     },
-    "id": 398,
+    "id": 408,
     "name": "Hội Đình Mai",
     "description": "lễ tế thần, cờ tướng, chọi gà."
   }
