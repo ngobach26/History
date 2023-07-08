@@ -40,7 +40,7 @@
         <fx:include fx:id="sideBar" source="../SideBar.fxml" />
     </left>
     <center>
-        <ScrollPane fitToWidth="true" stylesheets="@../../stylesheet/mainScreen.css">
+        <ScrollPane fitToWidth="true" prefWidth="643.0" stylesheets="@../../stylesheet/mainScreen.css">
             <content>
                 <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
                     <children>
@@ -53,7 +53,7 @@
                                 </Text>
                             </children>
                         </HBox>
-                  <ScrollPane prefHeight="550.0" prefWidth="590.0">
+                  <ScrollPane prefHeight="500.0" prefWidth="602.0">
                      <content>
                               <VBox prefHeight="208.0" prefWidth="590.0" spacing="15.0">
                                   <children>
@@ -157,18 +157,18 @@
                                       <FlowPane fx:id="relatedFesFlowPane" hgap="15.0" vgap="5.0" HBox.hgrow="ALWAYS" />
                                    </children>
                                 </HBox>
-                                    <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
-                                        <font>
-                                            <Font name="Gill Sans MT" size="12.0" />
-                                        </font>
-                                        <cursor>
-                                            <Cursor fx:constant="HAND" />
-                                        </cursor>
-                                    </Button>
                                   </children>
                               </VBox>
                      </content>
                   </ScrollPane>
+                        <Button mnemonicParsing="false" onAction="#onClickBack" style="-fx-background-color: #16badb;" stylesheets="@../../stylesheet/mainScreen.css" text="Go Back" textFill="#eaefee">
+                            <font>
+                                <Font name="Gill Sans MT" size="12.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
                     </children>
                     <BorderPane.margin>
                         <Insets />
