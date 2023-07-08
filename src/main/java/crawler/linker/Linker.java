@@ -1,4 +1,4 @@
-package linker;
+package crawler.linker;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +8,7 @@ import java.util.Map;
 import com.google.gson.reflect.TypeToken;
 
 import helper.JsonIO;
+import helper.StringHelper;
 import model.Era;
 import model.Event;
 import model.Festival;
@@ -15,11 +16,17 @@ import model.Figure;
 import model.Relic;
 
 public class Linker {
-	private JsonIO<Figure> figureIO = new JsonIO<>(new TypeToken<ArrayList<Figure>>() {}.getType());
-	private JsonIO<Era> eraIO = new JsonIO<>(new TypeToken<ArrayList<Era>>() {}.getType());
-	private JsonIO<Event> eventIO = new JsonIO<>(new TypeToken<ArrayList<Event>>() {}.getType());
-	private JsonIO<Festival> festivalIO = new JsonIO<>(new TypeToken<ArrayList<Festival>>() {}.getType());
-	private JsonIO<Relic> relicIO = new JsonIO<>(new TypeToken<ArrayList<Relic>>() {}.getType());
+	private static final JsonIO<Figure> FIGURE_IO = new JsonIO<>(new TypeToken<ArrayList<Figure>>() {}.getType());
+	private static final JsonIO<Era> ERA_IO = new JsonIO<>(new TypeToken<ArrayList<Era>>() {}.getType());
+	private static final JsonIO<Event> EVENT_IO = new JsonIO<>(new TypeToken<ArrayList<Event>>() {}.getType());
+	private static final JsonIO<Festival> FESTIVAL_IO = new JsonIO<>(new TypeToken<ArrayList<Festival>>() {}.getType());
+	private static final JsonIO<Relic> RELIC_IO = new JsonIO<>(new TypeToken<ArrayList<Relic>>() {}.getType());
+	
+	private static final String FIGURE_PATH = "src/main/resources/json/Figures.json";
+	private static final String ERA_PATH = "src/main/resources/json/Eras.json";
+	private static final String EVENT_PATH = "src/main/resources/json/Events.json";
+	private static final String FESTIVAL_PATH = "src/main/resources/json/Festivals.json";
+	private static final String RELIC_PATH = "src/main/resources/json/Relics.json";
 	
 	private List<Figure> figures;
 	private List<Era> eras;
@@ -27,12 +34,12 @@ public class Linker {
 	private List<Festival> festivals;
 	private List<Relic> relics;
 	
-	Linker() {
-		this.figures = figureIO.loadJson("src/main/resources/json/Figures.json");
-		this.eras = eraIO.loadJson("src/main/resources/json/Eras.json");
-		this.events = eventIO.loadJson("src/main/resources/json/Events.json");
-		this.festivals = festivalIO.loadJson("src/main/resources/json/Festivals.json");
-		this.relics = relicIO.loadJson("src/main/resources/json/Relics.json");
+	public Linker() {
+		this.figures = FIGURE_IO.loadJson(FIGURE_PATH);
+		this.eras = ERA_IO.loadJson(ERA_PATH);
+		this.events = EVENT_IO.loadJson(EVENT_PATH);
+		this.festivals = FESTIVAL_IO.loadJson(FESTIVAL_PATH);
+		this.relics = RELIC_IO.loadJson(RELIC_PATH);
 	}
 	
 	public void link() {
@@ -44,15 +51,15 @@ public class Linker {
 		linkFestivalToRelic();
 		linkFestivalToFigure();
 		linkFigureToFigure();
-		figureIO.writeJson(this.figures, "src/main/resources/json/Figures.json");
-		eraIO.writeJson(this.eras, "src/main/resources/json/Eras.json");
-		relicIO.writeJson(this.relics, "src/main/resources/json/Relics.json");
-		eventIO.writeJson(this.events, "src/main/resources/json/Events.json");
-		festivalIO.writeJson(this.festivals, "src/main/resources/json/Festivals.json");
+		FIGURE_IO.writeJson(this.figures, FIGURE_PATH);
+		ERA_IO.writeJson(this.eras, ERA_PATH);
+		RELIC_IO.writeJson(this.relics, RELIC_PATH);
+		EVENT_IO.writeJson(this.events, EVENT_PATH);
+		FESTIVAL_IO.writeJson(this.festivals, FESTIVAL_PATH);
 	}
 	
 	//link eras attribute of figure to era
-	public void linkFigureToEra() {
+	private void linkFigureToEra() {
 		for (Figure figure : figures) {
 			Map<String, Integer> linkedEras = new HashMap<>();
 			
@@ -118,7 +125,7 @@ public class Linker {
 	}
 	
 	//link kings attribute of era to figure
-	public void linkEraToFigure() {
+	private void linkEraToFigure() {
 		for (Era era : eras) {
 			Map<String, Integer> linkedKings = new HashMap<>();
 			
@@ -141,7 +148,7 @@ public class Linker {
 	}
 	
 	//link relatedFigures attribute of event to figure
-	public void linkEventToFigure() {
+	private void linkEventToFigure() {
 		for (Event event : events) {
 			Map<String, Integer> linkedRelatedFigures = new HashMap<>();
 			
@@ -166,7 +173,7 @@ public class Linker {
 	}
 	
 	//link eras attribute of event to era
-	public void linkEventToEra() {
+	private void linkEventToEra() {
 		for (Event event : events) {
 			Map<String, Integer> linkedEras = new HashMap<>();
 			
@@ -220,7 +227,7 @@ public class Linker {
 	}
 	
 	//link relatedFigures attribute of relic to figure
-	public void linkRelicToFigure() {
+	private void linkRelicToFigure() {
 		for (Relic relic : relics) {
 			Map<String, Integer> linkedRelatedFigures = new HashMap<>();
 			
@@ -240,14 +247,15 @@ public class Linker {
 	}
 	
 	//link relatedRelics attribute of festival to relic
-	public void linkFestivalToRelic() {
+	private void linkFestivalToRelic() {
 		for (Festival festival : festivals) {
 			Map<String, Integer> linkedRelatedRelics = new HashMap<>();
 			
 			for (String relicName : festival.getRelatedRelics().keySet()) {
 				boolean isFound = false;
 				for (Relic relic : relics) {
-					if (relic.containsName(relicName) || relicName.toLowerCase().contains(relic.getName().toLowerCase())) {
+					if (StringHelper.containsSubstrings(relicName, relic.getName()) ||
+							StringHelper.containsSubstrings(relic.getName(), relicName)) {
 						linkedRelatedRelics.put(relicName, relic.getId());
 						//link relic to festival
 						relic.addRelatedFestivals(festival.getName(), festival.getId());
@@ -264,7 +272,8 @@ public class Linker {
 		}
 	}
 	
-	public void linkFestivalToFigure() {
+	//link relatedFigures attribute of festival to figure
+	private void linkFestivalToFigure() {
 		for (Festival festival : festivals) {
 			Map<String, Integer> linkedRelatedFigures = new HashMap<>();
 			
@@ -288,7 +297,8 @@ public class Linker {
 		}
 	}
 	
-	public void linkFigureToFigure() {
+	//link mother, father, spouses, children of figure to figure
+	private void linkFigureToFigure() {
 		for (Figure figure: figures) {
 			Map<String, Integer> linkedMother = new HashMap<>();
 			Map<String, Integer> linkedFather = new HashMap<>();
@@ -300,7 +310,6 @@ public class Linker {
 				for (Figure otherFigure : figures) {
 					if (!otherFigure.equals(figure) && otherFigure.containsName(motherName)) {
 						linkedMother.put(motherName, otherFigure.getId());
-						otherFigure.addChildren(figure.getName(), figure.getId());
 						isFound = true;
 						break;
 					}
@@ -315,7 +324,6 @@ public class Linker {
 				for (Figure otherFigure : figures) {
 					if (!otherFigure.equals(figure) && otherFigure.containsName(fatherName)) {
 						linkedFather.put(fatherName, otherFigure.getId());
-						otherFigure.addChildren(figure.getName(), figure.getId());
 						isFound = true;
 						break;
 					}
@@ -360,8 +368,4 @@ public class Linker {
 		}
 	}
 	
-	public static void main(String[] args) {
-		Linker linker = new Linker();
-		linker.link();
-	}
 }

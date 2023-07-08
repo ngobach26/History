@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import helper.StringHelper;
+
 public class Era extends HistoricalEntity{
 	private static int numEras = 0;
 	private String startYear;
@@ -60,14 +62,7 @@ public class Era extends HistoricalEntity{
 	
 	
 	public void addRelatedEvents(String newEvent, int id) {
-		boolean isFound = false;
-		for (String relatedEvent : relatedEvents.keySet()) {
-			if (relatedEvent.equalsIgnoreCase(newEvent)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedEvents.keySet(), newEvent)) {
 			relatedEvents.put(newEvent, id);
 		}		
 	}

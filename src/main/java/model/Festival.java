@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import helper.StringHelper;
+
 public class Festival extends HistoricalEntity{
     private static int numFes = 0;
     private String location;
@@ -55,27 +57,13 @@ public class Festival extends HistoricalEntity{
 	}
 	
 	public void addRelatedRelics(String newRelic, int id) {
-		boolean isFound = false;
-		for (String relatedRelic : relatedRelics.keySet()) {
-			if (relatedRelic.equalsIgnoreCase(newRelic)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedRelics.keySet(), newRelic)) {
 			relatedRelics.put(newRelic, id);
 		}		
 	}
 
 	public void addRelatedFigures(String newFigure, int id) {
-		boolean isFound = false;
-		for (String relatedFigure : relatedFigures.keySet()) {
-			if (relatedFigure.equalsIgnoreCase(newFigure)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedFigures.keySet(), newFigure)) {
 			relatedFigures.put(newFigure, id);
 		}		
 	}

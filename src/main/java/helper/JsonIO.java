@@ -31,7 +31,7 @@ public class JsonIO<T extends HistoricalEntity>{
 	}
 
 	public List<T> loadJson(String path) {
-		List<T> list = null;
+		List<T> list = new ArrayList<>();
 		try (FileReader fileReader = new FileReader(path)){
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			list = gson.fromJson(fileReader, TYPE);

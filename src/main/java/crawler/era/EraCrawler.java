@@ -21,10 +21,12 @@ import com.google.gson.reflect.TypeToken;
 import crawler.ICrawler;
 import crawler.figure.FigureCrawler;
 import helper.JsonIO;
+import helper.StringHelper;
 import model.Era;
 
 public class EraCrawler implements ICrawler{
-	private JsonIO<Era> eraIO = new JsonIO<>(new TypeToken<ArrayList<Era>>() {}.getType());
+	private static final JsonIO<Era> ERA_IO = new JsonIO<>(new TypeToken<ArrayList<Era>>() {}.getType());
+	private static final String PATH = "src/main/resources/json/Eras.json";
 	
 	//This class stores capital/nationName in each era.
 	class PeriodEntity{
@@ -40,12 +42,11 @@ public class EraCrawler implements ICrawler{
 	}
 
 	@Override
-	public void crawl() {
-		eraIO.writeJson(crawlVanSu(), "src/main/resources/json/Eras.json");
+	public void crawl() {		
+		ERA_IO.writeJson(crawlVanSu(), PATH);
 	}
 	
-	
-	public List<Era> crawlVanSu(){
+	private List<Era> crawlVanSu(){
 		List<Era> eras = new ArrayList<>();
 		String url = "https://vansu.vn/viet-nam/nien-bieu-lich-su";
 		Document doc;
@@ -119,8 +120,8 @@ public class EraCrawler implements ICrawler{
 		List<PeriodEntity> eraCapitals = crawlCapital();
 		List<PeriodEntity> nationNameEntities = crawlNationName();
 		if (!startYear.equals("Không rõ") && !endYear.equals("Không rõ")) {
-			int startYearInt = convertYearStringToInt(startYear);
-			int endYearInt = convertYearStringToInt(endYear);
+			int startYearInt = StringHelper.convertYearStringToInt(startYear);
+			int endYearInt = StringHelper.convertYearStringToInt(endYear);
 			for (PeriodEntity eraCapital : eraCapitals) {
 				if ((startYearInt >= eraCapital.startYear) && (endYearInt <= eraCapital.endYear + 1)) {
 					capital = eraCapital.name;
@@ -146,7 +147,7 @@ public class EraCrawler implements ICrawler{
 		while (curr != endDiv) {
 			if (curr instanceof TextNode) {
 				String text = ((TextNode) curr).text().trim();
-				if (startsWithNumber(text)) {
+				if (StringHelper.startsWithDigit(text)) {
 					String strArr[] = text.split("[.(]");
 					kings.add(strArr[1].replaceAll("Chúa|Hoàng đế", "").trim());
 				}
@@ -164,11 +165,6 @@ public class EraCrawler implements ICrawler{
 		System.out.println("--------");
 		return new Era(eraName, startYear, endYear, description, capital, nationNames, kings);
 	}
-	
-	private boolean startsWithNumber(String text) {
-        Pattern pattern = Pattern.compile("^\\d+\\.");
-        return pattern.matcher(text).find();
-    }
 	
 	private List<PeriodEntity> crawlCapital() {
 		String url = "https://quynhluu2.edu.vn/Giao-vien/DANH-SACH-CAC-KINH-DO-THU-DO-CUA-VIET-NAM-765.html";
@@ -199,13 +195,14 @@ public class EraCrawler implements ICrawler{
 					endYear = (textNodes.get(textNodes.size()-1).text().split("-"))[1].trim();
 				}
 				
-				eraCapitals.add(new PeriodEntity(capital, convertYearStringToInt(startYear), convertYearStringToInt(endYear)));
+				eraCapitals.add(new PeriodEntity(capital, StringHelper.convertYearStringToInt(startYear), 
+						StringHelper.convertYearStringToInt(endYear)));
 			}
 	        //2 adjacent eras with same capital name
 			for (int i=0; i<eraCapitals.size()-1; i++) {
 				PeriodEntity currCapital = eraCapitals.get(i);
 				PeriodEntity nextCapital = eraCapitals.get(i+1);
-				if (currCapital.name.equals(nextCapital.name) && currCapital.endYear == nextCapital.startYear) {
+				if (currCapital.name.equalsIgnoreCase(nextCapital.name) && currCapital.endYear == nextCapital.startYear) {
 					currCapital.endYear = nextCapital.endYear;
 				}
 			}
@@ -220,7 +217,8 @@ public class EraCrawler implements ICrawler{
 		List<PeriodEntity> nationNames = new ArrayList<>();
 		
 		try {
-			String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/T%C3%AAn_g%E1%BB%8Di_Vi%E1%BB%87t_Nam", StandardCharsets.UTF_8.name());
+			String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/T%C3%AAn_g%E1%BB%8Di_Vi%E1%BB%87t_Nam", 
+					StandardCharsets.UTF_8.name());
 			doc = Jsoup.connect(url).get();
 			Elements rows = doc.select("div.mw-parser-output > table[cellspacing] table.collapsible tr");
 			for (Element row : rows) {
@@ -241,7 +239,8 @@ public class EraCrawler implements ICrawler{
 						startYear += " TCN";
 					}
 					
-					nationNames.add(new PeriodEntity(nationName, convertYearStringToInt(startYear), convertYearStringToInt(endYear)));
+					nationNames.add(new PeriodEntity(nationName, StringHelper.convertYearStringToInt(startYear), 
+							StringHelper.convertYearStringToInt(endYear)));
 				}		
 			}
 		} catch (UnsupportedEncodingException e) {
@@ -251,27 +250,8 @@ public class EraCrawler implements ICrawler{
 		}
 		
 		return nationNames;
-	}
+	}	
 	
-	private int convertYearStringToInt(String yearStr) {
-		int yearInt;
-		if (yearStr.contains("TCN")) {
-			yearInt = -(Integer.parseInt(yearStr.replaceAll("[^\\d]", "")));
-		}
-		else if (yearStr.contains("nay")) {
-			yearInt = Integer.MAX_VALUE - 1;
-		}
-		else {
-			yearInt = Integer.parseInt(yearStr.replace("CN", "").trim());
-		}
-		return yearInt;
-	}
-	
-	
-	public static void main(String[] args) {
-		EraCrawler eraCrawler = new EraCrawler();
-		eraCrawler.crawl();
-	}
 }
 
 

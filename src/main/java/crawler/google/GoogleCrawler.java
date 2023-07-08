@@ -1,4 +1,4 @@
-package crawler;
+package crawler.google;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

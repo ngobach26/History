@@ -194,7 +194,7 @@
     "approvedYear": "2011",
     "relatedFestivals": {
       "Lễ hội đền Mẫu": 31,
-      "Lễ hội đền Đại Lộ (đền Mẫu)": 278
+      "Lễ hội đền Đại Lộ (đền Mẫu)": 288
     },
     "relatedFigures": {},
     "id": 18,
@@ -1481,7 +1481,7 @@
     "category": "Lịch sử",
     "approvedYear": "1989",
     "relatedFestivals": {
-      "Lễ hội đền Cửa Ông": 151
+      "Lễ hội đền Cửa Ông": 161
     },
     "relatedFigures": {
       "Lê Tắc": 228,
@@ -1494,7 +1494,8 @@
       "Trần Tung": 271,
       "Trúc Lâm": 1822,
       "Bùi Huy Bích": 541,
-      "Trần Quốc Tảng": 266
+      "Trần Quốc Tảng": 266,
+      "An Nam": 806
     },
     "id": 138,
     "name": "Đền Cửa Ông",
@@ -1808,12 +1809,14 @@
       "Đại Nam": 199,
       "Trần Dụ Tông": 252,
       "Hoàng Hoa Thám": 1300,
+      "Hùng Định Vương": 749,
       "Bảo Đại": 1542,
       "Trần Thuận Tông": 2458,
       "Trần Nghệ Tông": 263,
       "Trần Hưng Đạo": 268,
       "Trần Cảnh": 251,
       "Trần Liễu": 182,
+      "An Sinh Vương Trần Liễu": 182,
       "Hồ Quý Ly": 2395,
       "Lê Lợi": 374,
       "Trương Hống": 40,
@@ -1823,6 +1826,7 @@
       "Huyền Quang": 230,
       "Thiên Thành": 2708,
       "Yết Kiêu": 276,
+      "Cao Sơn": 4,
       "Trần Hiến Tông": 272,
       "Trần Nguyên Đán": 261,
       "Trương Hát": 39,
@@ -1834,7 +1838,8 @@
       "Trần Duệ Tông": 258,
       "Đặng Tảo": 205,
       "Trúc Lâm": 1822,
-      "Trần Khâm": 255
+      "Trần Khâm": 255,
+      "Đại Vương": 4
     },
     "id": 168,
     "name": "Quần thể di tích danh thắng Yên Tử",
@@ -1869,7 +1874,7 @@
     "approvedYear": "1992",
     "relatedFestivals": {
       "Hội Xuân núi Bà": 17,
-      "Lễ hội chùa Long Tiên": 148
+      "Lễ hội chùa Long Tiên": 158
     },
     "relatedFigures": {},
     "id": 171,
@@ -1941,7 +1946,7 @@
     "category": "Văn hóa nghệ thuật",
     "approvedYear": "1974",
     "relatedFestivals": {
-      "Lễ hội đình Trà Cổ": 150
+      "Lễ hội đình Trà Cổ": 160
     },
     "relatedFigures": {},
     "id": 178,
@@ -2658,7 +2663,7 @@
     "category": "Lịch sử",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội đình Đông Phù": 286
+      "Lễ hội đình Đông Phù": 296
     },
     "relatedFigures": {},
     "id": 247,
@@ -3427,7 +3432,7 @@
     "category": "Văn hóa nghệ thuật",
     "approvedYear": "1998",
     "relatedFestivals": {
-      "Hội đình Nội Bình Đà": 328
+      "Hội đình Nội Bình Đà": 338
     },
     "relatedFigures": {},
     "id": 319,
@@ -3958,12 +3963,14 @@
       "Hội Đền Kiếp Bạc": 45
     },
     "relatedFigures": {
+      "Trần Hưng Đạo Vương": 268,
       "Vũ Phạm Hàm": 1681,
       "Yết Kiêu": 276,
       "Trần Hưng Đạo": 268,
       "Phạm Ngũ Lão": 246,
       "Nguyễn Trãi": 304,
       "Dã Tượng": 196,
+      "An Nam Hưng Đạo Vương": 268,
       "Thiên Thành": 2708
     },
     "id": 370,
@@ -4114,6 +4121,7 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Trần Cảnh": 251,
+      "An Sinh Vương Trần Liễu": 182,
       "Trần Liễu": 182,
       "Trần Thái Tông": 251
     },
@@ -4127,6 +4135,7 @@
     "approvedYear": "1962",
     "relatedFestivals": {},
     "relatedFigures": {
+      "An Sinh Vương Trần Liễu": 182,
       "Minh Không": 156,
       "Lê Thánh Tông": 391,
       "Huyền Quang": 230,
@@ -4143,7 +4152,7 @@
     "category": "Lịch sử",
     "approvedYear": "1992",
     "relatedFestivals": {
-      "Hội chùa Dâu": 166
+      "Hội chùa Dâu": 176
     },
     "relatedFigures": {},
     "id": 382,
@@ -4241,7 +4250,7 @@
     "category": "Lịch sử",
     "approvedYear": "1990",
     "relatedFestivals": {
-      "Lễ hội chùa Trăm Gian": 223
+      "Lễ hội chùa Trăm Gian": 233
     },
     "relatedFigures": {
       "Diệu Quang": 2350,
@@ -4271,15 +4280,17 @@
     "relatedFigures": {
       "Trần Anh Tông": 249,
       "Lê Quý Đôn": 2652,
-      "Trần Minh Tông": 259,
       "Lý Nhân Tông": 2427,
       "Đoàn Nhữ Hài": 215,
       "Trần Hiến Tông": 272,
-      "Hồ Chí Minh": 2001,
       "Ngô Thì Sĩ": 691,
-      "Nguyễn Trung Ngạn": 242,
+      "Chiêu Quốc Vương Trần Ích Tắc": 254,
       "Mạc Đĩnh Chi": 232,
-      "Mạc Hiển Tích": 149
+      "Mạc Hiển Tích": 149,
+      "An Nam": 806,
+      "Trần Minh Tông": 259,
+      "Hồ Chí Minh": 2001,
+      "Nguyễn Trung Ngạn": 242
     },
     "id": 393,
     "name": "Đền Mạc Đĩnh Chi",
@@ -4335,7 +4346,8 @@
     "relatedFigures": {
       "Khúc Thừa Dụ": 58,
       "Lê Tung": 393,
-      "Khúc Hạo": 57
+      "Khúc Hạo": 57,
+      "An Nam": 806
     },
     "id": 398,
     "name": "Đền Khúc Thừa Dụ",
@@ -4470,8 +4482,8 @@
     "category": "Lịch sử",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ đền Bà Chúa Kho": 161,
-      "Lễ hội đền Bà Chúa": 378
+      "Lễ đền Bà Chúa Kho": 171,
+      "Lễ hội đền Bà Chúa": 388
     },
     "relatedFigures": {
       "Lý Thường Kiệt": 148,
@@ -4565,9 +4577,11 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội làng Đình Bảng": 156
+      "Lễ hội làng Đình Bảng": 166
     },
-    "relatedFigures": {},
+    "relatedFigures": {
+      "Cao Sơn": 4
+    },
     "id": 416,
     "name": "Đình Đình Bảng",
     "description": "Đình Đình Bảng, tên Nôm là đình Báng là một ngôi đình nằm ở làng Đình Bảng (xưa là làng Cổ Pháp hay tên Nôm là làng Báng), thành phố Từ Sơn, tỉnh Bắc Ninh. Đình được xây dựng vào đầu thế kỷ 18, thờ các vị thành hoàng gồm Cao Sơn đại vương (thần Núi), Thủy Bá đại vương (thần Nước) và Bách Lệ đại vương (thần Đất) đồng thời thờ sáu vị có công lập lại làng vào thế kỷ 15."
@@ -4611,6 +4625,7 @@
       "Trần Quốc Hoàn": 2022,
       "Lý Công Uẩn": 141,
       "Hoàng Quốc Việt": 1757,
+      "Lý Thánh Mẫu Minh Đức Hoàng Thái Hậu Phạm Thị": 682,
       "Trần Đăng Ninh": 2029,
       "Vạn Hạnh": 98
     },
@@ -4743,6 +4758,7 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Kinh Dương Vương": 9,
+      "Kinh Dương": 9,
       "Sùng Lãm": 13,
       "Hùng Vương": 8,
       "Ngô Thì Sĩ": 691
@@ -4776,7 +4792,7 @@
     "category": "Lịch sử kiến trúc đặc biệt",
     "approvedYear": "1962",
     "relatedFestivals": {
-      "Hội chùa Bút Tháp": 157
+      "Hội chùa Bút Tháp": 167
     },
     "relatedFigures": {
       "Trần Thánh Tông": 253,
@@ -4802,7 +4818,8 @@
     "approvedYear": "1962",
     "relatedFestivals": {},
     "relatedFigures": {
-      "Mạc Đĩnh Chi": 232
+      "Mạc Đĩnh Chi": 232,
+      "Thiên Vương": 12
     },
     "id": 435,
     "name": "Chùa Dâu",
@@ -4813,7 +4830,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "2001",
     "relatedFestivals": {
-      "Hội chùa Tổ (chùa Phúc Nghiêm)": 167
+      "Hội chùa Tổ (chùa Phúc Nghiêm)": 177
     },
     "relatedFigures": {},
     "id": 436,
@@ -4825,7 +4842,7 @@
     "category": "Lịch sử kiến trúc đặc biệt",
     "approvedYear": "1962",
     "relatedFestivals": {
-      "Hội chùa Phật Tích": 158
+      "Hội chùa Phật Tích": 168
     },
     "relatedFigures": {
       "Trịnh Tráng": 807,
@@ -4951,6 +4968,7 @@
       "Lê Ngân": 313,
       "Trần Khát Chân": 257,
       "Lê Thánh Tông": 391,
+      "An Nam": 806,
       "Đinh Lễ": 86,
       "Nguyễn Trãi": 304,
       "Trần Lựu": 317,
@@ -5231,7 +5249,8 @@
     "approvedYear": "1964",
     "relatedFestivals": {},
     "relatedFigures": {
-      "Trần Nhân Tông": 255
+      "Trần Nhân Tông": 255,
+      "Đại Vương": 4
     },
     "id": 471,
     "name": "Đình Thổ Tang",
@@ -5632,7 +5651,8 @@
     "approvedYear": "1986",
     "relatedFestivals": {},
     "relatedFigures": {
-      "Ngô Quyền": 69
+      "Ngô Quyền": 69,
+      "An Dương": 15
     },
     "id": 510,
     "name": "Từ Lương Xâm",
@@ -5653,7 +5673,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "2007",
     "relatedFestivals": {
-      "Lễ hội đình Tứ Liên (đình Ngọc Xuyên)": 362
+      "Lễ hội đình Tứ Liên (đình Ngọc Xuyên)": 372
     },
     "relatedFigures": {},
     "id": 512,
@@ -5853,6 +5873,7 @@
       "Đinh Gia Khánh": 2299,
       "Lê Quý Đôn": 2652,
       "Lê Thánh Tông": 391,
+      "An Nam": 806,
       "Nguyễn Ánh": 823,
       "Nguyễn Trãi": 304,
       "Nguyễn Nghiễm": 742,
@@ -6195,7 +6216,8 @@
       "Trần Duệ Tông": 258,
       "Đỗ Tử Bình": 213,
       "Trần Dụ Tông": 252,
-      "Trương Hán Siêu": 273
+      "Trương Hán Siêu": 273,
+      "An Nam": 806
     },
     "id": 557,
     "name": "Lăng Thái Bảo Đỗ Tử Bình",
@@ -6280,6 +6302,7 @@
       "Lê Trọng Thứ": 669,
       "Phan Huy Chú": 1161,
       "Nguyễn Danh Phương": 2495,
+      "An Nam": 806,
       "Lê Duy Mật": 649,
       "Hoàng Đình Bảo": 616,
       "Nguyễn Nghiễm": 742,
@@ -6389,6 +6412,7 @@
       "Trần Tự Khánh": 270,
       "Lý Chiêu Hoàng": 181,
       "Phan Phu Tiên": 439,
+      "An Nam": 806,
       "Quách Bốc": 172,
       "Mai Lâm": 2032,
       "Đàm Dĩ Mông": 112,
@@ -6778,7 +6802,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội đình Vạn Phúc": 289
+      "Lễ hội đình Vạn Phúc": 299
     },
     "relatedFigures": {},
     "id": 605,
@@ -7003,6 +7027,7 @@
       "Trần Văn Cung": 2553,
       "Nguyễn Danh Đới": 3014,
       "Phan Chu Trinh": 1609,
+      "An Dương": 15,
       "Nguyễn Ái Quốc": 2001,
       "Ngô Gia Tự": 1484,
       "Tạ Hiện": 1278,
@@ -7233,7 +7258,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội đền Và": 269
+      "Lễ hội đền Và": 279
     },
     "relatedFigures": {},
     "id": 642,
@@ -7609,6 +7634,7 @@
       "Phan Chu Trinh": 1609,
       "Đặng Xuân Bảng": 960,
       "Hoàng Văn Thụ": 1419,
+      "Phù Đổng": 12,
       "Lý Thường Kiệt": 148,
       "Trần Phú": 1654,
       "Xuân Hồng": 1942,
@@ -7845,7 +7871,9 @@
     "location": "Trường Yên - Hoa Lư",
     "category": "Không rõ",
     "approvedYear": "Không rõ",
-    "relatedFestivals": {},
+    "relatedFestivals": {
+      "Lễ hội đền Trần Quốc Bảo": 117
+    },
     "relatedFigures": {},
     "id": 693,
     "name": "Đền Trần",
@@ -7905,6 +7933,7 @@
     "approvedYear": "Không rõ",
     "relatedFestivals": {},
     "relatedFigures": {
+      "Cao Sơn": 4,
       "Vân Trình": 1701
     },
     "id": 698,
@@ -7917,6 +7946,7 @@
     "approvedYear": "Không rõ",
     "relatedFestivals": {},
     "relatedFigures": {
+      "Cao Sơn": 4,
       "Vân Trình": 1701
     },
     "id": 699,
@@ -7944,6 +7974,7 @@
     "relatedFigures": {
       "Đinh Tiên Hoàng": 76,
       "Nguyễn Minh Không": 2775,
+      "Hoàng Hậu Dương Vân Nga": 74,
       "Lê Đại Hành": 84,
       "Lý Quốc Sư": 156,
       "Dương Vân Nga": 74
@@ -8038,6 +8069,7 @@
     "approvedYear": "Không rõ",
     "relatedFestivals": {},
     "relatedFigures": {
+      "Cao Sơn": 4,
       "Vân Trình": 1701
     },
     "id": 709,
@@ -8206,6 +8238,7 @@
       "Lý Quốc Sư Nguyễn Minh Không": 156,
       "Đinh Tiên Hoàng": 76,
       "Nguyễn Minh Không": 2775,
+      "Cao Sơn": 4,
       "Đinh Bộ Lĩnh": 76,
       "Lê Tương Dực": 2481,
       "Văn Lâm": 1067,
@@ -8294,6 +8327,7 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Đinh Tiên Hoàng": 76,
+      "Cao Sơn": 4,
       "Đinh Bộ Lĩnh": 76
     },
     "id": 727,
@@ -8400,6 +8434,7 @@
     "relatedFigures": {
       "Đinh Tiên Hoàng": 76,
       "Nguyễn Minh Không": 2775,
+      "Cao Sơn": 4,
       "Trần Hưng Đạo": 268,
       "Minh Không": 156,
       "Tô Hiến Thành": 173,
@@ -8433,6 +8468,7 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Đinh Tiên Hoàng": 76,
+      "Cao Sơn": 4,
       "Minh Không": 156,
       "Nguyễn Bặc": 79,
       "Lý Công Uẩn": 141,
@@ -8441,6 +8477,7 @@
       "Lê Bình": 1429,
       "Dương Vân Nga": 74,
       "Đinh Công Trứ": 65,
+      "An Nam": 806,
       "Duy Tân": 1541,
       "Quỳnh Lưu": 1862,
       "Nguyễn Minh Không": 2775,
@@ -8634,6 +8671,7 @@
     "approvedYear": "Không rõ",
     "relatedFestivals": {},
     "relatedFigures": {
+      "Cao Sơn": 4,
       "Ngô Văn Sở": 884,
       "Ngô Thì Nhậm": 831,
       "Ninh Tốn": 768,
@@ -9041,7 +9079,7 @@
     },
     "id": 790,
     "name": "Khu lưu niệm Tổng Bí thư Nguyễn Văn Linh",
-    "description": "Nguyễn Văn Linh, tên khai sinh là Nguyễn Đức Cúc (1 tháng 7 năm 1915 – 27 tháng 4 năm 1998) là Tổng bí thư Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam từ 1986 đến 1991. Thời kỳ là Tổng Bí thư, ông nổi tiếng với bút danh N.V.L. (sau này ông cho biết đó là \"Nói Và Làm\") với một loạt những bài báo trong chuyên mục Những việc cần làm ngay trên báo Nhân dân bàn về những việc cần phải chấn chỉnh trong xã hội. Ông được xem là người mở đường và có công lớn trong công cuộc Đổi Mới của Việt Nam sau khi nó được khởi xướng từ người tiền nhiệm của ông, cố Tổng Bí thư Trường Chinh."
+    "description": "Nguyễn Văn Linh, tên khai sinh là Nguyễn Đức Cúc (1 tháng 7 năm 1915 – 27 tháng 4 năm 1998) là Tổng bí thư Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam từ 1986 đến 1991. Thời kỳ là Tổng Bí thư, ông nổi tiếng với bút danh N.V.L. (sau này ông cho biết đó là \"Nói Và Làm\") với một loạt những bài báo trong chuyên mục Những việc cần làm ngay trên báo Nhân dân bàn về những việc cần phải chấn chỉnh trong xã hội. Ông được xem là người mở đường và có công lớn trong công cuộc Đổi Mới của Việt Nam sau khi nó được khởi xướng từ người tiền nhiệm của ông, Tổng Bí thư Trường Chinh."
   },
   {
     "location": "Hiến Nam, Tp. Hưng Yên",
@@ -9278,7 +9316,7 @@
     "category": "Lịch sử nghệ thuật",
     "approvedYear": "20/7/1994",
     "relatedFestivals": {
-      "Hội Đình Mai": 398
+      "Hội Đình Mai": 408
     },
     "relatedFigures": {},
     "id": 814,
@@ -9596,7 +9634,7 @@
     "category": "Lịch sử",
     "approvedYear": "13/02/1996",
     "relatedFestivals": {
-      "Lễ hội đền Bạch Mã": 319
+      "Lễ hội đền Bạch Mã": 329
     },
     "relatedFigures": {},
     "id": 845,
@@ -9658,7 +9696,7 @@
     "category": "Lịch sử kiến trúc nghệ thuật",
     "approvedYear": "18/01/1993",
     "relatedFestivals": {
-      "Hội đình Thượng Lão": 243
+      "Hội đình Thượng Lão": 253
     },
     "relatedFigures": {},
     "id": 851,
@@ -9710,7 +9748,7 @@
     "category": "Kiến trúc nghệ thuật",
     "approvedYear": "26/01/2011",
     "relatedFestivals": {
-      "Hội đình Gia Thuỵ": 303
+      "Hội đình Gia Thuỵ": 313
     },
     "relatedFigures": {},
     "id": 856,
@@ -9852,7 +9890,7 @@
     "category": "Kiến trúc nghệ thuật",
     "approvedYear": "07/5/1997",
     "relatedFestivals": {
-      "Lễ hội đình An Hòa": 317
+      "Lễ hội đình An Hòa": 327
     },
     "relatedFigures": {},
     "id": 870,
@@ -10097,6 +10135,7 @@
       "Lê Thánh Tông": 391,
       "Mạc Mậu Hợp": 506,
       "Lê Nghi Dân": 377,
+      "An Nam": 806,
       "Nguyễn Ánh": 823,
       "Vũ Như Tô": 453,
       "Ngô Quyền": 69,
@@ -10140,6 +10179,7 @@
       "Lê Thánh Tông": 391,
       "Mạc Mậu Hợp": 506,
       "Lê Nghi Dân": 377,
+      "An Nam": 806,
       "Nguyễn Ánh": 823,
       "Vũ Như Tô": 453,
       "Ngô Quyền": 69,
@@ -10183,6 +10223,7 @@
       "Lê Thánh Tông": 391,
       "Mạc Mậu Hợp": 506,
       "Lê Nghi Dân": 377,
+      "An Nam": 806,
       "Nguyễn Ánh": 823,
       "Vũ Như Tô": 453,
       "Ngô Quyền": 69,
@@ -10323,7 +10364,7 @@
     "category": "Lịch sử kiến trúc",
     "approvedYear": "1990",
     "relatedFestivals": {
-      "Lễ hội đình Đại Yên": 353
+      "Lễ hội đình Đại Yên": 363
     },
     "relatedFigures": {},
     "id": 905,
@@ -10345,7 +10386,7 @@
     "category": "Văn hóa kiến trúc",
     "approvedYear": "1990",
     "relatedFestivals": {
-      "Hội đình Kim Mã Hạ": 255
+      "Hội đình Kim Mã Hạ": 265
     },
     "relatedFigures": {},
     "id": 907,
@@ -10592,7 +10633,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1986",
     "relatedFestivals": {
-      "Lễ hội đền Bạch Mã": 130
+      "Lễ hội đền Bạch Mã": 140
     },
     "relatedFigures": {
       "Đinh Tiên Hoàng": 76,
@@ -10609,7 +10650,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1995",
     "relatedFestivals": {
-      "Hội chùa Hàm Long": 373
+      "Hội chùa Hàm Long": 383
     },
     "relatedFigures": {
       "Lý Nhân Tông": 2427,
@@ -10620,7 +10661,8 @@
       "Lê Thánh Tông": 391,
       "Triệu Việt Vương": 38,
       "Nguyễn Xí": 2469,
-      "Lê Nghi Dân": 377
+      "Lê Nghi Dân": 377,
+      "Đại Vương": 4
     },
     "id": 930,
     "name": "Chùa Hà",
@@ -10631,7 +10673,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1989",
     "relatedFestivals": {
-      "Lễ hội chùa Thánh Chúa": 276
+      "Lễ hội chùa Thánh Chúa": 286
     },
     "relatedFigures": {},
     "id": 931,
@@ -10643,7 +10685,7 @@
     "category": "Lịch sử văn hóa đặc biệt",
     "approvedYear": "1962",
     "relatedFestivals": {
-      "Lễ hội đền Đồng Nhân": 282
+      "Lễ hội đền Đồng Nhân": 292
     },
     "relatedFigures": {
       "Phan Chu Trinh": 1609,
@@ -10794,7 +10836,8 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Lý Nam Đế": 34,
-      "Minh Mạng": 1096
+      "Minh Mạng": 1096,
+      "Trần Quốc": 266
     },
     "id": 945,
     "name": "Chùa Trấn Quốc",
@@ -10851,7 +10894,7 @@
     "category": "Lịch sử",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội đình Ứng Thiên": 340
+      "Lễ hội đình Ứng Thiên": 350
     },
     "relatedFigures": {},
     "id": 950,
@@ -11053,7 +11096,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1962",
     "relatedFestivals": {
-      "Lễ hội chùa Láng": 339
+      "Lễ hội chùa Láng": 349
     },
     "relatedFigures": {
       "Lý Nhân Tông": 2427,
@@ -11150,7 +11193,7 @@
     "category": "Lịch sử văn hóa đặc biệt",
     "approvedYear": "2013",
     "relatedFestivals": {
-      "Hội đền Hát Môn": 333
+      "Hội đền Hát Môn": 343
     },
     "relatedFigures": {},
     "id": 976,
@@ -11162,7 +11205,7 @@
     "category": "Văn hóa kiến trúc",
     "approvedYear": "1979",
     "relatedFestivals": {
-      "Hội chùa Bối Khê": 262
+      "Hội chùa Bối Khê": 272
     },
     "relatedFigures": {},
     "id": 977,
@@ -11184,7 +11227,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1989",
     "relatedFestivals": {
-      "Lễ hội chùa Nành": 283
+      "Lễ hội chùa Nành": 293
     },
     "relatedFigures": {},
     "id": 979,
@@ -11208,6 +11251,7 @@
     "relatedFestivals": {},
     "relatedFigures": {
       "Phù Đổng Thiên Vương": 12,
+      "Phù Đổng": 12,
       "Lý Thái Tổ": 141
     },
     "id": 981,
@@ -11249,12 +11293,13 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1962",
     "relatedFestivals": {
-      "Hội Gióng đền Sóc": 236
+      "Hội Gióng đền Sóc": 246
     },
     "relatedFigures": {
       "Phù Đổng Thiên Vương": 12,
       "Lê Đại Hành": 84,
-      "Lê Hoàn": 84
+      "Lê Hoàn": 84,
+      "Đổng Thiên Vương": 12
     },
     "id": 985,
     "name": "Đền Sóc",
@@ -11299,6 +11344,8 @@
       "Kinh Dương Vương": 9,
       "Sùng Lãm": 13,
       "Âu Cơ": 2,
+      "Hoàng Hậu": 1,
+      "Hùng Hiền Vương": 748,
       "Lý Thái Tông": 145
     },
     "id": 989,
@@ -11319,7 +11366,9 @@
       "Minh Mạng": 1096,
       "Âu Cơ": 2,
       "Đồng Khánh": 1539,
-      "Lý Thái Tông": 145
+      "Hùng Hiền Vương": 748,
+      "Lý Thái Tông": 145,
+      "Minh Kha": 526
     },
     "id": 990,
     "name": "Đình Ngoại Bình Đà",
@@ -11383,7 +11432,7 @@
     "category": "Lịch sử văn hóa đặc biệt",
     "approvedYear": "2014",
     "relatedFestivals": {
-      "Hội chùa Tây Phương": 335
+      "Hội chùa Tây Phương": 345
     },
     "relatedFigures": {
       "Huy Cận": 1718,
@@ -11401,7 +11450,9 @@
     "relatedFigures": {
       "An Dương Vương": 15,
       "Lý Ông Trọng": 11,
-      "Thục Phán": 15
+      "Thục Phán": 15,
+      "Đại Vương": 4,
+      "Thục An Dương Vương": 15
     },
     "id": 995,
     "name": "Đình Chèm",
@@ -11540,7 +11591,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "2001",
     "relatedFestivals": {
-      "Hội đền Đồng Cổ (hội thề Đồng Cổ)": 365
+      "Hội đền Đồng Cổ (hội thề Đồng Cổ)": 375
     },
     "relatedFigures": {},
     "id": 1008,
@@ -11755,7 +11806,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1993",
     "relatedFestivals": {
-      "Lễ hội đền Sòng": 114
+      "Lễ hội đền Sòng": 124
     },
     "relatedFigures": {},
     "id": 1028,
@@ -11945,9 +11996,11 @@
     "approvedYear": "1993",
     "relatedFestivals": {},
     "relatedFigures": {
+      "Chiêu Minh Vương Trần Quang Khải": 264,
       "Trần Quang Khải": 264,
       "Trần Thánh Tông": 253,
-      "Bạch Liêu": 185
+      "Bạch Liêu": 185,
+      "Đại Vương": 4
     },
     "id": 1044,
     "name": "Đền thờ trạng nguyên Bạch Liêu",
@@ -12020,7 +12073,7 @@
     "category": "Lịch sử",
     "approvedYear": "2009",
     "relatedFestivals": {
-      "Hội đền Hữu Vĩnh": 258
+      "Hội đền Hữu Vĩnh": 268
     },
     "relatedFigures": {},
     "id": 1050,
@@ -12191,7 +12244,8 @@
       "Mai Thúc Huy": 51,
       "Mai Hắc Đế": 52,
       "Trần Quốc Vượng": 3058,
-      "Mã Viện": 2582
+      "Mã Viện": 2582,
+      "An Nam": 806
     },
     "id": 1065,
     "name": "Đền thờ Mai Hắc Đế",
@@ -12403,6 +12457,7 @@
       "Lê Trang Tông": 650,
       "Trịnh Tùng": 808,
       "Lê Chiêu Tông": 395,
+      "Bình An": 808,
       "Hoàng Đình Ái": 524,
       "Mạc Mậu Hợp": 506
     },
@@ -12567,9 +12622,10 @@
     "category": "Lịch sử",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội đền Cuông Nghệ An": 127
+      "Lễ hội đền Cuông Nghệ An": 137
     },
     "relatedFigures": {
+      "An Dương Vương Thục Phán": 15,
       "Phạm Đình Hổ": 1135,
       "Đinh Tiên Hoàng": 76,
       "Đinh Bộ Lĩnh": 76,
@@ -12632,7 +12688,8 @@
       "Cao Thông": 14,
       "Hùng Vương": 8,
       "Triệu Đà": 2579,
-      "Thục Phán": 15
+      "Thục Phán": 15,
+      "Thục An Dương Vương": 15
     },
     "id": 1091,
     "name": "Đền thờ Cao Lỗ",
@@ -13061,7 +13118,7 @@
     "category": "Lịch sử",
     "approvedYear": "1993",
     "relatedFestivals": {
-      "Lễ hội đền Cờn": 126
+      "Lễ hội đền Cờn": 136
     },
     "relatedFigures": {
       "Quỳnh Lưu": 1862,
@@ -13206,7 +13263,8 @@
       "Cao Thắng": 1327,
       "Phan Bội Châu": 1608,
       "Lê Đại": 1811,
-      "Cao Đạt": 1215
+      "Cao Đạt": 1215,
+      "An Nam": 806
     },
     "id": 1138,
     "name": "Nhà thờ Cao Thắng",
@@ -13315,6 +13373,7 @@
       "Lê Thánh Tông": 391,
       "Nguyễn Biểu": 2478,
       "Nguyễn Cảnh Dị": 312,
+      "Đại Vương": 4,
       "Hoàng Xuân Hãn": 1785
     },
     "id": 1146,
@@ -13506,7 +13565,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1992",
     "relatedFestivals": {
-      "Lễ hội chùa Chân Tiên": 192
+      "Lễ hội chùa Chân Tiên": 202
     },
     "relatedFigures": {},
     "id": 1165,
@@ -13778,7 +13837,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "Không rõ",
     "relatedFestivals": {
-      "Lễ hội Thành Hoàng - làng Quần Thanh": 122
+      "Lễ hội Thành Hoàng": 132
     },
     "relatedFigures": {},
     "id": 1190,
@@ -14596,7 +14655,8 @@
       "Minh Mạng": 1096,
       "Phạm Nguyễn Du": 777,
       "Nguyễn Phúc Khoát": 745,
-      "Nguyễn Phúc Thuần": 749
+      "Nguyễn Phúc Thuần": 749,
+      "Minh Vương Nguyễn Phúc Chu": 743
     },
     "id": 1260,
     "name": "Mộ Nguyễn Cư Trinh",
@@ -14735,7 +14795,8 @@
       "Lê Duẩn": 1810,
       "Minh Mạng": 1096,
       "Đồng Khánh": 1539,
-      "Lương Ngọc Quyến": 1474
+      "Lương Ngọc Quyến": 1474,
+      "Vũ Vương Nguyễn Phúc Khoát": 745
     },
     "id": 1271,
     "name": "KDT Cố đô Huế",
@@ -14906,7 +14967,8 @@
       "Đào Tấn": 963,
       "Nguyễn Hoàng": 724,
       "Ngô Đình Diệm": 1879,
-      "Nguyễn Phúc Chu": 743
+      "Nguyễn Phúc Chu": 743,
+      "Thiên Vương": 12
     },
     "id": 1283,
     "name": "Chùa Thiên Mụ",
@@ -15152,6 +15214,7 @@
       "Trần Quý Cáp": 1406,
       "Minh Hương": 1856,
       "Nguyễn Phúc Chu": 743,
+      "An Nam": 806,
       "Nguyễn Huệ": 833,
       "Bảo Đại": 1542,
       "Dương Châu": 2121,
@@ -15205,7 +15268,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "1991",
     "relatedFestivals": {
-      "Hội chùa Ông": 136
+      "Hội chùa Ông": 146
     },
     "relatedFigures": {},
     "id": 1308,
@@ -15252,6 +15315,7 @@
     "relatedFigures": {
       "Nguyễn Ánh": 823,
       "Nguyễn Phúc Ánh": 1095,
+      "Võ Vương Nguyễn Phúc Khoát": 745,
       "Nguyễn Nhạc": 887,
       "Nguyễn Huệ": 833
     },
@@ -15329,8 +15393,11 @@
       "Bảo Đại": 1542,
       "Lê Quý Đôn": 2652,
       "Nguyễn Phúc Tần": 748,
+      "Hoàng Hậu Mạc Thị Giai": 676,
+      "Duy Trinh": 1211,
       "Nguyễn Phúc Lan": 746,
-      "Minh Mạng": 1096
+      "Minh Mạng": 1096,
+      "Hoàng Hậu": 1
     },
     "id": 1318,
     "name": "Lăng mộ Đoàn Quý phi",
@@ -16273,7 +16340,7 @@
     "category": "Lịch sử",
     "approvedYear": "2011",
     "relatedFestivals": {
-      "Lễ hội chùa Ông Bổn": 145
+      "Lễ hội chùa Ông Bổn": 155
     },
     "relatedFigures": {},
     "id": 1397,
@@ -17853,7 +17920,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "21/01/1989",
     "relatedFestivals": {
-      "Lễ hội núi Bà Đen Tây Ninh": 197
+      "Lễ hội núi Bà Đen Tây Ninh": 207
     },
     "relatedFigures": {
       "Hồ Chí Minh": 2001
@@ -17991,7 +18058,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "25/03/1991",
     "relatedFestivals": {
-      "Lễ hội Nghinh Ông Đình Thắng Tam": 204
+      "Lễ hội Nghinh Ông Đình Thắng Tam": 214
     },
     "relatedFigures": {},
     "id": 1552,
@@ -18191,7 +18258,7 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "16/01/1995",
     "relatedFestivals": {
-      "Lễ hội Dinh Cô Long Hải": 205
+      "Lễ hội Dinh Cô Long Hải": 215
     },
     "relatedFigures": {},
     "id": 1571,
@@ -18451,9 +18518,7 @@
     "location": "Quận 5",
     "category": "Văn hóa kiến trúc",
     "approvedYear": "1998",
-    "relatedFestivals": {
-      "Lễ hội chùa Ông Bổn": 145
-    },
+    "relatedFestivals": {},
     "relatedFigures": {},
     "id": 1594,
     "name": "Miếu Nhị Phủ (Chùa Ông Bổn)",
@@ -18514,7 +18579,7 @@
     "category": "Lịch sử",
     "approvedYear": "1997",
     "relatedFestivals": {
-      "Lễ Kỳ Yên đình Bình Đông": 140
+      "Lễ Kỳ Yên đình Bình Đông": 150
     },
     "relatedFigures": {},
     "id": 1600,
@@ -18696,7 +18761,7 @@
     "category": "Văn hóa kiến trúc",
     "approvedYear": "1997",
     "relatedFestivals": {
-      "Lễ Kỳ Yên đình Phú Nhuận": 141
+      "Lễ Kỳ Yên đình Phú Nhuận": 151
     },
     "relatedFigures": {},
     "id": 1618,
@@ -18764,7 +18829,7 @@
     "category": "Văn hóa kiến trúc",
     "approvedYear": "2002",
     "relatedFestivals": {
-      "Lễ Kỳ Yên đình Trường Thọ": 142
+      "Lễ Kỳ Yên đình Trường Thọ": 152
     },
     "relatedFigures": {},
     "id": 1624,
@@ -19126,10 +19191,12 @@
     "category": "Lịch sử khảo cổ",
     "approvedYear": "11/6/1999",
     "relatedFestivals": {},
-    "relatedFigures": {},
+    "relatedFigures": {
+      "Hồ Chí Minh": 2001
+    },
     "id": 1655,
     "name": "Di tích khảo cổ Rạch Núi",
-    "description": "Di tích khảo cổ học Rạch Núi là một gò đất rộng khoảnh một hecta nằm tại ấp Tây, xã Đông Thạnh, huyện Cần Giuộc, tỉnh Long An, Việt Nam. Đường kính trung bình 100 m, cao hơn 6 m so với mặt đất tự nhiên, xung quanh có rạch bao bọc. Trên mặt gò có nhiều cây cổ thụ, bao quanh gò là rạch Núi, một con rạch nhỏ đổ vào Sông Cần Giuộc (Sông Rạch Cát). Do địa thế cao giữa khu vực đồng bằng nên còn được gọi theo dân gian là gò Núi Đất (hay thổ sơn)."
+    "description": "Di tích khảo cổ học Rạch Núi là một gò đất nằm tại ấp Tây, xã Đông Thạnh, huyện Cần Giuộc, tỉnh Long An, Việt Nam."
   },
   {
     "location": "Thanh Phú Long, Châu Thành",
@@ -19753,6 +19820,7 @@
       "Tôn Thất Thuyết": 1282,
       "Trương Minh Giảng": 1196,
       "Trần Lục": 1289,
+      "An Nam": 806,
       "Trần Hưng Đạo": 268,
       "Lê Thanh": 1455,
       "Lê Hồng Phong": 1439,
@@ -20018,7 +20086,7 @@
     "category": "Lịch sử",
     "approvedYear": "25/3/1991",
     "relatedFestivals": {
-      "Hội miếu Vũ, Xuân Đỉnh": 310
+      "Hội miếu Vũ, Xuân Đỉnh": 320
     },
     "relatedFigures": {},
     "id": 1728,
@@ -20602,7 +20670,9 @@
     "category": "Lịch sử văn hóa",
     "approvedYear": "Không rõ",
     "relatedFestivals": {},
-    "relatedFigures": {},
+    "relatedFigures": {
+      "Bình An": 808
+    },
     "id": 1780,
     "name": "Núi Mo So",
     "description": "Núi Mo So (theo tiếng Khmer, \"mo so\" có nghĩa là \"đá trắng\"), nằm cách tỉnh lộ 11 khoảng 2 km về phía Bắc và cách thị xã Hà Tiên khoảng 30 km; hiện thuộc ấp Ba Núi, xã Bình An, huyện Kiên Lương, tỉnh Kiên Giang, Việt Nam. Đây là một di tích Lịch sử cách mạng và thắng cảnh cấp quốc gia."
@@ -20656,6 +20726,7 @@
       "Huỳnh Mẫn Đạt": 1026,
       "Trần Bá Lộc": 1285,
       "Huỳnh Công Tấn": 1025,
+      "Bình An": 808,
       "Nguyễn Tri Phương": 1115,
       "Quản Lịch": 1117
     },

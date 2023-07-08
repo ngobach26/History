@@ -13,7 +13,10 @@
     "father": {},
     "children": {},
     "relatedEvents": {},
-    "relatedRelics": {},
+    "relatedRelics": {
+      "Đền Nội Bình Đà": 989,
+      "Lăng mộ Đoàn Quý phi": 1318
+    },
     "relatedFestivals": {},
     "id": 1,
     "name": "An Tiêm",
@@ -35,7 +38,6 @@
     },
     "children": {
       "Sùng Lãm": 13,
-      "Hùng Vương": 8,
       "Lạc Long Quân": 13
     },
     "relatedEvents": {},
@@ -49,9 +51,9 @@
       "Đình Ngoại Bình Đà": 990
     },
     "relatedFestivals": {
-      "Hội làng Xuân Dục": 221,
-      "Hội đình Nội Bình Đà": 328,
-      "Hội đình Văn Khê": 374
+      "Hội làng Xuân Dục": 231,
+      "Hội đình Nội Bình Đà": 338,
+      "Hội đình Văn Khê": 384
     },
     "id": 2,
     "name": "Âu Cơ",
@@ -80,7 +82,7 @@
       "Đền Tiên La": 565
     },
     "relatedFestivals": {
-      "Lễ hội đình Đại Yên": 353
+      "Lễ hội đình Đại Yên": 363
     },
     "id": 3,
     "name": "Bạch Hoa",
@@ -106,9 +108,37 @@
     },
     "children": {},
     "relatedEvents": {},
-    "relatedRelics": {},
+    "relatedRelics": {
+      "Quần thể di tích danh thắng Yên Tử": 168,
+      "Đình Đình Bảng": 416,
+      "Đình Thổ Tang": 471,
+      "Động Tiên Cá": 698,
+      "Động Vái Giời": 699,
+      "Vườn chim Thung Nham": 709,
+      "Núi chùa Bái Đính": 722,
+      "Động Thiên Tôn": 727,
+      "Đền Thánh Nguyễn": 737,
+      "Đền thờ Đinh Bộ Lĩnh": 739,
+      "Phòng tuyến Tam Điệp": 756,
+      "Chùa Hà": 930,
+      "Đình Chèm": 995,
+      "Đền thờ trạng nguyên Bạch Liêu": 1044,
+      "Đền thờ Nguyễn Biểu": 1146
+    },
     "relatedFestivals": {
-      "Lễ hội đình và đền Kim Liên (đền Cao Sơn)": 359
+      "Hội Hoa Sơn": 239,
+      "Hội làng Bồ Đề": 243,
+      "Hội đình Thượng Lão": 253,
+      "Hội làng Đa Sĩ": 274,
+      "Hội làng Đông Dư": 298,
+      "Hội làng Thổ Khối": 305,
+      "Hội làng Yên Thái": 318,
+      "Hội làng Hồ Khẩu": 332,
+      "Lễ hội làng Bát Tràng": 333,
+      "Hội làng Vải (hội Tầm Xá)": 362,
+      "Hội làng Khê Hồi": 365,
+      "Lễ hội đình và đền Kim Liên (đền Cao Sơn)": 369,
+      "Hội rước thành hoàng tổng Hà Hồi": 371
     },
     "id": 4,
     "name": "Cao Sơn Đại Vương",
@@ -130,15 +160,13 @@
     "father": {
       "Chử Cù Vân": 0
     },
-    "children": {
-      "Nguyễn Tường Phượng": 2032
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Chùa Hà": 930
     },
     "relatedFestivals": {
-      "Hội xã Tự Nhiên": 364
+      "Hội xã Tự Nhiên": 374
     },
     "id": 5,
     "name": "Chử Đồng Tử",
@@ -224,12 +252,13 @@
       "Đền thờ Cao Lỗ": 1091
     },
     "relatedFestivals": {
-      "Hội Đậu": 164,
-      "Hội làng Đại Lan": 234,
-      "Hội làng Hà Hương": 265,
-      "Hội làng Canh Hoạch (làng Vác)": 351,
-      "Hội Bất Nạo": 385,
-      "Hội làng Xuân Nộn": 392
+      "Lễ hội Nam Trì": 29,
+      "Hội Đậu": 174,
+      "Hội làng Đại Lan": 244,
+      "Hội làng Hà Hương": 275,
+      "Hội làng Canh Hoạch (làng Vác)": 361,
+      "Hội Bất Nạo": 395,
+      "Hội làng Xuân Nộn": 402
     },
     "id": 8,
     "name": "Hùng Vương",
@@ -307,7 +336,8 @@
       "Đình Chèm": 995
     },
     "relatedFestivals": {
-      "Hội chùa Hàm Long": 373
+      "Lễ hội đình-đền Chèm": 382,
+      "Hội chùa Hàm Long": 383
     },
     "id": 11,
     "name": "Lý Ông Trọng",
@@ -330,18 +360,21 @@
     "children": {},
     "relatedEvents": {},
     "relatedRelics": {
+      "Chùa Dâu": 435,
+      "Nhà lưu niệm đồng chí Trường Chinh": 674,
       "Đền Phù Đổng": 981,
-      "Đền Sóc": 985
+      "Đền Sóc": 985,
+      "Chùa Thiên Mụ": 1283
     },
     "relatedFestivals": {
       "hội Gióng Sóc Sơn": 3,
       "Hội Gióng Phù Đổng": 33,
-      "Hội đền Xuân Lai": 217,
-      "Hội đền Thanh Nhàn": 232,
-      "Hội Gióng đền Sóc": 236,
-      "Hội làng Bà Già": 254,
-      "Hội làng Cán Khê": 324,
-      "Hội Chi Nam (hội Phù Gióng)": 368
+      "Hội đền Xuân Lai": 227,
+      "Hội đền Thanh Nhàn": 242,
+      "Hội Gióng đền Sóc": 246,
+      "Hội làng Bà Già": 264,
+      "Hội làng Cán Khê": 334,
+      "Hội Chi Nam (hội Phù Gióng)": 378
     },
     "id": 12,
     "name": "Phù Đổng Thiên Vương",
@@ -365,7 +398,7 @@
       "Long Mẫu Thần Long": 0
     },
     "father": {
-      "Kinh Dương Vương Lộc Tục": 0
+      "Kinh Dương Vương Lộc Tục": 9
     },
     "children": {
       "Hùng Vương": 8
@@ -377,11 +410,11 @@
       "Đình Ngoại Bình Đà": 990
     },
     "relatedFestivals": {
-      "Hội Khám": 168,
-      "Hội làng Xuân Dục": 221,
-      "Hội đình Nội Bình Đà": 328,
-      "Hội làng chài Vạn Vĩ": 345,
-      "Hội đình Văn Khê": 374
+      "Hội Khám": 178,
+      "Hội làng Xuân Dục": 231,
+      "Hội đình Nội Bình Đà": 338,
+      "Hội làng chài Vạn Vĩ": 355,
+      "Hội đình Văn Khê": 384
     },
     "id": 13,
     "name": "Sùng Lãm",
@@ -412,9 +445,9 @@
       "Đền thờ Cao Lỗ": 1091
     },
     "relatedFestivals": {
-      "Hội đền Cao Lỗ Vương (Hội làng Đại Than)": 165,
-      "Hội đình Trần Đăng": 230,
-      "Hội vật làng Yên Nội": 301
+      "Hội đền Cao Lỗ Vương (Hội làng Đại Than)": 175,
+      "Hội đình Trần Đăng": 240,
+      "Hội vật làng Yên Nội": 311
     },
     "id": 14,
     "name": "Cao Thông",
@@ -436,13 +469,13 @@
     "father": {
       "Thục Chế": 0
     },
-    "children": {
-      "Cao Thông": 14
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến tranh Tần-Việt": 392
     },
     "relatedRelics": {
+      "Từ Lương Xâm": 510,
+      "Khu lưu niệm và Lăng mộ Nguyễn Đức Cảnh": 626,
       "Đền Quán Thánh": 896,
       "Đình Chèm": 995,
       "Đền Cuông": 1087,
@@ -450,10 +483,10 @@
     },
     "relatedFestivals": {
       "Lễ hội Cổ Loa": 4,
-      "Hội đền Cao Lỗ Vương (Hội làng Đại Than)": 165,
-      "Hội đình Trần Đăng": 230,
-      "Hội làng Ruộng": 241,
-      "Hội đình Thượng Lão": 243
+      "Hội đền Cao Lỗ Vương (Hội làng Đại Than)": 175,
+      "Hội đình Trần Đăng": 240,
+      "Hội làng Ruộng": 251,
+      "Hội đình Thượng Lão": 253
     },
     "id": 15,
     "name": "Thục Phán",
@@ -525,7 +558,7 @@
     },
     "relatedRelics": {},
     "relatedFestivals": {
-      "Lễ hội đình Ngũ Giáp": 277
+      "Lễ hội đình Ngũ Giáp": 287
     },
     "id": 18,
     "name": "Lữ Gia",
@@ -729,7 +762,9 @@
     "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
-    "relatedFestivals": {},
+    "relatedFestivals": {
+      "Hội phết Hiền Quan": 10
+    },
     "id": 27,
     "name": "Hoàng Thiều Hoa",
     "description": "Có sách chép sai là Hoàng Thiếu Hoa, không rõ năm sinh, năm mất. Nữ tướng đời Trưng vương, quê huyện Gia Hưng, tỉnh Thanh Hóa."
@@ -778,8 +813,7 @@
     "father": {},
     "children": {
       "Trưng Nhị": 0,
-      "Trưng Trắc": 0,
-      "Trưng Trắc - Trưng Nhị": 31
+      "Trưng Trắc": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -849,22 +883,22 @@
     },
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội vật Mai Động": 216,
-      "Hội An Sơn": 225,
-      "Lễ hội Vân Sa": 227,
-      "Hội đền Hạ Lôi": 231,
-      "Lễ hội kén rể": 279,
-      "Lễ hội đền Đồng Nhân": 282,
-      "Hội đình Bà Tía": 290,
-      "Lễ hội đình Vĩnh Ninh": 294,
-      "Hội đền Cai Công": 312,
-      "Hội đền Hát Môn": 333,
-      "Hội Nghiềm": 342,
-      "Hội bơi Thượng Cát": 348,
-      "Hội làng Lê Xá": 356,
-      "Hội xã Tự Nhiên": 364,
-      "Hội Bạch Trữ (Kẻ Bạch)": 379,
-      "Hội làng Lai Tảo": 393
+      "Hội vật Mai Động": 226,
+      "Hội An Sơn": 235,
+      "Lễ hội Vân Sa": 237,
+      "Hội đền Hạ Lôi": 241,
+      "Lễ hội kén rể": 289,
+      "Lễ hội đền Đồng Nhân": 292,
+      "Hội đình Bà Tía": 300,
+      "Lễ hội đình Vĩnh Ninh": 304,
+      "Hội đền Cai Công": 322,
+      "Hội đền Hát Môn": 343,
+      "Hội Nghiềm": 352,
+      "Hội bơi Thượng Cát": 358,
+      "Hội làng Lê Xá": 366,
+      "Hội xã Tự Nhiên": 374,
+      "Hội Bạch Trữ (Kẻ Bạch)": 389,
+      "Hội làng Lai Tảo": 403
     },
     "id": 31,
     "name": "Trưng Trắc - Trưng Nhị",
@@ -954,9 +988,9 @@
       "Khu di tích Đền Bà Triệu": 1010
     },
     "relatedFestivals": {
-      "Hội làng Phú Mỹ—Kiều Mai": 245,
-      "Hội Quán Giá": 350,
-      "Hội tế Trung Đồ": 397
+      "Hội làng Phú Mỹ—Kiều Mai": 255,
+      "Hội Quán Giá": 360,
+      "Hội tế Trung Đồ": 407
     },
     "id": 34,
     "name": "Lý Bôn",
@@ -987,7 +1021,7 @@
       "Cụm di tích thờ Lý Nam Đế (gồm Đình Mộ Đạo, Bảo Đức, Đại Phúc)": 467
     },
     "relatedFestivals": {
-      "Hội đình Thanh Liệt": 291
+      "Hội đình Thanh Liệt": 301
     },
     "id": 35,
     "name": "Phạm Tu",
@@ -1077,7 +1111,7 @@
       "Chùa Hà": 930
     },
     "relatedFestivals": {
-      "Hội làng Xuân Nộn": 392
+      "Hội làng Xuân Nộn": 402
     },
     "id": 38,
     "name": "Triệu Quang Phục",
@@ -1108,7 +1142,7 @@
       "Di tích Phòng tuyến sông Như Nguyệt": 428
     },
     "relatedFestivals": {
-      "Hội làng Xuân Nộn": 392
+      "Hội làng Xuân Nộn": 402
     },
     "id": 39,
     "name": "Trương Hát",
@@ -1140,7 +1174,7 @@
       "Di tích Phòng tuyến sông Như Nguyệt": 428
     },
     "relatedFestivals": {
-      "Hội làng Xuân Nộn": 392
+      "Hội làng Xuân Nộn": 402
     },
     "id": 40,
     "name": "Trương Hống",
@@ -1449,7 +1483,11 @@
       "Khu lưu niệm Ngô Quang Bích": 638
     },
     "relatedFestivals": {
-      "Hội làng Thổ Khối": 295
+      "Hội đình Kim Mã Hạ": 265,
+      "Hội chợ Chuông": 266,
+      "Lễ hội làng Triều Khúc": 267,
+      "Hội làng Thổ Khối": 305,
+      "Hội đình Quảng Bá": 321
     },
     "id": 53,
     "name": "Phùng Hưng",
@@ -1493,7 +1531,6 @@
     },
     "children": {
       "Dương Như Ngọc": 0,
-      "Dương Thị Như Ngọc": 56,
       "Dương Tam Kha": 64
     },
     "relatedEvents": {
@@ -1555,8 +1592,7 @@
       "Khúc Thừa Dụ": 58
     },
     "children": {
-      "Khúc Thừa Mỹ": 59,
-      "Khúc Thừa Mĩ": 2406
+      "Khúc Thừa Mỹ": 59
     },
     "relatedEvents": {
       "Kháng chiến chống quân Nam Hán lần thứ nhất": 4,
@@ -1758,8 +1794,7 @@
       "Nguyễn Công Tấn": 705
     },
     "children": {
-      "Đinh Tiên Hoàng": 76,
-      "Đinh Bộ Lĩnh": 76
+      "Đinh Tiên Hoàng": 76
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -1794,7 +1829,7 @@
       "Chùa Thầy": 993
     },
     "relatedFestivals": {
-      "Hội Đình Mai": 398
+      "Hội Đình Mai": 408
     },
     "id": 66,
     "name": "Đỗ Cảnh Thạc",
@@ -1911,8 +1946,7 @@
       "Ngô Xương Văn": 71
     },
     "children": {
-      "Ngô Xương Xí": 2413,
-      "Ngô Chân Lưu": 94
+      "Ngô Xương Xí": 2413
     },
     "relatedEvents": {
       "Loạn 12 sứ quân": 5,
@@ -1936,14 +1970,13 @@
     "role": "Con thứ hai Ngô Quyền",
     "spouses": {},
     "mother": {
-      "Hoàng Hậu": 0
+      "Hoàng Hậu": 1
     },
     "father": {
       "Ngô Quyền": 69
     },
     "children": {
-      "Ngô Nhật Khánh": 68,
-      "Ngô Xương Ngập": 70
+      "Ngô Nhật Khánh": 68
     },
     "relatedEvents": {
       "Loạn 12 sứ quân": 5,
@@ -2040,8 +2073,7 @@
     "children": {
       "Đinh Liễn": 73,
       "Lê Thị Phất Ngân": 0,
-      "Đinh Phế Đế": 0,
-      "Lê Ngân Tích": 93
+      "Đinh Phế Đế": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -2098,9 +2130,6 @@
     },
     "children": {
       "Đinh Liễn": 73,
-      "Đinh Duệ": 82,
-      "Đinh Liệt": 347,
-      "Đinh Điền": 77,
       "Đinh Hạng Lang": 2417,
       "Đinh Phế Đế": 0
     },
@@ -2139,8 +2168,8 @@
     },
     "relatedFestivals": {
       "Lễ hội Hoa Lư": 27,
-      "Hội thả diều Bá Giang": 358,
-      "Hội Đình Mai": 398
+      "Hội thả diều Bá Giang": 368,
+      "Hội Đình Mai": 408
     },
     "id": 76,
     "name": "Đinh Bộ Lĩnh",
@@ -2359,21 +2388,16 @@
       "Lê Minh Xưởng": 0,
       "Lê Long Tích": 0,
       "Lê Long Đĩnh": 91,
-      "Lê Long Việt": 92,
       "Lê Long Thâu": 0,
       "Lê Long Mang": 0,
       "Lê Long Đinh": 90,
-      "Lê Long Vân": 1820,
       "Lê Long Đề": 0,
-      "Lê Long Cảnh": 89,
       "Lê Thị Phất Ngân": 0,
       "Lê Long Tung": 0,
       "Lê Long Cân": 0,
-      "Lê Ngân Tích": 93,
       "Lê Trung Tông": 92,
       "Lê Long Kính": 89,
-      "Dương Hy Liễn": 0,
-      "Lê Duy Huyên": 492
+      "Dương Hy Liễn": 0
     },
     "relatedEvents": {
       "Lê Hoàn đánh bại quân Tống": 9,
@@ -2401,8 +2425,8 @@
       "Sông Nhà Lê": 1130
     },
     "relatedFestivals": {
-      "Hội làng Tó": 267,
-      "Hội đình Phú Diễn (Hữu Hoà)": 344
+      "Hội làng Tó": 277,
+      "Hội đình Phú Diễn (Hữu Hoà)": 354
     },
     "id": 84,
     "name": "Lê Hoàn",
@@ -3104,7 +3128,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Đặng Hữu Điểm": 201,
       "Đặng Diễn": 200,
       "Đặng Tảo": 205,
       "Đặng Ma La": 203
@@ -3256,7 +3279,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội làng Hậu Ái": 376
+      "Hội làng Hậu Ái": 386
     },
     "id": 121,
     "name": "Đỗ Kính Tu",
@@ -3306,8 +3329,8 @@
       "Đền, Lăng Thái sư Trần Thủ Độ, Đền Linh từ Quốc mẫu Trần Thị Dung": 570
     },
     "relatedFestivals": {
-      "Lễ hội làng Thọ Am": 287,
-      "Hội năm làng Mọc": 298
+      "Lễ hội làng Thọ Am": 297,
+      "Hội năm làng Mọc": 308
     },
     "id": 123,
     "name": "Đoàn Thượng",
@@ -3670,9 +3693,7 @@
     "father": {
       "Lê Thành": 0
     },
-    "children": {
-      "Lê Quát": 227
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Văn miếu Bắc Ninh": 407
@@ -3725,10 +3746,9 @@
     "children": {
       "Lý Bồ": 0,
       "Lý Long Bồ": 0,
-      "Lý Phật Mã": 145,
       "Lý Nhật Quang": 0,
       "Lý Thái Tông": 145,
-      "Vũ Đức Vương": 0,
+      "Vũ Đức Vương": 2263,
       "An Quốc": 0,
       "Lý Lực": 0
     },
@@ -3777,14 +3797,13 @@
       "Linh Từ Quốc Mẫu": 0
     },
     "mother": {
-      "Hoàng Hậu": 0
+      "Hoàng Hậu": 1
     },
     "father": {
       "Lý Cao Tông": 143
     },
     "children": {
       "Hiển Từ Thuận Thiên Hoàng Hậu": 0,
-      "Phạm Thái": 776,
       "Lý Chiêu Hoàng": 181
     },
     "relatedEvents": {},
@@ -3823,8 +3842,7 @@
     },
     "children": {
       "Lý Thẩm": 0,
-      "Lý Huệ Tông": 142,
-      "Lý Đạo Sảm": 142
+      "Lý Huệ Tông": 142
     },
     "relatedEvents": {
       "Lý Cao Tông được nhà Tống phong \"An Nam quốc vương\"": 340
@@ -3885,7 +3903,7 @@
       "Quần thể Hương Sơn (Chùa Hương)": 992
     },
     "relatedFestivals": {
-      "Hội chùa Phật Tích": 158
+      "Hội chùa Phật Tích": 168
     },
     "id": 144,
     "name": "Lý Nhật Tôn",
@@ -3911,7 +3929,6 @@
       "Lý Thái Tổ": 141
     },
     "children": {
-      "Lý Nhật Tôn": 144,
       "Lý Thánh Tông": 144
     },
     "relatedEvents": {
@@ -3956,7 +3973,6 @@
     },
     "children": {
       "Lý Nguyên Hoàng": 0,
-      "Lý Long Trát": 143,
       "Lý Long Tường": 0,
       "Lý Cao Tông": 143,
       "Lý Long Xưởng": 0
@@ -4038,8 +4054,8 @@
       "Lăng Trương Định": 1645
     },
     "relatedFestivals": {
-      "Lễ hội đình làng Nam Đồng": 326,
-      "Lễ hội làng Bắc Biên": 337
+      "Lễ hội đình làng Nam Đồng": 336,
+      "Lễ hội làng Bắc Biên": 347
     },
     "id": 148,
     "name": "Lý Thường Kiệt",
@@ -4057,9 +4073,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Mạc Đĩnh Chi": 232
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đền Mạc Đĩnh Chi": 393
@@ -4110,9 +4124,7 @@
     "father": {
       "Thái Tử Lý Kiến Thành": 0
     },
-    "children": {
-      "Nguyễn Thành": 1554
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -4136,7 +4148,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội Võng Thị": 391
+      "Hội Võng Thị": 401
     },
     "id": 152,
     "name": "Mục Thận",
@@ -4249,7 +4261,7 @@
       "Chùa Thầy": 993
     },
     "relatedFestivals": {
-      "Hội Ngũ Xã": 271
+      "Hội Ngũ Xã": 281
     },
     "id": 156,
     "name": "Nguyễn Chí Thành",
@@ -4638,7 +4650,7 @@
       "Đền Thánh Nguyễn": 737
     },
     "relatedFestivals": {
-      "Hội Sơn Thanh": 246
+      "Hội Sơn Thanh": 256
     },
     "id": 173,
     "name": "Tô Hiến Thành",
@@ -4722,9 +4734,9 @@
     },
     "relatedFestivals": {
       "Lễ hội Chùa Thầy": 26,
-      "Hội chùa Tam Huyền": 336,
-      "Lễ hội chùa Láng": 339,
-      "Hội chùa Hoa Lăng": 343
+      "Hội chùa Tam Huyền": 346,
+      "Lễ hội chùa Láng": 349,
+      "Hội chùa Hoa Lăng": 353
     },
     "id": 176,
     "name": "Từ Lộ",
@@ -4821,7 +4833,7 @@
       "Văn Miếu - Quốc Tử Giám, Bia tiến sĩ Văn Miếu Thăng Long": 962
     },
     "relatedFestivals": {
-      "Lễ hội chùa Thánh Chúa": 276
+      "Lễ hội chùa Thánh Chúa": 286
     },
     "id": 180,
     "name": "Ỷ Lan",
@@ -4884,15 +4896,12 @@
     "father": {
       "Trần Thừa": 0
     },
-    "children": {
-      "Trần Quốc Tuấn": 268,
-      "Trần Tung": 271,
-      "Trần Quang Quá": 2194
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Quần thể di tích danh thắng Yên Tử": 168,
       "Đền Cao An Phụ": 380,
+      "Động Kính Chủ": 381,
       "Đền, Lăng Thái sư Trần Thủ Độ, Đền Linh từ Quốc mẫu Trần Thị Dung": 570
     },
     "relatedFestivals": {},
@@ -5130,8 +5139,8 @@
       "Văn miếu Trấn Biên": 1494
     },
     "relatedFestivals": {
-      "Lễ hội làng Huỳnh Cung": 273,
-      "Hội đình Thanh Liệt": 291
+      "Lễ hội làng Huỳnh Cung": 283,
+      "Hội đình Thanh Liệt": 301
     },
     "id": 191,
     "name": "Châu An",
@@ -5212,7 +5221,7 @@
     "spouses": {},
     "mother": {},
     "father": {
-      "Bảo Nghĩa Vương Trần Bình Trọng": 0
+      "Bảo Nghĩa Vương Trần Bình Trọng": 250
     },
     "children": {
       "Trần Minh Tông Trần Mạnh": 0
@@ -5383,8 +5392,7 @@
     },
     "children": {
       "Đặng Như Tâm": 0,
-      "Đặng Tảo": 205,
-      "Đặng Nhữ Lâm": 204
+      "Đặng Tảo": 205
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -5970,8 +5978,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Trần Bình": 1644,
-      "Trần Bình Trọng": 250,
       "Lê Tông": 0
     },
     "relatedEvents": {
@@ -6557,10 +6563,10 @@
     "spouses": {
       "Tĩnh Huệ": 0,
       "Thuận Thánh": 0,
-      "Chiêu Từ Hoàng Hậu": 0
+      "Chiêu Từ Hoàng Hậu": 195
     },
     "mother": {
-      "Bảo Thánh Hoàng Hậu": 0
+      "Bảo Thánh Hoàng Hậu": 2738
     },
     "father": {
       "Trần Nhân Tông": 255
@@ -6614,7 +6620,7 @@
     },
     "children": {
       "Chiêu Từ": 195,
-      "Chiêu Từ Hoàng Hậu": 0
+      "Chiêu Từ Hoàng Hậu": 195
     },
     "relatedEvents": {
       "Chiến thắng quân Nguyên lần hai": 34
@@ -6648,17 +6654,7 @@
     "father": {
       "Trần Thừa": 0
     },
-    "children": {
-      "Chiêu Văn": 2774,
-      "Trần Quang Khải": 264,
-      "Băng Sơn": 3169,
-      "Trần Hoảng": 253,
-      "Trần Nhật Duật": 262,
-      "An Tư": 184,
-      "Trần Quốc Toản": 267,
-      "Trần Quang Quang": 1655,
-      "Trần Ích Tắc": 254
-    },
+    "children": {},
     "relatedEvents": {
       "Trần Cảnh lên ngôi vua, nhà Trần thành lập": 30,
       "Ban hành Quốc triều hình luật": 31,
@@ -6743,8 +6739,7 @@
     "children": {
       "Trần Đức Diệp": 0,
       "Trần Nhân Tông": 255,
-      "Thiên Thụy": 0,
-      "Trần Khâm": 255
+      "Thiên Thụy": 0
     },
     "relatedEvents": {
       "Lập Quốc tử giám ở kinh đô Thăng Long": 28,
@@ -6771,7 +6766,7 @@
     },
     "relatedFestivals": {
       "Lễ hội đền Thái Vi": 28,
-      "Lễ hội đền Bà Chúa": 378
+      "Lễ hội đền Bà Chúa": 388
     },
     "id": 253,
     "name": "Trần Hoảng",
@@ -6798,7 +6793,9 @@
       "Chiến thắng quân Nguyên lần hai": 34,
       "Chiến tranh Nguyên Mông–Đại Việt lần 3": 438
     },
-    "relatedRelics": {},
+    "relatedRelics": {
+      "Đền Mạc Đĩnh Chi": 393
+    },
     "relatedFestivals": {},
     "id": 254,
     "name": "Trần Ích Tắc",
@@ -6816,7 +6813,7 @@
     "location": "Không rõ",
     "role": "Vua thứ ba nhà Trần",
     "spouses": {
-      "Bảo Thánh Hoàng Hậu": 0
+      "Bảo Thánh Hoàng Hậu": 2738
     },
     "mother": {
       "Nguyên Thánh Thiên Cảm Hoàng Hậu": 0
@@ -6827,8 +6824,6 @@
     "children": {
       "Huyền Trân": 222,
       "Trần Anh Tông": 249,
-      "Đoàn Giỏi": 2308,
-      "Trần Huyền Trân": 2181,
       "Trần Quốc Chẩn": 0
     },
     "relatedEvents": {
@@ -6915,7 +6910,7 @@
       "Lăng mộ và miếu thờ Hoàng Hối Khanh": 1218
     },
     "relatedFestivals": {
-      "Hội đua thuyền Yên Duyên": 384
+      "Hội đua thuyền Yên Duyên": 394
     },
     "id": 257,
     "name": "Trần Khát Chân",
@@ -6976,17 +6971,13 @@
       "Kiều Đàm Linh": 0
     },
     "mother": {
-      "Chiêu Từ Hoàng Hậu": 0
+      "Chiêu Từ Hoàng Hậu": 195
     },
     "father": {
       "Tran Tung Ngoc": 0
     },
     "children": {
-      "An Trần": 0,
-      "Trần Vượng": 272,
-      "Trần Phủ": 263,
-      "Trần Hạo": 252,
-      "Trần Kính": 258
+      "An Trần": 0
     },
     "relatedEvents": {
       "Chiến thắng quân Nguyên lần ba": 36
@@ -7020,9 +7011,7 @@
       "Trần Nghệ Tông": 263
     },
     "children": {
-      "Trùng Quang Đế": 2475,
-      "Nguyễn Súy": 2477,
-      "Trần Quí Khoáng": 303
+      "Trùng Quang Đế": 2475
     },
     "relatedEvents": {
       "Chiến tranh Nguyên Mông–Đại Việt lần 3": 438
@@ -7163,7 +7152,6 @@
     "children": {
       "Quỳnh Thái": 0,
       "Quynh Tu": 0,
-      "Trần Nguyên Đán": 261,
       "Tran Dao Tai": 0,
       "Quỳnh Bảo": 0,
       "Vũ Túc Vương Đạo": 0,
@@ -7205,10 +7193,10 @@
       "Thượng Trân": 0
     },
     "mother": {
-      "Bảo Từ Thuận Thánh Hoàng Hậu": 0
+      "Bảo Từ Thuận Thánh Hoàng Hậu": 187
     },
     "father": {
-      "Hưng Nhượng": 0
+      "Hưng Nhượng": 266
     },
     "children": {},
     "relatedEvents": {},
@@ -7246,7 +7234,8 @@
     },
     "relatedRelics": {
       "Đền Cửa Ông": 138,
-      "Đền thờ Đỗ Khắc Chung": 448
+      "Đền thờ Đỗ Khắc Chung": 448,
+      "Chùa Trấn Quốc": 945
     },
     "relatedFestivals": {},
     "id": 266,
@@ -7303,11 +7292,7 @@
     "father": {
       "Trần Liễu": 182
     },
-    "children": {
-      "Nguyễn Đạo": 1084,
-      "Nguyễn Văn Mại": 2057,
-      "Trần Quốc Tảng": 266
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến thắng quân xâm lược Mông Cổ lần thứ nhất": 33,
       "Chiến thắng quân Nguyên lần hai": 34,
@@ -7358,9 +7343,9 @@
     },
     "relatedFestivals": {
       "Hội Đền Kiếp Bạc": 45,
-      "Lễ hội Vân Sa": 227,
-      "Lễ hội đền Lư Giang": 388,
-      "Hội điện Thái Bình": 390
+      "Lễ hội Vân Sa": 237,
+      "Lễ hội đền Lư Giang": 398,
+      "Hội điện Thái Bình": 400
     },
     "id": 268,
     "name": "Trần Quốc Tuấn",
@@ -7557,7 +7542,7 @@
     "relatedRelics": {},
     "relatedFestivals": {
       "Lễ hội đình Yên Phụ": 18,
-      "Lễ hội đình Nhật Tân": 293
+      "Lễ hội đình Nhật Tân": 303
     },
     "id": 275,
     "name": "Uy Linh Lang",
@@ -7736,11 +7721,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Ức": 851,
-      "Lê Thiếu Dĩnh": 390,
-      "Ngô Thì Hương": 1069,
-      "Nguyễn Trãi": 304,
-      "Trương Trọng Hữu": 1299
+      "Nguyễn Trãi": 304
     },
     "relatedEvents": {
       "Chiến tranh Đại Ngu–Đại Minh": 443
@@ -7984,7 +7965,6 @@
       "Đặng Đình Dực": 0
     },
     "children": {
-      "Đặng Toán": 954,
       "Đặng Dung": 296
     },
     "relatedEvents": {
@@ -8083,9 +8063,7 @@
     "father": {
       "Đặng Tất": 292
     },
-    "children": {
-      "Đặng Chiêm": 340
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Núi Lam Thành": 1040,
@@ -8303,7 +8281,7 @@
     },
     "relatedFestivals": {
       "Hội chùa Côn Sơn": 13,
-      "Hội đền Nguyễn Trãi": 386
+      "Hội đền Nguyễn Trãi": 396
     },
     "id": 304,
     "name": "Nguyễn Trãi",
@@ -8735,13 +8713,11 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Lê Công Hạnh": 639
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội Quất Động": 370
+      "Hội Quất Động": 380
     },
     "id": 321,
     "name": "Bùi Công Hành",
@@ -8886,9 +8862,7 @@
     "father": {
       "Bùi Xương Tự": 549
     },
-    "children": {
-      "Bùi Bỉnh Uyên": 520
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -9429,8 +9403,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Đỗ Hồng Quân": 0,
-      "Nguyễn Nhuận": 1529
+      "Đỗ Hồng Quân": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -9875,7 +9848,7 @@
       "Rú Thành (Núi Lam Thành)": 1108
     },
     "relatedFestivals": {
-      "Hội đình Vẽ": 300
+      "Hội đình Vẽ": 310
     },
     "id": 371,
     "name": "Lê Khôi",
@@ -9915,7 +9888,7 @@
     },
     "mother": {},
     "father": {
-      "Vương Lê Lai": 0
+      "Vương Lê Lai": 307
     },
     "children": {
       "Lê Niệm": 380
@@ -9949,8 +9922,6 @@
     "children": {
       "Lê Thái Tông": 379,
       "Lê Tư Tề": 0,
-      "Bùi Văn Khuê": 473,
-      "Lê Nguyên Long": 379,
       "Nguyễn Xí": 2469
     },
     "relatedEvents": {
@@ -10002,7 +9973,7 @@
     "spouses": {},
     "mother": {},
     "father": {
-      "Vương Lê Lai": 0
+      "Vương Lê Lai": 307
     },
     "children": {},
     "relatedEvents": {},
@@ -10109,8 +10080,6 @@
     "children": {
       "Lê Khắc Xương": 0,
       "Lê Thánh Tông": 391,
-      "Lê Bang Cơ": 365,
-      "Lê Tư Thành": 391,
       "Lê Nhân Tông": 365,
       "Lê Nghi Dân": 377
     },
@@ -10188,7 +10157,7 @@
       "Lê Oanh": 0,
       "Lê Sùng": 0,
       "Lê Quyên": 0,
-      "Cẩm Giang Vương": 0,
+      "Cẩm Giang Vương": 1120,
       "Lê Vinh": 0,
       "Tĩnh Lượng": 0
     },
@@ -10289,11 +10258,8 @@
       "Trịnh Thị Tuyên": 0
     },
     "children": {
-      "Lê Dực": 366,
       "Lê Sùng": 0,
-      "Lê Tương Dực": 2481,
-      "Cẩm Giang Vương": 0,
-      "Lê Oánh": 381
+      "Cẩm Giang Vương": 1120
     },
     "relatedEvents": {
       "Chiến thắng quân xâm lược Mông Cổ lần thứ nhất": 33
@@ -10446,7 +10412,6 @@
       "Lê Cảnh": 0,
       "Lê Tranh": 0,
       "Lê Trang": 0,
-      "Lê Hiến Phủ": 225,
       "Nguyễn Sư Hồi": 0,
       "Lê Tuyên": 0,
       "Lê Cảo": 0,
@@ -10594,8 +10559,7 @@
       "Lê Sùng": 0
     },
     "children": {
-      "Lê Trang Tông": 650,
-      "Lê Duy Ninh": 650
+      "Lê Trang Tông": 650
     },
     "relatedEvents": {
       "Khởi Nghĩa Trần Cảo": 54,
@@ -10701,7 +10665,7 @@
     "role": "Danh tướng",
     "spouses": {},
     "mother": {
-      "Tuyên Từ Văn Hoàng Hậu Nguyễn Thị Anh": 0
+      "Tuyên Từ Văn Hoàng Hậu Nguyễn Thị Anh": 426
     },
     "father": {
       "Lưu Trung": 0
@@ -10860,9 +10824,7 @@
       "Hà Thị": 0
     },
     "father": {},
-    "children": {
-      "Đàm Thận Huy": 338
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -10988,9 +10950,7 @@
       "Ngô Từ": 412
     },
     "children": {
-      "Ngô Chi Lan": 408,
-      "Lê Thánh Tông": 391,
-      "Lê Tư Thành": 391
+      "Lê Thánh Tông": 391
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -11016,7 +10976,6 @@
       "Lê Khoáng": 0
     },
     "children": {
-      "Phan Bá Vành": 1154,
       "Ngô Thị Ngọc Dao": 411
     },
     "relatedEvents": {},
@@ -11384,8 +11343,7 @@
       "Thọ Kính": 0,
       "Thọ Nguyên": 0,
       "Bảo Phúc": 0,
-      "Thọ Túc": 0,
-      "Hồ Ngọc Cẩn": 1398
+      "Thọ Túc": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -11850,7 +11808,6 @@
     "children": {
       "Trần Đăng Huy": 0,
       "Trần Doãn Hữu": 0,
-      "Nguyễn Hãng": 419,
       "Trần Trung Khoản": 0
     },
     "relatedEvents": {
@@ -12017,7 +11974,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội làng chài Vạn Vĩ": 345
+      "Hội làng chài Vạn Vĩ": 355
     },
     "id": 451,
     "name": "Võ Duệ",
@@ -12184,9 +12141,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Mộng Tuân": 294
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -12909,8 +12864,6 @@
     },
     "father": {},
     "children": {
-      "Nguyễn Năng Tĩnh": 1092,
-      "Lê Duy Đàm": 491,
       "Lê Thế Tông": 0
     },
     "relatedEvents": {
@@ -12921,7 +12874,7 @@
       "Công Thần Miếu Vĩnh Long": 1729
     },
     "relatedFestivals": {
-      "Hội làng Phú Đô": 237
+      "Hội làng Phú Đô": 247
     },
     "id": 490,
     "name": "Lê Duy Bang",
@@ -13062,7 +13015,6 @@
       "Lương Đắc Bằng": 396
     },
     "children": {
-      "Lê Hữu Khánh": 1235,
       "Lương Tuyên Quang": 0
     },
     "relatedEvents": {},
@@ -13158,7 +13110,7 @@
       "Đô thị cổ Hội An": 1304
     },
     "relatedFestivals": {
-      "Hội Quất Động": 370
+      "Hội Quất Động": 380
     },
     "id": 499,
     "name": "Mạc Đăng Dung",
@@ -13262,7 +13214,6 @@
     "children": {
       "Mạc Kính Cung": 502,
       "Mạc Thị Giai": 676,
-      "Mạc Kính Khoan": 504,
       "Mạc Kính Chỉ": 501
     },
     "relatedEvents": {
@@ -13505,7 +13456,6 @@
       "Nguyễn Văn Định": 0
     },
     "children": {
-      "Nguyễn Thiến": 515,
       "Nguyễn Văn Chính": 0
     },
     "relatedEvents": {
@@ -13594,7 +13544,6 @@
     },
     "children": {
       "Nguyễn Miễn": 0,
-      "Mạc Ngọc Liễn": 507,
       "Nguyễn Quyện": 0
     },
     "relatedEvents": {},
@@ -13736,8 +13685,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Mạc Tông": 0,
-      "Mạc Thiên Tích (Tứ)": 677
+      "Mạc Tông": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -13874,6 +13822,7 @@
     },
     "relatedRelics": {
       "Đền thờ Trạng Trình Nguyễn Bỉnh Khiêm (thuộc Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm)": 529,
+      "Đình Ngoại Bình Đà": 990,
       "Đền thờ Nguyễn Cảnh Hoan": 1076,
       "Đô thị cổ Hội An": 1304
     },
@@ -14212,9 +14161,7 @@
     "father": {
       "Nguyễn Công Tấn": 705
     },
-    "children": {
-      "Bùi Xương Tự": 549
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đền Cửa Ông": 138,
@@ -14392,9 +14339,7 @@
     "father": {
       "Bùi Huy Bích": 541
     },
-    "children": {
-      "Bùi Xương Trạch": 328
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -14523,9 +14468,7 @@
     "father": {
       "Nguyễn Công Tấn": 705
     },
-    "children": {
-      "Nguyễn Ngọc Thăng": 1093
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đền thờ Lãnh binh Nguyễn Ngọc Thăng": 1712
@@ -14905,10 +14848,7 @@
     "father": {
       "Trịnh Liễu": 0
     },
-    "children": {
-      "Đặng Đình Tướng": 567,
-      "Đặng Đình Lân": 566
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -15058,10 +14998,7 @@
       "Nguyễn Thị Mịch": 0
     },
     "father": {},
-    "children": {
-      "Đào Duy Từ": 576,
-      "Đào Duy Hiệp": 3181
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -15105,9 +15042,7 @@
     "father": {
       "Đinh Nho Hoàn": 581
     },
-    "children": {
-      "Đinh Nho Quang": 1220
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -15127,9 +15062,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Đinh Nho Công": 580
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -15604,9 +15537,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Hà Thọ Lộc": 603
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -16178,9 +16109,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Hoàng Đình Thể": 618
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến dịch Phú Xuân 1786": 281,
       "Trận đánh Cẩm Sa giữa quân Trịnh và quân Tây Sơn": 318
@@ -16537,7 +16466,6 @@
     "children": {
       "Lê Duy Vỹ": 0,
       "Lê Duy Cận": 0,
-      "Lê Thị Ngọc Hân": 881,
       "Lê Ngọc Hân": 2667,
       "Lê Ngọc Bình": 0
     },
@@ -16580,12 +16508,8 @@
     "children": {
       "Lê Duy Mật": 649,
       "Lê Thuần Tông": 0,
-      "Lê Duy Thìn": 654,
-      "Lê Duy Tường": 655,
       "Lê Duy Phường": 0,
-      "Lê Thuần": 137,
-      "Lê Ý": 462,
-      "Lê Duy Phương": 651
+      "Lê Ý": 462
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -16673,7 +16597,7 @@
       "Nguyễn Thị Ngọc Bạch": 0
     },
     "mother": {
-      "Hoàng Thái Hậu Nguyễn Thị Ngọc Bạch": 0
+      "Hoàng Thái Hậu Nguyễn Thị Ngọc Bạch": 2028
     },
     "father": {
       "Duy Kỳ": 0
@@ -16701,7 +16625,7 @@
       "Nguyễn Thị Kim": 759
     },
     "mother": {
-      "Mẫn Thái Hậu": 0
+      "Mẫn Thái Hậu": 1026
     },
     "father": {
       "Lê Duy Vỹ": 0
@@ -16749,7 +16673,6 @@
       "Lê Kính Tông": 0
     },
     "children": {
-      "Lê Duy Hợp": 645,
       "Lê Huyền Tông": 656,
       "Lê Gia Tông": 644,
       "Lê Chân Tông": 646,
@@ -16888,7 +16811,7 @@
     "role": "Vua",
     "spouses": {},
     "mother": {
-      "Đức Hoàng Thái Hậu Nguyễn": 0
+      "Đức Hoàng Thái Hậu Nguyễn": 2028
     },
     "father": {
       "Lê Thế Tông": 0
@@ -17051,9 +16974,7 @@
     "father": {
       "Lê Hữu Mưu": 661
     },
-    "children": {
-      "Lê Hữu Kiều": 660
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -17111,10 +17032,7 @@
     },
     "father": {},
     "children": {
-      "Hải Thượng Lãn": 0,
-      "Lê Hữu Trác": 662,
-      "Lê Hữu Thường": 1038,
-      "Lê Hữu Danh": 659
+      "Hải Thượng Lãn": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -17240,7 +17158,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Lê Thì Hải": 665,
       "Con Lê Thì Hiến": 0
     },
     "relatedEvents": {
@@ -17313,10 +17230,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Lê Quý Đôn": 2652,
-      "Lê Trọng Đôn": 1046,
-      "Lê Sĩ Quí": 1828,
-      "Lê Quí Đôn": 663
+      "Lê Quý Đôn": 2652
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -17424,8 +17338,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Mạc Thiên Tứ": 0,
-      "Mạc Thiên Tích (Tứ)": 677
+      "Mạc Thiên Tứ": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -17487,11 +17400,11 @@
     "father": {
       "Mạc Kính Điển": 503
     },
-    "children": {
-      "Nguyễn Phúc Lan": 746
-    },
+    "children": {},
     "relatedEvents": {},
-    "relatedRelics": {},
+    "relatedRelics": {
+      "Lăng mộ Đoàn Quý phi": 1318
+    },
     "relatedFestivals": {},
     "id": 676,
     "name": "Mạc Thị Giai",
@@ -17633,6 +17546,7 @@
     "relatedEvents": {},
     "relatedRelics": {
       "Đền Lý Bát Đế (Đền Đô) và Lăng mộ các vua nhà Lý": 417,
+      "Chùa Dận": 418,
       "Quần thể di tích - danh thắng Tràng Kênh": 520
     },
     "relatedFestivals": {},
@@ -17832,14 +17746,7 @@
       "Ngô Trân": 694
     },
     "children": {
-      "Ngô Thì Chí": 689,
-      "Ngô Tưởng Đạo": 698,
-      "Ngô Thì Hiệu": 1068,
-      "Ngô Thì Hương": 1069,
-      "Ngô Thì Nhậm": 831,
-      "Ngô Thì Ức": 693,
-      "Ngô Thì Trí": 692,
-      "Ngô Thì Giai": 1067
+      "Ngô Thì Nhậm": 831
     },
     "relatedEvents": {
       "Trận Tốt Động – Chúc Động": 49,
@@ -17925,9 +17832,7 @@
     },
     "mother": {},
     "father": {},
-    "children": {
-      "Ngô Thì Sĩ": 691
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -18025,7 +17930,6 @@
       "Ngô Thì Sĩ": 691
     },
     "children": {
-      "Ngô Thì Du": 1066,
       "Ngô Thì Ức": 693
     },
     "relatedEvents": {},
@@ -18200,32 +18104,7 @@
       "Nguyễn Thị Phan": 0
     },
     "father": {},
-    "children": {
-      "Nguyễn Thức Đường": 1565,
-      "Dương Văn An": 476,
-      "Nguyễn Hiệt Chi": 1510,
-      "Nguyễn Bảo": 1076,
-      "Nguyễn Công Thái": 706,
-      "Nguyễn Lí": 420,
-      "Nguyễn Lại": 738,
-      "Bùi Huy Bích": 541,
-      "Hà Nhậm Đại": 482,
-      "Đinh Công Trứ": 65,
-      "Diên Lộc Hầu": 555,
-      "Nguyễn Tăng Doãn": 1108,
-      "Hoàng Đình Bảo": 616,
-      "Nguyễn Công Tiễu": 1912,
-      "Quản Danh Dương": 785,
-      "Đinh Thì Trung": 582,
-      "Nhữ Bá Sĩ": 1131,
-      "Bùi Dụng Tân": 538,
-      "Nguyễn Công Thành": 2355,
-      "Nguyễn Công Triều": 707,
-      "Nguyễn Hữu Kê": 1946,
-      "Nguyễn Công Cơ": 703,
-      "Nguyễn Công Bao": 2354,
-      "Nguyễn Công Truyền": 3013
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đình Tiểu Hoàng, Đình Ngoại Đê, Lăng Nguyễn Công Trứ": 634
@@ -18465,9 +18344,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Đình Chiểu": 1243,
       "Nguyễn Thị Phu": 0,
-      "Nguyễn Đình Chiêm": 1502,
       "Nguyễn Đình Lâu": 0
     },
     "relatedEvents": {},
@@ -18648,7 +18525,7 @@
       "Phan Thị Thanh Nhàn": 0
     },
     "father": {
-      "Kiên Thái Vương Nguyễn Phúc Hồng Cai": 0
+      "Kiên Thái Vương Nguyễn Phúc Hồng Cai": 2028
     },
     "children": {
       "Nguyễn Phúc Như Mai": 0,
@@ -18757,8 +18634,7 @@
     },
     "children": {
       "Nguyễn Hữu Cảnh": 727,
-      "Nguyễn Hữu Hào": 726,
-      "Nguyễn Hữu Kính": 727
+      "Nguyễn Hữu Hào": 726
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -18783,9 +18659,7 @@
     "father": {},
     "children": {
       "Mariette Jeannette Nguyễn Hữu Thị Lan": 0,
-      "Agnès Nguyễn Hữu Hào": 0,
-      "Nguyễn Hữu Thi": 1949,
-      "Nguyễn Văn Hầu": 2043
+      "Agnès Nguyễn Hữu Hào": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -19068,7 +18942,7 @@
       "Từ đường thờ TS Nguyễn Tông Quai": 574
     },
     "relatedFestivals": {
-      "Hội làng Phú Xá": 382
+      "Hội làng Phú Xá": 392
     },
     "id": 736,
     "name": "Nguyễn Kiều",
@@ -19090,10 +18964,7 @@
     },
     "children": {
       "Nguyễn Thị Ngọc Bảo": 0,
-      "Nguyễn Sư Hoàng": 1548,
       "Nguyễn Hoàng": 724,
-      "Nguyễn Hoản": 723,
-      "Nguyẽn Hoàng Ca": 2357,
       "Nguyễn Uông": 0
     },
     "relatedEvents": {
@@ -19227,9 +19098,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Nễ": 836,
-      "Nguyễn Trung Ngạn": 242,
-      "Nguyễn Học Sĩ": 1941,
       "Nguyễn Du": 1078,
       "Nguyễn Đề": 0,
       "Nguyễn Khản": 0
@@ -19273,7 +19141,6 @@
     "children": {
       "Nguyễn Phúc Chú": 0,
       "Nguyễn Phúc Đăng": 0,
-      "Nguyễn Phúc Trú": 751,
       "Nguyễn Phúc Điền": 0,
       "Nguyễn Phúc Tứ": 0,
       "Nguyễn Phúc Thể": 0,
@@ -19283,6 +19150,7 @@
     "relatedRelics": {
       "Chùa Hoằng Phúc": 1170,
       "Lăng mộ Nguyễn Hữu Cảnh": 1217,
+      "Mộ Nguyễn Cư Trinh": 1260,
       "Chùa Thiên Mụ": 1283,
       "Đô thị cổ Hội An": 1304,
       "Chùa Thiên Ấn": 1326,
@@ -19344,6 +19212,8 @@
     "relatedEvents": {},
     "relatedRelics": {
       "Mộ Nguyễn Cư Trinh": 1260,
+      "KDT Cố đô Huế": 1271,
+      "Lăng mộ Thượng thư Trương Công Hy": 1312,
       "Từ đường Bùi Thị Xuân": 1341,
       "Mộ Trịnh Hoài Đức": 1482
     },
@@ -19367,7 +19237,7 @@
     "location": "Không rõ",
     "role": "Con thứ hai",
     "spouses": {
-      "Trương Hoàng Hậu": 0
+      "Trương Hoàng Hậu": 39
     },
     "mother": {
       "Mạc Thị Giai": 676
@@ -19406,10 +19276,7 @@
     "father": {
       "Nguyễn Hoàng": 724
     },
-    "children": {
-      "Nguyễn Phúc Lan": 746,
-      "Bạch Hoa": 3
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến tranh Trịnh-Nguyễn, đất nước bị chia cắt thành hai vùng": 58
     },
@@ -19443,7 +19310,6 @@
       "Nguyễn Phúc Lan": 746
     },
     "children": {
-      "Nguyễn Phúc Trăn": 750,
       "Nguyễn Phúc Diễn": 0,
       "Nguyễn Phúc Trân": 0,
       "Tôn Thất Hiệp": 1639,
@@ -19453,6 +19319,8 @@
       "Trận Cảng Eo đánh bại hạm đội Châu Âu": 312
     },
     "relatedRelics": {
+      "Đền Nội Bình Đà": 989,
+      "Đình Ngoại Bình Đà": 990,
       "Lăng mộ Nguyễn Hữu Cảnh": 1217,
       "Lăng mộ Đoàn Quý phi": 1318,
       "Mộ Trịnh Hoài Đức": 1482
@@ -19480,15 +19348,14 @@
     "father": {
       "Nguyễn Phúc Khoát": 745
     },
-    "children": {
-      "Tống Phúc Hòa": 789
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến thắng Rạch Gầm – Xoài Mút": 64,
       "Chiến dịch Phú Xuân 1786": 281,
       "Trận đánh Cẩm Sa giữa quân Trịnh và quân Tây Sơn": 318
     },
     "relatedRelics": {
+      "Quần thể di tích danh thắng Yên Tử": 168,
       "Khu thờ tự Việp Quận công Hoàng Ngũ Phúc": 292,
       "Mộ Nguyễn Cư Trinh": 1260
     },
@@ -19836,9 +19703,7 @@
     "father": {
       "Nhữ Đình Hiền": 764
     },
-    "children": {
-      "Nhữ Tiến Hiền": 764
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -19864,10 +19729,7 @@
     "father": {
       "Nhữ Tiến Dụng": 763
     },
-    "children": {
-      "Nhữ Tiến Dụng": 763,
-      "Nhữ Đình Toản": 762
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -20036,9 +19898,7 @@
     "father": {
       "Phạm Huy Ánh": 0
     },
-    "children": {
-      "Phạm Đình Toái": 1267
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Khu thờ tự Việp Quận công Hoàng Ngũ Phúc": 292,
@@ -20061,9 +19921,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Phạm Đình Hổ": 1135
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -20243,9 +20101,7 @@
       "Phan Huy Lê": 3056
     },
     "children": {
-      "Phan Huy Ôn": 779,
-      "Cù Huy Hà Vũ": 0,
-      "Phan Huy Ích": 855
+      "Cù Huy Hà Vũ": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -20632,7 +20488,6 @@
       "Trần Phụ Dực": 796
     },
     "children": {
-      "Trần Phụ Dực": 796,
       "Trần Danh Án": 793
     },
     "relatedEvents": {},
@@ -20681,8 +20536,7 @@
       "Trần Danh Lâm": 794
     },
     "children": {
-      "Trần Danh Ninh": 795,
-      "Trần Danh Lâm": 794
+      "Trần Danh Ninh": 795
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -20735,7 +20589,6 @@
     },
     "children": {
       "Lê Vân": 0,
-      "Phạm Đôn Lễ": 434,
       "Lê Khanh": 434,
       "Lê Vi": 0
     },
@@ -21006,8 +20859,23 @@
     "children": {},
     "relatedEvents": {},
     "relatedRelics": {
+      "Đền Cửa Ông": 138,
       "Khu thờ tự Việp Quận công Hoàng Ngũ Phúc": 292,
-      "Từ đường, Lăng mộ Lê Quý Đôn": 563
+      "Đền Mạc Đĩnh Chi": 393,
+      "Đền Khúc Thừa Dụ": 398,
+      "Đền thờ Trần Nguyên Hãn": 447,
+      "Đền thờ Trạng Trình Nguyễn Bỉnh Khiêm (thuộc Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm)": 529,
+      "Lăng Thái Bảo Đỗ Tử Bình": 557,
+      "Từ đường, Lăng mộ Lê Quý Đôn": 563,
+      "Đền, Lăng Thái sư Trần Thủ Độ, Đền Linh từ Quốc mẫu Trần Thị Dung": 570,
+      "Đền thờ Đinh Bộ Lĩnh": 739,
+      "KDT Hoàng thành Thăng Long": 892,
+      "Khu khảo cổ 18 Hoàng Diệu (KDT Hoàng thành Thăng Long)": 893,
+      "Thành cổ Hà Nội (KDT Hoàng thành Thăng Long)": 894,
+      "Đền thờ Mai Hắc Đế": 1065,
+      "Nhà thờ Cao Thắng": 1138,
+      "Đô thị cổ Hội An": 1304,
+      "Nhà bia Trương Vĩnh Ký": 1707
     },
     "relatedFestivals": {},
     "id": 806,
@@ -21084,7 +20952,9 @@
       "Thành cổ Hà Nội (KDT Hoàng thành Thăng Long)": 894,
       "Đền thờ Nguyễn Cảnh Hoan": 1076,
       "Đền thờ Thái Bá Du": 1077,
-      "Đền thờ và mộ Ngô Trí Hòa": 1095
+      "Đền thờ và mộ Ngô Trí Hòa": 1095,
+      "Núi Mo So": 1780,
+      "Đình thờ Nguyễn Trung Trực": 1784
     },
     "relatedFestivals": {},
     "id": 808,
@@ -21424,17 +21294,16 @@
       "Nỗ Nhĩ Cáp Xích": 0
     },
     "children": {
-      "Nguyễn Quang Nhạc": 2365,
+      "Thuận Trị": 0,
+      "Cố Luân Ung Mục Trưởng": 0,
       "Cố Luân Thục Triết Trưởng": 0,
+      "Hòa Thạc Khác Thuần Trưởng": 0,
+      "Cố Luân Ngao Hán": 0,
       "Thao Tắc": 0,
+      "Hào Cách": 0,
       "Diệp Bố Thư": 0,
       "Thạc Tắc": 0,
       "Cao Tắc": 0,
-      "Thuận Trị": 0,
-      "Cố Luân Ung Mục Trưởng": 0,
-      "Hòa Thạc Khác Thuần Trưởng": 0,
-      "Cố Luân Ngao Hán": 0,
-      "Hào Cách": 0,
       "Bác Mục Bác Quả Nhĩ": 0,
       "Cố Luân Ôn Trang Trưởng": 0
     },
@@ -21499,8 +21368,7 @@
       "Anh Chu Văn Dũng": 0
     },
     "children": {
-      "Vũ Mỵ Hằng": 0,
-      "Vũ Huy Tấn": 844
+      "Vũ Mỵ Hằng": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -21795,7 +21663,7 @@
     },
     "relatedFestivals": {
       "Lễ hội Đống Đa": 1,
-      "Hội đền Ghềnh (Hà Nội)": 389
+      "Hội đền Ghềnh (Hà Nội)": 399
     },
     "id": 833,
     "name": "Nguyễn Huệ",
@@ -22424,7 +22292,6 @@
       "Phan Huy Cận": 778
     },
     "children": {
-      "Phan Huy Thực": 1162,
       "Phan Huy Chú": 1161
     },
     "relatedEvents": {
@@ -22799,9 +22666,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Tường Phổ": 1119
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -23127,9 +22992,7 @@
     "father": {
       "Nguyễn Tấn Trực": 0
     },
-    "children": {
-      "Lê Quang Vinh": 1827
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -23175,8 +23038,7 @@
     },
     "children": {
       "Ngô Văn Nhật": 0,
-      "Ngô Văn Đắc": 0,
-      "Ngô Thị Đế": 690
+      "Ngô Văn Đắc": 0
     },
     "relatedEvents": {
       "Trận Ngọc Hồi – Đống Đa, đẩy lui quân xâm lược nhà Thanh, nhà Hậu Lê sụp đổ": 470
@@ -23360,8 +23222,7 @@
   },
   {
     "otherNames": [
-      "Hoàng Trác",
-      "Cảnh Thịnh"
+      "Hoàng Trác"
     ],
     "bornYear": "Quí Mão 1783",
     "diedYear": "Nhâm Tuất 1802",
@@ -24008,8 +23869,7 @@
       "Cao Bá Quát": 920
     },
     "children": {
-      "Cao Bá Nhạ": 919,
-      "Cao Bá Nghi": 918
+      "Cao Bá Nhạ": 919
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -24052,9 +23912,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Hoàng Cao Khải": 1406
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -24080,9 +23938,7 @@
     },
     "children": {
       "Cao Bá Phùng": 0,
-      "Cao Bá Thông": 0,
-      "Cao Bá Đạt": 917,
-      "Cao Bá Thao": 1706
+      "Cao Bá Thông": 0
     },
     "relatedEvents": {
       "Khởi nghĩa Cao Bá Quát": 76
@@ -24534,9 +24390,7 @@
     "father": {
       "Dương Quang Bắc": 0
     },
-    "children": {
-      "Dương Khuê": 1308
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Chùa Thanh Mai": 374
@@ -24785,7 +24639,6 @@
       "Đặng Lân": 0
     },
     "children": {
-      "Vương Duy Trinh": 1211,
       "Trịnh Cán": 0
     },
     "relatedEvents": {},
@@ -25393,9 +25246,7 @@
     "father": {
       "Đỗ Huy Cảnh": 0
     },
-    "children": {
-      "Đỗ Huy Liêu": 977
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -25947,8 +25798,7 @@
     },
     "father": {},
     "children": {
-      "Thiệu Trị": 1104,
-      "Nguyễn Phúc Miên Tông": 1104
+      "Thiệu Trị": 1104
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -26345,9 +26195,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Hoàng Tăng Bí": 1228
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -26457,9 +26305,7 @@
     },
     "mother": {},
     "father": {},
-    "children": {
-      "Huỳnh Công Miêng": 1422
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Gò Tháp": 1662,
@@ -27040,9 +26886,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Lê Văn Khôi": 1051,
-      "Lê Văn Tập": 1469,
-      "Lê Hữu Đạt": 1815
+      "Lê Văn Khôi": 1051
     },
     "relatedEvents": {
       "Khởi nghĩa Lê Văn Khôi": 77,
@@ -27290,9 +27134,7 @@
     "father": {
       "Mai Xuân Tín": 0
     },
-    "children": {
-      "Đào Doãn Địch": 961
-    },
+    "children": {},
     "relatedEvents": {
       "Phong trào Cần Vương": 87
     },
@@ -27431,9 +27273,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Ngô Lập Chi": 1885
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Từ đường Doãn Khuê": 652
@@ -27778,11 +27618,7 @@
     "father": {
       "Nguyen Cong Tan": 0
     },
-    "children": {
-      "Hoàng Diệu": 1008,
-      "Nguyễn Long Cát": 1964,
-      "Đinh Thì Trung": 582
-    },
+    "children": {},
     "relatedEvents": {
       "Khởi nghĩa Phan Bá Vành": 74,
       "Cuộc nổi dậy Lâm Sâm đời vua Thiệu Trị": 327
@@ -27822,7 +27658,6 @@
       "Nguyễn Nghiễm": 742
     },
     "children": {
-      "Nguyễn Liên Phong": 1249,
       "Nguyễn Ngũ": 0,
       "Nguyễn Tứ": 0
     },
@@ -27991,9 +27826,7 @@
     "father": {
       "Trần Hưng Đạo": 268
     },
-    "children": {
-      "Nguyễn Duật": 1241
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -28297,10 +28130,7 @@
     "father": {
       "Nguyễn Phúc Luân": 0
     },
-    "children": {
-      "Nguyễn Phúc Đảm": 1096,
-      "Nguyễn Phúc Cảnh": 888
-    },
+    "children": {},
     "relatedEvents": {
       "Nghĩa quân Tây Sơn lật đổ chính quyền chúa Nguyễn ở Đàng Trong": 63,
       "Chiến thắng Rạch Gầm – Xoài Mút": 64,
@@ -28352,18 +28182,7 @@
     "father": {
       "Gia Long": 1095
     },
-    "children": {
-      "Tương An Quận Vương": 1198,
-      "Nguyễn Phúc Vĩnh Trinh": 1252,
-      "Nguyễn Phúc Miên Thẩm": 1102,
-      "Nguyễn Trinh Thận": 1260,
-      "Nguyễn Phúc Miên Bửu": 1100,
-      "Nguyễn Phúc Miên Trinh": 1105,
-      "Nguyễn Phúc Tĩnh Hòa": 1106,
-      "Nguyễn Phúc Miên Thanh": 1103,
-      "Nguyễn Phúc Miên Tông": 1104,
-      "Nguyễn Phúc Miên Định": 1101
-    },
+    "children": {},
     "relatedEvents": {
       "Minh Mạng lên ngôi Hoàng Đế": 72,
       "Quốc hiệu Đại Nam": 73,
@@ -28508,7 +28327,6 @@
       "Thiệu Trị": 1104
     },
     "children": {
-      "Nguyễn Phúc Ưng Chân": 1537,
       "Dục Đức": 1537,
       "Nguyễn Phúc Ưng Khánh": 0
     },
@@ -28664,11 +28482,7 @@
     "father": {
       "Minh Mạng": 1096
     },
-    "children": {
-      "Nguyễn Phúc Hồng Y": 1099,
-      "Nguyễn Phúc Hồng Nhậm": 1098,
-      "Nguyễn Phúc Hồng Dật": 1536
-    },
+    "children": {},
     "relatedEvents": {
       "Cuộc nổi dậy Lâm Sâm đời vua Thiệu Trị": 327,
       "Đại Nam và Xiêm La ký hòa ước": 335
@@ -28704,8 +28518,7 @@
       "Minh Mạng": 1096
     },
     "children": {
-      "Nguyễn Phúc Hồng Thiết": 0,
-      "Nguyễn Thị Tuệ": 1255
+      "Nguyễn Phúc Hồng Thiết": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -28916,10 +28729,7 @@
     },
     "children": {
       "Nguyễn Trọng Lội": 0,
-      "Nguyễn Quí Ân": 756,
-      "Nguyễn Quí Anh": 1544,
-      "Nguyễn Quý Anh": 0,
-      "Nguyễn Trọng Lợi": 1570
+      "Nguyễn Quý Anh": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -29261,9 +29071,7 @@
     "father": {
       "Võ Quang Nghiêm": 0
     },
-    "children": {
-      "Nguyễn Quang Bích": 1107
-    },
+    "children": {},
     "relatedEvents": {
       "Phong trào Cần Vương": 87
     },
@@ -30180,9 +29988,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Phan Đình Thông": 1271
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -30350,7 +30156,6 @@
       "Đặng Bá Kiển": 0
     },
     "children": {
-      "Phan Ngọc Tòng": 1164,
       "Phan Tôn": 0,
       "Phan Liêm": 1272
     },
@@ -30552,8 +30357,7 @@
     "children": {
       "Trọng Trữ": 0,
       "Trọng Huề": 0,
-      "Trọng Thuận": 0,
-      "Thân Trọng Huề": 1636
+      "Trọng Thuận": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -30698,9 +30502,7 @@
     "father": {
       "Trần Đình Khanh": 1181
     },
-    "children": {
-      "Ninh Tốn": 768
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -30742,9 +30544,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Bích San": 1179
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -31139,9 +30939,7 @@
     "father": {
       "Trương Thừa Huy": 0
     },
-    "children": {
-      "Trương Gia Mô": 1664
-    },
+    "children": {},
     "relatedEvents": {
       "Trận Cầu Giấy (Hà Nội) PGacniê bị giết": 176,
       "Biến cố Bắc Kỳ năm 1873": 571
@@ -31465,10 +31263,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Phạm Thận Duật": 1146,
-      "Nguyễn Đình Thi": 1921
-    },
+    "children": {},
     "relatedEvents": {
       "cách mạng tháng Tám": 503
     },
@@ -31570,10 +31365,12 @@
       "Thành nhà Hồ": 1001,
       "Nhà cụ Phó bảng Nguyễn Sinh Sắc - Nơi Chủ tịch Hồ Chí Minh sống thời niên thiếu ở Làng Sen": 1070,
       "Khu lưu niệm Phan Bội Châu": 1074,
+      "Lăng mộ Đoàn Quý phi": 1318,
       "Trường Dục Thanh": 1404
     },
     "relatedFestivals": {
-      "Hội làng Nghi Tàm": 309
+      "Lễ hội đình Yên Phụ": 18,
+      "Hội làng Nghi Tàm": 319
     },
     "id": 1211,
     "name": "Vương Duy Trinh",
@@ -31957,7 +31754,6 @@
     "father": {},
     "children": {
       "Hoàng Đạo Thúy": 1773,
-      "Hoàng Thị Uyển": 1412,
       "Hoàng Thị Tĩnh": 0
     },
     "relatedEvents": {},
@@ -32056,9 +31852,7 @@
     "father": {
       "Hoàng Công Định": 0
     },
-    "children": {
-      "Lê Văn Hòe": 1843
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -32178,9 +31972,7 @@
     "father": {
       "Lê Đình Dương": 1436
     },
-    "children": {
-      "Lê Đình Thám": 1812
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -32434,9 +32226,7 @@
     },
     "children": {
       "Nguyễn Đình Chiêm": 1502,
-      "Sương Nguyệt Anh": 2083,
-      "Nguyễn Xuân Khuê": 2083,
-      "Nguyễn Đình Sách": 716
+      "Sương Nguyệt Anh": 2083
     },
     "relatedEvents": {
       "Trận thành Gia Định năm 1859": 565
@@ -32816,9 +32606,7 @@
     "father": {
       "Nguyễn Tuy": 0
     },
-    "children": {
-      "Nguyễn Tuyển": 761
-    },
+    "children": {},
     "relatedEvents": {
       "Phong trào Cần Vương": 87,
       "Khởi nghĩa Bãi Sậy": 88,
@@ -32872,9 +32660,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Thượng Hiền": 1567
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -32927,10 +32713,7 @@
     "father": {
       "Nguyễn Văn Cư": 0
     },
-    "children": {
-      "Phùng Chí Kiên": 1627,
-      "Nguyễn Vĩ": 2080
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -33156,10 +32939,7 @@
     "father": {
       "Phan Dinh Tuyen": 0
     },
-    "children": {
-      "Cao Nữu": 1326,
-      "Trịnh Khắc Lập": 1661
-    },
+    "children": {},
     "relatedEvents": {
       "Phong trào Cần Vương": 87,
       "Khởi nghĩa Hương Khê": 91
@@ -33260,9 +33040,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Phan Thành": 0,
-      "Phan Khoang": 2132,
-      "Phan Du": 2126
+      "Phan Thành": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -33511,7 +33289,6 @@
     "children": {
       "Tôn Thất Đàm": 2632,
       "Tôn Nữ Thị Tựu": 0,
-      "Tôn Thất Đạm": 1176,
       "Ton Nu Thi An": 0,
       "Tôn Thất Tiệp": 0,
       "Tôn Thất Trọng": 0,
@@ -34051,7 +33828,6 @@
       "Trương Chánh Thi": 0
     },
     "children": {
-      "Nguyễn Trọng Quản": 1571,
       "Trương Vĩnh Tống": 2238,
       "Trương Vĩnh Thế": 0
     },
@@ -34771,7 +34547,7 @@
       "Thiện Niệm": 0
     },
     "father": {
-      "Thoại Thái Vương Nguyễn Phúc Hồng Y": 0
+      "Thoại Thái Vương Nguyễn Phúc Hồng Y": 1099
     },
     "children": {},
     "relatedEvents": {},
@@ -34815,9 +34591,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Bá Trác": 1496
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -34977,9 +34751,7 @@
     "father": {
       "Ngô Văn Mà": 0
     },
-    "children": {
-      "Vương Hồng Sển": 2274
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -35188,10 +34960,7 @@
       "Thái Thị Liên": 0
     },
     "father": {},
-    "children": {
-      "Đặng Thái Thuyên": 1351,
-      "Đặng Thái Thuyến": 2973
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Khu lưu niệm Phan Bội Châu": 1074,
@@ -35481,8 +35250,7 @@
     },
     "children": {
       "Đỗ Thị Như Tuyết": 0,
-      "Đào Quốc Anh": 0,
-      "Đào Trinh Nhất": 1744
+      "Đào Quốc Anh": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -36016,7 +35784,6 @@
     },
     "father": {},
     "children": {
-      "Kiều Phụng": 878,
       "Tiểu Phụng": 0,
       "Quỳnh Em": 0
     },
@@ -36626,10 +36393,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Hoàng Thúc Trâm": 1781,
-      "Hoàng Thúc Tấn": 1780
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -36761,10 +36525,7 @@
     "father": {
       "Hoàng Khải Lan": 0
     },
-    "children": {
-      "Hoàng Văn Hành": 2330,
-      "Hoàng Văn Diễn": 1021
-    },
+    "children": {},
     "relatedEvents": {
       "Lãnh tụ Nguyễn Ái Quốc trờ về nước, đặt căn cứ tại Pác Bó": 192,
       "Thành lập đội du kích Bắc Sơn": 193
@@ -37169,8 +36930,7 @@
       "Hà An Tổng Đốc Lê Đình Đỉnh": 0
     },
     "children": {
-      "Lê Thị Cả": 0,
-      "Lê Đỉnh": 1234
+      "Lê Thị Cả": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -37209,7 +36969,6 @@
       "Lê Long Đề": 0,
       "Lê Thị Phất Ngân": 0,
       "Lê Long Tung": 0,
-      "Lê Phổ": 1823,
       "Lê Long Cân": 0,
       "Lê Trung Tông": 92,
       "Lê Long Kính": 89,
@@ -37507,13 +37266,11 @@
       "Huỳnh Thị Tài": 0
     },
     "mother": {
-      "Hoàng Hậu Nam Phương": 0
+      "Hoàng Hậu Nam Phương": 2014
     },
     "father": {},
     "children": {
-      "Lê Thị Bình": 0,
-      "Lê Phát An": 1447,
-      "Lê Thị Bính": 1457
+      "Lê Thị Bình": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -37715,7 +37472,7 @@
     },
     "children": {
       "Jeanne Mariette Nguyễn Hữu Thị Lan": 0,
-      "Nam Phương Hoàng Hậu": 0
+      "Nam Phương Hoàng Hậu": 2014
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -37864,9 +37621,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Văn Khương": 2214
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -38200,9 +37955,7 @@
     "father": {
       "Lương Văn Tích": 0
     },
-    "children": {
-      "Lương Ngọc Quyến": 1474
-    },
+    "children": {},
     "relatedEvents": {
       "Đông Kinh Nghĩa Thục": 96,
       "Bác Hồ ra đi tìm đường cứu nước": 97
@@ -38305,13 +38058,7 @@
     "father": {
       "Giacôbê Ngô Đình Niêm": 0
     },
-    "children": {
-      "Ngô Đình Cẩn": 2876,
-      "Ngô Đình Khôi": 1482,
-      "Ngô Đình Diệm": 1879,
-      "Ngô Đình Thị Hiệp": 2879,
-      "Ngô Đình Nhu": 1881
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -38617,9 +38364,7 @@
     "father": {
       "Nguyễn Khuê": 0
     },
-    "children": {
-      "Nguyễn Đôn Phục": 1925
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Lăng Mai Xuân Thưởng": 1342
@@ -38997,10 +38742,7 @@
     "father": {
       "Nguyễn Công Tấn": 705
     },
-    "children": {
-      "Nguyễn Đổng Chi": 1926,
-      "Nguyễn Kinh Chi": 1962
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Trường Dục Thanh": 1404
@@ -39211,9 +38953,7 @@
     "father": {
       "Quách Nhẫn": 0
     },
-    "children": {
-      "Nguyễn Khắc Đạm": 3125
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "ATK2 (10 di tích)": 303
@@ -39589,8 +39329,7 @@
       "Đồng Khánh": 1539
     },
     "children": {
-      "Bảo Đại": 1542,
-      "Nguyễn Phúc Vĩnh Thụy": 1542
+      "Bảo Đại": 1542
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -39677,9 +39416,7 @@
       "Nguyễn Phúc Bửu Kiêm": 0,
       "Nguyễn Phúc Bửu Lũy": 0,
       "Nguyễn Phúc Nhàn Gia": 0,
-      "Nguyễn Phúc Bửu Kể": 1989,
       "Thành Thái": 1990,
-      "Nguyễn Phúc Bửu Lân": 1990,
       "Nguyễn Phúc Tốn Tùy": 0,
       "Nguyễn Phúc Châu Hoàn": 0
     },
@@ -39744,7 +39481,6 @@
       "Nguyen Phuc Hy Duyet": 0,
       "Nguyễn Phúc Dĩ Hy": 0,
       "Khải Định": 1534,
-      "Nguyễn Phúc Bửu Đảo": 1534,
       "Nguyễn Phúc Hỷ Hỷ": 0,
       "Nguyễn Phúc Dĩ Ngu": 0
     },
@@ -39875,9 +39611,7 @@
     "father": {
       "Khải Định": 1534
     },
-    "children": {
-      "Nguyễn Phương Thảo": 1996
-    },
+    "children": {},
     "relatedEvents": {
       "Vua Bảo Đại thoái vị": 213,
       "Ngày toàn quốc chống Mỹ": 238,
@@ -39927,9 +39661,7 @@
     "father": {
       "Nguyễn Quang Huy": 0
     },
-    "children": {
-      "Nguyễn Văn Diêu": 1121
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -40026,12 +39758,7 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Tất Đạt": 2000,
-      "Nguyễn Án": 1072,
-      "Đỗ Tử Vi": 214,
       "Hồ Chí Minh": 2001,
-      "Lê Bảng": 364,
-      "Nguyễn Tất Thành": 2001,
       "Nguyễn Sinh Khiêm": 2000
     },
     "relatedEvents": {},
@@ -40470,7 +40197,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Phúc Hồng Y": 1099,
       "Nguyễn An Ninh": 1492,
       "Nguyễn Thị Năng": 0,
       "Nguyễn An Thường": 0,
@@ -40528,8 +40254,7 @@
     "children": {
       "Nguyễn Thức Đường": 1565,
       "Nguyễn Thức Canh": 2019,
-      "Nguyễn Thức Bao": 0,
-      "Trần Trọng Khắc": 2204
+      "Nguyễn Thức Bao": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -40722,9 +40447,7 @@
     "father": {
       "Nguyễn Văn Toản": 0
     },
-    "children": {
-      "Nguyễn Tử Nha": 1575
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -41300,9 +41023,7 @@
     "father": {
       "Phạm Duy Đạt": 0
     },
-    "children": {
-      "Phạm Duy Khiêm": 2089
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -41460,7 +41181,6 @@
     "father": {},
     "children": {
       "Phạm Tuyên": 2909,
-      "Phạm Thái": 776,
       "Phạm Khuê": 0
     },
     "relatedEvents": {},
@@ -41619,7 +41339,6 @@
     "children": {
       "Phan Nghi Đệ": 0,
       "Phan Thị Cương": 0,
-      "Mai Lão Bạng": 1479,
       "Phan Nghi Huynh": 0
     },
     "relatedEvents": {
@@ -42970,9 +42689,7 @@
     "father": {
       "Văn Khâm": 0
     },
-    "children": {
-      "Trần Văn Giáp": 2211
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -43666,9 +43383,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Dương Công Trừng": 557
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -44057,7 +43772,6 @@
     "father": {},
     "children": {
       "Lê Anh Xuân": 2284,
-      "Ca Lê Hiến": 2284,
       "Ca Lê Thuần": 0
     },
     "relatedEvents": {},
@@ -44393,7 +44107,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Hoàng Bình Chính": 610,
       "Cù Huy Hà Vũ": 0
     },
     "relatedEvents": {},
@@ -44588,9 +44301,7 @@
     "father": {
       "Dương Trọng Phổ": 0
     },
-    "children": {
-      "Dương Trọng Bái": 3151
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Từ đường, Lăng mộ Lê Quý Đôn": 563
@@ -44662,9 +44373,7 @@
       "Dương Trọng Phổ": 0
     },
     "children": {
-      "Dương Thị Xuân Quý": 0,
-      "Dương Thị Xuân Quí": 2291,
-      "Dương Bích Liên": 2747
+      "Dương Thị Xuân Quý": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -44895,8 +44604,7 @@
       "Đặng Việt Bắc": 0,
       "Đặng Việt Bích": 0,
       "Đặng Xuân Kỳ": 0,
-      "Đặng Việt Nga": 0,
-      "Đặng Xuân Viện": 1740
+      "Đặng Việt Nga": 0
     },
     "relatedEvents": {
       "Hội nghị Ban thường vụ mở rộng của Trung ương Đảng Cộng sản Đông Dương và chỉ thị “Nhật - Pháp bắn nhau và hành động của chúng ta”": 203,
@@ -44953,8 +44661,7 @@
       "Đặng Xuân Khu": 1738
     },
     "children": {
-      "Trường Chinh": 1738,
-      "Đặng Xuân Khu": 1738
+      "Trường Chinh": 1738
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -45065,9 +44772,7 @@
     "father": {
       "Đào Nguyên Phổ": 1362
     },
-    "children": {
-      "Đào Nguyên Phổ": 1362
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -45823,7 +45528,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Hoàng Khương An": 1409,
       "Huỳnh Thị Kim Định": 0,
       "Huỳnh Khương An": 1409,
       "Huỳnh Thị Kim Dung": 0
@@ -45972,9 +45676,7 @@
     "father": {
       "Hoàng Thúc Hội": 1413
     },
-    "children": {
-      "Hoàng Xuân Sính": 2917
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -46312,7 +46014,6 @@
     },
     "children": {
       "Huỳnh Thị Thu Cúc": 0,
-      "Nguyễn Đình Tựu": 1085,
       "Huỳnh Thị Xuân Lan": 0
     },
     "relatedEvents": {},
@@ -46355,9 +46056,7 @@
       "Huỳnh Thu Nguyệt": 0,
       "Huỳnh Thị Sông Bé": 0,
       "Huỳnh Thu Cúc": 0,
-      "Huỳnh Văn Nam": 0,
-      "Huỳnh Thúc Kháng": 1794,
-      "Dương Đình Thưởng": 1339
+      "Huỳnh Văn Nam": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -46658,9 +46357,7 @@
     "father": {
       "Lê Tự": 0
     },
-    "children": {
-      "Lê Khâm": 2338
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -46910,9 +46607,7 @@
     "father": {
       "Lê Văn Duyệt": 1049
     },
-    "children": {
-      "Lý Tự Trọng": 2701
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -47079,9 +46774,7 @@
     "father": {
       "Lê Nguyên Phong": 0
     },
-    "children": {
-      "Nguyễn Bặc": 79
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đền Cửa Ông": 138,
@@ -47355,7 +47048,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Kim Cương": 1960,
       "Kim Cương": 0
     },
     "relatedEvents": {},
@@ -47384,9 +47076,7 @@
     "father": {
       "Lê Công": 0
     },
-    "children": {
-      "Lê Tấn Quốc": 2343
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -47408,7 +47098,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Bá Xuyến": 702,
       "Phan Diễn": 0
     },
     "relatedEvents": {},
@@ -47492,8 +47181,7 @@
       "Đồ Lê": 0
     },
     "children": {
-      "Lê Đông Hải": 0,
-      "Lê Tán Tương": 387
+      "Lê Đông Hải": 0
     },
     "relatedEvents": {
       "Chiến dịch Biên giới": 240,
@@ -48198,7 +47886,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Lưu Quang Bật": 1863,
       "Lưu Quang Vũ": 2348
     },
     "relatedEvents": {},
@@ -50280,9 +49967,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguiễn Ngu Í": 1893
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -50332,7 +50017,7 @@
     "spouses": {},
     "mother": {},
     "father": {
-      "Kinh Dương Vương Lộc Tục": 0
+      "Kinh Dương Vương Lộc Tục": 9
     },
     "children": {},
     "relatedEvents": {},
@@ -50615,9 +50300,7 @@
     "father": {
       "Nguyễn Khoa Tùng": 0
     },
-    "children": {
-      "Nguyễn Khoa Điềm": 2836
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -51283,9 +50966,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Phan Lãng": 1985
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -51333,9 +51014,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Kim Thành": 1961
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Văn miếu Trấn Biên": 1494
@@ -51456,7 +51135,6 @@
     },
     "children": {
       "Nguyễn Phúc Vĩnh Chương": 0,
-      "Nguyễn Phúc Vĩnh San": 1541,
       "Duy Tân": 1541,
       "Nguyễn Phúc Vĩnh Giu": 0
     },
@@ -51936,6 +51614,7 @@
       "Địa đạo Bến Đình": 1628,
       "Ngã ba Giồng": 1631,
       "Mộ và đền thờ Thủ Khoa Huân": 1644,
+      "Di tích khảo cổ Rạch Núi": 1655,
       "Khu lưu niệm Luật sư Nguyễn Hữu Thọ": 1660,
       "Khu di tích Nguyễn Sinh Sắc": 1664,
       "Khu mộ Phan Thanh Giản": 1699,
@@ -52208,7 +51887,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Phúc Vĩnh San": 1541,
       "Nguyễn Ngọc Minh": 1979
     },
     "relatedEvents": {},
@@ -52651,7 +52329,9 @@
     },
     "relatedEvents": {},
     "relatedRelics": {},
-    "relatedFestivals": {},
+    "relatedFestivals": {
+      "Hội chùa Tam Sơn": 172
+    },
     "id": 2028,
     "name": "Nguyễn Tuân",
     "description": "Nhà văn hiện đại, bút danh Nguyễn, Ân Ngũ Tuyên, Nhất Lang, Thanh Hà, Ngột Lôi Quất, Tuấn Thừa Sức. Quê xã Nhân Mục, huyện Từ Liêm, Hà Nội, sinh ngày 10-7-1910, nguyên quán tỉnh Thanh Hóa."
@@ -53006,9 +52686,7 @@
       "Nguyễn Văn Tề": 0
     },
     "children": {
-      "Cô Bắc": 2964,
-      "Văn Thao": 0,
-      "Nguyễn Thị Giang": 1557
+      "Văn Thao": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -53225,8 +52903,7 @@
     },
     "father": {},
     "children": {
-      "Nguyễn Văn Huy": 0,
-      "Nguyễn Văn Hoài": 2046
+      "Nguyễn Văn Huy": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -53615,9 +53292,7 @@
     "father": {
       "Nguyễn Quang Sáng": 2828
     },
-    "children": {
-      "Nguyễn Chánh Sắt": 1906
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -53723,8 +53398,6 @@
       "Nguyễn Văn Chung": 0
     },
     "children": {
-      "Dương Trực Nguyên": 336,
-      "Lương Thúc Kỳ": 1475,
       "Nguyễn Thiệu Long": 0,
       "Nguyễn Thị Tuấn Anh": 0,
       "Nguyễn Quang Lộc": 0
@@ -54474,10 +54147,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Nguyễn Văn Hòe": 2047,
-      "Phạm Thị Thanh Vân": 2375
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -54652,9 +54322,7 @@
     "father": {
       "Phạm Phú Sung": 0
     },
-    "children": {
-      "Phạm Phú Hưu": 2103
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -54852,9 +54520,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Phạm Tu": 35
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Mộ và đền thờ Thủ Khoa Huân": 1644
@@ -55054,9 +54720,7 @@
     },
     "mother": {},
     "father": {},
-    "children": {
-      "Phạm Hổ": 2903
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -55399,9 +55063,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Bùi Thế Toại": 547
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -56401,9 +56063,7 @@
     },
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Đăng Long": 862
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -56682,8 +56342,7 @@
     "father": {},
     "children": {
       "Trần Nguyệt Quang": 0,
-      "Trần Trường Chiến": 0,
-      "Phan Huy Trấn": 838
+      "Trần Trường Chiến": 0
     },
     "relatedEvents": {
       "Chủ tịch Hồ Chí Minh đọc bản “Tuyên ngôn Độc lập”": 216,
@@ -56791,9 +56450,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Kim Thạch": 3192
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -58467,10 +58124,7 @@
     },
     "mother": {},
     "father": {},
-    "children": {
-      "Võ Phong": 454,
-      "Võ Hồng Anh": 3160
-    },
+    "children": {},
     "relatedEvents": {
       "Lãnh tụ Nguyễn Ái Quốc trờ về nước, đặt căn cứ tại Pác Bó": 192,
       "Đội Việt Nam tuyên truyền giải phóng quân thành lập": 198,
@@ -59703,9 +59357,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Đinh Gia Trinh": 1746
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Đền thờ Trạng Trình Nguyễn Bỉnh Khiêm (thuộc Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm)": 529
@@ -60391,9 +60043,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Bảo Ninh": 3168
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -61925,10 +61575,7 @@
     "children": {
       "Khâm Thánh Hoàng Hậu": 0,
       "Hồ Hán Thương": 285,
-      "Hồ Nguyên Trừng": 279,
-      "Hồ Ngạn Thần": 293,
-      "Nguyễn Văn Bổng": 2038,
-      "Lê Nguyên Trung": 1041
+      "Hồ Nguyên Trừng": 279
     },
     "relatedEvents": {
       "Hồ Quý Ly lật đổ nhà Trần, lập nhà Hồ": 39,
@@ -62034,7 +61681,7 @@
     "role": "Thái tử nhà Đinh",
     "spouses": {},
     "mother": {
-      "Hoàng Hậu Hoàng Thị": 0
+      "Hoàng Hậu Hoàng Thị": 2845
     },
     "father": {
       "Đinh Tiên Hoàng": 76
@@ -62087,8 +61734,8 @@
       "Chùa Láng": 967
     },
     "relatedFestivals": {
-      "Hội đền Ninh Xá": 360,
-      "Hội Võng Thị": 391
+      "Hội đền Ninh Xá": 370,
+      "Hội Võng Thị": 401
     },
     "id": 2427,
     "name": "Lý Nhân Tông",
@@ -62113,7 +61760,6 @@
       "Sùng Hiền": 0
     },
     "children": {
-      "Lý Thiên Tộ": 146,
       "Lý Anh Tông": 146,
       "Lý Thiên Lộc": 0
     },
@@ -62131,8 +61777,8 @@
       "Chùa Thầy": 993
     },
     "relatedFestivals": {
-      "Lễ hội đình An Hòa": 317,
-      "Lễ hội chùa Láng": 339
+      "Lễ hội đình An Hòa": 327,
+      "Lễ hội chùa Láng": 349
     },
     "id": 2428,
     "name": "Lý Thần Tông",
@@ -62157,8 +61803,7 @@
       "Trần Thừa": 0
     },
     "children": {
-      "Ứng Thụy": 0,
-      "Trần Thủ Độ": 183
+      "Ứng Thụy": 0
     },
     "relatedEvents": {},
     "relatedRelics": {
@@ -62541,7 +62186,6 @@
     },
     "children": {
       "Mạc Đôn Nhượng": 500,
-      "Mạc Phúc Hải": 509,
       "Mạc Kính Điển": 503,
       "Mạc Phúc Tư": 0,
       "Mạc Hiến Tông": 0
@@ -62682,10 +62326,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Đậu Quang Lĩnh": 1367,
-      "Nguyễn Trọng Quyền": 2025
-    },
+    "children": {},
     "relatedEvents": {
       "Hiệp ước Giáp Tuất 1874": 92,
       "Tôn Thất Thuyết đem quân tấn công tòa Khâm sứ Pháp ở Huế, mở đầu phong trào Cần Vương": 182,
@@ -62835,9 +62476,7 @@
     "father": {
       "Võ Văn Hợi": 0
     },
-    "children": {
-      "Trần Thiện Hoa": 2200
-    },
+    "children": {},
     "relatedEvents": {
       "THÀNH LẬP ĐOÀN THANH NIÊN CỘNG SẢN HỒ CHÍ MINH": 157
     },
@@ -62996,7 +62635,7 @@
     },
     "children": {
       "Ma Guang": 0,
-      "Mã Hoàng Hậu": 0,
+      "Mã Hoàng Hậu": 284,
       "Ma Fang": 0,
       "Ma Liao": 0
     },
@@ -63410,14 +63049,13 @@
       "Lê Hiển Tông": 642
     },
     "children": {
-      "Lê Cao Lãng": 1034,
       "Nguyễn Quang Đức": 0,
       "Nguyễn Thị Ngọc": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội đền Ghềnh (Hà Nội)": 389
+      "Hội đền Ghềnh (Hà Nội)": 399
     },
     "id": 2667,
     "name": "Lê Ngọc Hân",
@@ -63828,9 +63466,7 @@
     "father": {
       "Trần Kim Báu": 0
     },
-    "children": {
-      "Nguyễn Văn Bồng": 2037
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -63916,9 +63552,7 @@
     "father": {
       "Trần Thái Tông": 251
     },
-    "children": {
-      "Hoằng Chân": 2773
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến thắng Như Nguyệt": 309
     },
@@ -64071,7 +63705,7 @@
       "Qin Jialan": 0
     },
     "father": {
-      "Triệu Minh Vương": 0
+      "Triệu Minh Vương": 743
     },
     "children": {},
     "relatedEvents": {
@@ -64095,7 +63729,7 @@
     "spouses": {},
     "mother": {},
     "father": {
-      "Triệu Minh Vương": 0
+      "Triệu Minh Vương": 743
     },
     "children": {},
     "relatedEvents": {},
@@ -64133,7 +63767,7 @@
       "Cụm di tích thờ Lý Nam Đế (gồm Đình Mộ Đạo, Bảo Đức, Đại Phúc)": 467
     },
     "relatedFestivals": {
-      "Hội làng Phú Mỹ—Kiều Mai": 245
+      "Hội làng Phú Mỹ—Kiều Mai": 255
     },
     "id": 2787,
     "name": "Hậu Lý Nam Đế",
@@ -64210,9 +63844,7 @@
     "father": {
       "Hồ Phi Diễn": 0
     },
-    "children": {
-      "Hồ Xuân Lan": 1225
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Chùa và động Địch Lộng": 738,
@@ -64786,9 +64418,7 @@
     "father": {
       "Trần Quang Chiêu": 0
     },
-    "children": {
-      "Nguyễn Mỹ Ca": 1975
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Quần thể Hương Sơn (Chùa Hương)": 992,
@@ -64888,7 +64518,6 @@
     "mother": {},
     "father": {},
     "children": {
-      "Nguyễn Văn Tài": 2063,
       "Nguyễn Quang Dũng": 0
     },
     "relatedEvents": {},
@@ -64961,9 +64590,7 @@
     "father": {
       "Hải Triều": 1958
     },
-    "children": {
-      "Công Nữ Đồng Canh": 1717
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -64988,7 +64615,6 @@
     "father": {},
     "children": {
       "Lưu Tuấn Anh": 0,
-      "Nguyễn Thành Long": 2005,
       "Lưu Quỳnh Thơ": 0
     },
     "relatedEvents": {},
@@ -65080,13 +64706,8 @@
     "father": {},
     "children": {
       "Bạch Liên": 0,
-      "Nguyễn Tất Đạt": 2000,
-      "Hoàng Xuân Hành": 1421,
       "Nguyễn Sinh Nhuận": 0,
-      "Trần Nguyên Đán": 261,
       "Hồ Chí Minh": 2001,
-      "Nguyễn Quí Yêm": 1545,
-      "Nguyễn Tất Thành": 2001,
       "Nguyễn Sinh Khiêm": 2000
     },
     "relatedEvents": {},
@@ -65333,9 +64954,7 @@
     "father": {
       "Trần Văn Thông": 2221
     },
-    "children": {
-      "Trần Đình Bá": 1647
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -65589,9 +65208,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Thị Trâm": 2931
-    },
+    "children": {},
     "relatedEvents": {
       "Chiến dịch Trần Hưng Đạo năm 1950 - 1951": 590
     },
@@ -66159,8 +65776,7 @@
       "Đoàn Hữu Công": 0
     },
     "children": {
-      "Thanh Lam": 0,
-      "Nguyễn Thị Hiên": 850
+      "Thanh Lam": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -66279,8 +65895,7 @@
     "father": {},
     "children": {
       "Trần Thu Hà": 0,
-      "Trần Vũ Hoàng": 0,
-      "Trần Tiến": 798
+      "Trần Vũ Hoàng": 0
     },
     "relatedEvents": {},
     "relatedRelics": {},
@@ -66355,7 +65970,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Lễ hội đình Phú Gia": 252
+      "Lễ hội đình Phú Gia": 262
     },
     "id": 2927,
     "name": "Trần Khai Nguyên",
@@ -66441,7 +66056,6 @@
     "children": {
       "Hồ Xuân Kiêm": 0,
       "Hồ Học Lãm": 1397,
-      "Hồ Ngọc Lãm": 2986,
       "Hồ Xuân Lan": 1225
     },
     "relatedEvents": {},
@@ -67708,7 +67322,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội Đại Bái": 163
+      "Hội Đại Bái": 173
     },
     "id": 3013,
     "name": "Nguyễn Công Truyền",
@@ -67726,9 +67340,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trung Kiên": 3015
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {
       "Khu lưu niệm và Lăng mộ Nguyễn Đức Cảnh": 626
@@ -68316,7 +67928,6 @@
       "Phan Huy Tùng": 0
     },
     "children": {
-      "Phan Huy Cận": 778,
       "Phan Phương Thảo": 0,
       "Phan Thị Linh": 0,
       "Phan Hồng Liên": 0
@@ -68953,9 +68564,7 @@
       "Phạm Thị Thức": 0
     },
     "father": {},
-    "children": {
-      "Đặng Vũ Hỷ": 1737
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -69499,9 +69108,7 @@
     "spouses": {},
     "mother": {},
     "father": {},
-    "children": {
-      "Trần Văn Giàu": 2212
-    },
+    "children": {},
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {},
@@ -69582,7 +69189,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội Đại Mỗ": 235
+      "Hội Đại Mỗ": 245
     },
     "id": 3128,
     "name": "Nguyễn Qúy Đức",
@@ -70232,7 +69839,7 @@
     "relatedEvents": {},
     "relatedRelics": {},
     "relatedFestivals": {
-      "Hội thờ Thủy thần": 305
+      "Hội thờ Thủy thần": 315
     },
     "id": 3168,
     "name": "Bảo Ninh",

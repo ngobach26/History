@@ -19,28 +19,32 @@ import com.google.gson.reflect.TypeToken;
 import crawler.ICrawler;
 import crawler.figure.FigureCrawler;
 import helper.JsonIO;
+import helper.StringHelper;
 import model.Relic;
 
 public class RelicCrawler implements ICrawler {
-    private JsonIO<Relic> relicIO = new JsonIO<>(new TypeToken<ArrayList<Relic>>() {}.getType());
+    private static final JsonIO<Relic> RELIC_IO = new JsonIO<>(new TypeToken<ArrayList<Relic>>() {}.getType());
+    private static final String PATH = "src/main/resources/json/Relics.json";
 
     @Override
     public void crawl() {
-        relicIO.writeJson(crawlWiki(), "src/main/resources/json/Relics.json");
+		RELIC_IO.writeJson(crawlWiki(), PATH);
     }
     
-    public List<Relic> crawlWiki() {
+    private List<Relic> crawlWiki() {
         Document doc;
         List<Relic> relics = new ArrayList<>();
         
         try {
-        	String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_Di_t%C3%ADch_qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam", StandardCharsets.UTF_8.name());
+        	String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_Di_t%C3%ADch_qu%E1%BB%91c_gia_Vi%E1%BB%87t_Nam", 
+        			StandardCharsets.UTF_8.name());
             doc = Jsoup.connect(url).get();
             Elements tables = doc.select("table.wikitable");
             Element tableNinhBinh = doc.selectFirst("#mw-content-text > div.mw-parser-output > table:nth-child(55)");
             Set<String> surnames = new FigureCrawler().getUniqueSurnames();
 
             for (Element table : tables) {
+            	//table Ninh Binh has different format
                 if (table == tableNinhBinh) {
                     Elements rows = table.select("tr");
                     for (int i = 1; i < rows.size(); i++) {
@@ -55,30 +59,37 @@ public class RelicCrawler implements ICrawler {
                         
                         Element aTag = cells.get(1).selectFirst("a[href]");
                         if (aTag != null) {
-                        	String link = URLDecoder.decode(aTag.attr("abs:href"), StandardCharsets.UTF_8.name());
-                        	if (!link.contains("/w/index.php?")) {
-                        		Document relicDoc = Jsoup.connect(link).get();
-                        		Element overviewPara = relicDoc.selectFirst("div.mw-parser-output > p");
-                        		if (overviewPara != null) {
-                        			overviewPara.select("sup").remove();
-                        			description = overviewPara.text();
-                        		}
-                        		
-                        		Elements paras = relicDoc.select("div.mw-parser-output > p");
-                        		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
-                        		for (Element para: paras) {
-                        			Matcher matcher = pattern.matcher(para.text());
-                        	        while (matcher.find()) {
-                        	        	String potentialName = matcher.group();
-                        	            int length = potentialName.split("\\s+").length;
-                        	            String surname = (potentialName.split("\\s+"))[0];
-                        	            if (!potentialFigureNames.contains(potentialName) && surnames.contains(surname) && length > 1) {
-                        	            	potentialFigureNames.add(potentialName.replaceAll("\\s+", " "));
-                        	            }
-                        	        }
-                        		}
-                    	        System.out.println(potentialFigureNames);
-                        	}
+                        	try {
+                        		String link = URLDecoder.decode(aTag.attr("abs:href"), StandardCharsets.UTF_8.name());
+                            	if (!link.contains("/w/index.php?")) {
+                            		Document relicDoc = Jsoup.connect(link).get();
+                            		Element overviewPara = relicDoc.selectFirst("div.mw-parser-output > p");
+                            		if (overviewPara != null) {
+                            			overviewPara.select("sup").remove();
+                            			description = overviewPara.text();
+                            		}
+                            		
+                            		Elements paras = relicDoc.select("div.mw-parser-output > p");
+                            		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
+                            		for (Element para: paras) {
+                            			Matcher matcher = pattern.matcher(para.text());
+                            	        while (matcher.find()) {
+                            	        	String potentialName = matcher.group();
+                            	            int length = potentialName.split("\\s+").length;
+                            	            String surname = (potentialName.split("\\s+"))[0];
+                            	            //only crawl potentialName with surnames found in Figures.json
+                            	            if (!StringHelper.containString(potentialFigureNames, potentialName) && 
+                            	            		StringHelper.containString(surnames, surname) && 
+                            	            		length > 1) {
+                            	            	potentialFigureNames.add(potentialName.replaceAll("\\s+", " "));
+                            	            }
+                            	        }
+                            		}
+                        	        System.out.println(potentialFigureNames);
+                            	}
+							} catch (IOException e) {
+								e.printStackTrace();
+							}     	          	
                         }
 
                         //Add relic
@@ -92,7 +103,8 @@ public class RelicCrawler implements ICrawler {
                     }
                     continue;
                 }
-
+                
+                //crawl tables not table Ninh Binh
                 Elements rows = table.select("tr");
 
                 for (int i = 1; i < rows.size(); i++) {
@@ -116,31 +128,39 @@ public class RelicCrawler implements ICrawler {
                         
                         Element aTag = cells.get(0).selectFirst("a[href]");
                         if (aTag != null) {
-                        	String link = URLDecoder.decode(aTag.attr("abs:href"), StandardCharsets.UTF_8.name());
-                        	if (!link.contains("/w/index.php?")) {
-                        		Document relicDoc = Jsoup.connect(link).get();
-                        		Element overviewPara = relicDoc.selectFirst("div.mw-parser-output > p");
-                        		if (overviewPara != null) {
-                        			overviewPara.select("sup").remove();
-                        			description = overviewPara.text();
-                        		}
-                        		if (category.contains("Lịch sử")) {
-                        			Elements paras = relicDoc.select("div.mw-parser-output > p");
-                            		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
-                            		for (Element para: paras) {
-                            			Matcher matcher = pattern.matcher(para.text());
-                            	        while (matcher.find()) {
-                            	        	String potentialName = matcher.group();
-                            	            int length = potentialName.split("\\s+").length;
-                            	            String surname = (potentialName.split("\\s+"))[0];
-                            	            if (!potentialFigureNames.contains(potentialName) && surnames.contains(surname) && length > 1) {
-                            	            	potentialFigureNames.add(potentialName.replaceAll("\\s+", " "));
-                            	            }
-                            	        }
+                        	try {
+                        		String link = URLDecoder.decode(aTag.attr("abs:href"), StandardCharsets.UTF_8.name());
+                            	if (!link.contains("/w/index.php?")) {
+                            		Document relicDoc = Jsoup.connect(link).get();
+                            		Element overviewPara = relicDoc.selectFirst("div.mw-parser-output > p");
+                            		if (overviewPara != null) {
+                            			overviewPara.select("sup").remove();
+                            			description = overviewPara.text();
                             		}
-                        	        System.out.println(potentialFigureNames);
-                        		}
-                        	}
+                            		//only relics with "Lich su" category have relatedFigures
+                            		if (category.contains("Lịch sử")) {
+                            			Elements paras = relicDoc.select("div.mw-parser-output > p");
+                                		Pattern pattern = Pattern.compile("(\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*)");                        			
+                                		for (Element para: paras) {
+                                			Matcher matcher = pattern.matcher(para.text());
+                                	        while (matcher.find()) {
+                                	        	String potentialName = matcher.group();
+                                	            int length = potentialName.split("\\s+").length;
+                                	            String surname = (potentialName.split("\\s+"))[0];
+                                	            //only crawl potential names with surnames found in Figures.json
+                                	            if (!StringHelper.containString(potentialFigureNames, potentialName) && 
+                                	            		StringHelper.containString(surnames, surname) && 
+                                	            		length > 1) {
+                                	            	potentialFigureNames.add(potentialName.replaceAll("\\s+", " "));
+                                	            }
+                                	        }
+                                		}
+                            	        System.out.println(potentialFigureNames);
+                            		}
+                            	}
+							} catch (IOException e) {
+								e.printStackTrace();
+							}                        	
                         }
 
                         //Add relic
@@ -161,12 +181,9 @@ public class RelicCrawler implements ICrawler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
 
         return relics;
     }
 
-    public static void main(String[] args) {
-        RelicCrawler relicCrawler = new RelicCrawler();
-        relicCrawler.crawl();
-    }
 }

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import helper.StringHelper;
+
 public class Event extends HistoricalEntity{
 	 private static int numEvents = 0;
 	 private String startYear;
@@ -77,14 +79,7 @@ public class Event extends HistoricalEntity{
 	}
 	
 	public void addRelatedFigures(String newFigure, int id) {
-		boolean isFound = false;
-		for (String relatedFigure : relatedFigures.keySet()) {
-			if (relatedFigure.equalsIgnoreCase(newFigure)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedFigures.keySet(), newFigure)) {
 			relatedFigures.put(newFigure, id);
 		}		
 	}

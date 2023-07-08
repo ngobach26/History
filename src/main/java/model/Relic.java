@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import helper.StringHelper;
+
 public class Relic extends HistoricalEntity{
     private static int numRelics = 0;
     private String location;
@@ -47,14 +49,7 @@ public class Relic extends HistoricalEntity{
 	}
 	
 	public void addRelatedFestivals(String newFestival, int id) {
-		boolean isFound = false;
-		for (String relatedFestival : relatedFestivals.keySet()) {
-			if (relatedFestival.equalsIgnoreCase(newFestival)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedFestivals.keySet(), newFestival)) {
 			relatedFestivals.put(newFestival, id);
 		}		
 	}

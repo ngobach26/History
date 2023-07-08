@@ -24,21 +24,23 @@ import com.google.gson.reflect.TypeToken;
 
 import crawler.ICrawler;
 import helper.JsonIO;
+import helper.StringHelper;
 import model.Event;
 import model.Figure;
 
 public class EventCrawler implements ICrawler{
-	private JsonIO<Event> eventIO = new JsonIO<>(new TypeToken<ArrayList<Event>>() {}.getType());
+	private static final JsonIO<Event> EVENT_IO = new JsonIO<>(new TypeToken<ArrayList<Event>>() {}.getType());
+	private static final String PATH = "src/main/resources/json/Events.json";
 	
 	@Override
 	public void crawl() {
 		List<Event> tvls = crawlThuVienLichSu();
 		List<Event> wiki = crawlWiki();
 		List<Event> nks = crawlNguoiKeSu();
-		eventIO.writeJson(merge(merge(tvls, wiki), nks), "src/main/resources/json/Events.json");
+		EVENT_IO.writeJson(merge(merge(tvls, wiki), nks), PATH);
 	}
 	
-	public List<Event> crawlNguoiKeSu(){
+	private List<Event> crawlNguoiKeSu(){
 		List<Event> events = new ArrayList<>();
 		String url ="https://nguoikesu.com/tu-lieu/quan-su?start=";
 		Document doc;
@@ -50,90 +52,93 @@ public class EventCrawler implements ICrawler{
 				Elements links = doc.select("h2 a[href]");
 				//Each link is about an event
 				for (Element link : links) {
-					Document eventDoc = Jsoup.connect(link.attr("abs:href")).get();
-					
-					String eventName = "Không rõ";
-					String time = "Không rõ";
-					String startYear = "Không rõ";
-					String endYear = "Không rõ";
-					String location = "Không rõ";
-					String result = "Không rõ";
-					String description = "Không rõ";
-					List<String> relatedFigures = new ArrayList<>();
-					
-					//crawl eventName
-					Element header = eventDoc.selectFirst(".page-header h1");
-					if (header != null) {
-						eventName = header.text();
-					}
-					String strArr[] = eventName.split("năm|,");
-					if (strArr.length == 2) {
-						time = strArr[1].trim();
-					}
-					
-					//crawl time, location, result
-					Element infoTable = eventDoc.selectFirst("table[cellpadding=0]");
-					if (infoTable != null) {
-						Elements infoRows = infoTable.select("tr");
-						for (Element inforRow : infoRows) {
-							Elements infoCells = inforRow.select("td");
-							if (infoCells.get(0).text().equals("Thời gian") && time.equals("Không rõ")) {
-								time = infoCells.get(1).text().replaceAll("năm|Năm", "").trim();
+					try {
+						Document eventDoc = Jsoup.connect(link.attr("abs:href")).get();
+						
+						String eventName = "Không rõ";
+						String time = "Không rõ";
+						String startYear = "Không rõ";
+						String endYear = "Không rõ";
+						String location = "Không rõ";
+						String result = "Không rõ";
+						String description = "Không rõ";
+						List<String> relatedFigures = new ArrayList<>();
+						
+						//crawl eventName
+						Element header = eventDoc.selectFirst(".page-header h1");
+						if (header != null) {
+							eventName = header.text();
+						}
+						String strArr[] = eventName.split("năm|,");
+						if (strArr.length == 2) {
+							time = strArr[1].trim();
+						}
+						
+						//crawl startYear,endYear, location, result
+						Element infoTable = eventDoc.selectFirst("table[cellpadding=0]");
+						if (infoTable != null) {
+							Elements infoRows = infoTable.select("tr");
+							for (Element inforRow : infoRows) {
+								Elements infoCells = inforRow.select("td");
+								if (infoCells.get(0).text().equals("Thời gian") && time.equals("Không rõ")) {
+									time = infoCells.get(1).text().replaceAll("năm|Năm", "").trim();
+								}
+								if (infoCells.get(0).text().equals("Địa điểm")) {
+									location = infoCells.get(1).text();
+								}
+								if (infoCells.get(0).text().equals("Kết quả")) {
+									result = infoCells.get(1).text();
+								}
 							}
-							if (infoCells.get(0).text().equals("Địa điểm")) {
-								location = infoCells.get(1).text();
-							}
-							if (infoCells.get(0).text().equals("Kết quả")) {
-								result = infoCells.get(1).text();
+						}				
+						
+						String timeArr[] = time.split("[-–]");
+						if (timeArr.length == 1) {
+							startYear = time.replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
+							endYear = startYear;
+						}
+						else {
+							startYear = timeArr[0].replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
+							endYear = timeArr[1].replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
+							if (startYear.equals("")) {
+								startYear = endYear;
 							}
 						}
-					}				
+						
+						//crawl related Figures
+						Element articleBody = eventDoc.selectFirst("div.com-content-article__body");					
+						Elements aTags = articleBody.select("a[href]");
+			            for (Element a : aTags) {
+			            	if (a.attr("href").contains("/nhan-vat") && !a.attr("href").contains("/nha-")) {
+			            		String figure = a.text().trim();
+			            		if (!StringHelper.containString(relatedFigures, figure)) {
+			            			relatedFigures.add(figure);
+			            		}
+			            	}
+			            }
+			            
+			            //crawl description
+			            Element overviewPara = articleBody.selectFirst("> p");
+			            if (overviewPara != null) {
+			            	overviewPara.select("sup").remove();
+			            	description = (overviewPara.text().split("(?<=\\.)\\s+(?=[A-Z])"))[0];
+			            }
 					
-					String timeArr[] = time.split("[-–]");
-					if (timeArr.length == 1) {
-						startYear = time.replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
-						endYear = startYear;
-					}
-					else {
-						startYear = timeArr[0].replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
-						endYear = timeArr[1].replaceAll("\\d*\\s*tháng\\s*\\d+", "").trim();
-						if (startYear.equals("")) {
-							startYear = endYear;
-						}
-					}
-					
-					//crawl related Figures
-					Element articleBody = eventDoc.selectFirst("div.com-content-article__body");					
-					Elements aTags = articleBody.select("a[href]");
-		            for (Element a : aTags) {
-		            	if (a.attr("href").contains("/nhan-vat") && !a.attr("href").contains("/nha-")) {
-		            		String figure = a.text().trim();
-		            		if (!relatedFigures.contains(figure)) {
-		            			relatedFigures.add(figure);
-		            		}
-		            	}
-		            }
-		            
-		            //crawl description
-		            Element overviewPara = articleBody.selectFirst("> p");
-		            if (overviewPara != null) {
-		            	overviewPara.select("sup").remove();
-		            	description = (overviewPara.text().split("(?<=\\.)\\s+(?=[A-Z])"))[0];
-		            }
-				
-		            
-					
-					System.out.println(eventName);
-					System.out.println(time);
-					System.out.println(startYear);
-					System.out.println(endYear);
-					System.out.println(location);
-					System.out.println(result);
-					System.out.println(relatedFigures);
-					System.out.println(description);
-					System.out.println("--------------------------");
-					events.add(new Event(eventName, startYear, endYear, location, result, relatedFigures, description));
-					
+			            
+						
+						System.out.println(eventName);
+						System.out.println(time);
+						System.out.println(startYear);
+						System.out.println(endYear);
+						System.out.println(location);
+						System.out.println(result);
+						System.out.println(relatedFigures);
+						System.out.println(description);
+						System.out.println("--------------------------");
+						events.add(new Event(eventName, startYear, endYear, location, result, relatedFigures, description));
+					} catch (IOException e) {
+						e.printStackTrace();
+					}					
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -142,12 +147,13 @@ public class EventCrawler implements ICrawler{
 		return events;
 	}
 	
-	public List<Event> crawlWiki(){
+	private List<Event> crawlWiki(){
 		List<Event> events = new ArrayList<>();
 		Document doc;
 		
 		try {
-			String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/Ni%C3%AAn_bi%E1%BB%83u_l%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam", StandardCharsets.UTF_8.name());
+			String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/Ni%C3%AAn_bi%E1%BB%83u_l%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam", 
+					StandardCharsets.UTF_8.name());
 			doc = Jsoup.connect(url).get();
 			
 			Element content = doc.getElementById("mw-content-text");
@@ -185,12 +191,11 @@ public class EventCrawler implements ICrawler{
 					events.add(addInformationWiki(aTags, eventName, time));
 				}
 			}
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+		} 
 		catch(IOException e) {
 			e.printStackTrace();
 		}
+		
 		return events;
 	}
 	
@@ -202,6 +207,7 @@ public class EventCrawler implements ICrawler{
 		String description = "Không rõ";
 		List<String> relatedFigures = new ArrayList<>();
 		
+		//crawl startYear, endYear
 		String timeArr[] = time.split("[-–]");
 		if (timeArr.length == 1) {
 			if (time.equals("Thế kỉ VII TCN")) {
@@ -224,11 +230,12 @@ public class EventCrawler implements ICrawler{
 			endYear = "-" + endYear.replaceAll("[^\\d]", "");
 		}
 		
+		//get link to crawl location, result, description, relatedFigures
 		String link = "";
 		for (Element aTag : aTags) {
 			String aText = aTag.text();
 			//only get relavant links with certain keywords			
-			if (containsAny(aText, "Văn hóa", "Hòa ước", "Chiến tranh", "Khởi nghĩa", "Trận", "Loạn",
+			if (StringHelper.containsSubstrings(aText, "Văn hóa", "Hòa ước", "Chiến tranh", "Khởi nghĩa", "Trận", "Loạn",
 		            "Hội nghị", "Nổi dậy", "Phong trào", "Cách mạng", "Chiến dịch", "Chiến tranh",  
 		            "Xô Viết Nghệ Tĩnh", "Đổi Mới")) {
 				try {
@@ -252,7 +259,7 @@ public class EventCrawler implements ICrawler{
 				if (paragraph.isBlank()) {
 					paragraph = eventDoc.select("div.mw-parser-output > p:nth-child(2)").text();
 				}
-				//get the first sentence
+				//crawl description, location, result
 				description = (paragraph.split("(?<=\\.)\\s+(?=[A-Z])"))[0];
 				Element infoTable = eventDoc.selectFirst("div.mw-parser-output table.infobox tr table");
 				if (infoTable != null) {
@@ -269,6 +276,7 @@ public class EventCrawler implements ICrawler{
 					}
 				}
 				
+				//crawl relatedFigures
 				Elements rows = eventDoc.select("div.mw-parser-output table.infobox > tbody > tr");
 				for (Element row : rows) {
 					if (row.text().equals("Chỉ huy và lãnh đạo")) {
@@ -303,7 +311,7 @@ public class EventCrawler implements ICrawler{
 						
 	}
 	
-	public List<Event> crawlThuVienLichSu() {
+	private List<Event> crawlThuVienLichSu() {
 		List<Event> events = new ArrayList<>();
 		String url ="https://thuvienlichsu.vn/su-kien?page=";
 		Document doc;
@@ -315,110 +323,115 @@ public class EventCrawler implements ICrawler{
 				Elements aTags = doc.select("div.card a.click");
 				for (Element aTag : aTags) {
 					String link = aTag.attr("abs:href");
-					Document linkDoc = Jsoup.connect(link).get();
-					
-					String eventName = "Không rõ";
-					String startYear = "Không rõ";
-					String endYear = "Không rõ";
-					String time = "Không rõ";
-					String location = "Không rõ";
-					String result = "Không rõ";
-					String description = "Không rõ";
-					List<String> relatedFigures = new ArrayList<>();
-					
-					//extract eventName, time
-					String title = linkDoc.selectFirst("div.divide-tag").text();
-					eventName = title;
-					Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
-		            Matcher matcher = pattern.matcher(title);
-		            while (matcher.find()) {
-		            	if (containsNumber(matcher.group())) {
-		            		time = matcher.group(1).trim();
-		            		List<Integer> dashIndexes = new ArrayList<>();
-			            	for (int j = 0; j < time.length(); j++) {
-			                    if (time.charAt(j) == '-') {
-			                        dashIndexes.add(j);
-			                    }
-			                }
-			            	if (dashIndexes.isEmpty()) {
-			            		startYear = time;
-			            		endYear = time;
-			            	}
-			            	else if (dashIndexes.size() == 1) {
-			            		if (dashIndexes.get(0) == 0) {
-				            		if (time.charAt(1) == ' ') {
-				            			startYear = time.substring(1).trim();
-				            			endYear = startYear;
-				            		}
-				            		else {
-				            			startYear = time;
-				            			endYear = time;
-				            		}
+					try {
+						Document linkDoc = Jsoup.connect(link).get();
+						
+						String eventName = "Không rõ";
+						String startYear = "Không rõ";
+						String endYear = "Không rõ";
+						String time = "Không rõ";
+						String location = "Không rõ";
+						String result = "Không rõ";
+						String description = "Không rõ";
+						List<String> relatedFigures = new ArrayList<>();
+						
+						//extract eventName, startYear, endYear
+						String title = linkDoc.selectFirst("div.divide-tag").text();
+						eventName = title;
+						Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+			            Matcher matcher = pattern.matcher(title);
+			            while (matcher.find()) {
+			            	if (StringHelper.containsNumber(matcher.group())) {
+			            		time = matcher.group(1).trim();
+			            		List<Integer> dashIndexes = new ArrayList<>();
+				            	for (int j = 0; j < time.length(); j++) {
+				                    if (time.charAt(j) == '-') {
+				                        dashIndexes.add(j);
+				                    }
+				                }
+				            	if (dashIndexes.isEmpty()) {
+				            		startYear = time;
+				            		endYear = time;
+				            	}
+				            	else if (dashIndexes.size() == 1) {
+				            		if (dashIndexes.get(0) == 0) {
+					            		if (time.charAt(1) == ' ') {
+					            			startYear = time.substring(1).trim();
+					            			endYear = startYear;
+					            		}
+					            		else {
+					            			startYear = time;
+					            			endYear = time;
+					            		}
+					            	}
+					            	else {
+					            		startYear = time.substring(0, dashIndexes.get(0)).trim();
+					            		endYear = time.substring(dashIndexes.get(0) + 1, time.length()).trim();
+					            	}
 				            	}
 				            	else {
-				            		startYear = time.substring(0, dashIndexes.get(0)).trim();
-				            		endYear = time.substring(dashIndexes.get(0) + 1, time.length()).trim();
+				            		if (dashIndexes.get(0) == 0) {
+					            		startYear = time.substring(0, dashIndexes.get(1)).trim();
+				            			endYear = time.substring(dashIndexes.get(1) + 1, time.length()).trim();
+					            	}
+					            	else {
+					            		startYear = time.substring(0, dashIndexes.get(0)).trim();
+					            		endYear = time.substring(dashIndexes.get(0) + 1, time.length()).trim();
+					            	}
+				            	}			            	
+		
+				            	eventName = eventName.replace(matcher.group(), "").trim();
+				            	
+				            	if (eventName.contains("Giải phóng Phan Thiết")) {
+				            		startYear = "1975";
+				            		endYear = "1975";
 				            	}
+				            	break;
+			            	}		            	
+			            }
+			            
+			            //crawl location, description, relatedFigures
+			            Elements cardElements = linkDoc.select("div.divide-tag");
+			            for (int j=1; j<cardElements.size(); j++) {
+			            	Element cardElement = cardElements.get(j);
+			            	String cardTitle = cardElement.selectFirst("div.divide-line h3.header-edge").text().trim();
+			            	if (cardTitle.equals("Diễn biễn lịch sử")) {          		
+			            		description = cardElement.selectFirst("div.card-body").text();
 			            	}
-			            	else {
-			            		if (dashIndexes.get(0) == 0) {
-				            		startYear = time.substring(0, dashIndexes.get(1)).trim();
-			            			endYear = time.substring(dashIndexes.get(1) + 1, time.length()).trim();
-				            	}
-				            	else {
-				            		startYear = time.substring(0, dashIndexes.get(0)).trim();
-				            		endYear = time.substring(dashIndexes.get(0) + 1, time.length()).trim();
-				            	}
-			            	}			            	
-	
-			            	eventName = eventName.replace(matcher.group(), "").trim();
-			            	
-			            	if (eventName.contains("Giải phóng Phan Thiết")) {
-			            		startYear = "1975";
-			            		endYear = "1975";
+			            	else if (cardTitle.equals("Địa điểm liên quan")) {
+			            		location = "";
+			            		Elements locationElements = cardElement.select("div.card a.click");
+			            		for (int k = 0; k < locationElements.size() - 1; k++) {
+			            			location = location + locationElements.get(k).text() + ", ";
+			            		}
+			            		location = location + locationElements.get(locationElements.size() - 1).text();
 			            	}
-			            	break;
-		            	}		            	
-		            }
-		            
-		            Elements cardElements = linkDoc.select("div.divide-tag");
-		            for (int j=1; j<cardElements.size(); j++) {
-		            	Element cardElement = cardElements.get(j);
-		            	String cardTitle = cardElement.selectFirst("div.divide-line h3.header-edge").text().trim();
-		            	if (cardTitle.equals("Diễn biễn lịch sử")) {          		
-		            		description = cardElement.selectFirst("div.card-body").text();
-		            	}
-		            	else if (cardTitle.equals("Địa điểm liên quan")) {
-		            		location = "";
-		            		Elements locationElements = cardElement.select("div.card a.click");
-		            		for (int k = 0; k < locationElements.size() - 1; k++) {
-		            			location = location + locationElements.get(k).text() + ", ";
-		            		}
-		            		location = location + locationElements.get(locationElements.size() - 1).text();
-		            	}
-		            	else if (cardTitle.equals("Nhân vật liên quan")) {
-		            		Elements relatedFigureCards = cardElement.select("div.card div.card");
-		            		for (Element relatedFigureCard : relatedFigureCards) {
-		            			String rawText = relatedFigureCard.selectFirst("a.click").text();
-		            			matcher = pattern.matcher(rawText);
-		            			if (matcher.find()) {
-		            				relatedFigures.add(rawText.replace(matcher.group(), "").replace("Chủ tịch", "").trim());
-		            			}
-		            		}
-		            	}
-		            }
+			            	else if (cardTitle.equals("Nhân vật liên quan")) {
+			            		Elements relatedFigureCards = cardElement.select("div.card div.card");
+			            		for (Element relatedFigureCard : relatedFigureCards) {
+			            			String rawText = relatedFigureCard.selectFirst("a.click").text();
+			            			matcher = pattern.matcher(rawText);
+			            			if (matcher.find()) {
+			            				relatedFigures.add(rawText.replace(matcher.group(), "").replace("Chủ tịch", "").trim());
+			            			}
+			            		}
+			            	}
+			            }
 
-		            
-		            System.out.println(eventName);
-		            System.out.println(time);
-		            System.out.println(startYear);
-		            System.out.println(endYear);
-		            System.out.println(description);
-		            System.out.println(location);
-		            System.out.println(relatedFigures);
-		            System.out.println("--------------");
-		            
-		            events.add(new Event(eventName, startYear, endYear, location, result, relatedFigures, description));
+			            
+			            System.out.println(eventName);
+			            System.out.println(time);
+			            System.out.println(startYear);
+			            System.out.println(endYear);
+			            System.out.println(description);
+			            System.out.println(location);
+			            System.out.println(relatedFigures);
+			            System.out.println("--------------");
+			            
+			            events.add(new Event(eventName, startYear, endYear, location, result, relatedFigures, description));
+					} catch (IOException e) {
+						e.printStackTrace();
+					}					
 				}
 				
 			} catch (IOException e) {
@@ -446,45 +459,45 @@ public class EventCrawler implements ICrawler{
 				String startYear1 = event1.getStartYear();
 				String endYear1 = event1.getEndYear();
 				
-				if ((containsAny(eventName2, eventName1) || containsAny(eventName1, eventName2))
+				if ((StringHelper.containsSubstrings(eventName2, eventName1) || StringHelper.containsSubstrings(eventName1, eventName2))
 						&& (startYear1.equals(startYear2) || endYear1.equals(endYear2))) {
 					isFound = true;
 				}
 				else if (startYear1.equals(startYear2) && endYear1.equals(endYear2)) {			
-					if (containsAny(eventName2, "lên ngôi", "xưng đế")
-						&& containsAny(eventName1, "lên ngôi", "xưng đế")) {
+					if (StringHelper.containsSubstrings(eventName2, "lên ngôi", "xưng đế")
+						&& StringHelper.containsSubstrings(eventName1, "lên ngôi", "xưng đế")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "dời đô")
-							&& containsAny(eventName1, "dời đô")) {
+					else if (StringHelper.containsSubstrings(eventName2, "dời đô")
+							&& StringHelper.containsSubstrings(eventName1, "dời đô")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "đổi tên")
-							&& containsAny(eventName1, "đổi tên")) {
+					else if (StringHelper.containsSubstrings(eventName2, "đổi tên")
+							&& StringHelper.containsSubstrings(eventName1, "đổi tên")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "qua đời")
-							&& containsAny(eventName1, "qua đời")) {
+					else if (StringHelper.containsSubstrings(eventName2, "qua đời")
+							&& StringHelper.containsSubstrings(eventName1, "qua đời")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "tạm ước", "hòa ước", "hiệp ước")
-							&& containsAny(eventName1, "tạm ước", "hòa ước", "hiệp ước")) {
+					else if (StringHelper.containsSubstrings(eventName2, "tạm ước", "hòa ước", "hiệp ước")
+							&& StringHelper.containsSubstrings(eventName1, "tạm ước", "hòa ước", "hiệp ước")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "tuyển cử")
-							&& containsAny(eventName1, "tuyển cử")) {
+					else if (StringHelper.containsSubstrings(eventName2, "tuyển cử")
+							&& StringHelper.containsSubstrings(eventName1, "tuyển cử")) {
 						isFound = true;
 					}
-					else if (containsAny(eventName2, "hội nghị", "hiệp định")
-							&& containsAny(eventName1, "hội nghị", "hiệp định")) {
+					else if (StringHelper.containsSubstrings(eventName2, "hội nghị", "hiệp định")
+							&& StringHelper.containsSubstrings(eventName1, "hội nghị", "hiệp định")) {
 						isFound = true;
 					}
-					else if ((containsAny(eventName2, "trận", "chiến thắng", "chiến tranh", "chiến dịch", "phân tranh")
-							&& containsAny(eventName1, "trận", "chiến thắng", "chiến tranh", "chiến dịch", "phân tranh"))
-							|| (containsAny(eventName2, "khởi nghĩa")
-							&& containsAny(eventName1, "khởi nghĩa")) 
-							|| (containsAny(eventName2, "thành lập", "lập ra", "lập lên")
-							&& containsAny(eventName1, "thành lập", "lập ra", "lập lên"))) {
+					else if ((StringHelper.containsSubstrings(eventName2, "trận", "chiến thắng", "chiến tranh", "chiến dịch", "phân tranh")
+							&& StringHelper.containsSubstrings(eventName1, "trận", "chiến thắng", "chiến tranh", "chiến dịch", "phân tranh"))
+							|| (StringHelper.containsSubstrings(eventName2, "khởi nghĩa")
+							&& StringHelper.containsSubstrings(eventName1, "khởi nghĩa")) 
+							|| (StringHelper.containsSubstrings(eventName2, "thành lập", "lập ra", "lập lên")
+							&& StringHelper.containsSubstrings(eventName1, "thành lập", "lập ra", "lập lên"))) {
 						if (!startYear1.equals("Không rõ") && Integer.parseInt(startYear1) < 1860) {
 							isFound = true;
 						}
@@ -494,7 +507,7 @@ public class EventCrawler implements ICrawler{
 						     Matcher matcher1 = regex.matcher(eventName1.replaceAll("(?i)(trận|chiến thắng|chiến tranh|chiến dịch|khởi nghĩa)", ""));
 						     Matcher matcher2 = regex.matcher(eventName2.replaceAll("(?i)(trận|chiến thắng|chiến tranh|chiến dịch|khởi nghĩa)", ""));
 						     //compare personal names of event names
-						     if ((matcher1.find() && matcher2.find()) && (matcher1.group().equals(matcher2.group()))) {
+						     if ((matcher1.find() && matcher2.find()) && (matcher1.group().equalsIgnoreCase(matcher2.group()))) {
 						    	 isFound = true;
 						     }
 						}
@@ -532,27 +545,5 @@ public class EventCrawler implements ICrawler{
 		return list1;
 	}
 	
-	private boolean containsNumber(String str) {
-		for (char c : str.toCharArray()) {
-			if (Character.isDigit(c)) {
-				return true; 
-			}
-		}
-		return false;
-	}
-	
-	private boolean containsAny(String str, String... substrings) {
-		for (String substr : substrings) {
-	        if (str.toLowerCase().contains(substr.toLowerCase())) {
-	            return true;
-	        }
-	    }
-	    return false;
-	}
-	
-	public static void main(String[] args) {
-		EventCrawler eventCrawler = new EventCrawler();
-		eventCrawler.crawl();
-	}
 	
 }

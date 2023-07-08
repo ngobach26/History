@@ -19,38 +19,24 @@ import com.google.gson.reflect.TypeToken;
 
 import crawler.ICrawler;
 import helper.JsonIO;
+import helper.StringHelper;
 import model.Festival;
 
 public class FestivalCrawler implements ICrawler{
-    private JsonIO<Festival> festivalIO = new JsonIO<>(new TypeToken<ArrayList<Festival>>() {}.getType());
+    private static final JsonIO<Festival> FESTIVAL_IO = new JsonIO<>(new TypeToken<ArrayList<Festival>>() {}.getType());
+    private static final String PATH = "src/main/resources/json/Festivals.json";
 
     @Override
 	public void crawl() {
     	List<Festival> allFestivals = new ArrayList<>();
-        allFestivals = crawlWiki();
-//        allFestivals.addAll(crawlFesND());
-//        allFestivals.addAll(crawlFesAG());
-//        allFestivals.addAll(crawlFesLS());
-//        allFestivals.addAll(crawlFesQNam());
-//        allFestivals.addAll(crawlFesHue());
-//        allFestivals.addAll(crawlFesTH());
-//        allFestivals.addAll(crawlFesNA());
-//        allFestivals.addAll(crawlFesHP());
-//        allFestivals.addAll(crawlFesHCM());
-//        allFestivals.addAll(crawlFesQNinh());
-//        allFestivals.addAll(crawlFesBN());
-//        allFestivals.addAll(crawlFesVP());
-//        allFestivals.addAll(crawlFesQB());
-//        allFestivals.addAll(crawlFesHT());
-//        allFestivals.addAll(crawlFesTN());
-//        allFestivals.addAll(crawlFesBRVT());
-		
+        allFestivals = crawlWiki();		
         
         merge(allFestivals, crawlFesND(), "Nam Định");
         merge(allFestivals, crawlFesAG(), "An Giang");
         merge(allFestivals, crawlFesLS(), "Lạng Sơn");
         merge(allFestivals, crawlFesQNam(), "Quảng Nam");
         merge(allFestivals, crawlFesHue(), "Huế");
+        merge(allFestivals, crawlFesHP(), "Hải Phòng");
         merge(allFestivals, crawlFesTH(), "Thanh Hóa");
         merge(allFestivals, crawlFesNA(), "Nghệ An");
         merge(allFestivals, crawlFesHCM(), "Hồ Chí Minh");
@@ -62,16 +48,17 @@ public class FestivalCrawler implements ICrawler{
         merge(allFestivals, crawlFesTN(), "Tây Ninh");
         merge(allFestivals, crawlFesBRVT(), "Vũng Tàu");
         merge(allFestivals, crawlFesHN(), "Hà Nội");
-        festivalIO.writeJson(allFestivals, "src/main/resources/json/Festivals.json");
+        FESTIVAL_IO.writeJson(allFestivals, PATH);
         
 	}
 
-    public List<Festival> crawlWiki() {
+    private List<Festival> crawlWiki() {
         Document doc;
         List<Festival> festivals = new ArrayList<>();
 
         try {
-            String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam?fbclid=IwAR1Qp43JccDCCImhhHwycn6jRup0POXf_qq-doZ4AuPtLRorscpvjYdaQYs", StandardCharsets.UTF_8.name());
+            String url = URLDecoder.decode("https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam?fbclid=IwAR1Qp43JccDCCImhhHwycn6jRup0POXf_qq-doZ4AuPtLRorscpvjYdaQYs", 
+            		StandardCharsets.UTF_8.name());
             doc = Jsoup.connect(url).get();
 
             Elements table = doc.select("table.prettytable.wikitable");
@@ -107,12 +94,16 @@ public class FestivalCrawler implements ICrawler{
                 if (aElement != null) {
                 	String link = URLDecoder.decode(aElement.attr("abs:href"), StandardCharsets.UTF_8.name());
                 	if (!link.contains("/w/index.php")) {
-                		Document linkDoc = Jsoup.connect(link).get();
-                		description = linkDoc.selectFirst("div.mw-parser-output > p").text();
-                		
-            			getRelatedRelics(relatedRelics, description);
-						
-                		System.out.println("Description: " + description);
+                		try {
+                			Document linkDoc = Jsoup.connect(link).get();
+                    		description = linkDoc.selectFirst("div.mw-parser-output > p").text();
+                    		
+                			getRelatedRelics(relatedRelics, description);
+    						
+                    		System.out.println("Description: " + description);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}               		
                 	}
                 }
             
@@ -166,22 +157,14 @@ public class FestivalCrawler implements ICrawler{
 				+ "\\s+((\\p{Lu}\\p{Ll}*\\s*)+)");
 		Matcher matcher = pattern.matcher(text);						
 		while (matcher.find()) {
-			boolean isDuplicate = false;
 			String newRelic = matcher.group().trim();
-			//check duplicated			
-			for (String relatedRelic : relatedRelics) {
-				if (relatedRelic.equalsIgnoreCase(newRelic)) {
-					isDuplicate = true;
-					break;
-				}
-			}
-			if (!isDuplicate) {
+			if (!StringHelper.containString(relatedRelics, newRelic)) {
 			    relatedRelics.add(newRelic);
 			}										
 		}
     }
     
-    public List<Festival> crawlFesND() {
+    private List<Festival> crawlFesND() {
         Document doc;
         List<Festival> festivals_ND = new ArrayList<>();
 
@@ -222,7 +205,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_ND;
     }
     
-    public List<Festival> crawlFesLS() {
+    private List<Festival> crawlFesLS() {
         Document doc;
         List<Festival> festivals_LS = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -234,51 +217,39 @@ public class FestivalCrawler implements ICrawler{
         try {
             String url = "https://vinpearl.com/vi/12-le-hoi-lang-son-truyen-thong-noi-tieng-bac-nhat-xu-lang?fbclid=IwAR0B5Xmqg8vZaT8GwpIptPLZGzeUdOP6-kaE4chSdNCR450j6W_glcC4lP4#1.+L%E1%BB%85+h%E1%BB%99i+ch%C3%B9a+Tam+Thanh+-+L%E1%BB%85+h%E1%BB%99i+L%E1%BA%A1ng+S%C6%A1n+%C4%91%E1%BA%B7c+s%E1%BA%AFc+%C4%91%E1%BA%A7u+n%C4%83m";
             doc = Jsoup.connect(url).get();
-            Elements elements = doc.select("#block-porto-content > div > div.container.detail.news-full > div > div.main-body-wrapper > div.content-wrapper > div.content");
-            for (Element element : elements) {
+            Element element = doc.selectFirst("#block-porto-content > div > div.container.detail.news-full > div > div.main-body-wrapper > div.content-wrapper > div.content");
                 
-                //Get name
-                Elements nameElements = elements.select("h2");
-                for (Element nameElement: nameElements) {
-                    String temp = nameElement.text().substring(nameElement.text().indexOf(" ") + 1);
-                    String tempArr[] = temp.split("-");
-                    if (tempArr.length == 2) {
-                    	if (tempArr[0].contains("Lạng Sơn")) {
-                    		name.add(tempArr[1].trim());
-                    	}
-                    	else {
-                    		name.add(tempArr[0].trim());
-                    	}
-                    }
-                    else {
-                    	name.add(temp);
-                    }     
-                }
-
-                String currentLocation = ""; 
-                String currentDate = "";
-
-                //Get startingDay, location, description
-                Elements locTimeElements = elements.select("ul");
-                
-                for (Element locTimeElement: locTimeElements) {
-                    Element firstP = locTimeElement.nextElementSibling(); 
-                    if (firstP.tagName().equals("p")) {
-                        description.add(firstP.text());
-                    }
-                    String temp = locTimeElement.text();
-                    if (temp.contains("Địa điểm:")) {
-                        currentLocation = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian diễn ra:"));
-                        location.add(currentLocation);
-                        temp = temp.substring(temp.indexOf("Thời gian diễn ra:"));
-                    } 
-
-                    if (temp.contains("Thời gian diễn ra:")) {
-                        currentDate = temp.substring(temp.indexOf(":") + 2);
-                        startingDay.add(currentDate);
-                    }
-                }               
+            //Get name
+            Elements nameElements = element.select("h2");
+            for (Element nameElement: nameElements) {
+                String temp = nameElement.text().substring(nameElement.text().indexOf(" ") + 1);
+                name.add(StringHelper.removeUnwanted(temp, "Lạng Sơn"));
             }
+
+            String currentLocation = ""; 
+            String currentDate = "";
+
+            //Get startingDay, location, description
+            Elements locTimeElements = element.select("ul");
+            
+            for (Element locTimeElement: locTimeElements) {
+                Element firstP = locTimeElement.nextElementSibling(); 
+                if (firstP.tagName().equals("p")) {
+                    description.add(firstP.text());
+                }
+                String temp = locTimeElement.text();
+                if (temp.contains("Địa điểm:")) {
+                    currentLocation = temp.substring(temp.indexOf(":") + 2, temp.indexOf("Thời gian diễn ra:"));
+                    location.add(currentLocation);
+                    temp = temp.substring(temp.indexOf("Thời gian diễn ra:"));
+                } 
+
+                if (temp.contains("Thời gian diễn ra:")) {
+                    currentDate = temp.substring(temp.indexOf(":") + 2);
+                    startingDay.add(currentDate);
+                }
+            }               
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -298,7 +269,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_LS;
     }
     
-    public List<Festival> crawlFesQNam() {
+    private List<Festival> crawlFesQNam() {
         Document doc;
         List<Festival> festivals_QNam = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -320,18 +291,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("[-–]");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Quảng Nam")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }
+                name.add(StringHelper.removeUnwanted(temp, "Quảng Nam"));
             }
 
             //Get time, location and description
@@ -399,7 +359,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_QNam;
     }
     
-    public List<Festival> crawlFesNA() {
+    private List<Festival> crawlFesNA() {
         Document doc;
         List<Festival> festivals_NA = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -420,18 +380,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("[-:\\?]");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Nghệ An")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }                
+                name.add(StringHelper.removeUnwanted(temp, "Nghệ An"));      
             }
 
             String currentLocation = ""; 
@@ -481,7 +430,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_NA;
     }
     
-    public List<Festival> crawlFesTH() {
+    private List<Festival> crawlFesTH() {
         Document doc;
         List<Festival> festivals_TH = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -501,7 +450,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                name.add(temp);
+                name.add(StringHelper.removeUnwanted(temp, "Thanh Hóa"));
             }
 
             String currentLocation = ""; 
@@ -552,7 +501,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_TH;
     }
     
-    public List<Festival> crawlFesHP() {
+    private List<Festival> crawlFesHP() {
         Document doc;
         List<Festival> festivals_HP = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -571,8 +520,8 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                name.add(StringHelper.removeUnwanted(temp, "Hải Phòng"));
             }
 
             String currentLocation = ""; 
@@ -607,7 +556,7 @@ public class FestivalCrawler implements ICrawler{
             e.printStackTrace();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < name.size(); i++) {
         	List<String> relatedRelics = new ArrayList<>();
         	getRelatedRelics(relatedRelics, name.get(i));
             festivals_HP.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
@@ -622,7 +571,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_HP;
     }
 
-    public List<Festival> crawlFesHCM() {
+    private List<Festival> crawlFesHCM() {
         Document doc;
         List<Festival> festivals_HCM = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -642,18 +591,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf(". "); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("-");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("HCM")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }
+                name.add(StringHelper.removeUnwanted(temp, "HCM"));
             }
 
             String currentLocation = ""; 
@@ -688,7 +626,7 @@ public class FestivalCrawler implements ICrawler{
             e.printStackTrace();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < name.size(); i++) {
         	List<String> relatedRelics = new ArrayList<>();
         	getRelatedRelics(relatedRelics, name.get(i));
             festivals_HCM.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
@@ -703,7 +641,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_HCM;
     }
 
-    public List<Festival> crawlFesQNinh() {
+    private List<Festival> crawlFesQNinh() {
         Document doc;
         List<Festival> festivals_QNinh = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -723,18 +661,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("-");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Hạ Long")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }
+                name.add(StringHelper.removeUnwanted(temp, "Hạ Long"));
             }
 
             String currentLocation = ""; 
@@ -769,7 +696,7 @@ public class FestivalCrawler implements ICrawler{
             e.printStackTrace();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < name.size(); i++) {
         	List<String> relatedRelics = new ArrayList<>();
         	getRelatedRelics(relatedRelics, name.get(i));
             festivals_QNinh.add(new Festival(name.get(i), location.get(i), "Không rõ", startingDay.get(i), description.get(i), relatedFigures, relatedRelics));
@@ -784,7 +711,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_QNinh;
     }
     
-    public List<Festival> crawlFesHue() {
+    private List<Festival> crawlFesHue() {
         Document doc;
         List<Festival> festivals_Hue = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -849,7 +776,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_Hue;
     }
 
-    public List<Festival> crawlFesAG() {
+    private List<Festival> crawlFesAG() {
         Document doc;
         List<Festival> festivals_AG = new ArrayList<>();
 
@@ -874,7 +801,7 @@ public class FestivalCrawler implements ICrawler{
                 String location = "";
                 String startingDay = "";
                 String description = "";
-                String related = "";
+                String relatedFigure = "";
 
                 name = lineText.substring(0, lineText.indexOf("Thời gian:"));
                 lineText = lineText.substring(lineText.indexOf("Thời gian:"));               
@@ -891,17 +818,17 @@ public class FestivalCrawler implements ICrawler{
                 System.out.println(location);
                 
 
-                related = (lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Đặc điểm:")).replace(".","").split("[(,]"))[0].trim();
+                relatedFigure = (lineText.substring(lineText.indexOf(":") + 2, lineText.indexOf("Đặc điểm:")).replace(".","").split("[(,]"))[0].trim();
                 lineText = lineText.substring(lineText.indexOf("Đặc điểm: "));
-                relatedFigures.add(related);
-                System.out.println(related);
+                relatedFigures.add(relatedFigure);
+                System.out.println(relatedFigure);
 
                 description = lineText.substring(lineText.indexOf(":") + 2);
                 System.out.println(description);
                 
                 System.out.println("--------------------");
 
-                festivals_AG.add(new Festival(name, location, related, startingDay, description, relatedFigures, relatedRelics));
+                festivals_AG.add(new Festival(name, location, "Không rõ", startingDay, description, relatedFigures, relatedRelics));
 
             }
             
@@ -912,7 +839,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_AG;
     }
     
-    public List<Festival> crawlFesBN() {
+    private List<Festival> crawlFesBN() {
         Document doc;
         List<Festival> festivals_BN = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -928,8 +855,8 @@ public class FestivalCrawler implements ICrawler{
             for (Element nameElement: nameElements) {
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
-                String temp1 = temp.substring(separatorIndex + 2);
-                name.add(temp1);
+                temp = temp.substring(separatorIndex + 2);
+                name.add(StringHelper.removeUnwanted(temp, "Bắc Ninh"));
             }
             
             int idx = 0;
@@ -995,7 +922,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_BN;
     }
 
-    public List<Festival> crawlFesVP() {
+    private List<Festival> crawlFesVP() {
         Document doc;
         List<Festival> festivals_VP = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -1059,7 +986,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_VP;
     }
     
-    public List<Festival> crawlFesQB() {
+    private List<Festival> crawlFesQB() {
         Document doc;
         List<Festival> festivals_QB = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -1076,18 +1003,7 @@ public class FestivalCrawler implements ICrawler{
 
             Elements nameElements = elements.select("h2");
             for (Element nameElement: nameElements) {
-            	String tempArr[] = nameElement.text().split("-");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Quảng Bình")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(nameElement.text());
-                }       
+            	name.add(StringHelper.removeUnwanted(nameElement.text(), "Quảng Bình"));     
             }
 
             String currentLocation = ""; 
@@ -1137,7 +1053,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_QB;
     }
 
-    public List<Festival> crawlFesHT() {
+    private List<Festival> crawlFesHT() {
         Document doc;
         List<Festival> festivals_HT = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -1157,18 +1073,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("[-:\\?]");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Hà Tĩnh")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }       
+                name.add(StringHelper.removeUnwanted(temp, "Hà Tĩnh"));    
             }
 
             String currentLocation = ""; 
@@ -1217,7 +1122,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_HT;
     }
 
-    public List<Festival> crawlFesTN() {
+    private List<Festival> crawlFesTN() {
         Document doc;
         List<Festival> festivals_TN = new ArrayList<>();
         List<String> name = new ArrayList<>();
@@ -1237,18 +1142,7 @@ public class FestivalCrawler implements ICrawler{
                 String temp = nameElement.text();
                 int separatorIndex = temp.indexOf("."); // Find the index of the separator ". "
                 temp = temp.substring(separatorIndex + 2);
-                String tempArr[] = temp.split("-");
-                if (tempArr.length == 2) {
-                	if (tempArr[0].contains("Tây Ninh")) {
-                		name.add(tempArr[1].trim());
-                	}
-                	else {
-                		name.add(tempArr[0].trim());
-                	}
-                }
-                else {
-                	name.add(temp);
-                }                
+                name.add(StringHelper.removeUnwanted(temp, "Tây Ninh"));                
             }
 
             String currentLocation = ""; 
@@ -1297,7 +1191,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_TN;
     }
 
-    public List<Festival> crawlFesBRVT() {
+    private List<Festival> crawlFesBRVT() {
         Document doc;
         List<Festival> festivals_BRVT = new ArrayList<>();
 
@@ -1316,7 +1210,6 @@ public class FestivalCrawler implements ICrawler{
                 String name = cells.get(1).text();
                 String startingDay = cells.get(2).text();
                 String location = cells.get(3).text();
-                String firstTime = "Không rõ";
                 String description = cells.get(4).text();
                 List<String> relatedFigures = new ArrayList<>();
                 List<String> relatedRelics = new ArrayList<>();
@@ -1326,11 +1219,10 @@ public class FestivalCrawler implements ICrawler{
                 if (description.isEmpty()) description = "Không rõ";
                 if (location.isEmpty()) location = "Không rõ";
 
-                festivals_BRVT.add(new Festival(name, location, firstTime, startingDay, description, relatedFigures, relatedRelics));
+                festivals_BRVT.add(new Festival(name, location, "Không rõ", startingDay, description, relatedFigures, relatedRelics));
                 System.out.println(name);
                 System.out.println(startingDay);
                 System.out.println(location);
-                System.out.println(firstTime);
                 System.out.println(description);
                 System.out.println(relatedFigures);
                 System.out.println("---------------");
@@ -1344,7 +1236,7 @@ public class FestivalCrawler implements ICrawler{
         return festivals_BRVT;
     }
     
-    public List<Festival> crawlFesHN() {
+    private List<Festival> crawlFesHN() {
     	Document doc;
     	List<Festival> festivals_HN = new ArrayList<>();
     	String url = "https://evbn.org/danh-sach-cac-le-hoi-o-ha-noi-1650760290/";
@@ -1361,6 +1253,8 @@ public class FestivalCrawler implements ICrawler{
                 String description = "Không rõ";
                 List<String> relatedFigures = new ArrayList<>();
                 List<String> relatedRelics = new ArrayList<>();
+                
+                getRelatedRelics(relatedRelics, name);
 				
 				List<TextNode> textNodes = pElement.textNodes();
 				for (TextNode textNode : textNodes) {
@@ -1378,7 +1272,7 @@ public class FestivalCrawler implements ICrawler{
 						Matcher matcher = pattern.matcher(text);
 						while (matcher.find()) {
 							String newFigure = matcher.group();
-							if (!relatedFigures.contains(newFigure) && 
+							if (!StringHelper.containString(relatedFigures, newFigure) && 
 								!newFigure.equals("Thanh Oai") && 
 								!newFigure.equals("Việt Nam")) {
 								if (newFigure.equals("Tản Viên")) {
@@ -1387,11 +1281,9 @@ public class FestivalCrawler implements ICrawler{
 								relatedFigures.add(newFigure);
 							}							
 						}
-						System.out.println(text);
 					}
 					else if (text.contains("Đặc điểm:")) {
 						description = text.replace("Đặc điểm:", "").trim();
-						getRelatedRelics(relatedRelics, name);
 					}
 				}
 				System.out.println(name);
@@ -1413,7 +1305,7 @@ public class FestivalCrawler implements ICrawler{
     }
     
     //list 2 is added to base list 1, list 2 is a list of festivals in a province
-    public List<Festival> merge(List<Festival> list1, List<Festival> list2, String province) {
+    private List<Festival> merge(List<Festival> list1, List<Festival> list2, String province) {
     	List<Festival> provinceFests = new ArrayList<>();
     	for (Festival festival1 : list1) {
     		if (festival1.getLocation().contains(province)) {
@@ -1422,12 +1314,12 @@ public class FestivalCrawler implements ICrawler{
     	}
     	
     	for (Festival festival2: list2) {
-    		String festival2Name = festival2.getName().replaceAll("Hội|Lễ hội|Lễ", "").trim();
+    		String festival2Name = festival2.getName().replaceAll("(?i)(Hội|Lễ hội|Lễ|Hội xuân)", "").trim();
     		boolean isFound = false;
     		for (Festival provinceFest : provinceFests) {
-    			String provinceFestName = provinceFest.getName().replaceAll("Hội|Lễ hội|Lễ", "").trim();
-    			if (provinceFestName.toLowerCase().contains(festival2Name.toLowerCase()) || 
-    				festival2Name.toLowerCase().contains(provinceFestName.toLowerCase())) {
+    			String provinceFestName = provinceFest.getName().replaceAll("(?i)(Hội|Lễ hội|Lễ|Hội xuân)", "").trim();
+    			if (StringHelper.containsSubstrings(provinceFestName, festival2Name) || 
+    				StringHelper.containsSubstrings(festival2Name, provinceFestName)) {
     				
     				if (provinceFest.getDescription().equals("Không rõ")) {
     					provinceFest.setDescription(festival2.getDescription());
@@ -1454,8 +1346,4 @@ public class FestivalCrawler implements ICrawler{
     	return list1;
     }
     
-    public static void main(String[] args) {
-        FestivalCrawler festivalCrawler = new FestivalCrawler();
-        festivalCrawler.crawl();
-    }
 }

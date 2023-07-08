@@ -122,59 +122,24 @@ public class Figure extends HistoricalEntity{
 		this.children = children;
 	}
 	
-	public void addChildren(String newChild, int id) {
-		boolean isFound = false;
-		for (String child : children.keySet()) {
-			if (child.equalsIgnoreCase(newChild)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
-			children.put(newChild, id);
-		}		
-	}
-	
 	public void addRelatedEvents(String newEvent, int id) {
-		boolean isFound = false;
-		for (String relatedEvent : relatedEvents.keySet()) {
-			if (relatedEvent.equalsIgnoreCase(newEvent)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedEvents.keySet(), newEvent)) {
 			relatedEvents.put(newEvent, id);
 		}		
 	}
 	
 	public void addRelatedFestivals(String newFestival, int id) {
-		boolean isFound = false;
-		for (String relatedFestival : relatedFestivals.keySet()) {
-			if (relatedFestival.equalsIgnoreCase(newFestival)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedFestivals.keySet(), newFestival)) {
 			relatedFestivals.put(newFestival, id);
 		}		
 	}
 	
 	public void addRelatedRelics(String newRelic, int id) {
-		boolean isFound = false;
-		for (String relatedRelic : relatedRelics.keySet()) {
-			if (relatedRelic.equalsIgnoreCase(newRelic)) {
-				isFound = true;
-				break;
-			}
-		}
-		if (!isFound) {
+		if (!StringHelper.containString(relatedRelics.keySet(), newRelic)) {
 			relatedRelics.put(newRelic, id);
 		}		
 	}
 	
-
 	@Override
 	public boolean containsName(String comparedName) {
 		List<String> allNames = getAllNames();

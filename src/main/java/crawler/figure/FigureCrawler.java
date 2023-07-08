@@ -17,8 +17,8 @@ import org.jsoup.select.Elements;
 
 import com.google.gson.reflect.TypeToken;
 
-import crawler.GoogleCrawler;
 import crawler.ICrawler;
+import crawler.google.GoogleCrawler;
 import helper.JsonIO;
 import helper.StringHelper;
 import model.Event;
@@ -30,12 +30,10 @@ public class FigureCrawler implements ICrawler{
 	
 	@Override
 	public void crawl() {
-//		List<Figure> vs = crawlVanSu();
-//		List<Figure> tvls = crawlThuVienLichSu();
-//		FIGURE_IO.writeJson(merge(vs, tvls), "src/main/resources/json/Figures.json");
-//		FIGURE_IO.writeJson(crawlThuVienLichSu(), "src/main/resources/json/FiguresTVLS2.json");
-//		FIGURE_IO.writeJson(addDetails(), "src/main/resources/json/Figures.json");
-		processDetails();
+		List<Figure> vs = crawlVanSu();
+		List<Figure> tvls = crawlThuVienLichSu();
+		List<Figure> merged = merge(vs, tvls);		
+		FIGURE_IO.writeJson(processDetails(addDetails(merged)), PATH);
 	}
 	
 	private List<Figure> crawlVanSu() {
@@ -73,39 +71,43 @@ public class FigureCrawler implements ICrawler{
 		            
 		            //crawl further information
 		            String link = cells.get(0).select("a[href]").attr("abs:href");
-		            Document linkDoc = Jsoup.connect(link).get();
-		            Elements linkDocRows = linkDoc.select("tr");	//each row corresponds to a field of info	            
-		            for (Element linkDocRow : linkDocRows) {
-		            	//crawl bornyear and diedyear
-		            	if (linkDocRow.selectFirst("td").text().equals("Năm sinh")) {
-		            		String yearsString[] = linkDocRow.select("td").get(1).text().split("-", 2);
-		            		yearsString[0] = yearsString[0].trim();
-		            		yearsString[1] = yearsString[1].trim();
-		            		if (!yearsString[0].contains(".") && !yearsString[0]. contains("…") && !yearsString[0].equals("")) {
-		                        bornYear = yearsString[0];
-		                    }
-		                    if (!yearsString[1].contains(".") && !yearsString[1]. contains("…") && !yearsString[1].equals("")) {
-		                        diedYear = yearsString[1];
-		                    }
-		            	}
-		            	//crawl other names
-		            	else if (linkDocRow.selectFirst("td").text().equals("Tên khác")) {
-		            		String nameArr[] = linkDocRow.select("td").get(1).text().split("-");
-		            		for (String name : nameArr) {
-		            			otherNames.add(name.trim());
-		            		}
-		            	}
-		            }
-		            
-		            Element lastLinkDocRow = linkDocRows.get(linkDocRows.size() - 1);	//last row corresponds to the description
-		            Element iElement = lastLinkDocRow.selectFirst("i");
-		            //crawl figure's role
-		            if (iElement != null) {
-		               role = iElement.text();
-		            }
-		            
-		            //crawl short description
-		            shortDescription = lastLinkDocRow.selectFirst("p").text();
+		            try {
+		            	Document linkDoc = Jsoup.connect(link).get();
+			            Elements linkDocRows = linkDoc.select("tr");	//each row corresponds to a field of info	            
+			            for (Element linkDocRow : linkDocRows) {
+			            	//crawl bornyear and diedyear
+			            	if (linkDocRow.selectFirst("td").text().equals("Năm sinh")) {
+			            		String yearsString[] = linkDocRow.select("td").get(1).text().split("-", 2);
+			            		yearsString[0] = yearsString[0].trim();
+			            		yearsString[1] = yearsString[1].trim();
+			            		if (!yearsString[0].contains(".") && !yearsString[0]. contains("…") && !yearsString[0].equals("")) {
+			                        bornYear = yearsString[0];
+			                    }
+			                    if (!yearsString[1].contains(".") && !yearsString[1]. contains("…") && !yearsString[1].equals("")) {
+			                        diedYear = yearsString[1];
+			                    }
+			            	}
+			            	//crawl other names
+			            	else if (linkDocRow.selectFirst("td").text().equals("Tên khác")) {
+			            		String nameArr[] = linkDocRow.select("td").get(1).text().split("-");
+			            		for (String name : nameArr) {
+			            			otherNames.add(name.trim());
+			            		}
+			            	}
+			            }
+			            
+			            Element lastLinkDocRow = linkDocRows.get(linkDocRows.size() - 1);	//last row corresponds to the description
+			            Element iElement = lastLinkDocRow.selectFirst("i");
+			            //crawl figure's role
+			            if (iElement != null) {
+			               role = iElement.text();
+			            }
+			            
+			            //crawl short description
+			            shortDescription = lastLinkDocRow.selectFirst("p").text();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}		            
 
 		            figures.add(new Figure(mainName, otherNames, bornYear, diedYear, eras, location, role, shortDescription));	
 		            
@@ -120,31 +122,16 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	public Set<String> getUniqueEras(){
-		Set<String> eras = new HashSet<>();
-		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
-		for (Figure figure : figures) {
-			eras.addAll(figure.getEras().keySet());
-		}
-		return eras;
-	}
-	
-	private List<Figure> addDetails(){
-		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
-		
+	private List<Figure> addDetails(List<Figure> figures){		
 		//add details for each figure
-		for (int i=2030;i<2035;i++) {  //  2278-2281 2244-2248 2746 2721 2618 2529
+		for (int i=0;i<figures.size();i++) {  
 			Map<String, Integer> mother = new HashMap<>();
 			Map<String, Integer> father = new HashMap<>();
 			Map<String, Integer> children = new HashMap<>();
 			Map<String, Integer> spouses = new HashMap<>();
 			
 			Figure figure = figures.get(i);
-			List<String> nameList = new ArrayList<>();
-			nameList.add(figure.getName());
-			for (String otherName : figure.getOtherNames()) {
-				nameList.add(otherName);
-			}
+			List<String> nameList = figure.getAllNames();
 			
 			String motherName, fatherName;
 			for (String name : nameList) {
@@ -198,10 +185,8 @@ public class FigureCrawler implements ICrawler{
 		return figures;
 	}
 	
-	private List<Figure> processDetails() { 
-		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
-		
-		int j = 0;
+	//reformat mother, father, spouses, children
+	private List<Figure> processDetails(List<Figure> figures) { 
 		for (Figure figure : figures) {
 			Map<String, Integer> mother = new HashMap<>();
 			Map<String, Integer> father = new HashMap<>();
@@ -282,13 +267,13 @@ public class FigureCrawler implements ICrawler{
 			}
 			
 			//avoid same motherName and spouseName/childrenName
-			if (childrenNames.contains(motherName) || spouseNames.contains(motherName)) {
+			if (StringHelper.containString(childrenNames, motherName) || StringHelper.containString(spouseNames, motherName)) {
 				childrenNames.remove(motherName);
 				spouseNames.remove(motherName);
 				motherName = "";
 			}
 			//avoid same fatherName and spouseName/childrenName
-			if (childrenNames.contains(fatherName) || spouseNames.contains(fatherName)) {
+			if (StringHelper.containString(childrenNames, fatherName) || StringHelper.containString(spouseNames, fatherName)) {
 				childrenNames.remove(fatherName);
 				spouseNames.remove(fatherName);
 				fatherName = "";
@@ -323,19 +308,9 @@ public class FigureCrawler implements ICrawler{
 			figure.setFather(father);
 			figure.setSpouses(spouses);
 			figure.setChildren(children);
-		}
-		
+		}		
 		
 		return figures;
-	}
-	
-	public Set<String> getUniqueSurnames() {
-		Set<String> surnames = new HashSet<>();
-		List<Figure> figures = FIGURE_IO.loadJson("src/main/resources/json/Figures.json");
-		for (Figure figure : figures) {
-			surnames.add((figure.getName().split("\\s+"))[0]);
-		}
-		return surnames;
 	}
 	
 	private List<Figure> crawlThuVienLichSu() {
@@ -350,106 +325,110 @@ public class FigureCrawler implements ICrawler{
 				Elements aTags = doc.select("div.card a.click");
 				for (Element aTag : aTags) {
 					String link = aTag.attr("abs:href");
-					Document linkDoc = Jsoup.connect(link).get();
-					
-					List<String> eras = new ArrayList<>(); 
-		            List<String> otherNames = new ArrayList<>(); 
-		            String mainName = "Không rõ";
-		            String bornYear = "Không rõ";
-		            String diedYear = "Không rõ";
-		            String location = "Không rõ";  
-		            String role = "Không rõ";
-		            String description = "Không rõ";		            
-		            
-		            //extract name, bornYear, diedYear
-		            String title = linkDoc.selectFirst("div.divide-tag").text();
-		            mainName = title;	            
-		            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
-		            Matcher matcher = pattern.matcher(title);
-		            if (matcher.find()) {
-		            	String timeText = matcher.group(1).trim();
-		            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
-		            	List<Integer> dashIndexes = new ArrayList<>();
-		            	for (int j = 0; j < timeText.length(); j++) {
-		                    if (timeText.charAt(j) == '-') {
-		                        dashIndexes.add(j);
-		                    }
-		                }		            	
-		            	if (dashIndexes.get(0) == 0) {
-		            		bornYear = timeText.substring(0, dashIndexes.get(1)).trim();
-	            			diedYear = timeText.substring(dashIndexes.get(1) + 1, timeText.length()).trim();
-		            	}
-		            	else {
-		            		bornYear = timeText.substring(0, dashIndexes.get(0)).trim();
-		            		diedYear = timeText.substring(dashIndexes.get(0) + 1, timeText.length()).trim();
-		            	}
-		            	if (bornYear.equals("?")) {
-		    				bornYear = "Không rõ";
-		    			}
-		    			if (diedYear.equals("?")) {
-		    				diedYear = "Không rõ";
-		    			} 
-		            	System.out.println(timeText);
-		            }
-					
-		            Element descriptionPara = linkDoc.select("div.divide-tag").get(2).selectFirst("div.card-body > p.card-text");
-					description = descriptionPara.text().replace("đế", "Đế").replace("vương", "Vương").replace("hậu", "Hậu");
-					
-					
-					//extract otherNames
-					//find name that first appears in description
-					pattern = Pattern.compile("^((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
-					matcher = pattern.matcher(description);
-					String otherName;
-					if (matcher.find()) {
-						otherName = matcher.group();
-						if (!otherName.equalsIgnoreCase(mainName)) {
-							otherNames.add(otherName);
+					try {
+						Document linkDoc = Jsoup.connect(link).get();
+						
+						List<String> eras = new ArrayList<>(); 
+			            List<String> otherNames = new ArrayList<>(); 
+			            String mainName = "Không rõ";
+			            String bornYear = "Không rõ";
+			            String diedYear = "Không rõ";
+			            String location = "Không rõ";  
+			            String role = "Không rõ";
+			            String description = "Không rõ";		            
+			            
+			            //extract name, bornYear, diedYear
+			            String title = linkDoc.selectFirst("div.divide-tag").text();
+			            mainName = title;	            
+			            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+			            Matcher matcher = pattern.matcher(title);
+			            if (matcher.find()) {
+			            	String timeText = matcher.group(1).trim();
+			            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
+			            	List<Integer> dashIndexes = new ArrayList<>();
+			            	for (int j = 0; j < timeText.length(); j++) {
+			                    if (timeText.charAt(j) == '-') {
+			                        dashIndexes.add(j);
+			                    }
+			                }		            	
+			            	if (dashIndexes.get(0) == 0) {
+			            		bornYear = timeText.substring(0, dashIndexes.get(1)).trim();
+		            			diedYear = timeText.substring(dashIndexes.get(1) + 1, timeText.length()).trim();
+			            	}
+			            	else {
+			            		bornYear = timeText.substring(0, dashIndexes.get(0)).trim();
+			            		diedYear = timeText.substring(dashIndexes.get(0) + 1, timeText.length()).trim();
+			            	}
+			            	if (bornYear.equals("?")) {
+			    				bornYear = "Không rõ";
+			    			}
+			    			if (diedYear.equals("?")) {
+			    				diedYear = "Không rõ";
+			    			} 
+			            	System.out.println(timeText);
+			            }
+						
+			            Element descriptionPara = linkDoc.select("div.divide-tag").get(2).selectFirst("div.card-body > p.card-text");
+						description = descriptionPara.text().replace("đế", "Đế").replace("vương", "Vương").replace("hậu", "Hậu");
+						
+						
+						//extract otherNames
+						//find name that first appears in description
+						pattern = Pattern.compile("^((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
+						matcher = pattern.matcher(description);
+						String otherName;
+						if (matcher.find()) {
+							otherName = matcher.group();
+							if (!otherName.equalsIgnoreCase(mainName)) {
+								otherNames.add(otherName);
+							}
 						}
-					}
-					//find names that follow certain word groups
-					pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|"
-							+ "ban tước|ca ngợi là|còn gọi là|gọi tôn là|húy là|tên khác là|"
-							+ "niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|"
-							+ "tự xưng là|đặt tên mình là|kiểm hiệu|có tên là|tức là|hay còn gọi|"
-							+ "được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|"
-							+ "lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|"
-							+ "phong thành|lại phong|hưởng tước|cung kính gọi là|đổi niên hiệu|tự là|"
-							+ "xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|"
-							+ "Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là|"
-							+ "tên thật)"
-							+ "\\s+((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
-					matcher = pattern.matcher(description);					
-					while (matcher.find()) {
-						otherName = matcher.group(2);
-						if (!otherName.equalsIgnoreCase(mainName) && !StringHelper.containString(otherNames, otherName)) {
-							otherNames.add(otherName);
+						//find names that follow certain word groups
+						pattern = Pattern.compile("(còn được gọi là|tước hiệu|tên thật là|truy phong là|"
+								+ "ban tước|ca ngợi là|còn gọi là|gọi tôn là|húy là|tên khác là|"
+								+ "niên hiệu là|được phong là|được tôn là|hiệu là|người đời còn gọi là|"
+								+ "tự xưng là|đặt tên mình là|kiểm hiệu|có tên là|tức là|hay còn gọi|"
+								+ "được đặc phong làm|thường gọi ông là|đặt hiệu là|dâng tên thụy là|"
+								+ "lấy vị hiệu là|đã phong bà là|đã phong ông là|lấy hiệu là|truy tôn là|"
+								+ "phong thành|lại phong|hưởng tước|cung kính gọi là|đổi niên hiệu|tự là|"
+								+ "xưng là|thuỵ là|thuỵ hiệu là|phong thụy cho ông là|được biết đến với tên gọi|"
+								+ "Tên thật của ông là|bút danh là|bút hiệu|tự|tên thuở nhỏ là|thường gọi là|"
+								+ "tên thật)"
+								+ "\\s+((\\p{Lu}\\p{Ll}*\\s+){1,}(\\p{Lu}\\p{Ll}*))");
+						matcher = pattern.matcher(description);					
+						while (matcher.find()) {
+							otherName = matcher.group(2);
+							if (!otherName.equalsIgnoreCase(mainName) && !StringHelper.containString(otherNames, otherName)) {
+								otherNames.add(otherName);
+							}
 						}
-					}
-								
-					//extract role
-					pattern = Pattern.compile("(là|là một vị|là một|là vị|là một trong những|là nữ|là một nữ)\\s+" +
-							  "(?i)(vua|hoàng đế|thái sư|danh tướng|tướng|thái tử|anh hùng|danh nhân|"
-							  + "thiền sư|hoàng hậu|nhà|hiệu trưởng|giảng viên|học giả|triết gia|"
-							  + "chính khách|giáo sư|phó giáo sư|quan|chuyên gia|danh sĩ|diễn viên|"
-							  + "doanh nhân|sĩ quan|cựu tướng|thủ tướng|nghệ sĩ|cận vệ|thủ lĩnh|chí sĩ|"
-							  + "trí thức|tu sĩ|võ tướng|linh mục|chiến sĩ|học giả|nhạc sĩ|thẩm phán|"
-							  + "sĩ phu|ca sĩ|tiến sĩ|liệt sĩ|cựu thần|hào trưởng)" + 
-							  "(.*?)(\\.|,|và)");
-					matcher = pattern.matcher(description);
-					if (matcher.find()) {
-			            role = matcher.group(2) + matcher.group(3);
-			        }
-					
-					System.out.println(mainName);
-					System.out.println(otherNames);
-					System.out.println(bornYear);
-					System.out.println(diedYear);
-					System.out.println(role);
-					System.out.println(description);
-					System.out.println("----------");
-					
-					figures.add(new Figure(mainName, otherNames, bornYear, diedYear, eras, location, role, description));
+									
+						//extract role
+						pattern = Pattern.compile("(là|là một vị|là một|là vị|là một trong những|là nữ|là một nữ)\\s+" +
+								  "(?i)(vua|hoàng đế|thái sư|danh tướng|tướng|thái tử|anh hùng|danh nhân|"
+								  + "thiền sư|hoàng hậu|nhà|hiệu trưởng|giảng viên|học giả|triết gia|"
+								  + "chính khách|giáo sư|phó giáo sư|quan|chuyên gia|danh sĩ|diễn viên|"
+								  + "doanh nhân|sĩ quan|cựu tướng|thủ tướng|nghệ sĩ|cận vệ|thủ lĩnh|chí sĩ|"
+								  + "trí thức|tu sĩ|võ tướng|linh mục|chiến sĩ|học giả|nhạc sĩ|thẩm phán|"
+								  + "sĩ phu|ca sĩ|tiến sĩ|liệt sĩ|cựu thần|hào trưởng)" + 
+								  "(.*?)(\\.|,|và)");
+						matcher = pattern.matcher(description);
+						if (matcher.find()) {
+				            role = matcher.group(2) + matcher.group(3);
+				        }
+						
+						System.out.println(mainName);
+						System.out.println(otherNames);
+						System.out.println(bornYear);
+						System.out.println(diedYear);
+						System.out.println(role);
+						System.out.println(description);
+						System.out.println("----------");
+						
+						figures.add(new Figure(mainName, otherNames, bornYear, diedYear, eras, location, role, description));
+					} catch (IOException e) {
+						e.printStackTrace();
+					}					
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -465,35 +444,42 @@ public class FigureCrawler implements ICrawler{
 				String location = locationDiv.selectFirst("div.divide-line").text().trim();
 				System.out.println(location);
 				String link = locationDiv.selectFirst("div.watch-more a").attr("abs:href");
-				Document linkDoc = Jsoup.connect(link).get();
-				
-				//more links at the end of the page
-				Elements linkElements = linkDoc.select("ul.pagination li a");
-				for (Element linkElement : linkElements) {				
-					if (Character.isDigit(linkElement.text().trim().charAt(0))) {
-						link = linkElement.attr("abs:href");
-						linkDoc = Jsoup.connect(link).get();
-						
-						Elements figureDivs = linkDoc.select("div.container > div.row div.divide-content");
-						for (Element figureDiv : figureDivs) {
-							String mainName = figureDiv.selectFirst("div.card-body a.click").text();	            
-				            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
-				            Matcher matcher = pattern.matcher(mainName);
-				            if (matcher.find()) {
-				            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
-				            }
-				            System.out.println(mainName);	
-				            
-				            //add location
-				            for (Figure figure : figures) {
-				            	if (mainName.equals(figure.getName())) {
-				            		figure.setLocation(location);
-				            	}
-				            }
+				try {
+					Document linkDoc = Jsoup.connect(link).get();
+					
+					//more links at the end of the page
+					Elements linkElements = linkDoc.select("ul.pagination li a");
+					for (Element linkElement : linkElements) {				
+						if (Character.isDigit(linkElement.text().trim().charAt(0))) {
+							link = linkElement.attr("abs:href");
+							try {
+								linkDoc = Jsoup.connect(link).get();
+								
+								Elements figureDivs = linkDoc.select("div.container > div.row div.divide-content");
+								for (Element figureDiv : figureDivs) {
+									String mainName = figureDiv.selectFirst("div.card-body a.click").text();	            
+						            Pattern pattern = Pattern.compile("\\(([^)]+)\\)");
+						            Matcher matcher = pattern.matcher(mainName);
+						            if (matcher.find()) {
+						            	mainName = mainName.replace(matcher.group(), "").replace("Chủ tịch", "").trim();
+						            }
+						            System.out.println(mainName);	
+						            
+						            //add location
+						            for (Figure figure : figures) {
+						            	if (mainName.equalsIgnoreCase(figure.getName())) {
+						            		figure.setLocation(location);
+						            	}
+						            }
+								}
+							} catch (IOException e) {
+								e.printStackTrace();
+							}							
 						}
-					}
+					}					
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-				
 				System.out.println("-------------");
 			}
 		} catch (IOException e) {
@@ -550,10 +536,24 @@ public class FigureCrawler implements ICrawler{
 		
 	}
 	
-	
-	public static void main(String[] args) {
-		FigureCrawler figureCrawler = new FigureCrawler();
-		figureCrawler.crawl();
+	public Set<String> getUniqueEras(){
+		Set<String> eras = new HashSet<>();
+		List<Figure> figures;
+		figures = FIGURE_IO.loadJson(PATH);
+		for (Figure figure : figures) {
+			eras.addAll(figure.getEras().keySet());
+		}
+		return eras;
 	}
 	
+	public Set<String> getUniqueSurnames() {
+		Set<String> surnames = new HashSet<>();
+		List<Figure> figures;
+		figures = FIGURE_IO.loadJson(PATH);
+		for (Figure figure : figures) {
+			surnames.add((figure.getName().split("\\s+"))[0]);
+		}	
+		return surnames;
+	}
+
 }
