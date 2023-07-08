@@ -18,5 +18,4 @@ public class Crawler implements ICrawler{
 		new RelicCrawler().crawl();;
 		new Linker().link();	
 	}
-
 }

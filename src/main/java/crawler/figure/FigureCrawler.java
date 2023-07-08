@@ -21,7 +21,6 @@ import crawler.ICrawler;
 import crawler.google.GoogleCrawler;
 import helper.JsonIO;
 import helper.StringHelper;
-import model.Event;
 import model.Figure;
 
 public class FigureCrawler implements ICrawler{

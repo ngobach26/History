@@ -1,9 +1,9 @@
 package model;
 
 public abstract class HistoricalEntity {
-    private int id;
-    private String name;
-    private String description;
+    protected int id;
+    protected String name;
+    protected String description;
 
     public HistoricalEntity(int id, String name, String description) {
         this.id = id;
@@ -56,7 +56,7 @@ public abstract class HistoricalEntity {
         return true;
     }
 
-    public boolean containsName(String name) {
+    public boolean containsNameForSearch(String name) {
         if (name == null)
             return false;
 
