@@ -37,7 +37,7 @@ public class EntityCollection<T extends HistoricalEntity> {
     }
 
     public FilteredList<T> searchByName(String name) {
-        return new FilteredList<>(data, entity -> entity.containsName(name));
+        return new FilteredList<>(data, entity -> entity.containsNameForSearch(name));
     }
 
     public FilteredList<T> searchByID(int id) {

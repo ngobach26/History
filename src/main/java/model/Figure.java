@@ -1,11 +1,11 @@
 package model;
 
+import helper.StringHelper;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import helper.StringHelper;
 
 public class Figure extends HistoricalEntity{
 	private static int numFigures = 0;
@@ -151,8 +151,7 @@ public class Figure extends HistoricalEntity{
 			relatedRelics.put(newRelic, id);
 		}		
 	}
-	
-	@Override
+
 	public boolean containsName(String comparedName) {
 		if (comparedName == null) {
 			return false;
@@ -167,14 +166,33 @@ public class Figure extends HistoricalEntity{
 					StringHelper.containsSubstrings(name, "công chúa", "thái hậu", "hoàng hậu", "vương")) {
 				comparedName = comparedName.replaceAll("(?i)(công chúa|thái hậu|hoàng hậu)", "").trim();
 				name = name.replaceAll("(?i)(công chúa|thái hậu|hoàng hậu)", "").trim();
-				if (StringHelper.containsSubstrings(name, comparedName) || 
+				if (StringHelper.containsSubstrings(name, comparedName) ||
 						StringHelper.containsSubstrings(comparedName, name)) {
 					return true;
 				}
-			}			
+			}
 		}
 
 		return false;
 	}
+
+	@Override
+	public boolean containsNameForSearch(String name) {
+		if (name == null)
+			return false;
+
+		if (this.name == null)
+			return false;
+		if(this.name.toLowerCase().contains(name.toLowerCase())){
+			return true;
+		}
+		for(String n : otherNames){
+			if(n.toLowerCase().contains(name.toLowerCase())){
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
 
