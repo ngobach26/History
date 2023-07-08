@@ -53,5 +53,6 @@ public class Relic extends HistoricalEntity{
 			relatedFestivals.put(newFestival, id);
 		}		
 	}
-	
+
 }
+

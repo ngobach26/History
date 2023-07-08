@@ -70,3 +70,4 @@ public abstract class HistoricalEntity {
         return this.id == id;
     }
 }
+
