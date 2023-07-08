@@ -1,5 +1,101 @@
 [
   {
+    "id": 747,
+    "name": "Nguyễn Phúc Nguyên",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:38:43"
+  },
+  {
+    "id": 31,
+    "name": "Trưng Trắc - Trưng Nhị",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:38:37"
+  },
+  {
+    "id": 19,
+    "name": "Kháng chiến của nhân dân ta chống quân xâm lược Hán",
+    "typeOfEntity": "Event",
+    "timestamp": "08/07/2023 17:38:36"
+  },
+  {
+    "id": 5,
+    "name": "Trưng Nữ Vương (40-43)",
+    "typeOfEntity": "Era",
+    "timestamp": "08/07/2023 17:38:33"
+  },
+  {
+    "id": 22,
+    "name": "Châu Bá",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:38:32"
+  },
+  {
+    "id": 383,
+    "name": "Văn hóa Tiền Sa Huỳnh",
+    "typeOfEntity": "Event",
+    "timestamp": "08/07/2023 17:38:26"
+  },
+  {
+    "id": 2,
+    "name": "Dựng nước (2000 - 258 trCN)",
+    "typeOfEntity": "Era",
+    "timestamp": "08/07/2023 17:38:25"
+  },
+  {
+    "id": 6,
+    "name": "Cường Bạo Đại Vương",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:38:23"
+  },
+  {
+    "id": 747,
+    "name": "Nguyễn Phúc Nguyên",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:18:12"
+  },
+  {
+    "id": 2,
+    "name": "Dựng nước (2000 - 258 trCN)",
+    "typeOfEntity": "Era",
+    "timestamp": "08/07/2023 17:18:08"
+  },
+  {
+    "id": 3,
+    "name": "Bạch Hoa",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 17:18:06"
+  },
+  {
+    "id": 3,
+    "name": "Bạch Hoa",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 02:51:05"
+  },
+  {
+    "id": 10,
+    "name": "La Viện",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 02:51:02"
+  },
+  {
+    "id": 747,
+    "name": "Nguyễn Phúc Nguyên",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 02:50:20"
+  },
+  {
+    "id": 3,
+    "name": "Bạch Hoa",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 02:50:11"
+  },
+  {
+    "id": 253,
+    "name": "Trần Hoảng",
+    "typeOfEntity": "Figure",
+    "timestamp": "08/07/2023 02:50:04"
+  },
+  {
     "id": 2001,
     "name": "Nguyễn Tất Thành",
     "typeOfEntity": "Figure",
@@ -28,150 +124,6 @@
     "name": "Chử Đồng Tử",
     "typeOfEntity": "Figure",
     "timestamp": "07/07/2023 23:59:21"
-  },
-  {
-    "id": 7,
-    "name": "Nhà Tiền Lý, Triệu (544-602)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:48"
-  },
-  {
-    "id": 7,
-    "name": "Nhà Tiền Lý, Triệu (544-602)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:41"
-  },
-  {
-    "id": 7,
-    "name": "Nhà Tiền Lý, Triệu (544-602)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:38"
-  },
-  {
-    "id": 7,
-    "name": "Nhà Tiền Lý, Triệu (544-602)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:30"
-  },
-  {
-    "id": 12,
-    "name": "Nhà Tiền Lê (980-1009)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:26"
-  },
-  {
-    "id": 22,
-    "name": "Nhà Nguyễn độc lập (1802-1883)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:17:00"
-  },
-  {
-    "id": 22,
-    "name": "Nhà Nguyễn độc lập (1802-1883)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:53"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:49"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:48"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:47"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:46"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:46"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:45"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:44"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:44"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:43"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:42"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:41"
-  },
-  {
-    "id": 277,
-    "name": "Cuộc kháng chiến chống quân Lương của nước Vạn Xuân",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:39"
-  },
-  {
-    "id": 130,
-    "name": "Lý Nam Đế giao binh quyền cho Triệu Quang Phục",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:31"
-  },
-  {
-    "id": 426,
-    "name": "Chiến tranh Tống - Việt",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:27"
-  },
-  {
-    "id": 9,
-    "name": "Lê Hoàn đánh bại quân Tống",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:19"
-  },
-  {
-    "id": 75,
-    "name": "Nhà Nguyễn sắp xếp lại đơn vị hành chính trong cả nước",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:01"
-  },
-  {
-    "id": 378,
-    "name": "Lễ hội đền Bà Chúa",
-    "typeOfEntity": "Festival",
-    "timestamp": "07/07/2023 19:17:34"
   },
   {
     "id": 39,
@@ -298,5 +250,53 @@
     "name": "Trịnh Sâm",
     "typeOfEntity": "Figure",
     "timestamp": "07/07/2023 19:16:45"
+  },
+  {
+    "id": 378,
+    "name": "Lễ hội đền Bà Chúa",
+    "typeOfEntity": "Festival",
+    "timestamp": "08/07/2023 02:50:01"
+  },
+  {
+    "id": 378,
+    "name": "Lễ hội đền Bà Chúa",
+    "typeOfEntity": "Festival",
+    "timestamp": "07/07/2023 19:17:34"
+  },
+  {
+    "id": 277,
+    "name": "Cuộc kháng chiến chống quân Lương của nước Vạn Xuân",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 19:17:39"
+  },
+  {
+    "id": 130,
+    "name": "Lý Nam Đế giao binh quyền cho Triệu Quang Phục",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 19:17:31"
+  },
+  {
+    "id": 426,
+    "name": "Chiến tranh Tống - Việt",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 19:17:27"
+  },
+  {
+    "id": 9,
+    "name": "Lê Hoàn đánh bại quân Tống",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 19:17:19"
+  },
+  {
+    "id": 75,
+    "name": "Nhà Nguyễn sắp xếp lại đơn vị hành chính trong cả nước",
+    "typeOfEntity": "Event",
+    "timestamp": "07/07/2023 19:17:01"
+  },
+  {
+    "id": 7,
+    "name": "Nhà Tiền Lý, Triệu (544-602)",
+    "typeOfEntity": "Era",
+    "timestamp": "07/07/2023 19:17:48"
   }
 ]

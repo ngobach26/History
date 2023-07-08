@@ -7,9 +7,10 @@ import javafx.scene.text.Text;
 import main.App;
 import main.EntityPages;
 import main.EntityType;
+import model.HistoricalEntity;
 import model.Relic;
 
-public class RelicDetailController {
+public class RelicDetailController implements DetailAction {
     @FXML
     private Text nameText;
     @FXML
@@ -25,7 +26,11 @@ public class RelicDetailController {
     @FXML
     private FlowPane relatedFesFlowPane;
 
-    public void setRelic(Relic relic) {
+    private Relic relic;
+
+    @Override
+    public void setEntity(HistoricalEntity entity) {
+        this.relic = (Relic) entity;
         nameText.setText(relic.getName());
         locationText.setText(relic.getLocation());
         categoryText.setText(relic.getCategory());
@@ -38,8 +43,8 @@ public class RelicDetailController {
     }
 
     @FXML
+    @Override
     public void onClickBack(ActionEvent event) {
         App.pageNavigationService.handleBackToPreviousPage(EntityPages.RELIC_PAGES.getViewPage());
     }
-
 }

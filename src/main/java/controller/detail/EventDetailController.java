@@ -8,8 +8,9 @@ import main.App;
 import main.EntityPages;
 import main.EntityType;
 import model.Event;
+import model.HistoricalEntity;
 
-public class EventDetailController {
+public class EventDetailController implements DetailAction{
     @FXML
     private Text nameText;
     @FXML
@@ -26,8 +27,11 @@ public class EventDetailController {
     private FlowPane relatedCharsFlowPane;
     @FXML
     private FlowPane relatedEraFlowPane;
+    private Event event;
 
-    public void setEvent(Event event) {
+    @Override
+    public void setEntity(HistoricalEntity entity) {
+        this.event = (Event) entity;
         nameText.setText(event.getName());
         timeText.setText(event.getStartYear());
         endtimeText.setText(event.getEndYear());
@@ -41,6 +45,7 @@ public class EventDetailController {
     }
 
     @FXML
+    @Override
     public void onClickBack(ActionEvent event) {
         App.pageNavigationService.handleBackToPreviousPage(EntityPages.EVENT_PAGES.getViewPage());
     }

@@ -8,8 +8,9 @@ import main.App;
 import main.EntityPages;
 import main.EntityType;
 import model.Festival;
+import model.HistoricalEntity;
 
-public class FestivalDetailController {
+public class FestivalDetailController implements DetailAction {
     @FXML
     private Text nameText;
     @FXML
@@ -24,8 +25,11 @@ public class FestivalDetailController {
     private FlowPane relatedCharsFlowPane;
     @FXML
     private FlowPane relatedRelicFlowPane;
+    private Festival festival;
 
-    public void setFestival(Festival festival) {
+    @Override
+    public void setEntity(HistoricalEntity entity) {
+        this.festival = (Festival) entity;
         nameText.setText(festival.getName());
         dateText.setText(festival.getStartingDay());
         overviewText.setText(festival.getDescription());
@@ -38,8 +42,8 @@ public class FestivalDetailController {
     }
 
     @FXML
+    @Override
     public void onClickBack(ActionEvent event) {
         App.pageNavigationService.handleBackToPreviousPage(EntityPages.FESTIVAL_PAGES.getViewPage());
     }
-
 }

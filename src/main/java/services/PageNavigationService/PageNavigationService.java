@@ -1,7 +1,9 @@
 package services.PageNavigationService;
 
 import collection.*;
+import controller.detail.*;
 import main.App;
+import main.EntityPages;
 import model.*;
 
 import java.util.*;
@@ -20,42 +22,26 @@ public class PageNavigationService {
         App.setRoot(page);
         currentView = null;
     }
-//    @Override
-//    public String toString() {
-//        StringBuilder sb = new StringBuilder();
-//        Stack<HistoricalEntity> tempStack = new Stack<>();
-//        int count = 0;
-//        while (count < 5 && !clickBackStack.isEmpty()) {
-//            HistoricalEntity entity = clickBackStack.pop();
-//            sb.append(entity.getName()).append("\n");
-//            tempStack.push(entity);
-//            count++;
-//        }
-//        while (!tempStack.isEmpty()) {
-//            clickBackStack.push(tempStack.pop());
-//        }
-//        return sb.append("----------").toString();
-//    }
 
 
     public void handleViewtoDetail(HistoricalEntity entity) {
         App.searchHistoryService.addToSearchHistory(entity);
         currentView = entity;
         if (entity instanceof Figure) {
-            HandleDetailHelp.Figure(entity);
+            HandleDetailHelp.<Figure,FigureDetailController>handeDetail(entity,EntityPages.FIGURE_PAGES.getDetailPage());
         } else if (entity instanceof Era) {
-            HandleDetailHelp.Era(entity);
+            HandleDetailHelp.<Era, EraDetailController>handeDetail(entity,EntityPages.ERA_PAGES.getDetailPage());
         } else if (entity instanceof Event) {
-            HandleDetailHelp.Event(entity);
+            HandleDetailHelp.<Event,EventDetailController>handeDetail(entity,EntityPages.EVENT_PAGES.getDetailPage());
         } else if (entity instanceof Festival) {
-            HandleDetailHelp.Festival(entity);
+            HandleDetailHelp.<Festival, FestivalDetailController>handeDetail(entity,EntityPages.FESTIVAL_PAGES.getDetailPage());
         } else if (entity instanceof Relic) {
-            HandleDetailHelp.Relic(entity);
+            HandleDetailHelp.<Relic, RelicDetailController>handeDetail(entity,EntityPages.RELIC_PAGES.getDetailPage());
         }
     }
 
     /**
-     * Xử lý sự kiện quay lại trang trước đó.
+     * Xử lý sự kiện quay lại trang detail trước đó.
      *
      * @param defaultPage Trang mặc định khi không có trang trước đó trong ngăn xếp các trang đã truy cập.
      */
@@ -65,52 +51,52 @@ public class PageNavigationService {
             return;
         }
         HistoricalEntity entity = clickBackStack.pop();
-        System.out.println(App.pageNavigationService.toString());
         if (entity instanceof Figure) {
-            HandleDetailHelp.Figure(entity);
+            HandleDetailHelp.<Figure,FigureDetailController>handeDetail(entity,EntityPages.FIGURE_PAGES.getDetailPage());
         } else if (entity instanceof Era) {
-            HandleDetailHelp.Era(entity);
+            HandleDetailHelp.<Era, EraDetailController>handeDetail(entity,EntityPages.ERA_PAGES.getDetailPage());
         } else if (entity instanceof Event) {
-            HandleDetailHelp.Event(entity);
+            HandleDetailHelp.<Event,EventDetailController>handeDetail(entity,EntityPages.EVENT_PAGES.getDetailPage());
         } else if (entity instanceof Festival) {
-            HandleDetailHelp.Festival(entity);
+            HandleDetailHelp.<Festival, FestivalDetailController>handeDetail(entity,EntityPages.FESTIVAL_PAGES.getDetailPage());
         } else if (entity instanceof Relic) {
-            HandleDetailHelp.Relic(entity);
+            HandleDetailHelp.<Relic, RelicDetailController>handeDetail(entity,EntityPages.RELIC_PAGES.getDetailPage());
         }
     }
 
     public void handleDetailToDetail(int id,String type){
         try {
             addEntityToClickBackStack(currentView);
-            System.out.println(App.pageNavigationService.toString());
             switch (type) {
                 case "Era":
                     Era era = EraData.getEraCollection().getById(id);
                     currentView = era;
-                    HandleDetailHelp.Era(era);
+                    HandleDetailHelp.<Era, EraDetailController>handeDetail(era,EntityPages.ERA_PAGES.getDetailPage());
                     App.searchHistoryService.addToSearchHistory(era);
                     break;
+
                 case "Festival":
                     Festival festival = FestivalData.getFestivalCollection().getById(id);
                     currentView = festival;
-                    HandleDetailHelp.Festival(festival);
+                    HandleDetailHelp.<Festival, FestivalDetailController>handeDetail(festival,EntityPages.FESTIVAL_PAGES.getDetailPage());
                     App.searchHistoryService.addToSearchHistory(festival);
                     break;
+
                 case "Figure":
                     Figure figure = FigureData.getFigureCollection().getById(id);
                     currentView = figure;
-                    HandleDetailHelp.Figure(figure);
+                    HandleDetailHelp.<Figure, FigureDetailController>handeDetail(figure, EntityPages.FIGURE_PAGES.getDetailPage());
                     App.searchHistoryService.addToSearchHistory(figure);
                     break;
                 case "Event":
                     Event event = EventData.getEventCollection().getById(id);
                     currentView = event;
-                    HandleDetailHelp.Event(event);
+                    HandleDetailHelp.<Event, EventDetailController>handeDetail(event, EntityPages.EVENT_PAGES.getDetailPage());
                     App.searchHistoryService.addToSearchHistory(event);
                     break;
                 case "Relic":
                     Relic relic = RelicData.getRelicCollection().getById(id);
-                    HandleDetailHelp.Relic(relic);
+                    HandleDetailHelp.<Relic, RelicDetailController>handeDetail(relic,EntityPages.RELIC_PAGES.getDetailPage());
                     App.searchHistoryService.addToSearchHistory(relic);
                     break;
                 default:
@@ -120,6 +106,7 @@ public class PageNavigationService {
             e.printStackTrace();
         }
     }
+
     private void addEntityToClickBackStack(HistoricalEntity entity) {
         try{
             if(entity!=null){

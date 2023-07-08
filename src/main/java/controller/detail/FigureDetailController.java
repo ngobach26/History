@@ -8,8 +8,9 @@ import main.App;
 import main.EntityPages;
 import main.EntityType;
 import model.Figure;
+import model.HistoricalEntity;
 
-public class FigureDetailController {
+public class FigureDetailController implements DetailAction {
     @FXML
     private Text nameText;
 
@@ -58,8 +59,11 @@ public class FigureDetailController {
     @FXML
     private FlowPane festivalFlowPane;
 
-    public void setFigure(Figure figure) {
+    private Figure figure;
 
+    @Override
+    public void setEntity(HistoricalEntity entity) {
+        this.figure = (Figure) entity;
         nameText.setText(figure.getName());
         realNameText.setText(figure.getName());
         bornText.setText(figure.getBornYear());
@@ -91,8 +95,8 @@ public class FigureDetailController {
     }
 
     @FXML
+    @Override
     public void onClickBack(ActionEvent event) {
         App.pageNavigationService.handleBackToPreviousPage(EntityPages.FIGURE_PAGES.getViewPage());
     }
-
 }

@@ -8,8 +8,9 @@ import main.App;
 import main.EntityPages;
 import main.EntityType;
 import model.Era;
+import model.HistoricalEntity;
 
-public class EraDetailController {
+public class EraDetailController implements DetailAction{
     @FXML
     private Text nameText;
     @FXML
@@ -26,8 +27,11 @@ public class EraDetailController {
     private FlowPane eventsFlowPane;
     @FXML
     private FlowPane countryFlowPane;
+    private Era era;
 
-    public void setEra(Era era) {
+    @Override
+    public void setEntity(HistoricalEntity entity) {
+        this.era = (Era) entity;
         nameText.setText(era.getName());
         overviewText.setText(era.getDescription());
         timeStampText.setText(era.getStartYear());
@@ -45,6 +49,7 @@ public class EraDetailController {
     }
 
     @FXML
+    @Override
     public void onClickBack(ActionEvent event) {
         App.pageNavigationService.handleBackToPreviousPage(EntityPages.ERA_PAGES.getViewPage());
     }
