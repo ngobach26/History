@@ -1,6 +1,10 @@
 package model;
 
+import controller.detail.FigureDetailController;
 import helper.StringHelper;
+import javafx.fxml.FXMLLoader;
+import main.App;
+import main.EntityPages;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -192,6 +196,18 @@ public class Figure extends HistoricalEntity{
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public void navigatePage() {
+		try{
+			FXMLLoader loader = App.setAndReturnRoot(EntityPages.FIGURE_PAGES.getDetailPage());
+			FigureDetailController controller = loader.getController();
+			controller.setFigure(this);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+		}
+
 	}
 
 }

@@ -1,5 +1,9 @@
 package model;
 
+
+import javafx.application.Application;
+import main.App;
+
 public abstract class HistoricalEntity {
     protected int id;
     protected String name;
@@ -11,6 +15,7 @@ public abstract class HistoricalEntity {
         this.description = description;
     }
 
+    public abstract void navigatePage();
     public int getId() {
         return id;
     }

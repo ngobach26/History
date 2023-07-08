@@ -1,12 +1,14 @@
 package model;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
+import controller.detail.EventDetailController;
 import helper.StringHelper;
+import javafx.fxml.FXMLLoader;
+import main.App;
+import main.EntityPages;
 
 public class Event extends HistoricalEntity{
 	 private static int numEvents = 0;
@@ -82,5 +84,16 @@ public class Event extends HistoricalEntity{
 		if (!StringHelper.containString(relatedFigures.keySet(), newFigure)) {
 			relatedFigures.put(newFigure, id);
 		}		
+	}
+
+	@Override
+	public void navigatePage() {
+		 try {
+			 FXMLLoader loader = App.setAndReturnRoot(EntityPages.EVENT_PAGES.getDetailPage());
+			 EventDetailController controller = loader.getController();
+			 controller.setEvent(this);
+		 }catch (NullPointerException e){
+			 e.printStackTrace();
+		 }
 	}
 }

@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import controller.detail.EraDetailController;
 import helper.StringHelper;
+import javafx.fxml.FXMLLoader;
+import main.App;
+import main.EntityPages;
 
 public class Era extends HistoricalEntity{
 	private static int numEras = 0;
@@ -65,6 +69,17 @@ public class Era extends HistoricalEntity{
 		if (!StringHelper.containString(relatedEvents.keySet(), newEvent)) {
 			relatedEvents.put(newEvent, id);
 		}		
+	}
+
+	@Override
+	public void navigatePage() {
+		try {
+			FXMLLoader loader = App.setAndReturnRoot(EntityPages.ERA_PAGES.getDetailPage());
+			EraDetailController controller = loader.getController();
+			controller.setEra(this);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+		}
 	}
 
 }

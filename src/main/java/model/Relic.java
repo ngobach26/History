@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import controller.detail.RelicDetailController;
 import helper.StringHelper;
+import javafx.fxml.FXMLLoader;
+import main.App;
+import main.EntityPages;
 
 public class Relic extends HistoricalEntity{
     private static int numRelics = 0;
@@ -52,6 +56,18 @@ public class Relic extends HistoricalEntity{
 		if (!StringHelper.containString(relatedFestivals.keySet(), newFestival)) {
 			relatedFestivals.put(newFestival, id);
 		}		
+	}
+
+	@Override
+	public void navigatePage() {
+		try{
+			FXMLLoader loader = App.setAndReturnRoot(EntityPages.RELIC_PAGES.getDetailPage());
+			RelicDetailController controller = loader.getController();
+			controller.setRelic(this);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+		}
+
 	}
 
 }

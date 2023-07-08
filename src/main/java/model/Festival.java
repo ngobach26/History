@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import controller.detail.FestivalDetailController;
 import helper.StringHelper;
+import javafx.fxml.FXMLLoader;
+import main.App;
+import main.EntityPages;
 
 public class Festival extends HistoricalEntity{
     private static int numFes = 0;
@@ -67,5 +71,16 @@ public class Festival extends HistoricalEntity{
 			relatedFigures.put(newFigure, id);
 		}		
 	}
-	
+
+	@Override
+	public void navigatePage() {
+		try{
+			FXMLLoader loader = App.setAndReturnRoot(EntityPages.FESTIVAL_PAGES.getDetailPage());
+			FestivalDetailController controller = loader.getController();
+			controller.setFestival(this);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+		}
+
+	}
 }
