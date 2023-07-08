@@ -12,9 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="titlebar" stylesheets="@../../stylesheet/mainScreen.css"
-    xmlns="http://javafx.com/javafx/19"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.overview.RelicViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="titlebar" stylesheets="@../../stylesheet/mainScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.overview.RelicViewController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
@@ -57,7 +55,7 @@
                             <columns>
                                 <TableColumn fx:id="colSiteId" prefWidth="75.0" text="Mã" />
                                 <TableColumn fx:id="colSiteName" prefWidth="191.19993591308594" text="Tên di tích" />
-                                <TableColumn fx:id="colSiteDate" prefWidth="197.59994506835938" text="Khởi công" />
+                                <TableColumn fx:id="colSiteDate" prefWidth="197.59994506835938" text="Năm công nhận" />
                                 <TableColumn fx:id="colSiteLocate" prefWidth="212.00006103515625" text="Địa điểm" />
                             </columns>
                             <columnResizePolicy>
