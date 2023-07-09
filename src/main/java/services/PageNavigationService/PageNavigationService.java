@@ -20,23 +20,6 @@ public class PageNavigationService {
         App.setRoot(page);
         currentView = null;
     }
-//    @Override
-//    public String toString() {
-//        StringBuilder sb = new StringBuilder();
-//        Stack<HistoricalEntity> tempStack = new Stack<>();
-//        int count = 0;
-//        while (count < 5 && !clickBackStack.isEmpty()) {
-//            HistoricalEntity entity = clickBackStack.pop();
-//            sb.append(entity.getName()).append("\n");
-//            tempStack.push(entity);
-//            count++;
-//        }
-//        while (!tempStack.isEmpty()) {
-//            clickBackStack.push(tempStack.pop());
-//        }
-//        return sb.append("----------").toString();
-//    }
-
 
     public void handleViewtoDetail(HistoricalEntity entity) {
         App.searchHistoryService.addToSearchHistory(entity);
@@ -55,14 +38,12 @@ public class PageNavigationService {
             return;
         }
         HistoricalEntity entity = clickBackStack.pop();
-        System.out.println(App.pageNavigationService.toString());
         entity.navigatePage();
     }
 
     public void handleDetailToDetail(int id,String type){
         try {
             addEntityToClickBackStack(currentView);
-            System.out.println(App.pageNavigationService.toString());
             setDataToCurrentView(id, type);
             currentView.navigatePage();
             App.searchHistoryService.addToSearchHistory(currentView);

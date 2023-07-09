@@ -4,8 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import collection.EventData;
-import controller.SearchBarController;
-import controller.SearchBoxListener;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
