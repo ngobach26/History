@@ -1,5 +1,47 @@
 [
   {
+    "id": 236,
+    "name": "Địa điểm di tích Chủ tịch Hồ Chí Minh thăm trường Đảng Nguyễn Ái Quốc (1949) ở Làng Luông",
+    "typeOfEntity": "Relic",
+    "timestamp": "09/07/2023 13:42:46"
+  },
+  {
+    "id": 1713,
+    "name": "Đền thờ nhà thơ Phan Văn Trị",
+    "typeOfEntity": "Relic",
+    "timestamp": "09/07/2023 13:42:21"
+  },
+  {
+    "id": 1020,
+    "name": "Đền thờ Nguyễn Chích",
+    "typeOfEntity": "Relic",
+    "timestamp": "09/07/2023 13:41:50"
+  },
+  {
+    "id": 894,
+    "name": "Thành cổ Hà Nội (KDT Hoàng thành Thăng Long)",
+    "typeOfEntity": "Relic",
+    "timestamp": "09/07/2023 13:41:03"
+  },
+  {
+    "id": 374,
+    "name": "Lê Lợi",
+    "typeOfEntity": "Figure",
+    "timestamp": "09/07/2023 13:40:46"
+  },
+  {
+    "id": 76,
+    "name": "Đinh Bộ Lĩnh",
+    "typeOfEntity": "Figure",
+    "timestamp": "09/07/2023 13:40:27"
+  },
+  {
+    "id": 2001,
+    "name": "Nguyễn Tất Thành",
+    "typeOfEntity": "Figure",
+    "timestamp": "09/07/2023 13:39:54"
+  },
+  {
     "id": 20,
     "name": "Trịnh - Nguyễn (1533-1788)",
     "typeOfEntity": "Era",
@@ -256,47 +298,5 @@
     "name": "Trịnh - Nguyễn (1533-1788)",
     "typeOfEntity": "Era",
     "timestamp": "07/07/2023 19:16:43"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:42"
-  },
-  {
-    "id": 20,
-    "name": "Trịnh - Nguyễn (1533-1788)",
-    "typeOfEntity": "Era",
-    "timestamp": "07/07/2023 19:16:41"
-  },
-  {
-    "id": 277,
-    "name": "Cuộc kháng chiến chống quân Lương của nước Vạn Xuân",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:39"
-  },
-  {
-    "id": 130,
-    "name": "Lý Nam Đế giao binh quyền cho Triệu Quang Phục",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:31"
-  },
-  {
-    "id": 426,
-    "name": "Chiến tranh Tống - Việt",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:27"
-  },
-  {
-    "id": 9,
-    "name": "Lê Hoàn đánh bại quân Tống",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:19"
-  },
-  {
-    "id": 75,
-    "name": "Nhà Nguyễn sắp xếp lại đơn vị hành chính trong cả nước",
-    "typeOfEntity": "Event",
-    "timestamp": "07/07/2023 19:17:01"
   }
 ]

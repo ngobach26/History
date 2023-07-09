@@ -25,7 +25,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         loadData();
         final String appName = "Vietnam History Wikiapp";
-        scene = new Scene(loadFXML(OtherPages.HOME_PAGE.getUrl()).load(), 950, 780);
+        scene = new Scene(loadFXML(OtherPages.HOME_PAGE.getUrl()).load(), 950, 650);
         scene.getStylesheets().add(getClass().getResource("/stylesheet/mainScreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle(appName);
@@ -89,7 +89,6 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/view/" + fxml + ".fxml"));
         return fxmlLoader;
     }
-
 
     public static void main(String[] args) {
         launch();
