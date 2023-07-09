@@ -3,6 +3,10 @@
 ---
 ### Demonstration
 
+<p align="center">
+  <img src="https://github.com/ngobach26/History/blob/main/src/main/resources/img/demo.png" />
+</p>
+
 ### Installation
 - We use [Java 8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html), [IntelliJ](https://vi.wikipedia.org/wiki/IntelliJ_IDEA) and [Eclipse](https://www.eclipse.org/) for our project.
 - Our main folder project is `\src\main\java`.
@@ -25,56 +29,31 @@
         <tr>
             <th align="center">Member name</th>
             <th align="center">Student ID</th>
-            <th align="center">Assignment</th>
         </tr>
         <tr>
             <td>Nguyễn Chí Long</td>
             <td align="center"> 20210553&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
       </td>
         </tr>
         <tr>
             <td>Ngô Xuân Bách</td>
             <td align="center"> 20215181&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
         </tr>
         <tr>
             <td>Lê Xuân Hiếu</td>
             <td align="center"> 20215201&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
         </tr>
         <tr>
             <td>Đinh Việt Quang</td>
             <td align="center"> 20215235&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
         </tr>
         <tr>
             <td>Nguyễn Việt Thắng</td>
             <td align="center"> 20215245&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
         </tr>
         <tr>
             <td>Nguyễn Đình Trung</td>
             <td align="center"> 20215249&nbsp;&nbsp;&nbsp;</td>
-            <td align="left">
-            <ul>
-              <li></li>
-            </ul>
         </tr>
     </tbody>
 </table>
