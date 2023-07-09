@@ -4,7 +4,7 @@
 }
 
 .backgroundForHomepage {
-    -fx-background-image: url("../img/appBg.jpg");
+    -fx-background-image: url("../img/appBg.png");
     -fx-background-color: transparent;
 }
 
