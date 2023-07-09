@@ -5,8 +5,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import collection.FigureData;
-import controller.SearchBarController;
-import controller.SearchBoxListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;

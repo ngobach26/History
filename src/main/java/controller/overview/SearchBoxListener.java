@@ -1,4 +1,4 @@
-package controller;
+package controller.overview;
 
 public interface SearchBoxListener {
     void handleSearchName(String name);
