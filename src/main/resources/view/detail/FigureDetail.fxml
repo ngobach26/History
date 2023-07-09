@@ -53,9 +53,9 @@
                                 </Text>
                             </children>
                         </HBox>
-                  <ScrollPane fitToWidth="true" prefHeight="600.0" prefWidth="602.0">
+                  <ScrollPane fitToWidth="true" prefHeight="480.0" prefWidth="602.0">
                      <content>
-                              <VBox prefHeight="600.0" prefWidth="650.0" spacing="15.0">
+                              <VBox spacing="15.0">
                                   <children>
                                       <HBox>
                                           <children>
