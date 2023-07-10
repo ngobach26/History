@@ -46,9 +46,9 @@
                     <children>
                         <HBox alignment="CENTER">
                             <children>
-                                <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN DI TÍCH" wrappingWidth="589.6101531982422">
+                                <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN DI TÍCH" wrappingWidth="620.0101184844971">
                                     <font>
-                                        <Font name="Monospaced Bold" size="40.0" />
+                                        <Font name="Monospaced Bold" size="30.0" />
                                     </font>
                                 </Text>
                             </children>

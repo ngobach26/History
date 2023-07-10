@@ -46,14 +46,14 @@
                     <children>
                         <HBox alignment="CENTER" prefWidth="550.0">
                             <children>
-                                <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN SỰ KIỆN " wrappingWidth="540.0102157592773">
+                                <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="THÔNG TIN SỰ KIỆN " wrappingWidth="601.6101913452148">
                                     <font>
-                                        <Font name="Monospaced Bold" size="40.0" />
+                                        <Font name="Monospaced Bold" size="30.0" />
                                     </font>
                                 </Text>
                             </children>
                         </HBox>
-                  <ScrollPane fitToWidth="true" prefHeight="450.0" prefWidth="606.0">
+                  <ScrollPane fitToWidth="true" prefHeight="420.0" prefWidth="606.0">
                      <content>
                               <VBox spacing="15.0">
                                   <children>
