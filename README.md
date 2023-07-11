@@ -14,7 +14,7 @@
 ### Project Organization
 1. `src` folder: official Java Project.
 2. `design` folder: all designs for the project (class diagram and use-case diagram).
-3. `docs` folder: `.docx` report file and slides for presentation.
+3. `docs` folder: `.pdf` report file and slides for presentation.
 
 ### Setup
 1. Press the **Fork** button (top right the page) to save copy of this project on your account.
@@ -22,7 +22,8 @@
 
        git clone https://github.com/ngobach26/History.git
 3. Run the application in the main Class [App.java](/src/main/java/main/App.java).
-
+### Data collection 
+In order to collect the data from wesites, please go to [Crawler.java](/src/main/java/crawler/Crawler.java) file, then run the main class 
 ### Collaborators
 <table>
     <tbody>
